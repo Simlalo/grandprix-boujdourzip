@@ -14,6 +14,7 @@ const TYPE_LABELS = {
 };
 
 export default function CommitteeDashboard({ userType }) {
+  const [view, setView] = useState('home');
   const [institutions, setInstitutions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -50,10 +51,24 @@ export default function CommitteeDashboard({ userType }) {
     <>
       <header className="header">
         <div className="header-content">
-          <div>
-            <div className="header-title">لجنة التنظيم</div>
-            <div className="header-subtitle">
-              {isAdmin ? 'مدير النظام' : 'مشاهد فقط'}
+          <div className="flex items-center gap-2">
+            {view !== 'home' && (
+              <button
+                onClick={() => setView('home')}
+                style={{ background: 'transparent', color: 'white', fontSize: 22, padding: '0 8px' }}
+              >
+                →
+              </button>
+            )}
+            <div>
+              <div className="header-title">
+                {view === 'home' && 'لجنة التنظيم'}
+                {view === 'institutions' && 'المؤسسات'}
+                {view === 'race' && 'يوم السباق'}
+              </div>
+              <div className="header-subtitle">
+                {isAdmin ? 'مدير النظام' : 'مشاهد فقط'}
+              </div>
             </div>
           </div>
           <button onClick={handleLogout} style={{ background: 'transparent', color: 'white', fontSize: 13 }}>
@@ -63,38 +78,66 @@ export default function CommitteeDashboard({ userType }) {
       </header>
 
       <div className="container">
-        <div className="flex gap-2 mb-4">
-          <StatCard label="إجمالي المؤسسات" value={stats.total} />
-          <StatCard label="بانتظار المراجعة" value={stats.submitted} highlight />
-          <StatCard label="مصادق عليها" value={stats.approved} success />
-        </div>
+        {/* ============ الصفحة الرئيسية ============ */}
+        {view === 'home' && (
+          <>
+            <div className="flex gap-2 mb-4">
+              <StatCard label="إجمالي المؤسسات" value={stats.total} />
+              <StatCard label="بانتظار المراجعة" value={stats.submitted} highlight />
+              <StatCard label="مصادق عليها" value={stats.approved} success />
+            </div>
 
-        {isAdmin && (
-          <button
-            className="btn btn-accent btn-block mb-4"
-            onClick={() => setShowAddForm(true)}
-          >
-            + إضافة مؤسسة جديدة
-          </button>
+            <div className="flex flex-col gap-4 mt-4">
+              <NavCard
+                icon="🏫"
+                title="المؤسسات"
+                subtitle={`${stats.total} مؤسسة • ${stats.submitted} بانتظار المراجعة`}
+                onClick={() => setView('institutions')}
+              />
+              <NavCard
+                icon="🏁"
+                title="يوم السباق"
+                subtitle="إدخال نتائج السباقات"
+                onClick={() => setView('race')}
+              />
+            </div>
+          </>
         )}
 
-        <h2 className="page-title" style={{ fontSize: 18 }}>المؤسسات</h2>
+        {/* ============ قسم المؤسسات ============ */}
+        {view === 'institutions' && (
+          <>
+            {isAdmin && (
+              <button
+                className="btn btn-accent btn-block mb-4"
+                onClick={() => setShowAddForm(true)}
+              >
+                + إضافة مؤسسة جديدة
+              </button>
+            )}
 
-        <div className="list">
-          {institutions.length === 0 && (
-            <div className="card text-center text-muted">
-              لم تُسجَّل أي مؤسسة بعد
+            <div className="list">
+              {institutions.length === 0 && (
+                <div className="card text-center text-muted">
+                  لم تُسجَّل أي مؤسسة بعد
+                </div>
+              )}
+              {institutions.map((inst) => (
+                <InstitutionCard
+                  key={inst.id}
+                  institution={inst}
+                  isAdmin={isAdmin}
+                  onUpdate={loadInstitutions}
+                />
+              ))}
             </div>
-          )}
-          {institutions.map((inst) => (
-            <InstitutionCard
-              key={inst.id}
-              institution={inst}
-              isAdmin={isAdmin}
-              onUpdate={loadInstitutions}
-            />
-          ))}
-        </div>
+          </>
+        )}
+
+        {/* ============ قسم يوم السباق ============ */}
+        {view === 'race' && (
+          <RaceDayPanel isAdmin={isAdmin} />
+        )}
       </div>
 
       {showAddForm && (
@@ -104,6 +147,46 @@ export default function CommitteeDashboard({ userType }) {
         />
       )}
     </>
+  );
+}
+
+function NavCard({ icon, title, subtitle, onClick }) {
+  return (
+    <div
+      className="card"
+      onClick={onClick}
+      style={{
+        cursor: 'pointer',
+        padding: 20,
+        display: 'flex',
+        alignItems: 'center',
+        gap: 16,
+        transition: 'transform 0.1s',
+      }}
+    >
+      <div style={{ fontSize: 40 }}>{icon}</div>
+      <div style={{ flex: 1 }}>
+        <div style={{ fontSize: 18, fontWeight: 900 }}>{title}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>
+          {subtitle}
+        </div>
+      </div>
+      <div style={{ fontSize: 24, color: 'var(--text-muted)' }}>‹</div>
+    </div>
+  );
+}
+
+function RaceDayPanel({ isAdmin }) {
+  return (
+    <div className="card text-center" style={{ padding: 40 }}>
+      <div style={{ fontSize: 48, marginBottom: 16 }}>🏁</div>
+      <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>
+        يوم السباق
+      </div>
+      <div className="text-muted">
+        قريباً جداً...
+      </div>
+    </div>
   );
 }
 
