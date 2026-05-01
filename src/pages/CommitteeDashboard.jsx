@@ -261,48 +261,19 @@ function AddInstitutionModal({ onClose, onSuccess }) {
       institutionName = `${youthType?.name || ''} - ${customYouthName.trim()}`;
     }
 
-    const { data: authData, error: authError } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: { institution_name: institutionName }
-      }
+    const { data, error: rpcError } = await supabase.rpc('admin_create_institution', {
+      p_email: email.trim(),
+      p_password: password,
+      p_name: institutionName,
+      p_type: type,
+      p_responsible_name: responsibleName.trim(),
+      p_phone: phone.trim(),
+      p_predefined_id: type === 'education' ? parseInt(selectedPredefined) : null,
+      p_youth_type_id: type === 'youth_culture' ? parseInt(selectedYouthType) : null,
     });
 
-    if (authError) {
-      setError('خطأ في إنشاء الحساب: ' + authError.message);
-      setLoading(false);
-      return;
-    }
-
-    if (!authData.user) {
-      setError('فشل إنشاء المستخدم');
-      setLoading(false);
-      return;
-    }
-
-    const insertData = {
-      auth_user_id: authData.user.id,
-      name: institutionName,
-      type,
-      responsible_name: responsibleName.trim(),
-      phone: phone.trim(),
-      email: email.trim(),
-      list_status: 'draft',
-    };
-
-    if (type === 'education') {
-      insertData.predefined_id = parseInt(selectedPredefined);
-    } else {
-      insertData.youth_type_id = parseInt(selectedYouthType);
-    }
-
-    const { error: instError } = await supabase
-      .from('institutions')
-      .insert(insertData);
-
-    if (instError) {
-      setError('خطأ في إنشاء المؤسسة: ' + instError.message);
+    if (rpcError) {
+      setError('خطأ: ' + rpcError.message);
       setLoading(false);
       return;
     }
