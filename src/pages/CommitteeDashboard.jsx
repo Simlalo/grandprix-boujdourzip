@@ -119,8 +119,26 @@ function StatCard({ label, value, highlight, success }) {
 
 function InstitutionCard({ institution, isAdmin, onUpdate }) {
   const [showActions, setShowActions] = useState(false);
+  const [athletes, setAthletes] = useState(null);
+  const [loadingAthletes, setLoadingAthletes] = useState(false);
+
   const status = STATUS_LABELS[institution.list_status];
   const athleteCount = institution.athletes?.[0]?.count || 0;
+
+  async function toggleDetails() {
+    if (!showActions && !athletes) {
+      setLoadingAthletes(true);
+      const { data } = await supabase
+        .from('athletes')
+        .select('*')
+        .eq('institution_id', institution.id)
+        .order('category')
+        .order('last_name');
+      setAthletes(data || []);
+      setLoadingAthletes(false);
+    }
+    setShowActions(!showActions);
+  }
 
   async function approve() {
     if (!confirm('المصادقة على هذه اللائحة؟')) return;
@@ -148,9 +166,20 @@ function InstitutionCard({ institution, isAdmin, onUpdate }) {
     onUpdate();
   }
 
+  function getCategoryLabel(category, gender) {
+    const isMale = gender === 'male';
+    const labels = {
+      katakit: isMale ? 'كتاكيت ذكور' : 'كتاكيت إناث',
+      baraem: isMale ? 'براعم' : 'برعمات',
+      sighar: isMale ? 'صغار' : 'صغيرات',
+      fityan: isMale ? 'فتيان' : 'فتيات',
+    };
+    return labels[category] || category;
+  }
+
   return (
     <div className="card" style={{ padding: 14 }}>
-      <div onClick={() => setShowActions(!showActions)} style={{ cursor: 'pointer' }}>
+      <div onClick={toggleDetails} style={{ cursor: 'pointer' }}>
         <div style={{ fontWeight: 700, fontSize: 15 }}>{institution.name}</div>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>
           {TYPE_LABELS[institution.type]} • {athleteCount} رياضي
@@ -160,20 +189,75 @@ function InstitutionCard({ institution, isAdmin, onUpdate }) {
             المسؤول: {institution.responsible_name}
           </div>
         )}
-        <span className={`badge ${status.class}`} style={{ marginTop: 6 }}>
-          {status.text}
-        </span>
+        <div className="flex justify-between items-center mt-2">
+          <span className={`badge ${status.class}`}>{status.text}</span>
+          <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>
+            {showActions ? '▲ إخفاء' : '▼ عرض اللائحة'}
+          </span>
+        </div>
       </div>
 
-      {showActions && isAdmin && institution.list_status === 'submitted' && (
-        <div className="flex gap-2 mt-4">
-          <button className="btn btn-success" style={{ flex: 1 }} onClick={approve}>
-            ✓ مصادقة
-          </button>
-          <button className="btn btn-danger" style={{ flex: 1 }} onClick={reject}>
-            ✕ رفض
-          </button>
-        </div>
+      {showActions && (
+        <>
+          <div style={{ borderTop: '1px solid var(--border)', marginTop: 12, paddingTop: 12 }}>
+            {loadingAthletes && <div className="text-center text-muted">جاري التحميل...</div>}
+
+            {athletes && athletes.length === 0 && (
+              <div className="text-center text-muted">لا يوجد رياضيون مسجلون</div>
+            )}
+
+            {athletes && athletes.length > 0 && (
+              <>
+                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 8 }}>
+                  الرياضيون ({athletes.length})
+                </div>
+                <div className="list">
+                  {athletes.map((a) => (
+                    <div key={a.id} style={{
+                      background: '#f8fafc',
+                      padding: 10,
+                      borderRadius: 8,
+                      marginBottom: 4,
+                    }}>
+                      <div style={{ fontSize: 14, fontWeight: 600 }}>
+                        {a.first_name} {a.last_name}
+                      </div>
+                      <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
+                        {getCategoryLabel(a.category, a.gender)} • {a.gender === 'male' ? 'ذكر' : 'أنثى'} • {new Date(a.birth_date).toLocaleDateString('ar')}
+                        {a.duplicate_flag && (
+                          <span className="badge badge-warning" style={{ marginRight: 6 }}>⚠ ازدواجية</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
+          {isAdmin && institution.list_status === 'submitted' && (
+            <div className="flex gap-2 mt-4">
+              <button className="btn btn-success" style={{ flex: 1 }} onClick={approve}>
+                ✓ مصادقة
+              </button>
+              <button className="btn btn-danger" style={{ flex: 1 }} onClick={reject}>
+                ✕ رفض
+              </button>
+            </div>
+          )}
+
+          {institution.list_status === 'approved' && (
+            <div className="alert alert-success" style={{ marginTop: 12, marginBottom: 0 }}>
+              ✓ تمت المصادقة على هذه اللائحة
+            </div>
+          )}
+
+          {institution.list_status === 'rejected' && institution.rejection_reason && (
+            <div className="alert alert-error" style={{ marginTop: 12, marginBottom: 0 }}>
+              <strong>سبب الرفض:</strong> {institution.rejection_reason}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
