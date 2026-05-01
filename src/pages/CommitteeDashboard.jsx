@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
+import RaceDayPanel from './RaceDayPanel';
 
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
@@ -176,19 +177,6 @@ function NavCard({ icon, title, subtitle, onClick }) {
   );
 }
 
-function RaceDayPanel({ isAdmin }) {
-  return (
-    <div className="card text-center" style={{ padding: 40 }}>
-      <div style={{ fontSize: 48, marginBottom: 16 }}>🏁</div>
-      <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>
-        يوم السباق
-      </div>
-      <div className="text-muted">
-        قريباً جداً...
-      </div>
-    </div>
-  );
-}
 
 function StatCard({ label, value, highlight, success }) {
   const color = highlight ? 'var(--accent)' : success ? 'var(--success)' : 'var(--primary)';
