@@ -144,6 +144,7 @@ export default function InstitutionDashboard({ institution }) {
                   athlete={a}
                   canEdit={canEdit}
                   onDelete={() => handleDeleteAthlete(a.id)}
+                  onUpdate={loadData}
                 />
               ))}
             </div>
@@ -174,25 +175,130 @@ export default function InstitutionDashboard({ institution }) {
   );
 }
 
-function AthleteCard({ athlete, canEdit, onDelete }) {
+function AthleteCard({ athlete, canEdit, onDelete, onUpdate }) {
+  const [editingDossard, setEditingDossard] = useState(false);
+  const [dossardValue, setDossardValue] = useState(athlete.dossard_number || '');
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState('');
+
   const fullName = `${athlete.first_name} ${athlete.last_name}`;
   const genderLabel = athlete.gender === 'male' ? 'ذكر' : 'أنثى';
+
+  async function saveDossard() {
+    setError('');
+    setSaving(true);
+
+    const numValue = dossardValue === '' ? null : parseInt(dossardValue);
+
+    if (numValue !== null && (isNaN(numValue) || numValue < 1)) {
+      setError('رقم غير صحيح');
+      setSaving(false);
+      return;
+    }
+
+    const { error: updateError } = await supabase
+      .from('athletes')
+      .update({ dossard_number: numValue })
+      .eq('id', athlete.id);
+
+    if (updateError) {
+      if (updateError.code === '23505') {
+        setError('هذا الرقم مستخدم في نفس الفئة');
+      } else {
+        setError('خطأ: ' + updateError.message);
+      }
+      setSaving(false);
+      return;
+    }
+
+    setEditingDossard(false);
+    setSaving(false);
+    onUpdate();
+  }
+
   return (
-    <div className="list-item">
-      <div className="list-item-info">
-        <div className="list-item-title">{fullName}</div>
-        <div className="list-item-meta">
-          {getCategoryLabel(athlete.category, athlete.gender)} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
+    <div className="list-item" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
+      <div className="flex justify-between items-center w-full">
+        <div className="list-item-info">
+          <div className="list-item-title">{fullName}</div>
+          <div className="list-item-meta">
+            {getCategoryLabel(athlete.category, athlete.gender)} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
+          </div>
+          {athlete.duplicate_flag && (
+            <span className="badge badge-warning" style={{ marginTop: 4 }}>⚠ ازدواجية محتملة</span>
+          )}
         </div>
-        {athlete.duplicate_flag && (
-          <span className="badge badge-warning" style={{ marginTop: 4 }}>⚠ ازدواجية محتملة</span>
+        {canEdit && (
+          <button onClick={onDelete} style={{ background: 'transparent', color: 'var(--danger)', fontSize: 20, padding: 8 }}>
+            ✕
+          </button>
         )}
       </div>
-      {canEdit && (
-        <button onClick={onDelete} style={{ background: 'transparent', color: 'var(--danger)', fontSize: 20, padding: 8 }}>
-          ✕
-        </button>
-      )}
+
+      <div style={{
+        marginTop: 10,
+        paddingTop: 10,
+        borderTop: '1px dashed var(--border)',
+      }}>
+        {!editingDossard ? (
+          <div className="flex justify-between items-center">
+            <div style={{ fontSize: 13 }}>
+              <span style={{ color: 'var(--text-muted)' }}>رقم الصدرية: </span>
+              {athlete.dossard_number ? (
+                <strong style={{ color: 'var(--accent)', fontSize: 16 }}>
+                  {athlete.dossard_number}
+                </strong>
+              ) : (
+                <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>غير محدد</span>
+              )}
+            </div>
+            {canEdit && (
+              <button
+                onClick={() => setEditingDossard(true)}
+                style={{ background: 'transparent', color: 'var(--accent)', fontSize: 13, padding: 4 }}
+              >
+                {athlete.dossard_number ? 'تعديل' : '+ إضافة'}
+              </button>
+            )}
+          </div>
+        ) : (
+          <div>
+            {error && <div className="alert alert-error" style={{ marginBottom: 8, fontSize: 12, padding: 8 }}>{error}</div>}
+            <div className="flex gap-2">
+              <input
+                type="number"
+                className="form-input"
+                value={dossardValue}
+                onChange={(e) => setDossardValue(e.target.value)}
+                placeholder="مثال: 47"
+                dir="ltr"
+                style={{ flex: 1, minHeight: 40 }}
+                min="1"
+                autoFocus
+              />
+              <button
+                className="btn btn-success"
+                onClick={saveDossard}
+                disabled={saving}
+                style={{ minWidth: 60, minHeight: 40, padding: '0 12px', fontSize: 13 }}
+              >
+                {saving ? '...' : 'حفظ'}
+              </button>
+              <button
+                className="btn btn-outline"
+                onClick={() => {
+                  setEditingDossard(false);
+                  setDossardValue(athlete.dossard_number || '');
+                  setError('');
+                }}
+                style={{ minWidth: 50, minHeight: 40, padding: '0 12px', fontSize: 13 }}
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
