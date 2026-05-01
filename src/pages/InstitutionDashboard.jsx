@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
 
-const CATEGORY_LABELS = {
-  katakit: 'كتاكيت',
-  baraem: 'براعم',
-  sighar: 'صغار',
-  fityan: 'فتيان',
-};
-
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
   submitted: { text: 'مُرسَلة للمراجعة', class: 'badge-submitted' },
   approved: { text: 'مصادق عليها', class: 'badge-approved' },
   rejected: { text: 'مرفوضة', class: 'badge-rejected' },
 };
+
+function getCategoryLabel(category, gender) {
+  const isMale = gender === 'male';
+  const labels = {
+    katakit: isMale ? 'كتاكيت ذكور' : 'كتاكيت إناث',
+    baraem: isMale ? 'براعم' : 'برعمات',
+    sighar: isMale ? 'صغار' : 'صغيرات',
+    fityan: isMale ? 'فتيان' : 'فتيات',
+  };
+  return labels[category] || category;
+}
 
 export default function InstitutionDashboard({ institution }) {
   const [data, setData] = useState(null);
@@ -178,7 +182,7 @@ function AthleteCard({ athlete, canEdit, onDelete }) {
       <div className="list-item-info">
         <div className="list-item-title">{fullName}</div>
         <div className="list-item-meta">
-          {CATEGORY_LABELS[athlete.category]} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
+          {getCategoryLabel(athlete.category, athlete.gender)} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
         </div>
         {athlete.duplicate_flag && (
           <span className="badge badge-warning" style={{ marginTop: 4 }}>⚠ ازدواجية محتملة</span>
@@ -203,16 +207,17 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  function getCategory(year) {
+  function getCategory(year, gender) {
     const y = parseInt(year);
-    if (y === 2015 || y === 2016) return 'كتاكيت';
-    if (y === 2013 || y === 2014) return 'براعم';
-    if (y === 2011 || y === 2012) return 'صغار';
-    if (y === 2009 || y === 2010) return 'فتيان';
+    const isMale = gender === 'male';
+    if (y === 2015 || y === 2016) return isMale ? 'كتاكيت ذكور' : 'كتاكيت إناث';
+    if (y === 2013 || y === 2014) return isMale ? 'براعم' : 'برعمات';
+    if (y === 2011 || y === 2012) return isMale ? 'صغار' : 'صغيرات';
+    if (y === 2009 || y === 2010) return isMale ? 'فتيان' : 'فتيات';
     return null;
   }
 
-  const category = birthYear ? getCategory(birthYear) : null;
+  const category = birthYear && gender ? getCategory(birthYear, gender) : null;
 
   async function handleSubmit(e) {
     e.preventDefault();
