@@ -373,26 +373,22 @@ function AddInstitutionModal({ onClose, onSuccess }) {
                   onChange={(e) => setSelectedPredefined(e.target.value)}
                 >
                   <option value="">اختر المؤسسة...</option>
-                  <optgroup label="التعليم العمومي - الابتدائي">
-                    {predefinedList.filter(p => p.sector === 'public' && p.level === 'ابتدائي').map(p => (
-                      <option key={p.id} value={p.id}>{p.name}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label="التعليم العمومي - الإعدادي">
-                    {predefinedList.filter(p => p.sector === 'public' && p.level === 'إعدادي').map(p => (
-                      <option key={p.id} value={p.id}>{p.name}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label="التعليم العمومي - الثانوي التأهيلي">
-                    {predefinedList.filter(p => p.sector === 'public' && p.level === 'تأهيلي').map(p => (
-                      <option key={p.id} value={p.id}>{p.name}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label="التعليم الخصوصي">
-                    {predefinedList.filter(p => p.sector === 'private').map(p => (
-                      <option key={p.id} value={p.id}>{p.name}</option>
-                    ))}
-                  </optgroup>
+                  <option disabled>━━ ابتدائي ━━</option>
+                  {predefinedList.filter(p => p.sector === 'public' && p.level === 'ابتدائي').map(p => (
+                    <option key={p.id} value={p.id}>{p.name}</option>
+                  ))}
+                  <option disabled>━━ إعدادي ━━</option>
+                  {predefinedList.filter(p => p.sector === 'public' && p.level === 'إعدادي').map(p => (
+                    <option key={p.id} value={p.id}>{p.name}</option>
+                  ))}
+                  <option disabled>━━ تأهيلي ━━</option>
+                  {predefinedList.filter(p => p.sector === 'public' && p.level === 'تأهيلي').map(p => (
+                    <option key={p.id} value={p.id}>{p.name}</option>
+                  ))}
+                  <option disabled>━━ خصوصي ━━</option>
+                  {predefinedList.filter(p => p.sector === 'private').map(p => (
+                    <option key={p.id} value={p.id}>{p.name}</option>
+                  ))}
                 </select>
               </div>
             )}
