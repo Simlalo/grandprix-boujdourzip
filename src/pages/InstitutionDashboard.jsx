@@ -77,6 +77,7 @@ export default function InstitutionDashboard({ institution }) {
   }
 
   const canEdit = data.list_status === 'draft' || data.list_status === 'submitted';
+  const canEditDossard = data.list_status !== 'rejected';
   const status = STATUS_LABELS[data.list_status];
 
   return (
@@ -143,6 +144,7 @@ export default function InstitutionDashboard({ institution }) {
                   key={a.id}
                   athlete={a}
                   canEdit={canEdit}
+                  canEditDossard={canEditDossard}
                   onDelete={() => handleDeleteAthlete(a.id)}
                   onUpdate={loadData}
                 />
@@ -175,7 +177,7 @@ export default function InstitutionDashboard({ institution }) {
   );
 }
 
-function AthleteCard({ athlete, canEdit, onDelete, onUpdate }) {
+function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
   const [editingDossard, setEditingDossard] = useState(false);
   const [dossardValue, setDossardValue] = useState(athlete.dossard_number || '');
   const [saving, setSaving] = useState(false);
@@ -252,7 +254,7 @@ function AthleteCard({ athlete, canEdit, onDelete, onUpdate }) {
                 <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>غير محدد</span>
               )}
             </div>
-            {canEdit && (
+            {canEditDossard && (
               <button
                 onClick={() => setEditingDossard(true)}
                 style={{ background: 'transparent', color: 'var(--accent)', fontSize: 13, padding: 4 }}
