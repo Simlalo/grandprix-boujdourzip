@@ -261,6 +261,7 @@ function AddInstitutionModal({ onClose, onSuccess }) {
       institutionName = `${youthType?.name || ''} - ${customYouthName.trim()}`;
     }
 
+    // 1. إنشاء حساب المصادقة
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email,
       password,
@@ -281,6 +282,7 @@ function AddInstitutionModal({ onClose, onSuccess }) {
       return;
     }
 
+    // 2. إنشاء صف المؤسسة
     const insertData = {
       auth_user_id: authData.user.id,
       name: institutionName,
@@ -345,6 +347,7 @@ function AddInstitutionModal({ onClose, onSuccess }) {
 
         {error && <div className="alert alert-error">{error}</div>}
 
+        {/* ========== الخطوة 1: اختيار المؤسسة ========== */}
         {step === 1 && (
           <>
             <div className="form-group">
@@ -436,6 +439,7 @@ function AddInstitutionModal({ onClose, onSuccess }) {
           </>
         )}
 
+        {/* ========== الخطوة 2: بيانات المسؤول ========== */}
         {step === 2 && (
           <>
             <div className="form-group">
@@ -520,6 +524,7 @@ function AddInstitutionModal({ onClose, onSuccess }) {
           </>
         )}
 
+        {/* ========== الخطوة 3: عرض البيانات ========== */}
         {step === 3 && createdInfo && (
           <>
             <div className="alert alert-success">
