@@ -297,6 +297,7 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
         .eq('id', r.id);
     }
 
+    setDossardInput('');
     await loadData();
     setSaving(false);
   }
