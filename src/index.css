@@ -254,3 +254,13 @@ a {
 .justify-between { justify-content: space-between; }
 .items-center { align-items: center; }
 .w-full { width: 100%; }
+
+@media print {
+  header, .btn, button, .no-print { display: none !important; }
+  body { background: white !important; }
+  .card { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+  .container { max-width: 100% !important; padding: 0 !important; }
+  .print-title { display: block !important; }
+}
+
+.print-title { display: none; }

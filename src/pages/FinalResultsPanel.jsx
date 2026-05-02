@@ -133,7 +133,20 @@ export default function FinalResultsPanel() {
   }
 
   return (
-    <div>
+    <div id="print-area">
+      <div className="no-print flex justify-between items-center mb-4">
+        <div className="print-title" style={{ fontSize: 18, fontWeight: 900 }}>
+          الجائزة الكبرى للعدو الريفي — بوجدور 2026
+        </div>
+        <button
+          className="btn btn-outline no-print"
+          style={{ minHeight: 44, fontSize: 14 }}
+          onClick={() => window.print()}
+        >
+          🖨 طباعة / PDF
+        </button>
+      </div>
+
       <div className="flex gap-2 mb-4">
         <button
           className={tab === 'standings' ? 'btn btn-accent' : 'btn btn-outline'}
