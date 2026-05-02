@@ -62,13 +62,13 @@ export default function App() {
 
   return (
     <Routes>
-      {/* صفحة عامة — بدون تسجيل دخول */}
+      {/* ── صفحة عامة — بدون تسجيل دخول ── */}
       <Route path="/results" element={<PublicResults />} />
 
-      {/* تسجيل الدخول */}
+      {/* ── تسجيل الدخول ── */}
       <Route path="/login" element={!session ? <Login /> : <Navigate to="/" />} />
 
-      {/* الصفحات المحمية */}
+      {/* ── الصفحات المحمية ── */}
       <Route
         path="/*"
         element={
