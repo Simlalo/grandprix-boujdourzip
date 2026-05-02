@@ -735,7 +735,19 @@ function generatePassword() {
 
 function QRCodeModal({ onClose }) {
   const url = `${window.location.origin}/results`;
-  const qrUrl = `https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${encodeURIComponent(url)}&choe=UTF-8`;
+  const canvasRef = useState(null);
+  const [canvasEl, setCanvasEl] = canvasRef;
+
+  useEffect(() => {
+    if (!canvasEl) return;
+    import('qrcode').then(QRCode => {
+      QRCode.toCanvas(canvasEl, url, {
+        width: 220,
+        margin: 2,
+        color: { dark: '#0f172a', light: '#ffffff' },
+      });
+    });
+  }, [canvasEl]);
 
   async function copyLink() {
     try {
@@ -767,7 +779,7 @@ function QRCodeModal({ onClose }) {
           background: 'white', padding: 12, borderRadius: 12,
           border: '2px solid var(--border)', display: 'inline-block', marginBottom: 16,
         }}>
-          <img src={qrUrl} alt="QR Code" width={200} height={200} style={{ display: 'block' }} />
+          <canvas ref={setCanvasEl} style={{ display: 'block' }} />
         </div>
 
         <div style={{
