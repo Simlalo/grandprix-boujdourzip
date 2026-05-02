@@ -43,7 +43,7 @@ function getCategoryLabel(category, gender) {
 }
 
 function validateMassarCode(code) {
-  if (!code) return true;
+  if (!code) return true; // اختياري
   return /^[A-Za-z]\d{9}$/.test(code.trim());
 }
 
@@ -254,11 +254,13 @@ function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
           <div className="list-item-meta">
             {getCategoryLabel(athlete.category, athlete.gender)} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
           </div>
+          {/* Code Massar */}
           {athlete.massar_code && (
             <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2, direction: 'ltr', textAlign: 'right' }}>
               Massar: <strong>{athlete.massar_code}</strong>
             </div>
           )}
+          {/* المستوى الدراسي */}
           {athlete.school_level && (
             <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
               {athlete.school_level}
@@ -275,6 +277,7 @@ function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
         )}
       </div>
 
+      {/* رقم الصدرية */}
       <div style={{ marginTop: 10, paddingTop: 10, borderTop: '1px dashed var(--border)' }}>
         {!editingDossard ? (
           <div className="flex justify-between items-center">
@@ -372,6 +375,7 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
       return;
     }
 
+    // التحقق من Code Massar
     if (massarCode && !validateMassarCode(massarCode)) {
       setError('رمز Massar غير صحيح — يجب أن يكون حرفاً يليه 9 أرقام (مثال: N123456789)');
       return;
@@ -472,6 +476,7 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
             )}
           </div>
 
+          {/* ── المستوى الدراسي (اختياري) ── */}
           <div className="form-group">
             <label className="form-label">
               المستوى الدراسي
@@ -493,6 +498,7 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
             </select>
           </div>
 
+          {/* ── Code Massar (اختياري) ── */}
           <div className="form-group">
             <label className="form-label">
               رمز Massar
