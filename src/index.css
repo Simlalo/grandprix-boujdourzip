@@ -261,6 +261,10 @@ a {
   .card { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
   .container { max-width: 100% !important; padding: 0 !important; }
   .print-title { display: block !important; }
+
+  [style*="gridTemplateColumns"] {
+    display: table-row !important;
+  }
 }
 
 .print-title { display: none; }
