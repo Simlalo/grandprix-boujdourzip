@@ -11,6 +11,14 @@ const CATEGORY_LABELS = {
 const CATEGORY_ORDER = ['katakit', 'baraem', 'sighar', 'fityan'];
 const MEDALS = ['🥇', '🥈', '🥉'];
 
+function shouldAutoRefresh() {
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  const hour = now.getHours();
+  const raceDays = ['2026-05-17', '2026-05-24'];
+  return raceDays.includes(today) && hour >= 10 && hour < 18;
+}
+
 export default function PublicResults() {
   const [tab, setTab] = useState('standings');
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -22,8 +30,10 @@ export default function PublicResults() {
 
   useEffect(() => {
     loadAll();
-    const interval = setInterval(loadAll, 30000);
-    return () => clearInterval(interval);
+    if (shouldAutoRefresh()) {
+      const interval = setInterval(loadAll, 30000);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   async function loadAll() {
