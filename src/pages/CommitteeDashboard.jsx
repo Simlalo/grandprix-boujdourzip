@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
 import RaceDayPanel from './RaceDayPanel';
+import FinalResultsPanel from './FinalResultsPanel';
 
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
@@ -66,6 +67,7 @@ export default function CommitteeDashboard({ userType }) {
                 {view === 'home' && 'لجنة التنظيم'}
                 {view === 'institutions' && 'المؤسسات'}
                 {view === 'race' && 'يوم السباق'}
+                {view === 'results' && 'النتائج النهائية'}
               </div>
               <div className="header-subtitle">
                 {isAdmin ? 'مدير النظام' : 'مشاهد فقط'}
@@ -100,6 +102,12 @@ export default function CommitteeDashboard({ userType }) {
                 title="يوم السباق"
                 subtitle="إدخال نتائج السباقات"
                 onClick={() => setView('race')}
+              />
+              <NavCard
+                icon="🏆"
+                title="النتائج النهائية"
+                subtitle="الترتيب العام والفئات"
+                onClick={() => setView('results')}
               />
             </div>
           </>
@@ -138,6 +146,11 @@ export default function CommitteeDashboard({ userType }) {
         {/* ============ قسم يوم السباق ============ */}
         {view === 'race' && (
           <RaceDayPanel isAdmin={isAdmin} />
+        )}
+
+        {/* ============ قسم النتائج النهائية ============ */}
+        {view === 'results' && (
+          <FinalResultsPanel />
         )}
       </div>
 
