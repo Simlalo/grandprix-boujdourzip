@@ -52,6 +52,7 @@ export default function InstitutionDashboard({ institution }) {
   const [athletes, setAthletes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [deadline, setDeadline] = useState(null);
 
   useEffect(() => { loadData(); }, []);
 
@@ -71,6 +72,14 @@ export default function InstitutionDashboard({ institution }) {
 
     setData(inst);
     setAthletes(ath || []);
+
+    const { data: settingData } = await supabase
+      .from('settings')
+      .select('value')
+      .eq('key', 'registration_deadline')
+      .single();
+    setDeadline(settingData?.value ? new Date(settingData.value) : null);
+
     setLoading(false);
   }
 
@@ -104,8 +113,9 @@ export default function InstitutionDashboard({ institution }) {
     return <div className="loading"><div className="spinner"></div></div>;
   }
 
-  const canEdit = data.list_status === 'draft' || data.list_status === 'submitted';
-  const canEditDossard = data.list_status !== 'rejected';
+  const isDeadlinePassed = deadline && new Date() > deadline;
+  const canEdit = (data.list_status === 'draft' || data.list_status === 'submitted') && !isDeadlinePassed;
+  const canEditDossard = data.list_status !== 'rejected' && !isDeadlinePassed;
   const status = STATUS_LABELS[data.list_status];
 
   return (
@@ -151,6 +161,14 @@ export default function InstitutionDashboard({ institution }) {
             </div>
           )}
         </div>
+
+        {isDeadlinePassed && (
+          <div className="alert alert-warning mb-4">
+            ⏰ <strong>انتهى موعد التسجيل في 13 ماي 2026.</strong>
+            <br />
+            لا يمكن التعديل. للحالات الاستثنائية تواصل مع لجنة التنظيم.
+          </div>
+        )}
 
         {canEdit && (
           <button
