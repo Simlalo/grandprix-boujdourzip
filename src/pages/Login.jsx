@@ -27,8 +27,9 @@ export default function Login() {
     <div className="login-screen">
       <div className="login-card">
         <div className="login-logo">
+          <div className="login-event-badge">🏃 بوجدور 2026</div>
           <h1>الجائزة الكبرى</h1>
-          <p>للعدو الريفي والسباق على الطريق — بوجدور</p>
+          <p>للعدو الريفي والسباق على الطريق</p>
         </div>
 
         <form onSubmit={handleLogin}>
