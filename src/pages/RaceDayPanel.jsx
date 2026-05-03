@@ -261,6 +261,7 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
 
     setSaving(true);
     const newRank = results.length + 1;
+    const newPoints = newRank <= 10 ? 11 - newRank : 0;
 
     const { data: inserted, error: insertError } = await supabase
       .from('results')
@@ -268,6 +269,7 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
         athlete_id: athlete.id,
         race_id: race.id,
         rank: newRank,
+        points: newPoints,
       })
       .select('*, athlete:athletes(*)')
       .single();
@@ -291,9 +293,11 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
 
     const toUpdate = results.filter(r => r.rank > rank);
     for (const r of toUpdate) {
+      const newRank = r.rank - 1;
+      const newPoints = newRank <= 10 ? 11 - newRank : 0;
       await supabase
         .from('results')
-        .update({ rank: r.rank - 1 })
+        .update({ rank: newRank, points: newPoints })
         .eq('id', r.id);
     }
 
@@ -499,7 +503,7 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
 }
 
 function ResultRow({ result, isAdmin, onRemove }) {
-  const points = result.rank <= 20 ? 21 - result.rank : 0;
+  const points = result.rank <= 10 ? 11 - result.rank : 0;
   const isPodium = result.rank <= 3;
 
   return (
