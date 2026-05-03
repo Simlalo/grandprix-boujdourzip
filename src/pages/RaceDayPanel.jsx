@@ -163,9 +163,18 @@ function RaceSelector({ onSelect, currentDay, isAdmin, onChangeDay }) {
             </div>
             <div style={{ flex: 1, textAlign: 'right', marginRight: 12 }}>
               <div style={{ fontSize: 20, fontWeight: 900 }}>{label}</div>
+              <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600, marginTop: 4 }}>
+                {race.distance_meters && `${race.distance_meters}م`}
+                {race.distance_meters && race.scheduled_at && ' • '}
+                {race.scheduled_at && new Date(race.scheduled_at).toLocaleTimeString('ar-MA', {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  timeZone: 'Africa/Casablanca'
+                })}
+              </div>
               {race.is_completed && (
                 <div style={{ fontSize: 12, color: 'var(--success)', fontWeight: 700, marginTop: 2 }}>
-                  مكتمل
+                  ✓ مكتمل
                 </div>
               )}
             </div>
@@ -351,7 +360,15 @@ function RaceResultsEntry({ race, isAdmin, onBack }) {
         <div style={{ fontSize: 16, opacity: 0.9, marginTop: 6 }}>
           {stageLabel}
         </div>
-        <div style={{ fontSize: 13, opacity: 0.7, marginTop: 8 }}>
+        {race.distance_meters && (
+          <div style={{ fontSize: 14, color: 'var(--accent)', fontWeight: 800, marginTop: 8 }}>
+            {race.distance_meters}م
+            {race.scheduled_at && ` • ${new Date(race.scheduled_at).toLocaleTimeString('ar-MA', {
+              hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Casablanca'
+            })}`}
+          </div>
+        )}
+        <div style={{ fontSize: 13, opacity: 0.7, marginTop: 6 }}>
           {athletes.length} رياضي مسجل • {results.length} وصل
         </div>
       </div>
