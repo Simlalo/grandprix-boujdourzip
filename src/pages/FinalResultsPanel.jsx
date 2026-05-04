@@ -35,7 +35,7 @@ export default function FinalResultsPanel() {
       .select(`
         id, rank, points, qualified_to_final,
         race:races(id, category, gender, stage),
-        athlete:athletes(id, first_name, last_name, dossard_number, institution:institutions(id, name))
+        athlete:athletes(id, first_name, last_name, dossard_number, institution:institutions(id, name, is_free_participants))
       `);
 
     const results = resultsData || [];
@@ -43,11 +43,11 @@ export default function FinalResultsPanel() {
     // حساب الترتيب الجماعي للمؤسسات
     const instMap = {};
     results.forEach(r => {
-      const instId = r.athlete?.institution?.id;
-      const instName = r.athlete?.institution?.name;
-      if (!instId) return;
-      if (!instMap[instId]) instMap[instId] = { id: instId, name: instName, points: 0 };
-      instMap[instId].points += (r.points || 0);
+      const inst = r.athlete?.institution;
+      if (!inst?.id) return;
+      if (inst.is_free_participants === true) return;
+      if (!instMap[inst.id]) instMap[inst.id] = { id: inst.id, name: inst.name, points: 0 };
+      instMap[inst.id].points += (r.points || 0);
     });
 
     const standings = Object.values(instMap)
