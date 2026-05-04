@@ -124,8 +124,11 @@ export default function InstitutionDashboard({ institution }) {
   }
 
   const isDeadlinePassed = deadline && new Date() > deadline;
-  const canEdit = (data.list_status === 'draft' || data.list_status === 'submitted') && !isDeadlinePassed;
-  const canEditDossard = data.list_status !== 'rejected' && !isDeadlinePassed;
+  const isFreeParticipants = data.is_free_participants === true;
+  const canEdit = isFreeParticipants
+    || ((data.list_status === 'draft' || data.list_status === 'submitted') && !isDeadlinePassed);
+  const canEditDossard = isFreeParticipants
+    || (data.list_status !== 'rejected' && !isDeadlinePassed);
   const status = STATUS_LABELS[data.list_status];
 
   return (
@@ -165,7 +168,7 @@ export default function InstitutionDashboard({ institution }) {
             </div>
           )}
 
-          {data.list_status === 'approved' && (
+          {data.list_status === 'approved' && !isFreeParticipants && (
             <div className="alert alert-success mt-4">
               ✓ تمت المصادقة على لائحتك. التعديل لم يعد ممكناً.
             </div>
