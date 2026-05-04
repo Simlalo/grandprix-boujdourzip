@@ -70,7 +70,7 @@ export default function InstitutionDashboard({ institution }) {
     setLoading(true);
     const { data: inst } = await supabase
       .from('institutions')
-      .select('*')
+      .select('*, predefined:predefined_educational_institutions(level)')
       .eq('id', institution.id)
       .single();
 
@@ -225,6 +225,7 @@ export default function InstitutionDashboard({ institution }) {
       {showAddForm && (
         <AddAthleteModal
           institutionId={institution.id}
+          institutionLevel={data.predefined?.level || null}
           onClose={() => setShowAddForm(false)}
           onSuccess={() => { setShowAddForm(false); loadData(); }}
         />
@@ -367,7 +368,16 @@ function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
   );
 }
 
-function AddAthleteModal({ institutionId, onClose, onSuccess }) {
+const LEVEL_TO_CYCLE = {
+  'ابتدائي': 'primary',
+  'إعدادي': 'middle',
+  'تأهيلي': 'high',
+};
+
+function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }) {
+  const fixedCycle = institutionLevel ? LEVEL_TO_CYCLE[institutionLevel] : null;
+  const isFixed = !!fixedCycle;
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [gender, setGender] = useState('');
@@ -375,8 +385,10 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
   const [birthMonth, setBirthMonth] = useState('');
   const [birthDay, setBirthDay] = useState('');
   const [massarCode, setMassarCode] = useState('');
-  const [schoolCycle, setSchoolCycle] = useState('primary');
-  const [schoolLevel, setSchoolLevel] = useState(SCHOOL_CYCLES.primary.default);
+  const [schoolCycle, setSchoolCycle] = useState(fixedCycle || 'primary');
+  const [schoolLevel, setSchoolLevel] = useState(
+    fixedCycle ? SCHOOL_CYCLES[fixedCycle].default : ''
+  );
 
   function handleCycleChange(cycle) {
     setSchoolCycle(cycle);
@@ -406,12 +418,7 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
       return;
     }
 
-    if (!schoolCycle) {
-      setError('اختر السلك');
-      return;
-    }
-
-    if (!schoolLevel) {
+    if (isFixed && !schoolLevel) {
       setError('اختر المستوى الدراسي');
       return;
     }
@@ -516,33 +523,45 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
             )}
           </div>
 
-          <div className="form-group">
-            <label className="form-label">السلك</label>
-            <select
-              className="form-select"
-              value={schoolCycle}
-              onChange={(e) => handleCycleChange(e.target.value)}
-              required
-            >
-              {Object.entries(SCHOOL_CYCLES).map(([key, cycle]) => (
-                <option key={key} value={key}>{cycle.label}</option>
-              ))}
-            </select>
-          </div>
+          {!isFixed && (
+            <div className="form-group">
+              <label className="form-label">السلك</label>
+              <select
+                className="form-select"
+                value={schoolCycle}
+                onChange={(e) => handleCycleChange(e.target.value)}
+              >
+                <option value="">— غير محدد —</option>
+                {Object.entries(SCHOOL_CYCLES).map(([key, cycle]) => (
+                  <option key={key} value={key}>{cycle.label}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
-          <div className="form-group">
-            <label className="form-label">المستوى الدراسي</label>
-            <select
-              className="form-select"
-              value={schoolLevel}
-              onChange={(e) => setSchoolLevel(e.target.value)}
-              required
-            >
-              {SCHOOL_CYCLES[schoolCycle].levels.map(level => (
-                <option key={level} value={level}>{level}</option>
-              ))}
-            </select>
-          </div>
+          {schoolCycle && (
+            <div className="form-group">
+              <label className="form-label">
+                المستوى الدراسي
+                {isFixed && (
+                  <span style={{ fontSize: 11, color: 'var(--text-muted)', marginRight: 6 }}>
+                    ({SCHOOL_CYCLES[fixedCycle].label})
+                  </span>
+                )}
+              </label>
+              <select
+                className="form-select"
+                value={schoolLevel}
+                onChange={(e) => setSchoolLevel(e.target.value)}
+                required={isFixed}
+              >
+                <option value="">— اختر —</option>
+                {SCHOOL_CYCLES[schoolCycle].levels.map(level => (
+                  <option key={level} value={level}>{level}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
           <div className="form-group">
             <label className="form-label">
