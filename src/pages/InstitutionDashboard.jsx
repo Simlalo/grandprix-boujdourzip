@@ -8,28 +8,38 @@ const STATUS_LABELS = {
   rejected: { text: 'مرفوضة', class: 'badge-rejected' },
 };
 
-const SCHOOL_LEVELS = [
-  { group: 'ابتدائي', options: [
-    'السنة الأولى ابتدائي',
-    'السنة الثانية ابتدائي',
-    'السنة الثالثة ابتدائي',
-    'السنة الرابعة ابتدائي',
-    'السنة الخامسة ابتدائي',
-    'السنة السادسة ابتدائي',
-  ]},
-  { group: 'إعدادي', options: [
-    'السنة الأولى إعدادي',
-    'السنة الثانية إعدادي',
-    'السنة الثالثة إعدادي',
-  ]},
-  { group: 'تأهيلي', options: [
-    'جذع مشترك',
-    'الأولى باكالوريا',
-    'الثانية باكالوريا',
-  ]},
-];
-
-const DEFAULT_SCHOOL_LEVEL = 'السنة السادسة ابتدائي';
+const SCHOOL_CYCLES = {
+  primary: {
+    label: 'ابتدائي',
+    levels: [
+      'السنة الأولى ابتدائي',
+      'السنة الثانية ابتدائي',
+      'السنة الثالثة ابتدائي',
+      'السنة الرابعة ابتدائي',
+      'السنة الخامسة ابتدائي',
+      'السنة السادسة ابتدائي',
+    ],
+    default: 'السنة السادسة ابتدائي',
+  },
+  middle: {
+    label: 'إعدادي',
+    levels: [
+      'السنة الأولى إعدادي',
+      'السنة الثانية إعدادي',
+      'السنة الثالثة إعدادي',
+    ],
+    default: 'السنة الأولى إعدادي',
+  },
+  high: {
+    label: 'تأهيلي',
+    levels: [
+      'جذع مشترك',
+      'الأولى باكالوريا',
+      'الثانية باكالوريا',
+    ],
+    default: 'جذع مشترك',
+  },
+};
 
 function getCategoryLabel(category, gender) {
   const isMale = gender === 'male';
@@ -365,7 +375,13 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
   const [birthMonth, setBirthMonth] = useState('');
   const [birthDay, setBirthDay] = useState('');
   const [massarCode, setMassarCode] = useState('');
-  const [schoolLevel, setSchoolLevel] = useState(DEFAULT_SCHOOL_LEVEL);
+  const [schoolCycle, setSchoolCycle] = useState('primary');
+  const [schoolLevel, setSchoolLevel] = useState(SCHOOL_CYCLES.primary.default);
+
+  function handleCycleChange(cycle) {
+    setSchoolCycle(cycle);
+    setSchoolLevel(SCHOOL_CYCLES[cycle].default);
+  }
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -491,22 +507,29 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
           </div>
 
           <div className="form-group">
-            <label className="form-label">
-              المستوى الدراسي
-              <span style={{ fontSize: 11, color: 'var(--text-muted)', marginRight: 6 }}>(اختياري)</span>
-            </label>
+            <label className="form-label">السلك</label>
+            <select
+              className="form-select"
+              value={schoolCycle}
+              onChange={(e) => handleCycleChange(e.target.value)}
+              required
+            >
+              {Object.entries(SCHOOL_CYCLES).map(([key, cycle]) => (
+                <option key={key} value={key}>{cycle.label}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">المستوى الدراسي</label>
             <select
               className="form-select"
               value={schoolLevel}
               onChange={(e) => setSchoolLevel(e.target.value)}
+              required
             >
-              <option value="">— غير محدد —</option>
-              {SCHOOL_LEVELS.map(group => (
-                <optgroup key={group.group} label={group.group}>
-                  {group.options.map(opt => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </optgroup>
+              {SCHOOL_CYCLES[schoolCycle].levels.map(level => (
+                <option key={level} value={level}>{level}</option>
               ))}
             </select>
           </div>
