@@ -406,6 +406,16 @@ function AddAthleteModal({ institutionId, onClose, onSuccess }) {
       return;
     }
 
+    if (!schoolCycle) {
+      setError('اختر السلك');
+      return;
+    }
+
+    if (!schoolLevel) {
+      setError('اختر المستوى الدراسي');
+      return;
+    }
+
     if (massarCode && !validateMassarCode(massarCode)) {
       setError('رمز Massar غير صحيح — يجب أن يكون حرفاً يليه 9 أرقام (مثال: N123456789)');
       return;
