@@ -22,7 +22,8 @@ export default function CommitteeDashboard({ userType }) {
   const [showAddForm, setShowAddForm] = useState(false);
   const [showQR, setShowQR] = useState(false);
 
-  const isAdmin = userType.role === 'admin';
+  const isAdmin = userType.role === 'admin' || userType.role === 'super_admin';
+  const isSuperAdmin = userType.role === 'super_admin';
 
   useEffect(() => { loadInstitutions(); }, []);
 
