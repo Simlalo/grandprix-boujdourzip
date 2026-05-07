@@ -422,10 +422,6 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
       return;
     }
 
-    if (isFixed && !schoolLevel) {
-      setError('اختر المستوى الدراسي');
-      return;
-    }
 
     if (massarCode && !validateMassarCode(massarCode)) {
       setError('رمز Massar غير صحيح — يجب أن يكون حرفاً يليه 9 أرقام (مثال: N123456789)');
@@ -574,17 +570,14 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
             <div className="form-group">
               <label className="form-label">
                 المستوى الدراسي
-                {isFixed && (
-                  <span style={{ fontSize: 11, color: 'var(--text-muted)', marginRight: 6 }}>
-                    ({SCHOOL_CYCLES[fixedCycle].label})
-                  </span>
-                )}
+                <span style={{ fontSize: 11, color: 'var(--text-muted)', marginRight: 6 }}>
+                  (اختياري{isFixed && ` - ${SCHOOL_CYCLES[fixedCycle].label}`})
+                </span>
               </label>
               <select
                 className="form-select"
                 value={schoolLevel}
                 onChange={(e) => setSchoolLevel(e.target.value)}
-                required={isFixed}
               >
                 <option value="">— اختر —</option>
                 {SCHOOL_CYCLES[schoolCycle].levels.map(level => (
