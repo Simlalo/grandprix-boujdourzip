@@ -385,8 +385,9 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
   const [lastName, setLastName] = useState('');
   const [gender, setGender] = useState('');
   const [birthYear, setBirthYear] = useState('');
-  const [birthMonth, setBirthMonth] = useState('');
-  const [birthDay, setBirthDay] = useState('');
+  const [birthMonth, setBirthMonth] = useState('1');
+  const [birthDay, setBirthDay] = useState('1');
+  const [showFullDate, setShowFullDate] = useState(false);
   const [massarCode, setMassarCode] = useState('');
   const [schoolCycle, setSchoolCycle] = useState(fixedCycle || 'primary');
   const [schoolLevel, setSchoolLevel] = useState(
@@ -498,27 +499,54 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
           </div>
 
           <div className="form-group">
-            <label className="form-label">تاريخ الميلاد</label>
-            <div className="flex gap-2">
-              <select className="form-select" value={birthDay} onChange={(e) => setBirthDay(e.target.value)} required>
-                <option value="">اليوم</option>
-                {Array.from({ length: 31 }, (_, i) => i + 1).map(d => (
-                  <option key={d} value={d}>{d}</option>
-                ))}
-              </select>
-              <select className="form-select" value={birthMonth} onChange={(e) => setBirthMonth(e.target.value)} required>
-                <option value="">الشهر</option>
-                {Array.from({ length: 12 }, (_, i) => i + 1).map(m => (
-                  <option key={m} value={m}>{m}</option>
-                ))}
-              </select>
-              <select className="form-select" value={birthYear} onChange={(e) => setBirthYear(e.target.value)} required>
-                <option value="">السنة</option>
-                {[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016].map(y => (
-                  <option key={y} value={y}>{y}</option>
-                ))}
-              </select>
-            </div>
+            <label className="form-label">سنة الميلاد</label>
+            <select
+              className="form-select"
+              value={birthYear}
+              onChange={(e) => setBirthYear(e.target.value)}
+              required
+            >
+              <option value="">اختر السنة</option>
+              {[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016].map(y => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+
+            {!showFullDate && (
+              <button
+                type="button"
+                onClick={() => setShowFullDate(true)}
+                style={{
+                  background: 'transparent',
+                  color: 'var(--accent)',
+                  fontSize: 13,
+                  marginTop: 8,
+                  padding: '4px 0',
+                  fontWeight: 700,
+                }}
+              >
+                ← تعديل اليوم والشهر (افتراضي: 1 يناير)
+              </button>
+            )}
+
+            {showFullDate && (
+              <div style={{ marginTop: 12 }}>
+                <label className="form-label" style={{ fontSize: 12 }}>اليوم والشهر</label>
+                <div className="flex gap-2">
+                  <select className="form-select" value={birthDay} onChange={(e) => setBirthDay(e.target.value)}>
+                    {Array.from({ length: 31 }, (_, i) => i + 1).map(d => (
+                      <option key={d} value={d}>{d}</option>
+                    ))}
+                  </select>
+                  <select className="form-select" value={birthMonth} onChange={(e) => setBirthMonth(e.target.value)}>
+                    {Array.from({ length: 12 }, (_, i) => i + 1).map(m => (
+                      <option key={m} value={m}>{m}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+
             {category && (
               <div className="alert alert-info mt-2" style={{ marginBottom: 0 }}>
                 الفئة: <strong>{category}</strong>
