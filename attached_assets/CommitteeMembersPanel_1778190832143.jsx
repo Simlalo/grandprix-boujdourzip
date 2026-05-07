@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../../supabase';
+import { supabase } from '../supabase';
 
 const ROLE_LABELS = {
   super_admin: 'مدير عام',
@@ -28,10 +28,11 @@ export default function CommitteeMembersPanel({ currentMemberId }) {
     setLoading(true);
     const { data } = await supabase
       .from('committee_members')
-      .select('id, full_name, role, auth_user_id, created_at')
+      .select('id, full_name, role, auth_user_id, created_at, auth_user:auth_user_id')
       .order('role')
       .order('created_at');
 
+    // جلب البريد لكل عضو
     if (data) {
       const userIds = data.map(m => m.auth_user_id);
       const { data: usersData } = await supabase
@@ -151,7 +152,7 @@ export default function CommitteeMembersPanel({ currentMemberId }) {
 // ═══════════════════════════════════════════════════════
 
 function AddMemberModal({ onClose, onSuccess }) {
-  const [mode, setMode] = useState('');
+  const [mode, setMode] = useState(''); // 'new' | 'existing'
   const [role, setRole] = useState('data_entry');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -168,6 +169,7 @@ function AddMemberModal({ onClose, onSuccess }) {
   }, [mode]);
 
   async function loadExistingUsers() {
+    // ممثلو المؤسسات الذين ليسوا أعضاء لجنة بعد
     const { data: institutions } = await supabase
       .from('institutions')
       .select('auth_user_id, name, responsible_name, email')

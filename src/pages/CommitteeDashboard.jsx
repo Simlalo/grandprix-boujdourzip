@@ -197,8 +197,7 @@ export default function CommitteeDashboard({ userType }) {
         {/* ============ قسم إدارة أعضاء اللجنة ============ */}
         {view === 'members' && (
           <CommitteeMembersPanel
-            isSuperAdmin={isSuperAdmin}
-            onBack={() => setView('home')}
+            currentMemberId={userType.id}
           />
         )}
       </div>
