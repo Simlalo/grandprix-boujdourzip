@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
 import RaceDayPanel from './RaceDayPanel';
 import FinalResultsPanel from './FinalResultsPanel';
+import CommitteeMembersPanel from './components/CommitteeMembersPanel';
 
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
@@ -118,6 +119,37 @@ export default function CommitteeDashboard({ userType }) {
               >
                 📲 مشاركة النتائج مع الجمهور
               </button>
+
+              {isSuperAdmin && (
+                <button
+                  onClick={() => setView('members')}
+                  className="card"
+                  style={{
+                    padding: 20,
+                    cursor: 'pointer',
+                    textAlign: 'right',
+                    border: '2px solid var(--accent)',
+                    background: '#fffbeb',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    minHeight: 80,
+                    fontFamily: 'inherit',
+                    width: '100%',
+                    marginTop: 8,
+                  }}
+                >
+                  <span style={{ fontSize: 20, color: 'var(--text-muted)' }}>›</span>
+                  <div style={{ flex: 1, textAlign: 'right' }}>
+                    <div style={{ fontSize: 18, fontWeight: 900, marginBottom: 4 }}>
+                      👥 إدارة أعضاء اللجنة
+                    </div>
+                    <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+                      إضافة وحذف أعضاء النظام
+                    </div>
+                  </div>
+                </button>
+              )}
             </div>
           </>
         )}
@@ -160,6 +192,14 @@ export default function CommitteeDashboard({ userType }) {
         {/* ============ قسم النتائج النهائية ============ */}
         {view === 'results' && (
           <FinalResultsPanel />
+        )}
+
+        {/* ============ قسم إدارة أعضاء اللجنة ============ */}
+        {view === 'members' && (
+          <CommitteeMembersPanel
+            isSuperAdmin={isSuperAdmin}
+            onBack={() => setView('home')}
+          />
         )}
       </div>
 
