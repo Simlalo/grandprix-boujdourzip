@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { supabase } from './supabase';
-import Login from './pages/Login';
-import InstitutionDashboard from './pages/InstitutionDashboard';
-import CommitteeDashboard from './pages/CommitteeDashboard';
-import PublicResults from './pages/PublicResults';
+import LoginScreen from './components/LoginScreen';
+import InstitutionDashboard from './components/InstitutionDashboard';
+import CommitteeDashboard from './components/CommitteeDashboard';
+import PublicResults from './components/PublicResults';
 
 function MainApp() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [institution, setInstitution] = useState(null);
   const [member, setMember] = useState(null);
+  // الواجهة النشطة عند مزدوج الدور: 'committee' أو 'institution'
   const [activeView, setActiveView] = useState('committee');
 
   useEffect(() => {
@@ -40,12 +41,14 @@ function MainApp() {
   async function loadUserData(authUser) {
     setUser(authUser);
 
+    // محاولة جلب بيانات المؤسسة
     const { data: instData } = await supabase
       .from('institutions')
       .select('*')
       .eq('auth_user_id', authUser.id)
       .single();
 
+    // محاولة جلب بيانات اللجنة
     const { data: memberData } = await supabase
       .from('committee_members')
       .select('*')
@@ -55,6 +58,9 @@ function MainApp() {
     setInstitution(instData || null);
     setMember(memberData || null);
 
+    // تحديد الواجهة الافتراضية:
+    // إذا كان لديه دور لجنة → ابدأ بواجهة اللجنة
+    // وإلا (مؤسسة فقط) → ابدأ بواجهة المؤسسة
     if (memberData) {
       setActiveView('committee');
     } else if (instData) {
@@ -78,41 +84,42 @@ function MainApp() {
 
   if (loading) {
     return (
-      <div className="loading">
+      <div className="loading-screen">
         <div className="spinner"></div>
       </div>
     );
   }
 
   if (!user) {
-    return <Login onLogin={handleLogin} />;
+    return <LoginScreen onLogin={handleLogin} />;
   }
 
+  // التحقق من الأدوار
   const isCommittee = !!member;
   const isInstitution = !!institution;
   const hasDualRole = isCommittee && isInstitution;
   const isAdmin = isCommittee && (member?.role === 'admin' || member?.role === 'super_admin');
   const isSuperAdmin = isCommittee && member?.role === 'super_admin';
 
+  // إذا لم يكن في أيٍ من الجدولين
   if (!isCommittee && !isInstitution) {
     return (
       <div className="container" style={{ padding: 20, textAlign: 'center' }}>
-        <div className="card">
-          <h2 style={{ marginBottom: 12 }}>حسابك غير مفعّل</h2>
-          <p style={{ color: 'var(--text-muted)', marginBottom: 20 }}>
-            البريد: {user.email}
-          </p>
-          <p style={{ marginBottom: 20 }}>
-            يرجى التواصل مع لجنة التنظيم لتفعيل حسابك.
-          </p>
-          <button onClick={handleLogout} className="btn btn-outline btn-block">
-            خروج
-          </button>
-        </div>
+        <h2>حسابك غير مفعّل</h2>
+        <p style={{ color: 'var(--text-muted)', marginBottom: 20 }}>
+          البريد: {user.email}
+        </p>
+        <p style={{ marginBottom: 20 }}>
+          يرجى التواصل مع لجنة التنظيم لتفعيل حسابك.
+        </p>
+        <button onClick={handleLogout} className="btn btn-outline">
+          خروج
+        </button>
       </div>
     );
   }
 
+  // عرض الواجهة النشطة
   if (activeView === 'committee' && isCommittee) {
     return (
       <CommitteeDashboard
@@ -139,6 +146,7 @@ function MainApp() {
     );
   }
 
+  // حالة احتياطية: إذا activeView لا يطابق ما هو متاح
   return (
     <div className="loading">
       <div className="spinner"></div>
@@ -148,9 +156,11 @@ function MainApp() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/results" element={<PublicResults />} />
-      <Route path="/*" element={<MainApp />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/results" element={<PublicResults />} />
+        <Route path="/*" element={<MainApp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
