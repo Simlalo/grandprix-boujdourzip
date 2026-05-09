@@ -23,24 +23,46 @@ export function useUserType(user) {
 
   async function detectUserType() {
     setLoading(true);
+    console.log('[useUserType] Starting detection for user:', user?.id);
 
-    // جلب بيانات اللجنة (إن وُجدت)
-    const { data: memberData } = await supabase
-      .from('committee_members')
-      .select('*')
-      .eq('auth_user_id', user.id)
-      .maybeSingle();
+    try {
+      // جلب بيانات اللجنة (إن وُجدت)
+      console.log('[useUserType] Querying committee_members...');
+      const { data: memberData, error: memberError } = await supabase
+        .from('committee_members')
+        .select('*')
+        .eq('auth_user_id', user.id)
+        .maybeSingle();
 
-    // جلب بيانات المؤسسة (إن وُجدت)
-    const { data: instData } = await supabase
-      .from('institutions')
-      .select('*')
-      .eq('auth_user_id', user.id)
-      .maybeSingle();
+      if (memberError) {
+        console.error('[useUserType] Committee error:', memberError);
+        alert('خطأ في جلب بيانات اللجنة: ' + memberError.message);
+      }
+      console.log('[useUserType] Committee result:', memberData);
 
-    setCommitteeMember(memberData || null);
-    setInstitution(instData || null);
-    setLoading(false);
+      // جلب بيانات المؤسسة (إن وُجدت)
+      console.log('[useUserType] Querying institutions...');
+      const { data: instData, error: instError } = await supabase
+        .from('institutions')
+        .select('*')
+        .eq('auth_user_id', user.id)
+        .maybeSingle();
+
+      if (instError) {
+        console.error('[useUserType] Institution error:', instError);
+        alert('خطأ في جلب بيانات المؤسسة: ' + instError.message);
+      }
+      console.log('[useUserType] Institution result:', instData);
+
+      setCommitteeMember(memberData || null);
+      setInstitution(instData || null);
+      console.log('[useUserType] Detection complete. Setting loading=false');
+    } catch (e) {
+      console.error('[useUserType] Unexpected error:', e);
+      alert('خطأ غير متوقع: ' + e.message);
+    } finally {
+      setLoading(false);
+    }
   }
 
   // الحالات المُشتقّة
