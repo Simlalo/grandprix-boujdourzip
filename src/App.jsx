@@ -5,6 +5,7 @@ import { useUserType } from './hooks/useUserType';
 
 import Login from './pages/Login';
 import CommitteeDashboard from './pages/CommitteeDashboard';
+import CallRoomPanel from './pages/CallRoomPanel';
 import InstitutionDashboard from './pages/InstitutionDashboard';
 import PublicResults from './pages/PublicResults';
 
@@ -96,6 +97,11 @@ function ProtectedDashboard() {
   }
 
   // عرض الواجهة النشطة
+  // call_room role gets dedicated screen
+  if (committeeMember?.role === 'call_room') {
+    return <CallRoomPanel user={user} onLogout={handleLogout} />;
+  }
+
   if (activeView === 'committee' && isCommittee) {
     return (
       <CommitteeDashboard
