@@ -57,7 +57,12 @@ function validateMassarCode(code) {
   return /^[A-Za-z]\d{9}$/.test(code.trim());
 }
 
-export default function InstitutionDashboard({ institution }) {
+export default function InstitutionDashboard({
+  institution,
+  hasDualRole,
+  onSwitchToCommittee,
+  onLogout,
+}) {
   const [data, setData] = useState(null);
   const [athletes, setAthletes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -94,7 +99,11 @@ export default function InstitutionDashboard({ institution }) {
   }
 
   async function handleLogout() {
-    await supabase.auth.signOut();
+    if (onLogout) {
+      await onLogout();
+    } else {
+      await supabase.auth.signOut();
+    }
   }
 
   async function handleSubmitList() {
@@ -139,9 +148,29 @@ export default function InstitutionDashboard({ institution }) {
             <div className="header-title">{data.name}</div>
             <div className="header-subtitle">{data.responsible_name}</div>
           </div>
-          <button onClick={handleLogout} style={{ background: 'transparent', color: 'white', fontSize: 13 }}>
-            خروج
-          </button>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+            {hasDualRole && (
+              <button
+                onClick={onSwitchToCommittee}
+                className="btn btn-outline"
+                style={{
+                  fontSize: 12,
+                  padding: '6px 12px',
+                  minHeight: 'auto',
+                  background: 'var(--accent)',
+                  color: 'white',
+                  borderColor: 'var(--accent)',
+                  fontWeight: 700,
+                }}
+                title="التبديل لواجهة اللجنة"
+              >
+                🔀 لجنة التنظيم
+              </button>
+            )}
+            <button onClick={handleLogout} className="logout-btn">
+              خروج
+            </button>
+          </div>
         </div>
       </header>
 
