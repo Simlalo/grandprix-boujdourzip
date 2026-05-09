@@ -514,3 +514,45 @@ a { color: inherit; text-decoration: none; }
 }
 
 .print-title { display: none; }
+
+/* ═══════════════════════════════════════════════════════
+   تنسيقات إضافية للأزرار في الـ header وشاشات التحميل
+   ═══════════════════════════════════════════════════════ */
+
+/* زر الخروج في الـ header */
+.logout-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+/* شاشة التحميل الكاملة */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  z-index: 9999;
+}
+
+/* تحسين .loading ليأخذ ارتفاع كامل عند الاستعمال داخلياً */
+.loading {
+  min-height: 200px;
+  width: 100%;
+}
