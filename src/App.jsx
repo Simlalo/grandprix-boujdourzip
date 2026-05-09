@@ -6,7 +6,6 @@ import { useUserType } from './hooks/useUserType';
 import Login from './pages/Login';
 import CommitteeDashboard from './pages/CommitteeDashboard';
 import InstitutionDashboard from './pages/InstitutionDashboard';
-import Members from './pages/Members';
 import PublicResults from './pages/PublicResults';
 import './App.css';
 
@@ -135,7 +134,6 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<ProtectedDashboard />} />
-      <Route path="/members" element={<Members />} />
       <Route path="/results" element={<PublicResults />} />
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
