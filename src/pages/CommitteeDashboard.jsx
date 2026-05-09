@@ -16,15 +16,22 @@ const TYPE_LABELS = {
   youth_culture: 'شباب وثقافة',
 };
 
-export default function CommitteeDashboard({ userType }) {
+export default function CommitteeDashboard({
+  userType,
+  isAdmin: isAdminProp,
+  isSuperAdmin: isSuperAdminProp,
+  hasDualRole,
+  onSwitchToInstitution,
+  onLogout,
+}) {
   const [view, setView] = useState('home');
   const [institutions, setInstitutions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showQR, setShowQR] = useState(false);
 
-  const isAdmin = userType.role === 'admin' || userType.role === 'super_admin';
-  const isSuperAdmin = userType.role === 'super_admin';
+  const isAdmin = isAdminProp ?? (userType?.role === 'admin' || userType?.role === 'super_admin');
+  const isSuperAdmin = isSuperAdminProp ?? (userType?.role === 'super_admin');
 
   useEffect(() => { loadInstitutions(); }, []);
 
@@ -77,9 +84,29 @@ export default function CommitteeDashboard({ userType }) {
               </div>
             </div>
           </div>
-          <button onClick={handleLogout} style={{ background: 'transparent', color: 'white', fontSize: 13 }}>
-            خروج
-          </button>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+            {hasDualRole && (
+              <button
+                onClick={onSwitchToInstitution}
+                className="btn btn-outline"
+                style={{
+                  fontSize: 12,
+                  padding: '6px 12px',
+                  minHeight: 'auto',
+                  background: 'var(--accent)',
+                  color: 'white',
+                  borderColor: 'var(--accent)',
+                  fontWeight: 700,
+                }}
+                title="التبديل لواجهة المؤسسة"
+              >
+                🔀 مؤسستي
+              </button>
+            )}
+            <button onClick={onLogout || handleLogout} className="logout-btn">
+              خروج
+            </button>
+          </div>
         </div>
       </header>
 
