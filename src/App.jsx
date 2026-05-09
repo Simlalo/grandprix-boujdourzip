@@ -7,7 +7,6 @@ import Login from './pages/Login';
 import CommitteeDashboard from './pages/CommitteeDashboard';
 import InstitutionDashboard from './pages/InstitutionDashboard';
 import PublicResults from './pages/PublicResults';
-import './App.css';
 
 function ProtectedDashboard() {
   const [user, setUser] = useState(null);
