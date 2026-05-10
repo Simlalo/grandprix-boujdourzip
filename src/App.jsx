@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { supabase } from './supabase';
 import { useUserType } from './hooks/useUserType';
 
 import Login from './pages/Login';
 import CommitteeDashboard from './pages/CommitteeDashboard';
 import CallRoomPanel from './pages/CallRoomPanel';
+import FinishLinePanel from './pages/FinishLinePanel';
 import InstitutionDashboard from './pages/InstitutionDashboard';
 import PublicResults from './pages/PublicResults';
 
 function ProtectedDashboard() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  // الواجهة النشطة لمزدوجي الدور: 'committee' أو 'institution'
   const [activeView, setActiveView] = useState('committee');
   const navigate = useNavigate();
 
@@ -42,7 +42,6 @@ function ProtectedDashboard() {
     return () => subscription.unsubscribe();
   }, []);
 
-  // عند تحميل بيانات المستخدم، إذا كان عضو لجنة → ابدأ بواجهة اللجنة
   useEffect(() => {
     if (!userTypeLoading) {
       if (isCommittee) {
@@ -78,7 +77,6 @@ function ProtectedDashboard() {
     );
   }
 
-  // إذا لم يكن في أيٍ من الجدولين
   if (!isCommittee && !isInstitution) {
     return (
       <div className="container" style={{ padding: 20, textAlign: 'center' }}>
@@ -96,11 +94,22 @@ function ProtectedDashboard() {
     );
   }
 
-  // عرض الواجهة النشطة
-  // call_room role gets dedicated screen
+  // ─── الأدوار التشغيلية ميدانياً (شاشة مخصصة) ──────────────────────
   if (committeeMember?.role === 'call_room') {
     return <CallRoomPanel user={user} onLogout={handleLogout} />;
   }
+
+  if (committeeMember?.role === 'finish_judge') {
+    return (
+      <FinishLinePanel
+        user={user}
+        committeeMember={committeeMember}
+        onLogout={handleLogout}
+      />
+    );
+  }
+
+  // TODO: timekeeper
 
   if (activeView === 'committee' && isCommittee) {
     return (
@@ -126,7 +135,6 @@ function ProtectedDashboard() {
     );
   }
 
-  // حالة احتياطية
   return (
     <div className="loading">
       <div className="spinner"></div>

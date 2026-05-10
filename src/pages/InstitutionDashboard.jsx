@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
+import CategoryCounters from '../components/athletes/CategoryCounters';
+import AthletesList from '../components/athletes/AthletesList';
+import { MAX_PER_CATEGORY } from '../lib/categories';
 
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
@@ -41,17 +44,6 @@ const SCHOOL_CYCLES = {
   },
 };
 
-function getCategoryLabel(category, gender) {
-  const isMale = gender === 'male';
-  const labels = {
-    katakit: isMale ? 'كتاكيت ذكور' : 'كتاكيت إناث',
-    baraem: isMale ? 'براعم' : 'برعمات',
-    sighar: isMale ? 'صغار' : 'صغيرات',
-    fityan: isMale ? 'فتيان' : 'فتيات',
-  };
-  return labels[category] || category;
-}
-
 function validateMassarCode(code) {
   if (!code) return true;
   return /^[A-Za-z]\d{9}$/.test(code.trim());
@@ -68,6 +60,7 @@ export default function InstitutionDashboard({
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [deadline, setDeadline] = useState(null);
+  const [dossardAthlete, setDossardAthlete] = useState(null);
 
   useEffect(() => { loadData(); }, []);
 
@@ -122,9 +115,9 @@ export default function InstitutionDashboard({
     else loadData();
   }
 
-  async function handleDeleteAthlete(id) {
+  async function handleDeleteAthlete(athlete) {
     if (!confirm('هل أنت متأكد من حذف هذا الرياضي؟')) return;
-    await supabase.from('athletes').delete().eq('id', id);
+    await supabase.from('athletes').delete().eq('id', athlete.id);
     loadData();
   }
 
@@ -204,6 +197,8 @@ export default function InstitutionDashboard({
           )}
         </div>
 
+        <CategoryCounters athletes={athletes} isFreeParticipants={isFreeParticipants} />
+
         {isDeadlinePassed && (
           <div className="alert alert-warning mb-4">
             ⏰ <strong>انتهى موعد التسجيل في 13 ماي 2026.</strong>
@@ -221,34 +216,21 @@ export default function InstitutionDashboard({
           </button>
         )}
 
-        {athletes.length > 0 && (
-          <>
-            <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 8 }}>
-              الرياضيون ({athletes.length})
-            </h3>
-            <div className="list mb-4">
-              {athletes.map((a) => (
-                <AthleteCard
-                  key={a.id}
-                  athlete={a}
-                  canEdit={canEdit}
-                  canEditDossard={canEditDossard}
-                  onDelete={() => handleDeleteAthlete(a.id)}
-                  onUpdate={loadData}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <AthletesList
+          athletes={athletes}
+          canEdit={canEdit}
+          onDelete={handleDeleteAthlete}
+          onSetDossard={canEditDossard ? (a) => setDossardAthlete(a) : undefined}
+        />
 
         {data.list_status === 'draft' && athletes.length > 0 && (
-          <button className="btn btn-success btn-block" onClick={handleSubmitList}>
+          <button className="btn btn-success btn-block mt-4" onClick={handleSubmitList}>
             إرسال اللائحة للمصادقة
           </button>
         )}
 
         {data.list_status === 'submitted' && (
-          <div className="alert alert-info">
+          <div className="alert alert-info mt-4">
             ⏳ لائحتك قيد المراجعة من طرف اللجنة.
           </div>
         )}
@@ -258,22 +240,30 @@ export default function InstitutionDashboard({
         <AddAthleteModal
           institutionId={institution.id}
           institutionLevel={data.predefined?.level || null}
+          athletes={athletes}
+          isFreeParticipants={isFreeParticipants}
           onClose={() => setShowAddForm(false)}
           onSuccess={() => { setShowAddForm(false); loadData(); }}
+        />
+      )}
+
+      {dossardAthlete && (
+        <DossardModal
+          athlete={dossardAthlete}
+          onClose={() => setDossardAthlete(null)}
+          onSuccess={() => { setDossardAthlete(null); loadData(); }}
         />
       )}
     </>
   );
 }
 
-function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
-  const [editingDossard, setEditingDossard] = useState(false);
+// ─── Dossard Modal ─────────────────────────────────────────────────────────────
+
+function DossardModal({ athlete, onClose, onSuccess }) {
   const [dossardValue, setDossardValue] = useState(athlete.dossard_number || '');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
-
-  const fullName = `${athlete.first_name} ${athlete.last_name}`;
-  const genderLabel = athlete.gender === 'male' ? 'ذكر' : 'أنثى';
 
   async function saveDossard() {
     setError('');
@@ -302,103 +292,59 @@ function AthleteCard({ athlete, canEdit, canEditDossard, onDelete, onUpdate }) {
       return;
     }
 
-    setEditingDossard(false);
     setSaving(false);
-    onUpdate();
+    onSuccess();
   }
 
   return (
-    <div className="list-item" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
-      <div className="flex justify-between items-center w-full">
-        <div className="list-item-info">
-          <div className="list-item-title">{fullName}</div>
-          <div className="list-item-meta">
-            {getCategoryLabel(athlete.category, athlete.gender)} • {genderLabel} • {new Date(athlete.birth_date).toLocaleDateString('ar')}
-          </div>
-          {athlete.massar_code && (
-            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2, direction: 'ltr', textAlign: 'right' }}>
-              Massar: <strong>{athlete.massar_code}</strong>
-            </div>
-          )}
-          {athlete.school_level && (
-            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
-              {athlete.school_level}
-            </div>
-          )}
-          {athlete.duplicate_flag && (
-            <span className="badge badge-warning" style={{ marginTop: 4 }}>⚠ ازدواجية محتملة</span>
-          )}
+    <div style={{
+      position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)',
+      display: 'flex', alignItems: 'flex-end', zIndex: 100,
+    }}>
+      <div style={{
+        background: 'white', width: '100%',
+        borderRadius: '20px 20px 0 0', padding: 20,
+      }}>
+        <div className="flex justify-between items-center mb-4">
+          <h2 style={{ fontSize: 18, fontWeight: 900 }}>
+            رقم الصدرية — {athlete.first_name} {athlete.last_name}
+          </h2>
+          <button onClick={onClose} style={{ background: 'transparent', fontSize: 24 }}>✕</button>
         </div>
-        {canEdit && (
-          <button onClick={onDelete} style={{ background: 'transparent', color: 'var(--danger)', fontSize: 20, padding: 8 }}>
-            ✕
-          </button>
-        )}
-      </div>
 
-      <div style={{ marginTop: 10, paddingTop: 10, borderTop: '1px dashed var(--border)' }}>
-        {!editingDossard ? (
-          <div className="flex justify-between items-center">
-            <div style={{ fontSize: 13 }}>
-              <span style={{ color: 'var(--text-muted)' }}>رقم الصدرية: </span>
-              {athlete.dossard_number ? (
-                <strong style={{ color: 'var(--accent)', fontSize: 16 }}>
-                  {athlete.dossard_number}
-                </strong>
-              ) : (
-                <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>غير محدد</span>
-              )}
-            </div>
-            {canEditDossard && (
-              <button
-                onClick={() => setEditingDossard(true)}
-                style={{ background: 'transparent', color: 'var(--accent)', fontSize: 13, padding: 4 }}
-              >
-                {athlete.dossard_number ? 'تعديل' : '+ إضافة'}
-              </button>
-            )}
-          </div>
-        ) : (
-          <div>
-            {error && <div className="alert alert-error" style={{ marginBottom: 8, fontSize: 12, padding: 8 }}>{error}</div>}
-            <div className="flex gap-2">
-              <input
-                type="number"
-                className="form-input"
-                value={dossardValue}
-                onChange={(e) => setDossardValue(e.target.value)}
-                placeholder="مثال: 47"
-                dir="ltr"
-                style={{ flex: 1, minHeight: 40 }}
-                min="1"
-                autoFocus
-              />
-              <button
-                className="btn btn-success"
-                onClick={saveDossard}
-                disabled={saving}
-                style={{ minWidth: 60, minHeight: 40, padding: '0 12px', fontSize: 13 }}
-              >
-                {saving ? '...' : 'حفظ'}
-              </button>
-              <button
-                className="btn btn-outline"
-                onClick={() => {
-                  setEditingDossard(false);
-                  setDossardValue(athlete.dossard_number || '');
-                  setError('');
-                }}
-                style={{ minWidth: 50, minHeight: 40, padding: '0 12px', fontSize: 13 }}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+        {error && <div className="alert alert-error mb-3">{error}</div>}
+
+        <div className="flex gap-2">
+          <input
+            type="number"
+            className="form-input"
+            value={dossardValue}
+            onChange={(e) => setDossardValue(e.target.value)}
+            placeholder="مثال: 47"
+            dir="ltr"
+            style={{ flex: 1, minHeight: 44 }}
+            min="1"
+            autoFocus
+          />
+          <button
+            className="btn btn-success"
+            onClick={saveDossard}
+            disabled={saving}
+            style={{ minWidth: 80, minHeight: 44 }}
+          >
+            {saving ? '...' : 'حفظ'}
+          </button>
+        </div>
+
+        <button className="btn btn-outline btn-block mt-3" onClick={onClose}>
+          إلغاء
+        </button>
       </div>
     </div>
   );
 }
+
+// ─── Add Athlete Modal ─────────────────────────────────────────────────────────
 
 const LEVEL_TO_CYCLE = {
   'ابتدائي': 'primary',
@@ -406,7 +352,7 @@ const LEVEL_TO_CYCLE = {
   'تأهيلي': 'high',
 };
 
-function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }) {
+function AddAthleteModal({ institutionId, institutionLevel, athletes, isFreeParticipants, onClose, onSuccess }) {
   const fixedCycle = institutionLevel ? LEVEL_TO_CYCLE[institutionLevel] : null;
   const isFixed = !!fixedCycle;
 
@@ -427,12 +373,22 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
     setSchoolCycle(cycle);
     setSchoolLevel(SCHOOL_CYCLES[cycle].default);
   }
+
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  function getCategory(year, gender) {
+  function getCategoryKey(year) {
     const y = parseInt(year);
-    const isMale = gender === 'male';
+    if (y === 2015 || y === 2016) return 'katakit';
+    if (y === 2013 || y === 2014) return 'baraem';
+    if (y === 2011 || y === 2012) return 'sighar';
+    if (y === 2009 || y === 2010) return 'fityan';
+    return null;
+  }
+
+  function getCategoryDisplay(year, g) {
+    const y = parseInt(year);
+    const isMale = g === 'male';
     if (y === 2015 || y === 2016) return isMale ? 'كتاكيت ذكور' : 'كتاكيت إناث';
     if (y === 2013 || y === 2014) return isMale ? 'براعم' : 'برعمات';
     if (y === 2011 || y === 2012) return isMale ? 'صغار' : 'صغيرات';
@@ -440,17 +396,31 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
     return null;
   }
 
-  const category = birthYear && gender ? getCategory(birthYear, gender) : null;
+  const categoryKey = birthYear ? getCategoryKey(birthYear) : null;
+  const categoryDisplay = birthYear && gender ? getCategoryDisplay(birthYear, gender) : null;
+
+  function countInCategory(catKey, gen) {
+    return (athletes || []).filter(
+      (a) => a.category === catKey && a.gender === gen
+    ).length;
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError('');
 
-    if (!category) {
+    if (!categoryKey) {
       setError('سنة الميلاد خارج الفئات المسموحة');
       return;
     }
 
+    if (!isFreeParticipants) {
+      const currentCount = countInCategory(categoryKey, gender);
+      if (currentCount >= MAX_PER_CATEGORY) {
+        setError(`وصلت هذه الفئة للحد الأقصى (${MAX_PER_CATEGORY} رياضيين)`);
+        return;
+      }
+    }
 
     if (massarCode && !validateMassarCode(massarCode)) {
       setError('رمز Massar غير صحيح — يجب أن يكون حرفاً يليه 9 أرقام (مثال: N123456789)');
@@ -460,7 +430,7 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
     setLoading(true);
     const birthDate = `${birthYear}-${birthMonth.padStart(2, '0')}-${birthDay.padStart(2, '0')}`;
 
-    const { error } = await supabase.from('athletes').insert({
+    const { error: insertError } = await supabase.from('athletes').insert({
       institution_id: institutionId,
       first_name: firstName.trim(),
       last_name: lastName.trim(),
@@ -470,8 +440,8 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
       school_level: schoolLevel || null,
     });
 
-    if (error) {
-      setError('خطأ: ' + error.message);
+    if (insertError) {
+      setError('خطأ: ' + insertError.message);
       setLoading(false);
     } else {
       onSuccess();
@@ -493,8 +463,6 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
         </div>
 
         <form onSubmit={handleSubmit}>
-          {error && <div className="alert alert-error">{error}</div>}
-
           <div className="form-group">
             <label className="form-label">الاسم الشخصي</label>
             <input
@@ -572,9 +540,14 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
               </div>
             )}
 
-            {category && (
+            {categoryDisplay && (
               <div className="alert alert-info mt-2" style={{ marginBottom: 0 }}>
-                الفئة: <strong>{category}</strong>
+                الفئة: <strong>{categoryDisplay}</strong>
+                {!isFreeParticipants && categoryKey && gender && (
+                  <span style={{ marginRight: 8, fontSize: 12, color: 'var(--text-muted)' }}>
+                    ({countInCategory(categoryKey, gender)}/{MAX_PER_CATEGORY} مسجل)
+                  </span>
+                )}
               </div>
             )}
           </div>
@@ -642,6 +615,9 @@ function AddAthleteModal({ institutionId, institutionLevel, onClose, onSuccess }
               </div>
             )}
           </div>
+
+          {/* ← رسالة الخطأ نُقلت هنا، فوق زر الحفظ مباشرة */}
+          {error && <div className="alert alert-error mt-4">{error}</div>}
 
           <button type="submit" className="btn btn-accent btn-block mt-4" disabled={loading}>
             {loading ? 'جاري الإضافة...' : 'إضافة الرياضي'}
