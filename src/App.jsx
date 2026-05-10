@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import CommitteeDashboard from './pages/CommitteeDashboard';
 import CallRoomPanel from './pages/CallRoomPanel';
 import FinishLinePanel from './pages/FinishLinePanel';
+import TimekeeperPanel from './pages/TimekeeperPanel';
 import InstitutionDashboard from './pages/InstitutionDashboard';
 import PublicResults from './pages/PublicResults';
 
@@ -94,7 +95,7 @@ function ProtectedDashboard() {
     );
   }
 
-  // ─── الأدوار التشغيلية ميدانياً (شاشة مخصصة) ──────────────────────
+  // ─── الأدوار التشغيلية ميدانياً (شاشات مخصصة) ──────────────────────
   if (committeeMember?.role === 'call_room') {
     return <CallRoomPanel user={user} onLogout={handleLogout} />;
   }
@@ -109,7 +110,15 @@ function ProtectedDashboard() {
     );
   }
 
-  // TODO: timekeeper
+  if (committeeMember?.role === 'timekeeper') {
+    return (
+      <TimekeeperPanel
+        user={user}
+        committeeMember={committeeMember}
+        onLogout={handleLogout}
+      />
+    );
+  }
 
   if (activeView === 'committee' && isCommittee) {
     return (
