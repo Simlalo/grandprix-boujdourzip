@@ -8,7 +8,6 @@ import {
   markSynced,
   deleteRecord,
   generateClientId,
-  clearRace,
 } from '../lib/offlineQueue';
 
 const CATEGORY_LABELS = {
@@ -46,10 +45,13 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
   const currentRaceRef = useRef(null);
   const tickIntervalRef = useRef(null);
 
+  // الطور مشتق من status في DB
   const phase = !currentRace
     ? 'no_race'
-    : currentRace.started_at
+    : currentRace.status === 'running'
     ? 'running'
+    : currentRace.status === 'finished' || currentRace.status === 'approved'
+    ? 'finished'
     : localStandby
     ? 'standby'
     : 'ready';
@@ -66,7 +68,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
 
       if (cloud) {
         const cloudIds = new Set(cloud.map((c) => c.client_id));
-        // الضغطات المعلّقة (بدون رقم بعد) تظهر في النهاية بترتيب الإدخال المحلي
         const pendingLocal = local
           .filter((l) => !cloudIds.has(l.client_id))
           .sort((a, b) => (a.recorded_at < b.recorded_at ? -1 : 1));
@@ -82,52 +83,70 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     setTimings(local.sort((a, b) => (a.recorded_at < b.recorded_at ? -1 : 1)));
   }
 
+  // اكتشاف "السباق الحالي" = السباق النشط (running)، أو الأقدم في pending به نشاط
   async function detectCurrentRace() {
-    const { data, error: err } = await supabase
-      .from('attendance')
-      .select('race_id, start_line_at, races!inner(id, category, gender, stage, is_completed, started_at)')
-      .not('start_line_at', 'is', null)
-      .eq('races.is_completed', false)
-      .order('start_line_at', { ascending: false })
+    // أولاً: ابحث عن سباق running
+    const { data: running } = await supabase
+      .from('races')
+      .select('*')
+      .eq('status', 'running')
       .limit(1);
 
-    if (err) {
+    if (running && running.length > 0) {
+      const race = running[0];
+      const wasNewRace =
+        !currentRaceRef.current || currentRaceRef.current.id !== race.id;
+      setCurrentRace(race);
+      currentRaceRef.current = race;
+      if (wasNewRace) {
+        await loadTimingsForRace(race.id);
+        setLocalStandby(false);
+      } else {
+        // نفس السباق — حدّث القيم في case status تغيّر
+        setCurrentRace(race);
+      }
       setLoading(false);
       return;
     }
 
-    if (!data || data.length === 0) {
-      if (currentRaceRef.current !== null) {
-        setCurrentRace(null);
-        currentRaceRef.current = null;
-        setTimings([]);
+    // ثانياً: ابحث عن سباق pending به نشاط في start_line
+    const { data: pending } = await supabase
+      .from('attendance')
+      .select('race_id, start_line_at, races!inner(*)')
+      .not('start_line_at', 'is', null)
+      .eq('races.status', 'pending')
+      .order('start_line_at', { ascending: false })
+      .limit(1);
+
+    if (pending && pending.length > 0) {
+      const race = pending[0].races;
+      const wasNewRace =
+        !currentRaceRef.current || currentRaceRef.current.id !== race.id;
+      setCurrentRace(race);
+      currentRaceRef.current = race;
+      if (wasNewRace) {
+        await loadTimingsForRace(race.id);
         setLocalStandby(false);
       }
       setLoading(false);
       return;
     }
 
-    const race = data[0].races;
-    const wasNewRace =
-      !currentRaceRef.current || currentRaceRef.current.id !== race.id;
-
-    setCurrentRace(race);
-    currentRaceRef.current = race;
-
-    if (wasNewRace) {
-      await loadTimingsForRace(race.id);
+    // لا سباق
+    if (currentRaceRef.current !== null) {
+      setCurrentRace(null);
+      currentRaceRef.current = null;
+      setTimings([]);
       setLocalStandby(false);
     }
     setLoading(false);
   }
 
-  // ─── مزامنة المعلقات: تستدعي record_arrival لكل واحدة ──────────────
   async function syncPendingRecords() {
     if (!navigator.onLine) return;
     const pending = await getPending(STORE);
     if (pending.length === 0) return;
 
-    // رتّب المعلّقات بترتيب الإدخال (الأقدم أولاً) لضمان ترتيب صحيح
     pending.sort((a, b) => (a.recorded_at < b.recorded_at ? -1 : 1));
 
     for (const record of pending) {
@@ -178,12 +197,15 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     window.addEventListener('offline', handleOffline);
 
     const syncInterval = setInterval(syncPendingRecords, 10000);
+    // polling احتياطي كل 30 ثانية لو realtime فشل
+    const pollInterval = setInterval(detectCurrentRace, 30000);
 
     return () => {
       supabase.removeChannel(channel);
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
       clearInterval(syncInterval);
+      clearInterval(pollInterval);
       if (tickIntervalRef.current) clearInterval(tickIntervalRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -217,7 +239,7 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     if (!currentRace) return;
     setErrorMsg('');
 
-    const { error: err } = await supabase.rpc('start_race', {
+    const { data, error: err } = await supabase.rpc('start_race', {
       p_race_id: currentRace.id,
     });
 
@@ -227,12 +249,18 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
       return;
     }
 
+    if (data && data[0]) {
+      // إن كان السباق يعمل بالفعل (idempotent)، نقبل القيم المُرجَعة
+      setCurrentRace((prev) =>
+        prev ? { ...prev, status: data[0].status, started_at: data[0].started_at } : prev
+      );
+    }
+
     if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
     setLocalStandby(false);
     await detectCurrentRace();
   }
 
-  // ─── تسجيل وصول — DB يحدد المرتبة ─────────────────────────────────
   async function handleArrival() {
     if (phase !== 'running' || !currentRace?.started_at) return;
 
@@ -241,7 +269,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     const clientId = generateClientId();
     const recordedBy = committeeMember?.id || null;
 
-    // ردود الفعل الفورية
     if (navigator.vibrate) navigator.vibrate(50);
     setButtonFlash(true);
     setTimeout(() => setButtonFlash(false), 150);
@@ -249,14 +276,14 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     const localRecord = {
       client_id: clientId,
       race_id: currentRace.id,
-      position: null, // ← لا نعرف بعد
+      position: null,
       finish_time_ms: finishTimeMs,
       recorded_by: recordedBy,
       recorded_at: new Date().toISOString(),
       synced: 0,
     };
 
-    // 1) خزن محلياً فوراً (احتياط)
+    // 1) احفظ محلياً فوراً (حماية ضد الانقطاع)
     await enqueue(STORE, localRecord);
     setTimings((prev) => [...prev, localRecord]);
 
@@ -272,7 +299,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
       if (!rpcErr && data && data[0]) {
         const assignedPos = data[0].assigned_position;
 
-        // عرض الإشعار العائم بالمرتبة الفعلية
         setLastFlash({
           position: assignedPos,
           time: finishTimeMs,
@@ -282,7 +308,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
           setLastFlash((prev) => (prev && prev.id === clientId ? null : prev));
         }, 1500);
 
-        // علم محلياً أنها تزامنت + احفظ المرتبة
         await markSynced(STORE, clientId);
         setTimings((prev) =>
           prev.map((t) =>
@@ -292,7 +317,7 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
           )
         );
       } else {
-        // فشل — اعرض إشعار بدون مرتبة
+        // فشل — احتفظ محلياً، سيُعاد المحاولة
         setLastFlash({
           position: '?',
           time: finishTimeMs,
@@ -304,7 +329,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
         }, 1500);
       }
     } else {
-      // offline — إشعار بدون مرتبة
       setLastFlash({
         position: '?',
         time: finishTimeMs,
@@ -333,17 +357,24 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
     setShowResetConfirm(false);
     if (!currentRace) return;
 
+    // RPC ذرية: تمسح كل شيء + تعيد status
     const { error: rpcErr } = await supabase.rpc('reset_race', {
       p_race_id: currentRace.id,
     });
+
     if (rpcErr) {
       setErrorMsg('خطأ في إعادة الضبط: ' + rpcErr.message);
       setTimeout(() => setErrorMsg(''), 4000);
       return;
     }
 
-    await supabase.from('race_timings').delete().eq('race_id', currentRace.id);
-    await clearRace(STORE, currentRace.id);
+    // امسح IndexedDB أيضاً
+    try {
+      const { clearRace } = await import('../lib/offlineQueue');
+      await clearRace(STORE, currentRace.id);
+    } catch (e) {
+      console.error(e);
+    }
 
     setTimings([]);
     setLocalStandby(false);
@@ -353,9 +384,22 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
 
   async function handleFinishRace() {
     setShowFinishConfirm(false);
-    if (tickIntervalRef.current) clearInterval(tickIntervalRef.current);
+    if (!currentRace) return;
+
     await syncPendingRecords();
-    detectCurrentRace();
+
+    const { error: rpcErr } = await supabase.rpc('finish_race', {
+      p_race_id: currentRace.id,
+    });
+
+    if (rpcErr) {
+      setErrorMsg('خطأ في إنهاء السباق: ' + rpcErr.message);
+      setTimeout(() => setErrorMsg(''), 4000);
+      return;
+    }
+
+    if (tickIntervalRef.current) clearInterval(tickIntervalRef.current);
+    await detectCurrentRace();
   }
 
   if (loading) {
@@ -469,7 +513,30 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
           </div>
         )}
 
-        {currentRace && (
+        {phase === 'finished' && currentRace && (
+          <div
+            style={{
+              background: 'white',
+              padding: 32,
+              borderRadius: 'var(--radius)',
+              textAlign: 'center',
+              marginTop: 24,
+            }}
+          >
+            <div style={{ fontSize: 48, marginBottom: 16 }}>🏁</div>
+            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>
+              السباق منتهٍ
+            </div>
+            <div style={{ fontSize: 13, color: '#666', marginBottom: 16 }}>
+              {CATEGORY_LABELS[currentRace.category][currentRace.gender]} — {stageLabel}
+            </div>
+            <div style={{ fontSize: 13, color: '#92400e' }}>
+              في انتظار اعتماد اللجنة
+            </div>
+          </div>
+        )}
+
+        {currentRace && phase !== 'finished' && (
           <>
             <div
               style={{
@@ -516,20 +583,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
                 >
                   ⏳ تأهب
                 </button>
-                {timings.length > 0 && (
-                  <div
-                    style={{
-                      marginTop: 20,
-                      padding: 12,
-                      background: '#fffbeb',
-                      borderRadius: 8,
-                      fontSize: 13,
-                      color: '#92400e',
-                    }}
-                  >
-                    ⚠ يوجد {timings.length} توقيت من تسجيل سابق
-                  </div>
-                )}
               </div>
             )}
 
@@ -642,6 +695,24 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
                     {formatTime(elapsed)}
                   </div>
                 </div>
+
+                {errorMsg && (
+                  <div
+                    style={{
+                      background: '#fff3f3',
+                      border: '2px solid #f44',
+                      color: '#c00',
+                      padding: 10,
+                      borderRadius: 8,
+                      marginBottom: 12,
+                      fontSize: 13,
+                      fontWeight: 600,
+                      textAlign: 'center',
+                    }}
+                  >
+                    {errorMsg}
+                  </div>
+                )}
 
                 <button
                   onClick={handleArrival}
@@ -788,7 +859,6 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
         )}
       </div>
 
-      {/* إشعار عائم */}
       {lastFlash && (
         <div
           style={{
@@ -854,7 +924,7 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
               تأكيد إنهاء السباق
             </h2>
             <p style={{ fontSize: 14, color: '#555', marginBottom: 20 }}>
-              تم تسجيل {timings.length} توقيت. هل أنت متأكد من إنهاء السباق؟
+              تم تسجيل {timings.length} توقيت. هل أنت متأكد من إنهاء السباق؟ لن يمكن إضافة تواقيت بعد ذلك.
             </p>
             <div style={{ display: 'flex', gap: 8 }}>
               <button
@@ -906,6 +976,7 @@ export default function TimekeeperPanel({ user, committeeMember, onLogout }) {
             <ul style={{ fontSize: 13, color: '#666', marginBottom: 20, paddingRight: 20 }}>
               <li>وقت بدء السباق</li>
               <li>{timings.length} توقيت مسجل</li>
+              <li>صدريات خط الوصول (إن وُجدت)</li>
             </ul>
             <p style={{ fontSize: 13, color: '#dc2626', fontWeight: 700, marginBottom: 20 }}>
               هذه العملية لا يمكن التراجع عنها.

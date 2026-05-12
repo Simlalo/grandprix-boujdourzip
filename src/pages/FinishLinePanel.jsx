@@ -35,16 +35,13 @@ const ISSUE_COLORS = {
 
 const STORE = 'finish_orders';
 
-// ─── تحليل الأخطاء لصدرية معطاة ─────────────────────────────────────
 async function analyzeIssues(dossard, race, existingOrders) {
   const issues = [];
 
-  // 1) تحقق من التكرار في نفس السباق (محلياً)
   if (existingOrders.some((o) => o.dossard_number === dossard)) {
     issues.push('duplicate_dossard');
   }
 
-  // 2) ابحث عن الرياضي في DB
   const { data: athlete } = await supabase
     .from('athletes')
     .select('id, first_name, last_name, category, gender')
@@ -56,13 +53,11 @@ async function analyzeIssues(dossard, race, existingOrders) {
     return { issues, athlete: null };
   }
 
-  // 3) تحقق من الفئة
   if (athlete.category !== race.category || athlete.gender !== race.gender) {
     issues.push('wrong_category');
     return { issues, athlete };
   }
 
-  // 4) تحقق من attendance
   const { data: att } = await supabase
     .from('attendance')
     .select('call_room_at, start_line_at')
@@ -77,7 +72,7 @@ async function analyzeIssues(dossard, race, existingOrders) {
 }
 
 export default function FinishLinePanel({ user, committeeMember, onLogout }) {
-  const [mode, setMode] = useState('input'); // 'input' | 'verify'
+  const [mode, setMode] = useState('input');
   const [currentRace, setCurrentRace] = useState(null);
   const [orders, setOrders] = useState([]);
   const [dossardInput, setDossardInput] = useState('');
@@ -87,7 +82,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
   const [online, setOnline] = useState(navigator.onLine);
   const [pendingCount, setPendingCount] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [showFinishConfirm, setShowFinishConfirm] = useState(false);
   const [editingId, setEditingId] = useState(null);
   const [editValue, setEditValue] = useState('');
   const inputRef = useRef(null);
@@ -116,36 +110,52 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     setOrders(local.sort((a, b) => a.position - b.position));
   }
 
+  // اكتشاف السباق الحالي = running أولاً، ثم pending به نشاط start_line
   async function detectCurrentRace() {
-    const { data, error: err } = await supabase
-      .from('attendance')
-      .select('race_id, start_line_at, races!inner(id, category, gender, stage, is_completed)')
-      .not('start_line_at', 'is', null)
-      .eq('races.is_completed', false)
-      .order('start_line_at', { ascending: false })
+    // أولاً: ابحث عن running
+    const { data: running } = await supabase
+      .from('races')
+      .select('*')
+      .eq('status', 'running')
       .limit(1);
 
-    if (err) {
-      setError('خطأ في الاتصال: ' + err.message);
-      setLoading(false);
-      return;
-    }
-
-    if (!data || data.length === 0) {
-      if (currentRaceRef.current !== null) {
-        setCurrentRace(null);
-        currentRaceRef.current = null;
-        setOrders([]);
+    if (running && running.length > 0) {
+      const race = running[0];
+      if (!currentRaceRef.current || currentRaceRef.current.id !== race.id) {
+        setCurrentRace(race);
+        currentRaceRef.current = race;
+        await loadOrdersForRace(race.id);
+      } else {
+        setCurrentRace(race);
       }
       setLoading(false);
       return;
     }
 
-    const race = data[0].races;
-    if (!currentRaceRef.current || currentRaceRef.current.id !== race.id) {
-      setCurrentRace(race);
-      currentRaceRef.current = race;
-      await loadOrdersForRace(race.id);
+    // ثانياً: pending به نشاط
+    const { data: pending } = await supabase
+      .from('attendance')
+      .select('race_id, start_line_at, races!inner(*)')
+      .not('start_line_at', 'is', null)
+      .eq('races.status', 'pending')
+      .order('start_line_at', { ascending: false })
+      .limit(1);
+
+    if (pending && pending.length > 0) {
+      const race = pending[0].races;
+      if (!currentRaceRef.current || currentRaceRef.current.id !== race.id) {
+        setCurrentRace(race);
+        currentRaceRef.current = race;
+        await loadOrdersForRace(race.id);
+      }
+      setLoading(false);
+      return;
+    }
+
+    if (currentRaceRef.current !== null) {
+      setCurrentRace(null);
+      currentRaceRef.current = null;
+      setOrders([]);
     }
     setLoading(false);
   }
@@ -203,12 +213,14 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     window.addEventListener('offline', handleOffline);
 
     const syncInterval = setInterval(syncPendingRecords, 10000);
+    const pollInterval = setInterval(detectCurrentRace, 30000);
 
     return () => {
       supabase.removeChannel(channel);
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
       clearInterval(syncInterval);
+      clearInterval(pollInterval);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -217,13 +229,21 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     setPendingCount(orders.filter((o) => !o.synced).length);
   }, [orders]);
 
-  // ─── إضافة صدرية (وضع الإدخال) ───────────────────────────────────────
+  const isRaceClosed =
+    currentRace &&
+    (currentRace.status === 'finished' || currentRace.status === 'approved');
+
   async function handleAddDossard() {
     setError('');
     setSuccess('');
 
     if (!currentRace) {
       setError('لا يوجد سباق نشط حالياً');
+      return;
+    }
+
+    if (isRaceClosed) {
+      setError('السباق منتهٍ — لا يمكن إضافة صدريات جديدة');
       return;
     }
 
@@ -234,8 +254,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     }
 
     setBusy(true);
-
-    // حلّل المشاكل (لكن احفظ مهما كان)
     const { issues } = await analyzeIssues(dossard, currentRace, orders);
 
     const newPosition = orders.length + 1;
@@ -290,7 +308,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     }
   }
 
-  // ─── حذف آخر إدخال (وضع الإدخال فقط) ─────────────────────────────────
   async function handleUndoLast() {
     if (orders.length === 0) return;
     if (!confirm('حذف آخر إدخال؟')) return;
@@ -305,7 +322,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     setTimeout(() => setSuccess(''), 1500);
   }
 
-  // ─── تعديل صدرية (وضع التحقق) ────────────────────────────────────────
   function startEdit(order) {
     setEditingId(order.client_id);
     setEditValue(String(order.dossard_number));
@@ -325,12 +341,9 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     }
 
     setBusy(true);
-
-    // أعد تحليل المشاكل للصدرية الجديدة
     const otherOrders = orders.filter((o) => o.client_id !== order.client_id);
     const { issues } = await analyzeIssues(newDossard, currentRace, otherOrders);
 
-    // حدّث في DB
     const { error: updateErr } = await supabase
       .from('race_finish_orders')
       .update({
@@ -365,13 +378,11 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     setEditValue('');
   }
 
-  // ─── حذف صف (وضع التحقق) — يعيد الترقيم آلياً ────────────────────────
   async function handleDeleteRow(order) {
     if (!confirm(`حذف المركز ${order.position} (#${order.dossard_number})؟ ستُعاد ترقيم الباقي.`)) return;
 
     setBusy(true);
 
-    // 1) احذف الصف
     const { error: delErr } = await supabase
       .from('race_finish_orders')
       .delete()
@@ -384,7 +395,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
     }
     await deleteRecord(STORE, order.client_id);
 
-    // 2) أعد ترقيم الصفوف ذات position > order.position
     const toRenumber = orders.filter((o) => o.position > order.position);
     for (const o of toRenumber) {
       await supabase
@@ -397,24 +407,9 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
         .eq('client_id', o.client_id);
     }
 
-    // 3) أعد التحميل
     await loadOrdersForRace(currentRace.id);
     setSuccess('✓ تم الحذف وإعادة الترقيم');
     setTimeout(() => setSuccess(''), 2000);
-    setBusy(false);
-  }
-
-  // ─── إنهاء السباق ───────────────────────────────────────────────────
-  async function handleFinishRace() {
-    if (!currentRace) return;
-    setShowFinishConfirm(false);
-    setBusy(true);
-    await syncPendingRecords();
-    setSuccess('✓ تم إنهاء السباق — في انتظار اعتماد اللجنة');
-    setTimeout(() => {
-      setSuccess('');
-      detectCurrentRace();
-    }, 3000);
     setBusy(false);
   }
 
@@ -424,7 +419,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', paddingBottom: 40 }}>
-      {/* شريط حالة المزامنة */}
       <div
         style={{
           background: online ? '#16a34a' : '#dc2626',
@@ -465,8 +459,7 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
         <button onClick={onLogout} className="logout-btn">خروج</button>
       </header>
 
-      {/* تبويبات الوضعين */}
-      {currentRace && (
+      {currentRace && !isRaceClosed && (
         <div
           style={{
             display: 'flex',
@@ -537,7 +530,7 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
           <>
             <div
               style={{
-                background: 'var(--primary)',
+                background: isRaceClosed ? '#6b7280' : 'var(--primary)',
                 color: 'white',
                 padding: 16,
                 borderRadius: 'var(--radius)',
@@ -559,10 +552,14 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                   </span>
                 )}
               </div>
+              {isRaceClosed && (
+                <div style={{ fontSize: 12, marginTop: 8, fontWeight: 700 }}>
+                  🏁 السباق منتهٍ — في انتظار اعتماد اللجنة
+                </div>
+              )}
             </div>
 
-            {/* وضع الإدخال — حقل الإدخال */}
-            {mode === 'input' && (
+            {!isRaceClosed && mode === 'input' && (
               <div
                 style={{
                   background: 'white',
@@ -658,8 +655,7 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
               </div>
             )}
 
-            {/* وضع التحقق — رسائل */}
-            {mode === 'verify' && (
+            {!isRaceClosed && mode === 'verify' && (
               <>
                 {error && (
                   <div
@@ -712,7 +708,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
               </>
             )}
 
-            {/* الترتيب */}
             <div style={{ marginBottom: 16 }}>
               <div
                 style={{
@@ -725,7 +720,7 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                 <h3 style={{ fontSize: 16, fontWeight: 800, margin: 0 }}>
                   الترتيب ({orders.length})
                 </h3>
-                {mode === 'input' && orders.length > 0 && (
+                {!isRaceClosed && mode === 'input' && orders.length > 0 && (
                   <button
                     onClick={handleUndoLast}
                     style={{
@@ -764,6 +759,7 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                     const orderIssues = o.issues || [];
                     const hasIssues = orderIssues.length > 0;
                     const isEditing = editingId === o.client_id;
+                    const canEdit = !isRaceClosed && mode === 'verify';
 
                     return (
                       <div
@@ -861,24 +857,24 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                           ) : (
                             <>
                               <div
-                                onClick={mode === 'verify' ? () => startEdit(o) : undefined}
+                                onClick={canEdit ? () => startEdit(o) : undefined}
                                 style={{
                                   flex: 1,
                                   fontSize: 18,
                                   fontWeight: 800,
                                   direction: 'ltr',
-                                  cursor: mode === 'verify' ? 'pointer' : 'default',
+                                  cursor: canEdit ? 'pointer' : 'default',
                                   textAlign: 'left',
-                                  padding: mode === 'verify' ? '4px 8px' : 0,
-                                  borderRadius: mode === 'verify' ? 6 : 0,
-                                  background: mode === 'verify' ? '#f3f4f6' : 'transparent',
+                                  padding: canEdit ? '4px 8px' : 0,
+                                  borderRadius: canEdit ? 6 : 0,
+                                  background: canEdit ? '#f3f4f6' : 'transparent',
                                 }}
-                                title={mode === 'verify' ? 'انقر للتعديل' : ''}
+                                title={canEdit ? 'انقر للتعديل' : ''}
                               >
                                 #{o.dossard_number}
                               </div>
 
-                              {mode === 'verify' && (
+                              {canEdit && (
                                 <button
                                   onClick={() => handleDeleteRow(o)}
                                   disabled={busy}
@@ -910,7 +906,6 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                           )}
                         </div>
 
-                        {/* علامات المشاكل */}
                         {hasIssues && !isEditing && (
                           <div
                             style={{
@@ -945,80 +940,9 @@ export default function FinishLinePanel({ user, committeeMember, onLogout }) {
                 </div>
               )}
             </div>
-
-            {/* زر إنهاء السباق — متاح في الوضعين */}
-            {orders.length > 0 && (
-              <button
-                onClick={() => setShowFinishConfirm(true)}
-                className="btn btn-block"
-                style={{
-                  background: '#dc2626',
-                  color: 'white',
-                  minHeight: 56,
-                  fontSize: 16,
-                  fontWeight: 900,
-                  marginTop: 16,
-                }}
-              >
-                🏁 إنهاء السباق
-              </button>
-            )}
           </>
         )}
       </div>
-
-      {showFinishConfirm && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.5)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 100,
-            padding: 16,
-          }}
-        >
-          <div
-            style={{
-              background: 'white',
-              padding: 24,
-              borderRadius: 'var(--radius)',
-              maxWidth: 400,
-              width: '100%',
-            }}
-          >
-            <h2 style={{ fontSize: 18, fontWeight: 900, marginTop: 0 }}>
-              تأكيد إنهاء السباق
-            </h2>
-            <p style={{ fontSize: 14, color: '#555', marginBottom: 8 }}>
-              هل أنت متأكد من أن جميع الرياضيين قد وصلوا؟
-            </p>
-            <p style={{ fontSize: 13, color: '#888', marginBottom: 20 }}>
-              سيتم تسجيل {orders.length} وصول. الرياضيون الذين عبروا خط الانطلاق ولم يصلوا
-              سيُصنّفون &quot;لم يكمل&quot; تلقائياً.
-            </p>
-
-            <div style={{ display: 'flex', gap: 8 }}>
-              <button
-                onClick={() => setShowFinishConfirm(false)}
-                className="btn btn-outline"
-                style={{ flex: 1 }}
-              >
-                تراجع
-              </button>
-              <button
-                onClick={handleFinishRace}
-                className="btn"
-                style={{ flex: 2, background: '#dc2626', color: 'white' }}
-              >
-                ✓ نعم، إنهاء
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
