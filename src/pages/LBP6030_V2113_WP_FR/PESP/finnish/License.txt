@@ -1,0 +1,57 @@
+CANON-OHJELMAN KÄYTTÖOIKEUSSOPIMUS
+
+TÄRKEÄÄ
+
+Tämä on sinun ja Canon Incorporatedin (jäljempänä Canon) välinen laillinen sopimus (jäljempänä Sopimus) tiettyjen Canonin kopiokoneiden, tulostimien tai monitoimilaitteiden (jäljempänä yhteisesti Tuotteet) ohjelmasovellusten ja niihin liittyvien kirjallisen ja sähköisen aineiston (jäljempänä yhteisesti OHJELMA) käytöstä.
+
+LUE TÄMÄ SOPIMUS HUOLELLISESTI NIIN, ETTÄ YMMÄRRÄT KAIKKI SEN EHDOT JA RAJOITUKSET ENNEN OHJELMAN ASENTAMISTA.  HYVÄKSYMISTÄ OSOITTAVAN PAINIKKEEN NAPSAUTTAMINEN TAI OHJELMAN ASENTAMINEN ON OSOITUS NÄIDEN EHTOJEN HYVÄKSYMISESTÄ.  ÄLÄ KÄYTÄ OHJELMAA, JOS ET HYVÄKSY NÄITÄ EHTOJA.
+
+
+1.  LISENSSIN MYÖNTÄMINEN
+Canon myöntää sinulle henkilökohtaisen, rajoitetun ja jaetun käyttöoikeuden (käytöllä tarkoitetaan tallentamista, lataamista, asentamista, käyttämistä, suoritusta ja esittelemistä) OHJELMAAN. OHJELMAA saa käyttää vain Tuotteiden käytön yhteydessä tietokoneissa, jotka on yhdistetty Tuotteeseen suoraan tai verkon kautta (jäljempänä Määrätty tietokone). 
+Muilla Määrätyn tietokoneen käyttäjillä on oikeus käyttää OHJELMAA sillä edellytyksellä, että varmistat, että muut käyttäjät hyväksyvät tämän Sopimuksen ehdot ja noudattavat niitä.
+
+OHJELMASTA voidaan ottaa yksi varmuuskopio.
+
+2.  RAJOITUKSET
+Et saa käyttää OHJELMAA muuten kuin näiden ehtojen mukaan. Sinulla ole oikeutta luovuttaa, jälleenlisensoida, vuokrata, lainata, välittää tai siirtää Ohjelmaa kolmannelle osapuolelle.  Et saa muuttaa, kääntää tai muuntaa OHJELMAA jollekin toiselle ohjelmointikielelle etkä muokata, purkaa tai muulla tavoin muuttaa OHJELMAA tai antaa kolmansien osapuolten tehdä tällaisia toimia.
+
+3.  TEKIJÄNOIKEUDET
+OHJELMASSA ja sen kopioissa olevaa Canonin ja sen lisensoijien tekijänoikeushuomautusta ei saa muuttaa, irrottaa tai poistaa.
+
+4.  OMISTUSOIKEUS
+OHJELMAN kaikki omistusoikeudet ja immateriaalioikeudet kuuluvat Canonille ja sen lisensoijille.  Mikäli tässä Sopimuksessa ei toisin mainita, Canon ei myönnä sinulle mitään käyttöoikeuksia Canonin tai sen lisensoijien immateriaalioikeuksiin.
+
+5.  VIENTIVALVONTA
+Sitoudut noudattamaan kaikkia sen maan vientilakeja ja -säädöksiä, jossa käytät OHJELMAA. OHJELMAA ei saa viedä kyseisten lakien, rajoitusten ja säädösten vastaisesti ilman tarvittavia viranomaislupia.
+
+6.  TUKI JA PÄIVITYKSET
+CANON, CANONIN TYTÄRYHTIÖT, NIIDEN JÄLLEENMYYJÄT, KAUPPIAAT JA CANONIN LISENSOIJAT EIVÄT OLE VASTUUSSA OHJELMAN HUOLLOSTA TAI OHJELMAN KÄYTÖN NEUVOMISESTA.  TÄSSÄ KUVATTUA OHJELMAA VARTEN EI TARJOTA MITÄÄN PÄIVITYKSIÄ, OHJELMAKORJAUKSIA TAI TUKEA.
+
+7.  TAKUUTA JA VELVOLLISUUKSIA KOSKEVA VASTUUVAPAUSLAUSEKE
+[EI TAKUUTA] OHJELMA TOIMITETAAN SELLAISENAAN ILMAN MITÄÄN SUORIA TAI EPÄSUORIA TAKUITA, MUKAAN LUKIEN MUUN MUASSA TAKUUT KAUPALLISESTA HYÖDYNNETTÄVYYDESTÄ JA SOPIVUUDESTA TIETTYYN TARKOITUKSEEN.  KÄYTTÄJÄ ON ITSE VASTUUSSA OHJELMAN LAATUUN JA SUORITUSKYKYYN LIITTYVISTÄ RISKEISTÄ.  KÄYTTÄJÄ VASTAA ITSE KAIKISTA VIRHEELLISEN OHJELMAN HUOLTOON JA KORJAAMISEEN LIITTYVISTÄ KULUISTA.  JOILLAKIN LAINSÄÄDÄNTÖALUEILLA EI SALLITA EPÄSUORIEN TAKUIDEN RAJOITUKSIA, JOTEN NÄMÄ RAJOITUKSET EIVÄT KOSKE KAIKKIA KÄYTTÄJIÄ.  
+KÄYTTÄJÄLLÄ SAATTAA OLLA NÄIDEN TAKUUOIKEUKSIEN LISÄKSI MYÖS LAINSÄÄDÄNNÖSTÄ JOHTUVIA OIKEUKSIA.
+
+CANON, CANONIN TYTÄRYHTIÖT, NIIDEN JÄLLEENMYYJÄT JA CANONIN LISENSOIJAT EIVÄT ANNA TAKUITA OHJELMAN TOIMINTOJEN SOPIVUUDESTA TIETTYYN TARKOITUKSEEN, OHJELMAN TOIMINNAN KESKEYTYKSETTÖMYYDESTÄ TAI OHJELMAN VIRHEETTÖMYYDESTÄ.
+
+[VASTUUNRAJOITUKSET] CANON, CANONIN TYTÄRYHTIÖT, NIIDEN JÄLLEENMYYJÄT JA CANONIN LISENSOIJAT EIVÄT OLE VASTUUSSA MISTÄÄN OHJELMASTA, SEN KÄYTÖSTÄ TAI SEN KÄYTÖN ESTYMISESTÄ JOHTUVISTA VAHINGOISTA (MUKAAN LUKIEN MUUN MUASSA LIIKETOIMINNAN KESKEYTYKSESTÄ, LIIKETOIMINNAN TIETOJEN TAI VOITTOJEN MENETYKSESTÄ, VAHINGONKORVAUSVELVOLLISUUDESTA TAI MUISTA SUORISTA TAI EPÄSUORISTA VAHINGOISTA AIHEUTUNEET VAHINGOT), VAIKKA TÄLLAISTEN VAHINKOJEN SYNTYMISEN MAHDOLLISUUDESTA OLISI ILMOITETTU ETUKÄTEEN.  JOILLAKIN LAINSÄÄDÄNTÖALUEILLA EI SALLITA SUORIEN JA EPÄSUORIEN VAHINKOJEN VASTUUNRAJOITUKSIA TAI MYYJÄN HUOLIMATTOMUUDESTA AIHEUTUNEIDEN HENKILÖVAHINKOJEN VASTUUNRAJOITUKSIA, JOTEN NÄMÄ RAJOITUKSET EIVÄT KOSKE KAIKKIA KÄYTTÄJIÄ.
+
+[VASTUUNVAPAUTUS] VAPAUTAT TÄTEN CANONIN, CANONIN TYTÄRYHTIÖT, NIIDEN JÄLLEENMYYJÄT JA CANONIN LISENSOIJAT KAIKISTA OHJELMAAN JA SEN KÄYTTÖÖN LIITTYVISTÄ VASTUISTA LAINSÄÄDÄNNÖN SALLIMASSA MÄÄRIN.
+
+8.  SOPIMUSKAUSI
+Tämä sopimus on voimassa siitä hetkestä, kun hyväksyt tämän Sopimuksen ehdot napsauttamalla hyväksymisen osoittavaa painiketta tai asennat OHJELMAN ensimmäisen kerran. Sopimuskausi päättyy, kun Sopimus irtisanotaan.  Sopimus voidaan irtisanoa hävittämällä OHJELMA ja kaikki sen kopiot. 
+Sopimus purkautuu automaattisesti, jos et noudata sen ehtoja.  Sopimuksen purkautuessa Canonilla on oikeus valvoa laillisia oikeuksiaan ja sinun on hävitettävä välittömästi OHJELMA ja kaikki sen kopiot.  Tämän Sopimuksen osiot 4 ja 7-11 säilyvät voimassa Sopimuksen irtisanomisen jälkeen.
+
+9.  YHDYSVALTOJEN VALTIONHALLINNON KÄYTTÖÄ KOSKEVA HUOMAUTUS
+"Yhdysvaltain valtionhallinnon loppukäyttäjällä" tarkoitetaan mitä tahansa Yhdysvaltain valtionhallinnon virastoa tai tahoa. Jos olet Yhdysvaltain valtionhallinnon loppukäyttäjä, sovelletaan seuraavia ehtoja: OHJELMA on säädöksen 48 C.F.R. 2.101 (lokakuu 1995) mukainen kaupallinen tavara, joka koostuu 48 C.F.R. 12.212 (syyskuu 1995) mukaisesta kaupallisesta tietokoneohjelmasta ja kaupallisen tietokoneohjelman asiakirjoista.  Säädösten 48 C.F.R. 12.212 ja 48 C.F.R. 227.7202-1 - 227.7202-4 (kesäkuu 1995) mukaisesti kaikki Yhdysvaltain valtionhallinnossa työskentelevät käyttäjät hankkivat OHJELMAN vain tässä mainituin oikeuksin.  Valmistaja on Canon Incorporated/30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10.  VOIMASSAOLON LAKKAAMINEN
+Jos oikeus tai tuomiovalta toteaa tämän Sopimuksen jonkin osan laittomaksi, kyseisen osan ehdot ovat mitättömät kyseisen oikeuden tai tuomiovallan tuomioalueella. Muiden osien ehdot pysyvät voimassa.
+
+11.  EHTOJEN HYVÄKSYMINEN
+NAPSAUTTAMALLA HYVÄKSYMISEN OSOITTAVAA PAINIKETTA TAI ASENTAMALLA OHJELMAN MYÖNNÄT, ETTÄ OLET LUKENUT TÄMÄN SOPIMUKSEN, YMMÄRTÄNYT SEN JA ETTÄ SUOSTUT NOUDATTAMAAN SIINÄ MAINITTUJA EHTOJA.  MYÖNNÄT MYÖS, ETTÄ TÄMÄ SOPIMUS ON AINOA SINUN JA CANONIN VÄLINEN SOPIMUS TÄMÄN SOPIMUKSEN AIHEPIIRISTÄ JA ETTÄ TÄMÄ SOPIMUS KORVAA KAIKKI AIEMMAT EHDOTUKSET JA SUULLISET TAI KIRJALLISET SOPIMUKSET, JA KAIKEN MUUN SINUN JA CANONIN VÄLISEN YHTEYDENPIDON TÄMÄN SOPIMUKSEN AIHEPIIRISTÄ.  MIKÄÄN TÄHÄN SOPIMUKSEEN LISÄTTY LIITE EI OLE LAINVOIMAINEN, ELLEI SITÄ OLE ALLEKIRJOITTANUT VALTUUTETTU CANONIN EDUSTAJA.
+
+
+Jos haluat lisätietoja tästä Sopimuksesta tai muista Canoniin tai sen tuotteisiin liittyvistä seikoista, ota yhteys paikalliseen Canon-jälleenmyyjään tai -jakelijaan, jolta hankit Tuotteen.
+
+No. 024410

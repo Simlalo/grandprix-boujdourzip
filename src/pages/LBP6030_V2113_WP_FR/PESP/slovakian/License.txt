@@ -1,0 +1,59 @@
+LICENÈNÁ ZMLUVA K SOFTVÉRU CANON
+
+DÔLEITÉ
+
+Toto je právna zmluva („zmluva“) medzi vami a spoloènosou Canon Inc. („Canon“), ktorá upravuje pouívanie softvérovıch programov spoloènosti Canon, vrátane príslušnıch návodov alebo inıch tlaèenıch materiálov k tımto softvérovım programom („SOFTVÉR“), ktoré sú urèené pre niektoré kopírovacie zariadenia, tlaèiarne a multifunkèné periférne zariadenia („produkty“) spoloènosti Canon.
+
+PRED NAINŠTALOVANÍM SOFTVÉRU JE NEVYHNUTNÉ, ABY STE SI STAROSTLIVO PREÈÍTALI VŠETKY PRÁVA A OBMEDZENIA POPISOVANÉ V TEJTO ZMLUVE A POROZUMELI IM.  KLIKNUTÍM NA NIŠIE UVEDENÉ TLAÈIDLO, KTORİM VYJADRUJETE SVOJ SÚHLAS, ALEBO INŠTALÁCIOU TOHTO SOFTVÉRU SÚHLASÍTE, E BUDETE VIAZANÍ ZMLUVNİMI PODMIENKAMI UVÁDZANİMI V TEJTO ZMLUVE.  AK NESÚHLASÍTE S NIŠIE UVEDENİMI ZMLUVNİMI PODMIENKAMI, SOFTVÉR NEPOUÍVAJTE.  
+
+
+1. UDELENIE LICENCIE
+Spoloènos Canon vám ude¾uje osobnú, obmedzenú a nevıhradnú licenciu na pouívanie (termín „pouívanie“ tie zahàòa ukladanie, zavádzanie, inštaláciu, sprístupnenie, spúšanie alebo zobrazenie) SOFTVÉRU vıhradne s produktmi a iba na poèítaèoch pripojenıch k produktom priamo alebo prostredníctvom siete („vyhradenı poèítaè“). 
+Máte oprávnenie umoni pouíva SOFTVÉR aj ïalším pouívate¾om inıch poèítaèov pripojenıch k vášmu vyhradenému poèítaèu, ale len za predpokladu, e zaistíte, e všetci takíto pouívatelia sa budú riadi podmienkami tejto zmluvy, a e sa na nich budú vzahova obmedzenia a záväzky, ktoré ste sa tımto zaviazali dodriava.
+
+Máte oprávnenie vytvori jednu kópiu SOFTVÉRU vıhradne na záloné úèely.
+
+2. OBMEDZENIA
+SOFTVÉR nemáte oprávnenie pouíva inak, ne ako je vıslovne uvedené a povolené v tejto zmluve. Taktie nesmiete odstupova, poskytova na základe sublicencie, predáva, prenajíma, poièiava za poplatok, poièiava alebo prenecha èi previes SOFTVÉR akejko¾vek tretej osobe.  Nemáte oprávnenie SOFTVÉR pozmeòova, preklada alebo prevádza do iného programovacieho jazyka, upravova, rozklada, dekompilova alebo inım spôsobom podrobova spätnému ininierstvu, a to isté nesmiete umoni ani tretím osobám.
+
+3. UPOZORNENIE K AUTORSKİM PRÁVAM
+Nemáte oprávnenie upravova, odobera alebo odstraòova upozornenie o autorskıch právach spoloènosti Canon a príslušnıch poskytovate¾ov licencií, ktoré sú obsiahnuté v SOFTVÉRI a v jeho prípadnıch kópiách.
+
+4. VLASTNÍCTVO
+Spoloènos Canon a jej poskytovatelia licencií majú vo všetkıch oh¾adoch práva na duševné vlastníctvo, vlastnícke práva a právne nároky súvisiace so SOFTVÉROM.  Okrem podmienok explicitne vyjadrenıch v tomto dokumente vám tımto spoloènos Canon neposkytuje ani neude¾uje iadnu licenciu alebo právo, èi u vyslovené alebo predpokladané, na iadne duševné vlastníctvo spoloènosti Canon a jej poskytovate¾ov licencií.
+
+5. KONTROLA VİVOZU
+Súhlasíte, e budete dodriava všetky vıvozné zákony, obmedzenia a predpisy danej krajiny a e SOFTVÉR nevyveziete alebo opätovne nevyveziete, èi u priamo alebo nepriamo, ak by ste tım porušili takéto zákony, obmedzenia a predpisy, alebo ak by ste tak uèinili bez všetkıch potrebnıch povolení.
+
+6. PODPORA A AKTUALIZÁCIA
+SPOLOÈNOS CANON, JEJ DCÉRSKE ALEBO PRIDRUENÉ SPOLOÈNOSTI A ICH DISTRIBÚTORI, PREDAJCOVIA ALEBO POSKYTOVATELIA LICENCIÍ SPOLOÈNOSTI CANON NEZODPOVEDAJÚ ZA UDROVANIE SOFTVÉRU ALEBO ZA POSKYTOVANIE POMOCI PRI JEHO POUÍVANÍ, ANI ZA POSKYTOVANIE AKİCHKO¼VEK AKTUALIZÁCIÍ, OPRÁV ALEBO PODPORU PRE NIŠIE UVEDENİ SOFTVÉR.
+
+7. ODMIETNUTIE ZÁRUK A ZODPOVEDNOSTI
+[VYLÚÈENIE ZÁRUKY] SOFTVÉR SA POSKYTUJE „TAK, AKO JE“, BEZ AKİCHKO¼VEK ZÁRUK, ÈI U VYSLOVENİCH ALEBO PREDPOKLADANİCH, A OKREM INÉHO VRÁTANE PREDPOKLADANİCH ZÁRUK OBCHODOVATE¼NOSTI A VHODNOSTI NA PRÍSLUŠNİ ÚÈEL.  VŠETKY RIZIKÁ, KTORÉ SA TİKAJÚ KVALITY A VİKONU SOFTVÉRU, NESIETE VY.  AK SA PREUKÁE, E JE SOFTVÉR CHYBNİ, ZNÁŠATE VŠETKY NÁKLADY NA NEVYHNUTNİ SERVIS, OPRAVU ALEBO ÚPRAVU.  NIEKTORÉ KRAJINY ALEBO PRÁVNE JURISDIKCIE NEPOVO¼UJÚ VYLÚÈENIE PREDPOKLADANİCH ZÁRUK, PRETO SA NA VÁS VYŠŠIE UVEDENÉ VYLÚÈENIE ZÁRUKY NEMUSÍ VZAHOVA.  
+TÁTO ZÁRUKA VÁM POSKYTUJE ŠPECIFICKÉ ZÁKONNÉ PRÁVA, ALE MÔU VÁM TIE PRISLÚCHA ÏALŠIE PRÁVA, KTORÉ SÚ V KADEJ KRAJINE ALEBO JURISDIKCII INÉ.
+
+SPOLOÈNOS CANON, JEJ DCÉRSKE ALEBO PRIDRUENÉ SPOLOÈNOSTI A ICH DISTRIBÚTORI, PREDAJCOVIA ALEBO POSKYTOVATELIA LICENCIÍ SPOLOÈNOSTI CANON NEZARUÈUJÚ, E FUNKCIE, KTORÉ SÚ INTEGROVANÉ V SOFTVÉRI, USPOKOJA VAŠE POIADAVKY, ANI NEZARUÈUJÚ NEPRERUŠOVANÚ ALEBO BEZPORUCHOVÚ PREVÁDZKU SOFTVÉRU.
+
+[VYLÚÈENIE ZODPOVEDNOSTI ZA ŠKODY] SPOLOÈNOS CANON, JEJ DCÉRSKE ALEBO PRIDRUENÉ SPOLOÈNOSTI A ICH DISTRIBÚTORI, PREDAJCOVIA ALEBO POSKYTOVATELIA LICENCIÍ NENESÚ ZODPOVEDNOS ZA ŠKODY AKÉHOKO¼VEK DRUHU (OKREM INÉHO VRÁTANE UŠLÉHO ZISKU, STRATY OBCHODNİCH INFORMÁCIÍ, PRERUŠENIA PODNIKANIA ALEBO INİCH KOMPENZAÈNİCH, NÁHODNİCH ALEBO NÁSLEDNİCH ŠKÔD) SPÔSOBENÉ SOFTVÉROM, JEHO POUÍVANÍM ALEBO NEMONOSOU HO POUÍVA, AJ AK BY SPOLOÈNOS CANON, JEJ DCÉRSKE ALEBO PRIDRUENÉ SPOLOÈNOSTI, ICH DISTRIBÚTORI, PREDAJCOVIA ALEBO POSKYTOVATELIA LICENCIÍ SPOLOÈNOSTI CANON BOLI UPOZORNENÍ NA MONOS TAKİCHTO ŠKÔD.  NIEKTORÉ KRAJINY ALEBO JURISDIKCIE NEDOVO¼UJÚ OBMEDZENIE ALEBO VYLÚÈENIE ZODPOVEDNOSTI ZA NÁHODNÉ ÈI NÁSLEDNÉ ŠKODY ALEBO ZA ZRANENIE ÈI ÚMRTIE OSÔB SPÔSOBENÉ NEDBANLIVOSOU NA STRANE PREDÁVAJÚCEHO, A PRETO SA NA VÁS VYŠŠIE UVEDENÉ OBMEDZENIE ALEBO VYLÚÈENIE NEMUSÍ VZAHOVA.
+
+[ZBAVENIE ZODPOVEDNOSTI] V PLNOM ROZSAHU POVOLENOM PRÍSLUŠNİM ZÁKONOM TİMTO ZBAVUJETE SPOLOÈNOS CANON, JEJ DCÉRSKE A PRIDRUENÉ SPOLOÈNOSTI, ICH DISTRIBÚTOROV, PREDAJCOV A POSKYTOVATE¼OV LICENCIÍ SPOLOÈNOSTI CANON ÚPLNEJ ZODPOVEDNOSTI VYPLİVAJÚCEJ ZO VŠETKİCH NÁROKOV, KTORÉ SA TİKAJÚ SOFTVÉRU ÈI JEHO POUÍVANIA, ALEBO S NIMI SÚVISIA.
+
+8. TRVANIE ZMLUVY
+Táto zmluva nadobúda úèinnos okamite po jej prijatí z vašej strany, a to buï potvrdením vášho súhlasu kliknutím na nišie uvedené tlaèidlo alebo nainštalovaním SOFTVÉRU, a zostáva v platnosti a do jej ukonèenia.  Túto zmluvu máte oprávnenie ukonèi znièením SOFTVÉRU vrátane všetkıch jeho kópií. 
+Táto zmluva sa tie ukonèí, ak nedodríte akúko¾vek zo zmluvnıch podmienok.  Po ukonèení tejto zmluvy musíte neodkladne znièi SOFTVÉR a všetky jeho kópie, prièom spoloènos Canon má navyše oprávnenie uplatni si príslušné zákonné práva.  Bez oh¾adu na vyššie uvedené zostávajú èlánky 4 a 7 a 11 v platnosti aj po ukonèení tejto zmluvy.
+
+9. U.S. GOVERNMENT RESTRICTED RIGHTS NOTICE
+„Koncovı pouívate¾ vlády USA“ oznaèuje akúko¾vek agentúru alebo subjekt vlády USA.  Ak ste koncovı pouívate¾ vlády USA, platí nasledujúce: The SOFTWARE is a "commercial item," as that term is defined at 48 C.F.R. 2.101 (October 1995), consisting of "commercial computer software" and "commercial computer software documentation," as such terms are used in 48 C.F.R. 12.212 (September 1995).  Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4 (June 1995), all U.S. Government End Users shall acquire the SOFTWARE with only those rights set forth herein.  The manufacturer is Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10. ODDELITE¼NOS
+Ak bude akáko¾vek èas tejto zmluvy akımko¾vek miestne príslušnım súdom alebo tribunálom prehlásená alebo oznaèená za neplatnú, stane sa vo vzahu k jurisdikcii príslušného súdu alebo tribunálu neplatnou a neúèinnou, prièom všetky ostatné podmienky tejto zmluvy zostávajú v platnosti a úèinnosti v plnom rozsahu.
+
+11. SÚHLAS
+KLIKNUTÍM NA NIŠIE UVEDENÉ TLAÈIDLO, KTORİM VYJADRUJETE SVOJ SÚHLAS, ALEBO INŠTALÁCIOU TOHTO SOFTVÉRU PREHLASUJETE, E STE SI TÚTO ZMLUVU PREÈÍTALI, POROZUMELI JEJ A E SÚHLASÍTE, E BUDETE VIAZANÍ JEJ ZMLUVNİMI PODMIENKAMI.  TAKISTO SÚHLASÍTE, E TÁTO ZMLUVA PREDSTAVUJE ÚPLNÚ A JEDINÚ ZMLUVU MEDZI VAMI A SPOLOÈNOSOU CANON TİKAJÚCU SA JEJ PREDMETU A NAHRÁDZA VŠETKY NÁVRHY ALEBO PREDCHÁDZAJÚCE ZMLUVY, ÈI U ÚSTNE ALEBO PÍSOMNÉ, AKO AJ AKÚKO¼VEK INÚ KOMUNIKÁCIU MEDZI VAMI A SPOLOÈNOSOU CANON, KTORÉ SA TİKAJÚ JEJ PREDMETU.  IADNY DODATOK K TEJTO ZMLUVE NEBUDE PLATNİ, POKIA¼ NEBUDE PODPÍSANİ RIADNE SPLNOMOCNENİM ZÁSTUPCOM SPOLOÈNOSTI CANON.
+
+
+Ak máte akéko¾vek otázky k tejto zmluve, alebo ak chcete z iného dôvodu kontaktova spoloènos Canon, píšte na adresu obchodného oddelenia dcérskej spoloènosti Canon alebo jej distribútora/predajcu, ktorı pôsobí v krajine, kde ste produkt zakúpili.
+
+È. I010G017560
+
+

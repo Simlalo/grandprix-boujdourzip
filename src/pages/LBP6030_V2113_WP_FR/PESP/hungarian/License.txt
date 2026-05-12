@@ -1,0 +1,57 @@
+CANON SZOFTVERLICENC-MEGÁLLAPODÁS
+
+FONTOS
+
+Ez a dokumentum az Ön és a Canon Inc. (továbbiakban: "Canon") között létrejött jogi megállapodás ("Megállapodás"), amely az Ön rendelkezésére bocsájtott Canon szoftverprogramok (a "SZOFTVER") - beleértve a kapcsolódó kézikönyveket, valamint a Canon bizonyos másológépeihez, nyomtatóihoz és többfunkciós perifériáihoz (a "Termékek"-hez) tartozó bármilyen nyomtatott anyagot - felhasználását szabályozza.
+
+A SZOFTVER INSTALLÁLÁSA ELÕTT GONDOSAN OLVASSA ÁT A MEGÁLLAPODÁSBAN ISMERTETETT JOGOKAT ÉS KORLÁTOZÁSOKAT, MAJD BIZONYOSODJON MEG ARRÓL, HOGY MEGÉRTETTE AZOKAT.  AZ ITT LEÍRT FELTÉTELEK ELFOGADÁSÁT JELZÕ GOMBRA KATTINTÁSSAL, VAGY A SZOFTVER INSTALLÁLÁSÁVAL ÖN ELFOGADJA, HOGY A JELEN MEGÁLLAPODÁS FELTÉTELEI ÉS RENDELKEZÉSEI ÖNRE NÉZVE KÖTELEZÕEK.  HA NEM ÉRT EGYET A MEGÁLLAPODÁS ALÁBBI FELTÉTELEIVEL, AKKOR NE HASZNÁLJA A SZOFTVERT.  
+
+
+1.  LICENCENGEDÉLYEZÉS
+A Canon személyre szóló, korlátozott és nem kizárólagos engedéllyel ruházza fel Önt, amely alapján Ön a SZOFTVERT kizárólag a Termékekkel együtt használhatja ("használat" alatt itt a tárolás, letöltés, telepítés, hozzáférés, végrehajtás vagy megjelenítés értendõ), és csak olyan számítógépeken, amelyek közvetlenül vagy hálózaton keresztül a Termékekhez kapcsolódnak (a "Kijelölt számítógép"). 
+A SZOFTVER használatát engedélyezheti más, a Kijelölt számítógéppel azonos helyi hálózaton lévõ számítógépek felhasználóinak is, feltéve, hogy biztosítja, hogy ezen felhasználók mindegyikére szintén kötelezõ érvényûek lesznek a jelen Megállapodás alábbiakban közölt korlátozásai és kötelezettségei.
+
+Kizárólag biztonsági mentés céljából készíthet egy darab másolatot a SZOFTVERRÕL.
+
+2.  KORLÁTOZÁSOK
+Kizárólag akkor használhatja a SZOFTVERT, ha azt kifejezetten engedélyezték Önnek a jelen megállapodásban; nem adhatja tovább, nem adhatja el, kölcsön vagy bérbe, nem adhatja ki lízingbe, és nem ruházhatja át semmilyen harmadik fél számára.  A SZOFTVERT sem Ön, sem pedig egy Ön által megbízott kívülálló fél nem alakíthatja át, nem módosíthatja, nem bonthatja szét, nem fordíthatja le más programozónyelvre, és nem fejtheti vissza.
+
+3.  A SZERZÕI JOGGAL KAPCSOLATOS KÖZLEMÉNY
+Ön nem módosíthatja, nem távolíthatja el és nem törölheti a Canonnak és licencadóinak a SZOFTVERBEN foglalt szerzõi joggal kapcsolatos közleményét, sem annak másolatát.
+
+4.  TULAJDONJOG
+A Canon és licencadói minden tekintetben fenntartják maguknak a SZOFTVERRE vonatkozó jogcímet, tulajdonjogokat és szellemi jogokat.  A Canon és licencadóinak bármely szellemi tulajdonára vonatkozó engedélyt vagy jogot - legyen az kifejezett vagy hallgatólagos - a Canon nem ruházza át Önre, kivéve, ha jelen dokumentumban kifejezetten utalnak erre.
+
+5.  EXPORTSZABÁLYOZÁS
+Ön belegyezését adja, hogy az adott országra vonatkozó valamennyi kiviteli korlátozást és jogszabályt betartja, a SZOFTVERT nem exportálja, ill. nem exportálja újra, közvetlenül vagy közvetetten, bármely vonatkozó törvény, korlátozás vagy jogszabály megszegésével, illetve a szükséges engedélyek hiányában.
+
+6.  A TÁMOGATÁS ÉS FRISSÍTÉS
+A CANON, ANNAK LEÁNYVÁLLALATAI VAGY PARTNERCÉGEI, FORGALMAZÓI VAGY MÁRKAKERESKEDÕI, TOVÁBBÁ A CANON LICENCADÓI NEM KÖTELESEK A SZOFTVER KARBANTARTÁSÁVAL ÉS ANNAK HASZNÁLATÁVAL KAPCSOLATBAN ÖNNEK SEGÍTSÉGET NYÚJTANI VAGY AHHOZ FRISSÍTÉSEKET, JAVÍTÁSOKAT ILLETVE TÁMOGATÁST BIZTOSÍTANI.
+
+7.  A GARANCIA ÉS A FELELÕSSÉG KIZÁRÁSA
+[NINCS GARANCIA]  A SZOFTVERT "AHOGY VAN" ÁLLAPOTBAN BOCSÁTJÁK AZ ÖN RENDELKEZÉSÉRE, MINDENFÉLE GARANCIA NÉLKÜL, LEGYEN AZ KIFEJEZETT VAGY BENNE FOGLALT, BELEÉRTVE TÖBBEK KÖZÖTT A PIACKÉPESSÉGRE ÉS EGY ADOTT CÉLRA VALÓ ALKALMASSÁGRA VONATKOZÓ HALLGATÓLAGOS GARANCIÁT.  A SZOFTVER MINÕSÉGÉT ÉS TELJESÍTMÉNYÉT ILLETÕEN A TELJES KOCKÁZAT ÖNT TERHELI.  AMENNYIBEN A SZOFTVER HIBÁSNAK BIZONYUL, ÚGY A SZÜKSÉGES SZERVIZELÉS, JAVÍTÁS ÉS MÓDOSÍTÁS ÖSSZES KÖLTSÉGÉT ÖN VISELI.  EGYES ORSZÁGOK VAGY HATÓSÁGOK NEM ENGEDÉLYEZIK A BENNE FOGLALT GARANCIÁK KIZÁRÁSÁT, TEHÁT LEHETSÉGES, HOGY A FENTI KIZÁRÁS ÖNRE NEM VONATKOZIK.  
+EZ A GARANCIA ÖNT KÜLÖNLEGES JOGOKKAL RUHÁZZA FEL, AMELYEKEN KÍVÜL MÉG MÁS EGYÉB JOGOKKAL IS RENDELKEZHET, AZONBAN E JOGOK AZ EGYES ORSZÁGOKTÓL VAGY HATÓSÁGOKTÓL FÜGGÕEN ELTÉRÕEK LEHETNEK.
+
+A CANON, A CANON LEÁNYVÁLLALATAI, PARTNERCÉGEI, FORGALMAZÓI ÉS MÁRKAKERESKEDÕI, TOVÁBBÁ A CANON LICENCADÓI NEM GARANTÁLJÁK, HOGY A SZOFTVERBEN TALÁLHATÓ FUNKCIÓK MEGFELELNEK AZ ÖN ELVÁRÁSAINAK, SEM PEDIG AZT, HOGY A SZOFTVER MÛKÖDÉSE FOLYAMATOS ÉS HIBÁKTÓL MENTES LESZ.
+
+[A KÁROKRA VONATKOZÓ FELELÕSSÉG ELHÁRÍTÁSA] A CANON, A CANON LEÁNYVÁLLALATAI VAGY PARTNERCÉGEI, AZOK FORGALMAZÓI VAGY MÁRKAKERESKEDÕI, TOVÁBBÁ A CANON LICENCADÓI SEMMILYEN KÖRÜLMÉNYEK KÖZÖTT NEM FELELÕSEK SEMMILYEN KÁRÉRT (KORLÁTOZÁS NÉLKÜL BELEÉRTVE AZ ÜZLETI NYERSÉG ELVESZTÉSÉT, AZ ÜZLETI ADATOK ELVESZTÉSÉT, AZ ÜZLETI KAPCSOLATOK MEGSZAKADÁSÁT, VAGY EGYÉB KÁRTÉRÍTÉSBÕL EREDÕ, VÉLETLENSZERÛ VAGY KÖVETKEZMÉNYKÉNT FELLÉPÕ KÁROKAT IS), AMELY A SZOFTVERBÕL VAGY ANNAK HASZNÁLATÁBÓL, ILL. HASZNÁLATÁRA VALÓ ALKALMATLANSÁGÁBÓL ERED, MÉG AKKOR SEM, HA A CANONT, A CANON LEÁNYVÁLLALATAIT VAGY PARTNERCÉGEIT, FORGALMAZÓIT VAGY MÁRKAKERESKEDÕIT, ILL. A CANON LICENCADÓIT MÁR TÁJÉKOZTATTÁK A HASONLÓ KÁROK ELÕFORDULÁSÁNAK LEHETÕSÉGÉRÕL.  NÉHÁNY ORSZÁG VAGY HATÓSÁG NEM ENGEDÉLYEZI A VÉLETLENSZERÛ VAGY KÖVETKEZMÉNYKÉNT FELLÉPÕ KÁROK, AZ ELADÓ GONDATLANSÁGÁBÓL BEKÖVETKEZÕ SZEMÉLYI SÉRÜLÉS VAGY HALÁLESET KIZÁRÁSÁNAK KORLÁTOZÁSÁT, TEHÁT ELKÉPZELHETÕ, HOGY A FENTI KORLÁTOZÁS VAGY KIZÁRÁS ÖNRE NEM VONATKOZIK.
+
+[LEMONDÁS A FELELÕSSÉGRÕL] A HATÁLYOS TÖRVÉNYI SZABÁLYOZÁS ÉRTELMÉBEN ÖN EZENNEL ELISMERI, HOGY A CANONT, A CANON LEÁNYVÁLLALATAIT ÉS PARTNERCÉGEIT, FORGALMAZÓIT ÉS MÁRKAKERESKEDÕIT, VALAMINT A CANON LICENCADÓIT A SZOFTVERREL VAGY ANNAK HASZNÁLATÁVAL KAPCSOLATBAN FELELÕSSÉG NEM TERHELI.
+
+8.  ÉRVÉNYESSÉG
+A jelen Megállapodás akkor lép életbe, amikor a gombra kattintva Ön elfogadja azt az alábbiak szerint vagy amikor installálja a SZOFTVERT, és felmondásig érvényes.  A Megállapodást Ön a SZOFTVER és a róla készített másolatok megsemmisítésével mondhatja fel. 
+A Megállapodás akkor is érvényét veszti, ha Ön nem tartja be az abban foglaltakat.  A Megállapodás felbontásakor - a Canon törvényes jogainak érvényesítésén túlmenõen - Ön köteles haladéktalanul megsemmisíteni a SZOFTVERT és az arról készített összes másolatot.  Mindazonáltal a 4. és a 7-11. rész rendelkezései a jelen Megállapodás felbontását követõen is érvényben maradnak.
+
+9.  AZ USA KORMÁNYZATI FELHASZNÁLÓINAK KORLÁTOZOTT JOGAIRA VONATKOZÓ KÖZLEMÉNY
+Az "USA kormányzati végfelhasználó" az USA kormányzatának ügynökségét vagy a kormányzathoz tartozó jogi személyt jelenti. Amennyiben Ön USA kormányzati végfelhasználó, a következõk vonatkoznak Önre: A SZOFTVER a 48 C.F.R. 2.101 (1995. október) fogalommeghatározása értelmében a "kereskedelmi cikk" besorolás alá esik, amely a 48 C.F.R. 12.212 (1995. szeptember) fogalommeghatározásának megfelelõen "kereskedelmi számítógépes szoftver"-bõl és "a kereskedelmi számítógépes szoftver dokumentációjá"-ból áll.  A SZOFTVERT a 48 C.F.R. 12.212 és a 48 C.F.R. 227.7202-1 - 227.7202-4 (1995. június) értelmében valamennyi USA illetékességû kormányzati végfelhasználó a jelen dokumentumban rögzített jogokkal szerezheti be.  A gyártó a Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokió 146-8501, Japán.
+
+10.  ELKÜLÖNÍTHETÕSÉG
+Amennyiben egy illetékes jogi fennhatóság bírósága vagy törvényszéke a megállapodás valamely cikkelyét törvénytelennek nyilvánítja vagy annak találja, akkor az a cikkely az adott bíróság vagy törvényszék törvénykezésére tekintettel semmisnek és hatálytalannak minõsítendõ, míg az összes többi cikkely teljes mértékig hatályban és érvényben marad.
+
+11.  ELISMERÉS
+AMENNYIBEN A GOMBRA KATTINTVA ELFOGADJA A MEGÁLLAPODÁST VAGY INSTALLÁLJA A SZOFTVERT, ELISMERI, HOGY A JELEN MEGÁLLAPODÁST ELOLVASTA, MEGÉRTETTE ÉS A BENNE FOGLALT FELTÉTELEKET MAGÁRA NÉZVE KÖTELEZÕ ÉRVÉNYÛNEK TARTJA.  EGYBEN AZT IS ELISMERI, HOGY EZ A SZERZÕDÉS A JELEN TARTALOMRA VONATKOZÓ TELJES ÉS KIZÁRÓLAGOS SZERZÕDÉSES NYILATKOZAT ÖN ÉS A CANON KÖZÖTT, AMELY MINDEN SZÓBELI ÉS ÍRÁSBELI AJÁNLATTÉTELT, KORÁBBI MEGÁLLAPODÁST ÉS EGYÉB, ÖN ÉS A CANON KÖZÖTT A JELEN TARTALOMRA VONATKOZÓAN LEZAJLOTT ESZMECSERÉT HATÁLYTALANÍT.  A SZERZÕDÉS BÁRMINEMÛ MÓDOSÍTÁSA CSAK A CANON HIVATALOSAN FELHATALMAZOTT KÉPVISELÕJÉNEK ALÁÍRÁSÁVAL ÉRVÉNYESÍTHETÕ.
+
+
+Amennyiben a Megállapodással kapcsolatban kérdései merülnének fel vagy bármilyen okból kifolyólag kapcsolatba szeretne lépni a Canonnal, úgy, kérjük, forduljon írásban a Canon értékesítési leányvállalatához, forgalmazójához/márkakereskedõjéhez abban az országban, ahol a Termékeket vásárolta.
+
+024410. sz.

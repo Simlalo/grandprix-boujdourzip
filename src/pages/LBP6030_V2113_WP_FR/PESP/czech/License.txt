@@ -1,0 +1,57 @@
+LICENÈNÍ DOHODA NA SOFTWARE FIRMY CANON
+
+DÙLEITÉ
+
+Toto je právní dohoda ("Dohoda") mezi Vámi a spoleèností Canon Inc. ("Canon") a upravuje uití softwarovıch programù spoleènosti Canon, vèetnì pøíslušnıch návodù nebo jinıch tištìnıch materiálù k tìmto softwarovıch programù ("SOFTWARE"), které jsou urèeny pro nìkterá kopírovací zaøízení, tiskárny a multifunkèní periferní zaøízení ("Produkty") spoleènosti Canon. 
+
+PØED NAINSTALOVÁNÍM SOFTWARU JE NEZBYTNÉ, ABYSTE SI PEÈLIVÌ PØEÈETLI PRÁVA I OMEZENÍ POPSANÁ V TÉTO DOHODÌ A POROZUMÌLI JIM. KLIKNUTÍM NA NÍE UVEDENÉ TLAÈÍTKO, JÍM POTVRZUJETE VÁŠ SOUHLAS, NEBO NAINSTALOVÁNÍM TOHOTO SOFTWARU SOUHLASÍTE, E BUDETE VÁZÁNI SMLUVNÍMI PODMÍNKAMI OBSAENİMI V TÉTO DOHODÌ. NESOUHLASÍTE-LI S NÍE UVEDENİMI SMLUVNÍMI PODMÍNKAMI, SOFTWARE NEPOUÍVEJTE. 
+
+
+1.  UDÌLENÍ LICENCE
+Spoleènost Canon Vám udìluje osobní, omezenou a nevıhradní licenci k uití (zde uvedenı pojem "uití" rovnì zahrnuje uloení, kopírování, nainstalování, zpøístupnìní, spuštìní nebo zobrazení) SOFTWARU vıluènì s Produkty a pouze na poèítaèích, které jsou k Produktùm pøipojené pøímo nebo prostøednictvím sítì ("Urèenı poèítaè"). 
+Jste oprávnìni umonit uití SOFTWARU i dalším uivatelùm jinıch poèítaèù, kteøí jsou pøipojeni k Vašemu Urèenému poèítaèi, avšak za pøedpokladu, e se všichni tito uivatelé budou øídit podmínkami této Dohody a e se na nì budou vztahovat omezení a závazky, k jejich dodrování jste se touto Dohodou zavázali.
+
+Jste oprávnìni vytvoøit jednu kopii SOFTWARU, a to vıhradnì za úèelem vytvoøení záloní kopie.
+
+2.  OMEZENÍ
+SOFTWARE nejste oprávnìni uívat jinak, ne jak je vıslovnì vymezeno a povoleno touto Dohodou. Rovnì nejste oprávnìni postoupit, poskytnout na základì sublicence, prodat, pronajmout, zapùjèit za úplatu, pùjèit, pøenechat nebo pøevést SOFTWARE ádné tøetí osobì. Nejste oprávnìni upravovat, pøekládat nebo pøevádìt SOFTWARE do jiného programovacího jazyka ani jej dále modifikovat, rozebírat, dekompilovat èi jinak zpìtnì sestavovat a toté neumoníte ani tøetím osobám.
+
+3.  OZNAÈENÍ AUTORSKÉHO PRÁVA
+Nejste oprávnìni upravovat, snímat èi odstraòovat jakákoli oznaèení autorskıch práv (copyrightu) spoleènosti Canon a pøíslušnıch poskytovatelù licencí, která se vztahují k SOFTWARU, a to vèetnì jeho pøípadnıch kopií.
+
+4.  VLASTNICTVÍ
+Spoleènost Canon i její poskytovatelé licencí si za všech okolností uchovávají právní nárok, vlastnické právo i práva duševního vlastnictví související se SOFTWAREM. Není-li v této Dohodì vıslovnì uvedeno jinak, spoleènost Canon Vám touto Dohodou neposkytuje ani neudìluje ádnou licenci nebo právo, a vyslovené èi vyvozené, na ádné duševní vlastnictví spoleènosti Canon a jejích poskytovatelù licencí.
+
+5.  KONTROLA VİVOZU
+Souhlasíte, e se budete øídit všemi vıvozními zákony, omezeními i pøedpisy dané zemì a e SOFTWARE jednou èi opakovanì nevyvezete, a u pøímo èi nepøímo, pokud byste tímto porušili pøíslušné zákony, omezení a pøedpisy, nebo pokud byste tak uèinili bez veškerıch nezbytnıch povolení.
+
+6.  PODPORA A AKTUALIZACE
+SPOLEÈNOST CANON, JEJÍ DCEØINÉ NEBO PØIDRUENÉ SPOLEÈNOSTI, JEJICH DISTRIBUTOØI, PRODEJCI NEBO POSKYTOVATELÉ LICENCÍ SPOLEÈNOSTI CANON NEJSOU ODPOVÌDNÍ ZA UDROVÁNÍ SOFTWARU, ZA POSKYTOVÁNÍ POMOCI PØI UÍVÁNÍ SOFTWARU NEBO ZA POSKYTOVÁNÍ JAKİCHKOLI AKTUALIZACÍ, OPRAV NEBO PODPORY PRO NÍE UVEDENİ SOFTWARE.
+
+7.  ODMÍTNUTÍ ZÁRUK A ODPOVÌDNOSTI
+[VYLOUÈENÍ ZÁRUKY] SOFTWARE JE POSKYTOVÁN "TAK, JAK JE" BEZ JAKİCHKOLI ZÁRUK, A VYJÁDØENİCH NEBO MLÈKY PØEDPOKLÁDANİCH, MIMO JINÉ VÈETNÌ PØEDPOKLÁDANÉ ZÁRUKY OBCHODOVATELNOSTI A VHODNOSTI PRO URÈITİ ÚÈEL. VEŠKERÁ RIZIKA, KTERÁ SE TİKAJÍ KVALITY A VİKONU SOFTWARU, NESETE VY. POKUD SE SOFTWARE PROKÁE JAKO VADNİ, PAK UHRADÍTE VŠECHNY NÁKLADY VYNALOENÉ NA VEŠKERÉ NEZBYTNÉ SERVISNÍ ZÁSAHY, OPRAVY NEBO ÚPRAVY. NÌKTERÉ ZEMÌ NEBO PRÁVNÍ JURISDIKCE NEDOVOLUJÍ VYLOUÈENÍ PØEDPOKLÁDANİCH ZÁRUK, PROTO SE NA VÁS VİŠE UVEDENÉ VYLOUÈENÍ ZÁRUKY NEMUSÍ VZTAHOVAT. 
+TATO ZÁRUKA VÁM POSKYTUJE SPECIFICKÁ ZÁKONNÁ PRÁVA A ROVNÌ VÁM MOHOU NÁLEET I DALŠÍ PRÁVA, KTERÁ JSOU V KADÉ ZEMI ÈI JURISDIKCI ODLIŠNÁ.
+
+SPOLEÈNOST CANON, JEJÍ DCEØINÉ NEBO PØIDRUENÉ SPOLEÈNOSTI, JEJICH DISTRIBUTOØI, PRODEJCI NEBO POSKYTOVATELÉ LICENCÍ SPOLEÈNOSTI CANON NEZARUÈUJÍ, E FUNKCE, KTERÉ JSOU SOUÈÁSTÍ SOFTWARU, USPOKOJÍ VAŠE POADAVKY, ANI NEZARUÈUJÍ NEPØERUŠOVANOU ÈI BEZPORUCHOVOU FUNKÈNOST SOFTWARU.
+
+[VYLOUÈENÍ ODPOVÌDNOSTI ZA ŠKODY] SPOLEÈNOST CANON, JEJÍ DCEØINÉ NEBO PØIDRUENÉ SPOLEÈNOSTI, JEJICH DISTRIBUTOØI, PRODEJCI NEBO POSKYTOVATELÉ LICENCÍ NENESOU ODPOVÌDNOST ZA JAKÉKOLI ŠKODY (MIMO JINÉ VÈETNÌ UŠLÉHO ZISKU, ZTRÁTY OBCHODNÍCH INFORMACÍ, ZTRÁT Z PØERUŠENÍ ÈINNOSTI NEBO JINÉ KOMPENZAÈNÍ NÁHRADY ŠKOD, NAHODILİCH ÈI NÁSLEDNİCH ŠKOD) ZPÙSOBENÉ SOFTWAREM, JEHO UITÍM NEBO NEMONOSTÍ POUÍT SOFTWARE, I POKUD BY SPOLEÈNOST CANON, JEJÍ DCEØINÉ NEBO PØIDRUENÉ SPOLEÈNOSTI, JEJICH DISTRIBUTOØI, PRODEJCI NEBO POSKYTOVATELÉ LICENCÍ SPOLEÈNOSTI CANON BYLI INFORMOVÁNI O MONOSTI VZNIKU TAKOVİCH ŠKOD. NÌKTERÉ ZEMÌ NEBO JURISDIKCE NEDOVOLUJÍ OMEZENÍ NEBO VYLOUÈENÍ ODPOVÌDNOSTI ZA NAHODILÉ ÈI NÁSLEDNÉ ŠKODY NEBO ZA PORANÌNÍ ÈI ÚMRTÍ OSOB ZPÙSOBENÉ NEDBALOSTÍ NA STRANÌ PRODÁVAJÍCÍHO, PROTO SE NA VÁS VİŠE UVEDENÉ OMEZENÍ NEBO VYLOUÈENÍ NEMUSÍ VZTAHOVAT.
+
+[ZPROŠTÌNÍ ODPOVÌDNOSTI] V PLNÉM ROZSAHU POVOLENÉM PØÍSLUŠNİM ZÁKONEM TÍMTO ZPROŠUJETE SPOLEÈNOST CANON, JEJÍ DCEØINÉ A PØIDRUENÉ SPOLEÈNOSTI, JEJICH DISTRIBUTORY, PRODEJCE A POSKYTOVATELE LICENCÍ SPOLEÈNOSTI CANON VEŠKERÉ ODPOVÌDNOSTI VYPLİVAJÍCÍ ZE VŠECH NÁROKÙ, KTERÉ SE TİKAJÍ SOFTWARU ÈI JEHO POUITÍ, NEBO S NIMI SOUVISEJÍCÍ.
+
+8.  PLATNOST DOHODY
+Tato Dohoda nabıvá úèinnosti okamikem jejího pøijetí z Vaší strany, a to buï potvrzením Vašeho souhlasu kliknutím na níe uvedené tlaèítko, nebo nainstalováním SOFTWARU, pøièem Dohoda zùstává v platnosti a do jejího ukonèení. Tuto Dohodu jste oprávnìni ukonèit znièením SOFTWARU vèetnì veškerıch jeho kopií. 
+Tato Dohoda bude také ukonèena, pokud nedodríte kteroukoli ze smluvních podmínek. Po ukonèení platnosti Dohody jste povinni neprodlenì znièit SOFTWARE i všechny jeho pøípadné kopie, pøièem spoleènost Canon je navíc oprávnìna uplatnit pøíslušná zákonná práva. Bez ohledu na vıše uvedené ustanovení èlánek è. 4 a èlánky è. 7 a 11 této Dohody zùstávají v platnosti i po jejím ukonèení.
+
+9.  OMEZENÁ PRÁVA VLÁDY SPOJENİCH STÁTÙ AMERICKİCH
+"Koncovı uivatel z øad vlády USA" oznaèuje jakoukoli agenturu èi subjekt vlády USA. Jste-li koncovım uivatelem z øad vlády USA, platí následující: SOFTWARE je "komerèní poloka" ve smyslu vymezeném èástí 48 C.F.R. 2.101 (Sbírka federálních pøedpisù USA, øíjen 1995) a zahrnuje "komerèní poèítaèovı software" a "dokumentaci ke komerènímu poèítaèovému softwaru" ve smyslu, v nìm jsou tyto pojmy pouité v èásti 48 C.F.R. 12.212 (Sbírka federálních zákonù USA, záøí 1995). V souladu s èástmi 48 C.F.R. 12.212 a 48 C.F.R. 227.7202-1 a 227.7202-4 (Sbírka federálních zákonù USA, èerven 1995) je tento SOFTWARE poskytnut všem koncovım uivatelùm z øad vlády USA pouze s právy, je jsou stanovena touto Dohodou. Vırobcem je spoleènost Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokio 146-8501, Japonsko.
+
+10.  ODDÌLITELNOST
+Bude-li kterákoli èást této Dohody jakımkoli místnì pøíslušnım soudem nebo tribunálem prohlášena èi shledána nezákonnou, stane se ve vztahu k jurisdikci pøíslušného soudu èi tribunálu neplatnou a neúèinnou, pøièem veškerá ostatní ustanovení této Dohody zùstávají platná a úèinná v plném rozsahu.
+
+11.  SOUHLAS
+KLIKNUTÍM NA NÍE UVEDENÉ TLAÈÍTKO, JÍM POTVRZUJETE VÁŠ SOUHLAS, NEBO NAINSTALOVÁNÍM SOFTWARU PROHLAŠUJETE, E JSTE SI TUTO DOHODU PØEÈETLI, E JÍ ROZUMÍTE A SOUHLASÍTE, E BUDETE VÁZÁNI JEJÍMI SMLUVNÍMI PODMÍNKAMI. ROVNÌ PROHLAŠUJETE, E TATO DOHODA PØEDSTAVUJE ÚPLNOU A JEDINOU DOHODOU MEZI VÁMI A SPOLEÈNOSTÍ CANON TİKAJÍCÍ SE JEJÍHO PØEDMÌTU A NAHRAZUJE VEŠKERÉ NÁVRHY NEBO PØEDCHOZÍ DOHODY, A ÚSTNÍ ÈI PÍSEMNÉ, JAKO I VŠECHNA DALŠÍ SDÌLENÍ UÈINÌNÁ MEZI VÁMI A SPOLEÈNOSTÍ CANON, KTERÁ SE TİKAJÍ JEJÍHO PØEDMÌTU. ÁDNİ DODATEK K TÉTO DOHODÌ NEBUDE PLATNİ, NEBUDE-LI PODEPSÁN ØÁDNÌ ZPLNOMOCNÌNİM ZÁSTUPCEM SPOLEÈNOSTI CANON.
+
+
+Máte-li jakékoli dotazy tıkající se této Dohody, anebo pøejete-li si kontaktovat spoleènost Canon z jiného dùvodu, pište na adresu dceøiné prodejní spoleènosti Canon nebo jejího distributora/prodejce, kteøí pùsobí v zemi, v ní jste Produkt zakoupili.
+
+È. 024410

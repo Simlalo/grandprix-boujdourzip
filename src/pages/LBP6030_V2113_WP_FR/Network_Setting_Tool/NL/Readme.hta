@@ -1,0 +1,1189 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="nl" xmlns="http://www.w3.org/1999/xhtml" xmlns:hta="urn:HTMLApplication">
+	<head>
+		<meta name="Generator" content="CAESAR" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+		<title>Canon MF/LBP Network Setup Tool voor Microsoft Windows versie 2.30</title>
+		<hta:application id="id_canon_main_window" applicationname="canon_main_window" border="thick" borderstyle="normal" caption="yes" maximizebutton="yes" minimizebutton="yes" showintaskbar="yes" singleinstance="no" sysmenu="yes" version="1.0" windowstate="normal" contextmenu="yes" navigable="yes" />
+		<style type="text/css">div.list{display:list-item!important;list-style-type:Disc;margin-left:40px!important;padding-left:5px!important;}table div.list{margin-left:20px!important;padding-left:5px!important;}div.dash{display:list-item!important;list-style-type:Circle;margin-left:65px!important;padding-left:5px!important;}table div.dash{margin-left:40px!important;padding-left:5px!important;}div.step_sub{display:list-item!important;list-style-type:Square;margin-left:30px!important;padding-left:5px!important;}div.list_link{display:list-item!important;list-style-type:Square;margin-left:50px!important;padding-left:5px!important;}div.h1{background:#F3F8FA!important;}div.h2,div.h2_2line,div.h2_3line{background:#F3F8FA!important;}div.h3{background:#F3F8FA!important;}thead.table_important td.table_important_col_0,thead.table_note td.table_note_col_0{padding:2px 5px 2px 5px!important;}</style>
+		<style type="text/css" >
+			<!--
+*{
+	font-family:"Arial","Helvetica",Sans-serif;
+	/*margin:0;*/
+	/*padding:0;*/
+	/*border:0;*/
+	/*background-color:Transparent;*/
+	font-size:100%;
+	/*font-style:Normal;*/
+	text-decoration:None;
+}
+html{
+	border:0;
+}
+body{
+	margin:0;
+	padding:0;
+	background:#FFFFFF;
+}
+span{
+	color:Inherit;
+}
+div#id_content a{
+	text-decoration:None;
+}
+div#id_content a:link{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:visited{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:hover{
+	color:#EC6700;
+	background-color:#FFFFCC;
+	text-decoration:Underline;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.chapter_title{
+	background:#4682B4;
+	padding:2px 5px 2px 5px;
+	border-bottom:Solid 1px #4682B4;
+	font-weight:Bold;
+	font-size:80%;
+	margin-bottom:16px;
+	text-align:Right;
+	color:#FFFFFF;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h1{
+	padding:32px 0 2px 8px;
+	border-bottom:Solid 1px #4682B4;
+	background:#F3F8FA;
+	font-weight:Bold;
+	font-size:120%;
+	margin-bottom:16px;
+	vertical-align:Bottom;
+	text-align:Left;
+	color:#000080;
+	position:Relative;
+}
+div.h1 a{
+	position:Absolute;
+	*position:Static!important;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h2,
+div.h2_2line,
+div.h2_3line{
+	border:Solid 1px #4682B4;
+	padding:5px;
+	margin:30px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	color:#000080;
+}
+div.h2 a,
+div.h2_2line a,
+div.h2_3line a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h2 img,
+div.h2_2line img,
+div.h2_3line img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h3{
+	padding:5px;
+	margin:25px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	border-bottom:Solid 1px #87CEEB;
+	color:#000080;
+}
+div.h3 a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h3 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h4{
+	margin:20px 10px 5px 10px;
+	font-weight:Bold;
+	font-size:90%;
+	border-Bottom:Solid 1px #87CEEB;
+	background:#FFFFFF;
+	padding:0px 5px;
+	color:#000080;
+}
+div.h4 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h5{
+	margin:20px 10px 5px 15px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h5 img{
+	vertical-align:Middle;
+	margin-right:5px;
+	margin-left:4px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h6{
+	margin:15px 10px 5px 30px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h6 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+table div.h6{
+	margin-left:0px;
+	margin-top:10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#000000;
+}
+table div.text{
+	margin:3px 0 0 0;
+}
+div.text img{
+	vertical-align:Middle;
+}
+table div.text img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level1{
+	font-size:80%;
+	margin:5px 10px 5px 40px;
+	color:#000000;
+}
+table div.text_level1{
+	margin:3px 0 0 10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level2{
+	font-size:80%;
+	margin:5px 10px 5px 50px;
+	color:#000000;
+}
+table div.text_level2{
+	margin:3px 0 0 20px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level3{
+	font-size:80%;
+	margin:5px 10px 5px 60px;
+	color:#000000;
+}
+table div.text_level3{
+	margin:3px 0 0 30px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_center{
+	text-align:Center;
+	font-size:80%;
+	color:#000000;
+}
+table div.text_center{
+	margin:3px 0 0 0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_right{
+	text-align:Right;
+	font-size:80%;
+	color:#000000;
+	margin-right:10px;
+}
+table div.text_right{
+	margin-right:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.annotation{
+	font-size:75%;
+	margin:0px 10px 5px 55px;
+	text-indent:-1.5em;
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left:20px;
+	padding-top:0px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#000000;
+}
+table div.list{
+	margin-left:0px;
+}
+div.list img{
+	vertical-align:Top;
+}
+table div.list img{
+	vertical-align:Top;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div.dash{
+	margin-left:50px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	font-weight:Normal;
+	font-size:80%;
+	background:Transparent;
+	_background:Transparent;
+	padding:0px 0px 0px 20px;
+	color:#000000;
+}
+*:first-child+html div.dash{
+	background:Transparent;
+}
+table div.dash{
+	margin-left:12px;
+}
+div.dash img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.example{
+	font-size:80%;
+	font-family:Monospace;
+	margin:5px 10px 5px 30px;
+	clear:Both;
+	background:#707080;
+	padding:5px;
+	color:#FFFFFF;
+}
+div#id_content div.example a:link{
+	color:#0000FF;
+	text-decoration:None;
+}
+div#id_content div.example a:visited{
+	color:#0000FF;
+	text-decoration:None;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.path{
+	padding:3px 10px 3px 20px;
+	font-size:80%;
+	margin:0px 30px;
+	background:Transparent;
+	_background:Transparent;
+	color:#666666;
+}
+div.path img{
+	vertical-align:Middle;
+}
+table div.path{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_number{
+	background:#F8F8F8;
+	font:Bold 200% "Arial";
+	color:#4682B4;
+	padding:0px 5px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+	margin-bottom:0px;
+}
+div.step_number span{
+	font:Bold 100% "Arial";
+	color:#4682B4;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_path{
+	padding:3px 10px 3px 30px;
+	font-size:80%;
+	margin:0px 10px;
+	background:#F8F8F8;
+	_background:#F8F8F8;
+	color:#666666;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_text{
+	font-weight:Bold;
+	padding:0px 10px 15px 5px;
+	font-size:80%;
+	margin:0px 10px 10px 10px;
+	background:#F8F8F8;
+	color:#000000;
+}
+div.step_text img{
+	vertical-align:Middle;
+}
+@media print{div.step_text{
+	padding:0px 10px 20px 5px;
+}}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_sub{
+	font-size:80%;
+	font-weight:Bold;
+	margin:10px 10px 5px 15px;
+	padding-left:15px;
+	background:Transparent;
+	_background:Transparent;
+	color:#000000;
+}
+div.step_sub img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.figure{
+	text-align:Left;
+	margin-left:30px;
+	margin-bottom:10px;
+}
+table div.figure{
+	margin-left:0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link{
+	margin:10px;
+	font-size:80%;
+	color:#3366A5;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link a{
+	text-decoration:None;
+	padding-left:10px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list_link{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-bottom:0px;
+	padding-left:20px;
+	padding-top:1px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#3366A5;
+}
+table div.list_link{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link_to_top{
+	text-align:Right;
+	padding:5px 10px 30px 10px;
+	font-size:80%;
+	color:#3366A5;
+	border-top:Dotted 1px #87CEEB;
+	margin-top:30px;
+}
+@media print{div.link_to_top{
+	display:None;
+}}
+div.link_to_top a{
+	text-decoration:None;
+	padding-left:12px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.trouble_shooting{
+	margin:10px 10px 10px 30px;
+}
+table.trouble_shooting{
+	border-collapse:Collapse;
+	table-layout:Fixed;
+}
+td.trouble_shooting{
+	border:Solid 1px #FFFFFF;
+}
+td.trouble_shooting_col_0{
+	padding:5px;
+	vertical-align:Middle;
+	font-size:100%;
+	width:80px;
+	background:#C0C0C0;
+	padding-bottom:10px;
+}
+td.trouble_shooting_col_1{
+	background:#EFEFEF;
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-left:5px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.outline{
+	margin:10px 10px 10px 30px;
+}
+table.outline{
+	border-collapse:Collapse;
+	font-size:100%;
+}
+td.outline{
+	padding:10px 5px 10px 5px;
+}
+td.outline_col_0{
+	vertical-align:Middle;
+	text-align:Center;
+	border:Solid 1px #87CEEB;
+	background:#F5F5F5;
+	width:30px;
+	font-size:130%;
+}
+td.outline_col_0 div.h6{
+	color:#4682B4;
+	margin:0px;
+}
+td.outline_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #87CEEB;
+	border-left:None;
+	background:#F5F5F5;
+	width:150px;
+}
+td.outline_col_1 div.h6{
+	margin:0px;
+	color:#000000;
+}
+td.outline_col_2{
+	vertical-align:Middle;
+	background:#FFFFFF;
+	border:Solid 1px #87CEEB;
+	padding:3px 3px 3px 10px;
+}
+td.outline_col_2 div.list{
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_ui{
+	margin:5px 10px 10px 30px;
+}
+table.table_ui{
+	table-layout:Auto;
+	border-collapse:Collapse;
+	border:None;
+	border-bottom:Solid 1px #E0E0E0;
+}
+td.table_ui_col_0{
+	padding:0px;
+	vertical-align:Top;
+	font-size:100%;
+	width:150px;
+	color:#000000;
+	padding:0px 0px 5px 0px;
+	border-right:None;
+}
+td.table_ui_col_1{
+	background:#FFFFFF;
+	padding:3px;
+	padding-left:10px;
+	border:Solid 1px #E0E0E0;
+	border-left:Solid 1px #E0E0E0;
+	border-right:None;
+	border-bottom:None;
+	vertical-align:Top;
+}
+td.table_ui_col_0 div.ui_level0{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 1px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #FFFFFF;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level1{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #87BEDB;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level2{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:10px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #A0D0EA;
+}
+td.table_ui_col_0 div.ui_level3{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:20px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #C6E5F6;
+}
+td.table_ui_col_0 div.ui_level1 img,
+td.table_ui_col_0 div.ui_level2 img,
+td.table_ui_col_0 div.ui_level3 img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+table div.table_important,
+table div.table_caution,
+table div.table_warning,
+table div.table_note{
+	margin-left:20px;
+}
+div.table_important,
+div.table_caution,
+div.table_warning,
+div.table_note{
+	margin:10px 10px 10px 30px;
+}
+*:first-child+html table.table_important,
+*:first-child+html table.table_caution,
+*:first-child+html table.table_warning,
+*:first-child+html table.table_note{
+	width:Auto;
+	table-layout:Fixed;
+}
+table.table_important,
+table.table_caution,
+table.table_warning,
+table.table_note{
+	background:#FFFFFF;
+	border-collapse:Collapse;
+	font-size:100%;
+	width:100%;
+	_width:Auto;
+	_table-layout:Fixed;
+}
+*:first-child+html table td.table_important_col_0,
+*:first-child+html table td.table_caution_col_0,
+*:first-child+html table td.table_warning_col_0,
+*:first-child+html table td.table_note_col_0{
+	width:Auto;
+}
+table td.table_important_col_0,
+table td.table_caution_col_0,
+table td.table_warning_col_0,
+table td.table_note_col_0{
+	width:100%;
+	_width:Auto;
+	vertical-align:Top;
+}
+*:first-child+html tbody.table_important td.table_important_col_0,
+*:first-child+html tbody.table_caution td.table_caution_col_0,
+*:first-child+html tbody.table_warning td.table_warning_col_0,
+*:first-child+html tbody.table_note td.table_note_col_0{
+	width:Auto;
+}
+tbody.table_important td.table_important_col_0,
+tbody.table_caution td.table_caution_col_0,
+tbody.table_warning td.table_warning_col_0,
+tbody.table_note td.table_note_col_0{
+	padding-left:10px;
+	width:100%;
+	_width:Auto;
+}
+@media print{
+thead.table_important td.table_important,
+thead.table_caution td.table_caution,
+thead.table_warning td.table_warning,
+thead.table_note td.table_note{
+	padding-bottom:5px;
+}}
+tbody.table_important td.table_important,
+tbody.table_caution td.table_caution,
+tbody.table_warning td.table_warning,
+tbody.table_note td.table_note{
+	padding-left:10px;
+	padding-top:2px;
+	border-bottom:None;
+	padding-bottom:5px;
+	border-top:None;
+}
+thead.table_important td.table_important_col_0,
+thead.table_note td.table_note_col_0{
+	padding:2px 5px 2px 30px;
+	text-align:Left;
+	border-bottom:None;
+}
+thead.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0{
+	padding:2px 23px 5px 5px;
+	text-align:Center;
+	border-bottom:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0 div img,
+thead.table_warning td.table_warning_col_0 div img{
+	margin-right:3px;
+}
+thead.table_important td.table_important div,
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div,
+thead.table_note td.table_note div{
+	font-weight:Bold;
+}
+table.table_important{
+	border:Solid 1px #808080;
+}
+table.table_caution,
+table.table_warning{
+	border:Solid 1px #808080;
+}
+table.table_note{
+	border:Solid 1px #808080;
+}
+thead.table_important td.table_important{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	font-size:120%;
+}
+
+thead.table_note td.table_note{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_important td.table_important div{
+	color:#4682B4;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	color:#000000;
+}
+thead.table_note td.table_note div{
+	color:#808080;
+}
+thead.table_important td.table_important_col_0,
+tbody.table_important td.table_important_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0,
+tbody.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0,
+tbody.table_warning td.table_warning_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_note td.table_note_col_0,
+tbody.table_note td.table_note_col_0{
+	border-right:Solid 1px #808080;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_no_border{
+	margin:10px 10px 10px 30px;	
+}
+table div.table_no_border{
+	margin-left:10px;
+}
+table.table_no_border{
+	border:None;
+	width:Auto;
+}
+thead.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	font-weight:Bold;
+	vertical-align:Middle;
+}
+tbody.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	vertical-align:Top;
+	border:None;
+	font-size:100%;
+	padding-bottom:5px;
+}
+tbody.table_no_border td.table_no_border div{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_matrix{
+	margin:10px 10px 10px 30px;
+}
+table div.table_matrix{
+	margin-left:20px;
+}
+table.table_matrix{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix{
+	padding:5px;
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_matrix td.table_matrix_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	background-color:#EFEFEF;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_matrix td.table_matrix{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_matrix td.table_matrix_col_1{
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_matrix td.table_matrix_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix_col_0{
+	border:Solid 1px #808080;
+	background-color:#DDDDDD;
+	padding:5px;
+}
+thead.table_matrix td.table_matrix div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_general{
+	margin:10px 10px 10px 30px;
+}
+table div.table_general{
+	margin-left:20px;
+}
+table.table_general{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general{
+	padding:5px;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_general td.table_general_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_general td.table_general{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_general td.table_general_col_1{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_general td.table_general_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general_col_0{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+thead.table_general td.table_general div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_number{
+	margin:10px 10px 10px 35px;	
+}
+table div.table_number{
+	margin-left:25px;
+}
+table.table_number{
+	border-collapse:Collapse;
+	border:None;
+	width:Auto;
+}
+tbody.table_number td.table_number{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	vertical-align:Top;
+}
+tbody.table_number td.table_number_col_0{
+	width:1.5em;
+	border:None;
+}
+tbody.table_number td.table_number_col_0 div{
+	margin-left:0px;
+	margin-right:0px;
+	font-weight:Normal;
+	text-align:Right;
+}
+tbody.table_number td.table_number_col_1{
+	width:Auto;
+}
+/*-----------------------------------------------------------------------------------------------*/
+span.bold{
+	font-weight:Bold;
+}
+span.italic{
+	font-style:Italic;
+}
+span.no_break{
+	white-space:Nowrap;
+}
+span.superscript{
+	vertical-align:Super;
+	font-size:80%;
+}
+span.subscript{
+	vertical-align:Sub;
+	font-size:80%;
+}
+span.underline{
+	text-decoration:Underline;
+}
+span.color_white{
+	color:#FFFFFF;
+}
+span.color_blue{
+	color:#0000FF;
+}
+span.color_red{
+	color:#FF0000;
+}
+span.color_orange{
+	color:#FFA500;
+}
+span.color_green{
+	color:#008000;
+}
+span.bold\+color_red{
+	color:#FF0000;
+	font-weight:Bold;
+}
+span.bold\+italic{
+	font-style:Italic;
+	font-weight:Bold;
+}
+span.bold\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+underline{
+	text-decoration:Underline;
+	font-weight:Bold;
+}
+span.italic\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-style:Italic;
+}
+span.yenmark{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+}
+span.yenmark\+italic{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+	font-style:Italic;
+}
+span.bold\+color_orange{
+	color:#FFA500;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+no_break{
+	white-space:Nowrap;
+	font-weight:Bold;
+}
+span.bold\+no_break\+superscript{
+	white-space:Nowrap;
+	font-weight:Bold;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.no_break\+superscript{
+	white-space:Nowrap;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.ui_text{
+}
+span.ui_bold{
+	font-weight:Bold;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div#id_breadcrumbs{
+	font-size:70%;
+	position:Absolute;
+	left:5px;
+	top:10px;
+	z-index:1;
+	cursor:Default;
+	display:None;
+}
+div#id_breadcrumbs a{
+	margin:0px 5px;
+}
+div#id_breadcrumbs a:link{
+	color:#0000FF;
+}
+div#id_breadcrumbs a:visited{
+	color:#0000FF;
+}
+span.style_name{
+	font:Normal 8pt "Tahoma";
+	color:#FF0000;
+	margin:0px 5px;
+}
+div.open_close_all{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div.open_close_next_sibling{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div#id_content div.open_close_all a:hover,
+div#id_content div.open_close_next_sibling a:hover{
+	text-decoration:None;
+}
+a.open_all:hover,
+a.close_all:hover,
+a.open_next_sibling:hover,
+a.close_next_sibling:hover{
+	border-bottom:Solid 1px #3366A5;
+}
+a.open_all,
+a.close_all,
+a.open_next_sibling,
+a.close_next_sibling{
+	border-bottom:Dotted 1px #3366A5;
+	padding-right:15px;
+}
+a.open_all{
+	margin-right:5px;
+}
+a.open_next_sibling{
+}
+a.close_all,
+a.close_next_sibling{
+}
+div.invisible_begin{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible_end{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible{
+	display:None;
+	border-right:Dotted 1px #808080;
+	margin-right:10px;
+}
+@media print{
+div.open_close_all{
+	display:None;
+}
+div.open_close_next_sibling{
+	display:None;
+}
+div.invisible{
+	display:Block;
+	border-right:None;
+	margin-right:0px;
+}}
+div.hr{
+	border-top:Solid 2px #808080;
+	margin:25px 10px 0px 10px;
+	font-size:0pt;
+	color:#FFFFFF;
+}
+hr{
+	color:#808080;
+	background-color:#808080;
+	margin:25px 10px 0px 10px;
+	height:2px;
+	border:0;
+}
+-->
+		</style>
+	</head>
+	<body>
+		<!--CONTENT_START-->
+		<div id="id_content">
+			<div class="h1">Canon MF/LBP Network Setup Tool voor Microsoft Windows versie 2.30</div>
+			<div class="h2">LICENTIEOVEREENKOMST VOOR CANON-PROGRAMMATUUR</div>
+			<div class="h5">BELANGRIJK</div>
+			<div class="text">Dit is een rechtsgeldige overeenkomst (&quot;overeenkomst&quot;) tussen u en Canon Inc. (&quot;Canon&quot;) betreffende het gebruik door u van programma's van Canon, inclusief bijbehorende handleidingen en eventuele gedrukte documentatie, (de &quot;PROGRAMMATUUR&quot;) voor bepaalde kopieerapparaten, printers en multifunctionele randapparatuur van Canon (de &quot;producten&quot;).</div>
+			<div class="text">LEES DEZE OVEREENKOMST ZORGVULDIG DOOR EN ZORG ERVOOR DAT U ALLE RECHTEN EN BEPERKINGEN DIE IN DEZE OVEREENKOMST WORDEN VERMELD, BEGRIJPT VOORDAT U DE PROGRAMMATUUR INSTALLEERT. DOOR OP DE BIJ DE AKKOORDVERKLARING BEHORENDE KNOP TE KLIKKEN EN U AKKOORD TE VERKLAREN ZOALS HIERONDER VERMELD OF DOOR DE PROGRAMMATUUR TE INSTALLEREN, STEMT U IN MET DE VOORWAARDEN. GEBRUIK DE PROGRAMMATUUR NIET INDIEN U NIET AKKOORD GAAT MET DE VOLGENDE VOORWAARDEN. </div>
+			<div class="h5">1. VERLENING VAN DE LICENTIE</div>
+			<div class="text">Canon verleent u een persoonlijke, gelimiteerde en niet-exclusieve licentie om de PROGRAMMATUUR uitsluitend voor producten te gebruiken (&quot;gebruiken&quot; in deze overeenkomst omvat het opslaan, laden, installeren, openen, uitvoeren of weergeven) op computers die rechtstreeks of via een netwerk zijn aangesloten op de producten (de &quot;aangewezen computer&quot;). </div>
+			<div class="text">U mag andere gebruikers van andere computers die zijn aangesloten op de aangewezen computer, toestaan om de PROGRAMMATUUR te gebruiken, onder voorwaarde dat u zich ervan verzekert dat deze gebruikers zich zullen houden aan de voorwaarden van deze overeenkomst en aan de beperkingen en verplichtingen waaraan u onder deze overeenkomst gebonden bent.</div>
+			<div class="text">U mag één kopie van de PROGRAMMATUUR maken, uitsluitend voor gebruik als reservekopie.</div>
+			<div class="h5">2. BEPERKINGEN</div>
+			<div class="text">U mag de PROGRAMMATUUR niet op enige andere wijze gebruiken dan expliciet is toegestaan in deze overeenkomst. U mag de PROGRAMMATUUR niet toewijzen, daarop een sublicentie verlenen, verkopen, verhuren, uitleasen, uitlenen, overbrengen of overdragen aan derden. U mag de PROGRAMMATUUR niet veranderen, omzetten of converteren naar een andere programmeertaal, modificeren, disassembleren, decompileren of op enige andere wijze reverse engineeren, noch mag u derden dit laten doen.</div>
+			<div class="h5">3. KENNISGEVING VOORBEHOUD AUTEURSRECHTEN</div>
+			<div class="text">Het is u niet toegestaan enige kennisgeving van voorbehoud van auteursrechten van Canon of andere licentiehouders die voorkomt in de PROGRAMMATUUR of een kopie ervan, te modificeren, verwijderen of wissen.</div>
+			<div class="h5">4. EIGENDOMSRECHT</div>
+			<div class="text">Eigendom van en intellectuele eigendomsrechten op de PROGRAMMATUUR berusten geheel bij Canon en haar licentiehouders. Behalve waar deze overeenkomst dit uitdrukkelijk toestaat, wordt door Canon geen licentie of recht, expliciet of impliciet, overgedragen of verleend aan u voor enig intellectueel eigendom van Canon en haar licentiehouders.</div>
+			<div class="h5">5. EXPORTREGELING</div>
+			<div class="text">U stemt ermee in u te houden aan alle exportwetten, -beperkingen en -voorschriften van het betrokken land, en de PROGRAMMATUUR niet te exporteren of opnieuw te exporteren, direct of indirect, in strijd met dergelijke wetten, beperkingen en voorschriften of zonder alle vereiste vergunningen.</div>
+			<div class="h5">6. ONDERSTEUNING EN NIEUWE VERSIES</div>
+			<div class="text">CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON ZIJN NIET AANSPRAKELIJK VOOR ONDERHOUD VAN OF HULP BIJ GEBRUIK VAN DE PROGRAMMATUUR. VOOR DE PROGRAMMATUUR ZULLEN ONDER DEZE OVEREENKOMST GEEN NIEUWE VERSIES, DEELREPARATIES OF ONDERSTEUNING WORDEN AANGEBODEN.</div>
+			<div class="h5">7. BEPERKING VAN GARANTIE EN AANSPRAKELIJKHEID</div>
+			<div class="text">[GEEN GARANTIE] DE PROGRAMMATUUR WORDT VERSTREKT &quot;AS IS&quot;, ZONDER ENIGERLEI GARANTIE, NOCH UITDRUKKELIJK NOCH IMPLICIET, DAARONDER MEDE BEGREPEN MAAR NIET BEPERKT TOT IMPLICIETE GARANTIES BETREFFENDE VERKOOPBAARHEID OF GESCHIKTHEID VOOR EEN BEPAALD DOEL. HET VOLLEDIGE RISICO WAT BETREFT KWALITEIT EN PRESTATIES VAN DE PROGRAMMATUUR BERUST BIJ U. ALS DE PROGRAMMATUUR GEBREKKIG BLIJKT TE ZIJN, ZIJN ALLE KOSTEN VOOR NOODZAKELIJK ONDERHOUD, REPARATIE OF CORRECTIE VOOR UW REKENING. IN BEPAALDE LANDEN OF RECHTSGEBIEDEN IS HET WETTELIJK NIET TOEGESTAAN IMPLICIETE GARANTIES UIT TE SLUITEN, ZODAT DE BOVENSTAANDE UITSLUITING MOGELIJK NIET OP U VAN TOEPASSING IS. </div>
+			<div class="text">DEZE GARANTIE VERLEENT U BEPAALDE JURIDISCHE RECHTEN. DAARNAAST HEBT U WELLICHT ANDERE RECHTEN DIE PER LAND OF RECHTSGEBIED KUNNEN VERSCHILLEN.</div>
+			<div class="text">NOCH CANON, NOCH DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON GARANDEREN DAT DE FUNCTIES OPGENOMEN IN DEZE PROGRAMMATUUR AAN UW VEREISTEN VOLDOEN, OF DAT DE WERKING VAN DE PROGRAMMATUUR ONONDERBROKEN EN FOUTLOOS ZAL ZIJN.</div>
+			<div class="text">[GEEN AANSPRAKELIJKHEID VOOR SCHADE] IN GEEN GEVAL ZIJN CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON AANSPRAKELIJK VOOR ENIGE SCHADE (INCLUSIEF EN ZONDER BEPERKINGEN HET VERLIES VAN BEDRIJFSWINST, HET VERLIES VAN BEDRIJFSINFORMATIE, SCHADE ALS GEVOLG VAN BEDRIJFSONDERBREKING OF ANDERE HERSTELSCHADE, BIJKOMSTIGE SCHADE OF VERVOLGSCHADE) ONTSTAAN TEN GEVOLGE VAN DE PROGRAMMATUUR, HET GEBRUIK ERVAN OF HET NIET KUNNEN GEBRUIKEN ERVAN, ZELFS INDIEN CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN DE MOGELIJKHEID VAN DERGELIJKE SCHADE OP DE HOOGTE ZIJN GESTELD. IN SOMMIGE LANDEN OF RECHTSGEBIEDEN IS BEPERKING OF UITSLUITING VAN AANSPRAKELIJKHEID IN HET GEVAL VAN INCIDENTELE OF VERVOLGSCHADE, PERSOONLIJK LETSEL OF OVERLIJDEN ALS GEVOLG VAN NALATIGHEID VAN DE VERKOPER NIET TOEGESTAAN, ZODAT DE BOVENSTAANDE BEPERKING OF UITSLUITING MOGELIJK NIET OP U VAN TOEPASSING IS.</div>
+			<div class="text">[VRIJWAARDING VAN AANSPRAKELIJKHEID] VOOR ZOVER MOGELIJK ONDER DE GELDENDE WETGEVING VRIJWAART U CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON VAN ALLE AANSPRAKELIJKHEID ONTSTAAN UIT OF GERELATEERD AAN ALLE VORDERINGEN MET BETREKKING TOT DE PROGRAMMATUUR OF HET GEBRUIK ERVAN.</div>
+			<div class="h5">8. TERMIJN</div>
+			<div class="text">Deze overeenkomst wordt van kracht wanneer u zichzelf ermee akkoord verklaart zoals hieronder vermeld door op de bij de akkoordverklaring behorende knop te klikken of door de PROGRAMMATUUR te installeren. De overeenkomst blijft van kracht totdat deze wordt beëindigd. U kunt deze overeenkomst beëindigen door de PROGRAMMATUUR inclusief alle eventuele kopieën ervan te vernietigen.</div>
+			<div class="text">Deze overeenkomst zal ook worden beëindigd als u zich niet houdt aan een van de voorwaarden van de overeenkomst. Wanneer de overeenkomst beëindigd is, dient u onmiddellijk de PROGRAMMATUUR en eventuele kopieën ervan te vernietigen. Canon kan zich in geval van beëindiging desgewenst beroepen op haar wettelijke rechten. Niettegenstaande het voorafgaande blijven secties 4 en 7 tot en met 11 ook na beëindiging van deze overeenkomst van kracht.</div>
+			<div class="h5">9. KENNISGEVING BEPERKTE RECHTEN BETREFFENDE DE VERENIGDE STATEN VAN AMERIKA</div>
+			<div class="text">A &quot;US Government End User&quot; shall mean any agency or entity of the government of the United States. If you are a US Government End User, the following shall apply: The SOFTWARE is a &quot;commercial item,&quot; as that term is defined at 48 C.F.R. 2.101 (October 1995), consisting of &quot;commercial computer software&quot; and &quot;commercial computer software documentation,&quot; as such terms are used in 48 C.F.R. 12.212 (September 1995). Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4 (June 1995), all U.S. Government End Users shall acquire the SOFTWARE with only those rights set forth herein. The manufacturer is Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.</div>
+			<div class="h5">10. SCHEIDBAARHEID</div>
+			<div class="text">Ingeval enige sectie van deze overeenkomst door een bevoegde rechterlijke instantie illegaal wordt bevonden of verklaard, zal de bewuste sectie nietig zijn voor wat betreft de jurisdictie van de genoemde rechterlijke instantie en zullen alle verdere bepalingen van deze overeenkomst onveranderd van kracht blijven.</div>
+			<div class="h5">11. ERKENNING</div>
+			<div class="text">DOOR OP DE KNOP TE KLIKKEN EN U AKKOORD TE VERKLAREN ZOALS HIERONDER VERMELD OF DOOR DE PROGRAMMATUUR TE INSTALLEREN, ERKENT U DAT U DEZE OVEREENKOMST HEBT GELEZEN EN BEGREPEN EN DAT U ERMEE INSTEMT GEBONDEN TE ZIJN AAN DE VOORWAARDEN ERVAN. U STEMT ER TEVENS MEE IN DAT DEZE TEKST DE VOLLEDIGE EN EXCLUSIEVE TEKST BEHELST VAN DEZE OVEREENKOMST TUSSEN U EN CANON AANGAANDE DE HIERIN BESCHREVEN ONDERWERPEN EN DAT DEZE OVEREENKOMST DE PLAATS INNEEMT VAN ALLE VOORSTELLEN OF EERDERE OVEREENKOMSTEN, MONDELING OF SCHRIFTELIJK OF VIA ANDERE COMMUNICATIEMIDDELEN, TUSSEN U EN CANON AANGAANDE DE HIERIN BESCHREVEN ONDERWERPEN. GEEN WIJZIGING VAN DEZE OVEREENKOMST KAN VAN KRACHT WORDEN ZONDER GETEKEND TE ZIJN DOOR EEN OP DE JUISTE WIJZE ERKENDE VERTEGENWOORDIGER VAN CANON.</div>
+			<div class="text">Als u nog vragen hebt over deze overeenkomst of om welke reden dan ook contact wilt opnemen met Canon, kunt u schrijven naar de verkoopmaatschappij of groothandelaar/dealer van Canon voor het land waar u de producten hebt aangeschaft.</div>
+			<div class="text"> </div>
+			<div class="text_right">No.025370</div>
+			<div class="h2">VOORZORGSMAATREGELEN</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">1.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">Let op de volgende beperkingen bij gebruik van deze software.</div>
+							</td>
+						</tr>
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+								<div class="text"></div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+								<div class="table_no_border">
+									<table class="table_no_border">
+										<tbody class="table_no_border">
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+													<div class="text">(1)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+													<div class="text">De software kan maximaal 10 draadloze LAN-toegangspunten detecteren door te zoeken naar draadloze LAN-toegangspunten.</div>
+												</td>
+											</tr>
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+													<div class="text">(2)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+													<div class="text">De software kan geen draadloze LAN-toegangspunten detecteren door te zoeken naar draadloze LAN-toegangspunten als de draadloze toegangspunten gebruikmaken van stealth-functie.</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">2.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">Klik op [Sluiten] als het dialoogvenster [Installatie van apparaat] wordt weergegeven als u de USB-kabel op uw computer aansluit.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr />
+			<div class="text_right">Copyright CANON INC. 2012</div>
+			<div class="text"></div>
+		</div>
+		<!--CONTENT_END-->
+	</body>
+</html>

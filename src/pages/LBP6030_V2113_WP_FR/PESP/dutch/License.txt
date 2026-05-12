@@ -1,0 +1,57 @@
+LICENTIEOVEREENKOMST VOOR CANON-PROGRAMMATUUR
+
+BELANGRIJK
+
+Dit is een rechtsgeldige overeenkomst ("overeenkomst") tussen u en Canon Inc. ("Canon") betreffende het gebruik door u van programma's van Canon, inclusief bijbehorende handleidingen en eventuele gedrukte documentatie, (de "PROGRAMMATUUR") voor bepaalde kopieerapparaten, printers en multifunctionele randapparatuur van Canon (de "producten").
+
+LEES DEZE OVEREENKOMST ZORGVULDIG DOOR EN ZORG ERVOOR DAT U ALLE RECHTEN EN BEPERKINGEN DIE IN DEZE OVEREENKOMST WORDEN VERMELD, BEGRIJPT VOORDAT U DE PROGRAMMATUUR INSTALLEERT.  DOOR OP DE BIJ DE AKKOORDVERKLARING BEHORENDE KNOP TE KLIKKEN EN U AKKOORD TE VERKLAREN ZOALS HIERONDER VERMELD OF DOOR DE PROGRAMMATUUR TE INSTALLEREN, STEMT U IN MET DE VOORWAARDEN.  GEBRUIK DE PROGRAMMATUUR NIET INDIEN U NIET AKKOORD GAAT MET DE VOLGENDE VOORWAARDEN.  
+
+
+1.  VERLENING VAN DE LICENTIE
+Canon verleent u een persoonlijke, gelimiteerde en niet-exclusieve licentie om de PROGRAMMATUUR uitsluitend voor producten te gebruiken ("gebruiken" in deze overeenkomst omvat het opslaan, laden, installeren, openen, uitvoeren of weergeven) op computers die rechtstreeks of via een netwerk zijn aangesloten op de producten (de "aangewezen computer"). 
+U mag andere gebruikers van andere computers die zijn aangesloten op de aangewezen computer, toestaan om de PROGRAMMATUUR te gebruiken, onder voorwaarde dat u zich ervan verzekert dat deze gebruikers zich zullen houden aan de voorwaarden van deze overeenkomst en aan de beperkingen en verplichtingen waaraan u onder deze overeenkomst gebonden bent.
+
+U mag één kopie van de PROGRAMMATUUR maken, uitsluitend voor gebruik als reservekopie.
+
+2.  BEPERKINGEN
+U mag de PROGRAMMATUUR niet op enige andere wijze gebruiken dan expliciet is toegestaan in deze overeenkomst. U mag de PROGRAMMATUUR niet toewijzen, daarop een sublicentie verlenen, verkopen, verhuren, uitleasen, uitlenen, overbrengen of overdragen aan derden. U mag de PROGRAMMATUUR niet veranderen, omzetten of converteren naar een andere programmeertaal, modificeren, disassembleren, decompileren of op enige andere wijze reverse engineeren, noch mag u derden dit laten doen.
+
+3.  KENNISGEVING VOORBEHOUD AUTEURSRECHTEN
+Het is u niet toegestaan enige kennisgeving van voorbehoud van auteursrechten van Canon of andere licentiehouders die voorkomt in de PROGRAMMATUUR of een kopie ervan, te modificeren, verwijderen of wissen.
+
+4.  EIGENDOMSRECHT
+Eigendom van en intellectuele eigendomsrechten op de PROGRAMMATUUR berusten geheel bij Canon en haar licentiehouders.  Behalve waar deze overeenkomst dit uitdrukkelijk toestaat, wordt door Canon geen licentie of recht, expliciet of impliciet, overgedragen of verleend aan u voor enig intellectueel eigendom van Canon en haar licentiehouders.
+
+5.  EXPORTREGELING
+U stemt ermee in u te houden aan alle exportwetten, -beperkingen en -voorschriften van het betrokken land, en de PROGRAMMATUUR niet te exporteren of opnieuw te exporteren, direct of indirect, in strijd met dergelijke wetten, beperkingen en voorschriften of zonder alle vereiste vergunningen.
+
+6.  ONDERSTEUNING EN NIEUWE VERSIES
+CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON ZIJN NIET AANSPRAKELIJK VOOR ONDERHOUD VAN OF HULP BIJ GEBRUIK VAN DE PROGRAMMATUUR. VOOR DE PROGRAMMATUUR ZULLEN ONDER DEZE OVEREENKOMST GEEN NIEUWE VERSIES, DEELREPARATIES OF ONDERSTEUNING WORDEN AANGEBODEN.
+
+7.  BEPERKING VAN GARANTIE EN AANSPRAKELIJKHEID
+[GEEN GARANTIE]  DE PROGRAMMATUUR WORDT VERSTREKT "AS IS", ZONDER ENIGERLEI GARANTIE, NOCH UITDRUKKELIJK NOCH IMPLICIET, DAARONDER MEDE BEGREPEN MAAR NIET BEPERKT TOT IMPLICIETE GARANTIES BETREFFENDE VERKOOPBAARHEID OF GESCHIKTHEID VOOR EEN BEPAALD DOEL.  HET VOLLEDIGE RISICO WAT BETREFT KWALITEIT EN PRESTATIES VAN DE PROGRAMMATUUR BERUST BIJ U.  ALS DE PROGRAMMATUUR GEBREKKIG BLIJKT TE ZIJN, ZIJN ALLE KOSTEN VOOR NOODZAKELIJK ONDERHOUD, REPARATIE OF CORRECTIE VOOR UW REKENING.  IN BEPAALDE LANDEN OF RECHTSGEBIEDEN IS HET WETTELIJK NIET TOEGESTAAN IMPLICIETE GARANTIES UIT TE SLUITEN, ZODAT DE BOVENSTAANDE UITSLUITING MOGELIJK NIET OP U VAN TOEPASSING IS.  
+DEZE GARANTIE VERLEENT U BEPAALDE JURIDISCHE RECHTEN. DAARNAAST HEBT U WELLICHT ANDERE RECHTEN DIE PER LAND OF RECHTSGEBIED KUNNEN VERSCHILLEN.
+
+NOCH CANON, NOCH DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON GARANDEREN DAT DE FUNCTIES OPGENOMEN IN DEZE PROGRAMMATUUR AAN UW VEREISTEN VOLDOEN, OF DAT DE WERKING VAN DE PROGRAMMATUUR ONONDERBROKEN EN FOUTLOOS ZAL ZIJN.
+
+[GEEN AANSPRAKELIJKHEID VOOR SCHADE] IN GEEN GEVAL ZIJN CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON AANSPRAKELIJK VOOR ENIGE SCHADE (INCLUSIEF EN ZONDER BEPERKINGEN HET VERLIES VAN BEDRIJFSWINST, HET VERLIES VAN BEDRIJFSINFORMATIE, SCHADE ALS GEVOLG VAN BEDRIJFSONDERBREKING OF ANDERE HERSTELSCHADE, BIJKOMSTIGE SCHADE OF VERVOLGSCHADE) ONTSTAAN TEN GEVOLGE VAN DE PROGRAMMATUUR, HET GEBRUIK ERVAN OF HET NIET KUNNEN GEBRUIKEN ERVAN, ZELFS INDIEN CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN DE MOGELIJKHEID VAN DERGELIJKE SCHADE OP DE HOOGTE ZIJN GESTELD.  IN SOMMIGE LANDEN OF RECHTSGEBIEDEN IS BEPERKING OF UITSLUITING VAN AANSPRAKELIJKHEID IN HET GEVAL VAN INCIDENTELE OF VERVOLGSCHADE, PERSOONLIJK LETSEL OF OVERLIJDEN ALS GEVOLG VAN NALATIGHEID VAN DE VERKOPER NIET TOEGESTAAN, ZODAT DE BOVENSTAANDE BEPERKING OF UITSLUITING MOGELIJK NIET OP U VAN TOEPASSING IS.
+
+[VRIJWAARDING VAN AANSPRAKELIJKHEID] VOOR ZOVER MOGELIJK ONDER DE GELDENDE WETGEVING VRIJWAART U CANON, DOCHTERBEDRIJVEN OF GELIEERDE ONDERNEMINGEN, GROOTHANDELAREN, DEALERS EN/OF LICENTIEHOUDERS VAN CANON VAN ALLE AANSPRAKELIJKHEID ONTSTAAN UIT OF GERELATEERD AAN ALLE VORDERINGEN MET BETREKKING TOT DE PROGRAMMATUUR OF HET GEBRUIK ERVAN.
+
+8.  TERMIJN
+Deze overeenkomst wordt van kracht wanneer u zichzelf ermee akkoord verklaart zoals hieronder vermeld door op de bij de akkoordverklaring behorende knop te klikken of door de PROGRAMMATUUR te installeren. De overeenkomst blijft van kracht totdat deze wordt beëindigd.  U kunt deze overeenkomst beëindigen door de PROGRAMMATUUR inclusief alle eventuele kopieën ervan te vernietigen. 
+Deze overeenkomst zal ook worden beëindigd als u zich niet houdt aan een van de voorwaarden van de overeenkomst.  Wanneer de overeenkomst beëindigd is, dient u onmiddellijk de PROGRAMMATUUR en eventuele kopieën ervan te vernietigen. Canon kan zich in geval van beëindiging desgewenst beroepen op haar wettelijke rechten.  Niettegenstaande het voorafgaande blijven secties 4 en 7 tot en met 11 ook na beëindiging van deze overeenkomst van kracht.
+
+9.  KENNISGEVING BEPERKTE RECHTEN BETREFFENDE DE VERENIGDE STATEN VAN AMERIKA
+A "US Government End User" shall mean any agency or entity of the government of the United States.  If you are a US Government End User, the following shall apply: The SOFTWARE is a "commercial item," as that term is defined at 48 C.F.R. 2.101 (October 1995), consisting of "commercial computer software" and "commercial computer software documentation," as such terms are used in 48 C.F.R. 12.212 (September 1995).  Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4 (June 1995), all U.S. Government End Users shall acquire the SOFTWARE with only those rights set forth herein.  The manufacturer is Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10.  SCHEIDBAARHEID
+Ingeval enige sectie van deze overeenkomst door een bevoegde rechterlijke instantie illegaal wordt bevonden of verklaard, zal de bewuste sectie nietig zijn voor wat betreft de jurisdictie van de genoemde rechterlijke instantie en zullen alle verdere bepalingen van deze overeenkomst onveranderd van kracht blijven.
+
+11.  ERKENNING
+DOOR OP DE KNOP TE KLIKKEN EN U AKKOORD TE VERKLAREN ZOALS HIERONDER VERMELD OF DOOR DE PROGRAMMATUUR TE INSTALLEREN, ERKENT U DAT U DEZE OVEREENKOMST HEBT GELEZEN EN BEGREPEN EN DAT U ERMEE INSTEMT GEBONDEN TE ZIJN AAN DE VOORWAARDEN ERVAN.  U STEMT ER TEVENS MEE IN DAT DEZE TEKST DE VOLLEDIGE EN EXCLUSIEVE TEKST BEHELST VAN DEZE OVEREENKOMST TUSSEN U EN CANON AANGAANDE DE HIERIN BESCHREVEN ONDERWERPEN EN DAT DEZE OVEREENKOMST DE PLAATS INNEEMT VAN ALLE VOORSTELLEN OF EERDERE OVEREENKOMSTEN, MONDELING OF SCHRIFTELIJK OF VIA ANDERE COMMUNICATIEMIDDELEN, TUSSEN U EN CANON AANGAANDE DE HIERIN BESCHREVEN ONDERWERPEN.  GEEN WIJZIGING VAN DEZE OVEREENKOMST KAN VAN KRACHT WORDEN ZONDER GETEKEND TE ZIJN DOOR EEN OP DE JUISTE WIJZE ERKENDE VERTEGENWOORDIGER VAN CANON.
+
+
+Als u nog vragen hebt over deze overeenkomst of om welke reden dan ook contact wilt opnemen met Canon, kunt u schrijven naar de verkoopmaatschappij of groothandelaar/dealer van Canon voor het land waar u de producten hebt aangeschaft.
+
+No.024410

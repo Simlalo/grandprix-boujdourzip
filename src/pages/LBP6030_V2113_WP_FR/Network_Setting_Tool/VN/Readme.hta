@@ -1,0 +1,1189 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:hta="urn:HTMLApplication">
+	<head>
+		<meta name="Generator" content="CAESAR" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+		<title>Công Cụ Thiết Lập Mạng Canon MF/LBP cho phiên bản Microsoft Windows 2.30</title>
+		<hta:application id="id_canon_main_window" applicationname="canon_main_window" border="thick" borderstyle="normal" caption="yes" maximizebutton="yes" minimizebutton="yes" showintaskbar="yes" singleinstance="no" sysmenu="yes" version="1.0" windowstate="normal" contextmenu="yes" navigable="yes" />
+		<style type="text/css">div.list{display:list-item!important;list-style-type:Disc;margin-left:40px!important;padding-left:5px!important;}table div.list{margin-left:20px!important;padding-left:5px!important;}div.dash{display:list-item!important;list-style-type:Circle;margin-left:65px!important;padding-left:5px!important;}table div.dash{margin-left:40px!important;padding-left:5px!important;}div.step_sub{display:list-item!important;list-style-type:Square;margin-left:30px!important;padding-left:5px!important;}div.list_link{display:list-item!important;list-style-type:Square;margin-left:50px!important;padding-left:5px!important;}div.h1{background:#F3F8FA!important;}div.h2,div.h2_2line,div.h2_3line{background:#F3F8FA!important;}div.h3{background:#F3F8FA!important;}thead.table_important td.table_important_col_0,thead.table_note td.table_note_col_0{padding:2px 5px 2px 5px!important;}</style>
+		<style type="text/css" >
+			<!--
+*{
+	font-family:"Arial","Helvetica",Sans-serif;
+	/*margin:0;*/
+	/*padding:0;*/
+	/*border:0;*/
+	/*background-color:Transparent;*/
+	font-size:100%;
+	/*font-style:Normal;*/
+	text-decoration:None;
+}
+html{
+	border:0;
+}
+body{
+	margin:0;
+	padding:0;
+	background:#FFFFFF;
+}
+span{
+	color:Inherit;
+}
+div#id_content a{
+	text-decoration:None;
+}
+div#id_content a:link{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:visited{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:hover{
+	color:#EC6700;
+	background-color:#FFFFCC;
+	text-decoration:Underline;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.chapter_title{
+	background:#4682B4;
+	padding:2px 5px 2px 5px;
+	border-bottom:Solid 1px #4682B4;
+	font-weight:Bold;
+	font-size:80%;
+	margin-bottom:16px;
+	text-align:Right;
+	color:#FFFFFF;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h1{
+	padding:32px 0 2px 8px;
+	border-bottom:Solid 1px #4682B4;
+	background:#F3F8FA;
+	font-weight:Bold;
+	font-size:120%;
+	margin-bottom:16px;
+	vertical-align:Bottom;
+	text-align:Left;
+	color:#000080;
+	position:Relative;
+}
+div.h1 a{
+	position:Absolute;
+	*position:Static!important;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h2,
+div.h2_2line,
+div.h2_3line{
+	border:Solid 1px #4682B4;
+	padding:5px;
+	margin:30px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	color:#000080;
+}
+div.h2 a,
+div.h2_2line a,
+div.h2_3line a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h2 img,
+div.h2_2line img,
+div.h2_3line img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h3{
+	padding:5px;
+	margin:25px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	border-bottom:Solid 1px #87CEEB;
+	color:#000080;
+}
+div.h3 a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h3 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h4{
+	margin:20px 10px 5px 10px;
+	font-weight:Bold;
+	font-size:90%;
+	border-Bottom:Solid 1px #87CEEB;
+	background:#FFFFFF;
+	padding:0px 5px;
+	color:#000080;
+}
+div.h4 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h5{
+	margin:20px 10px 5px 15px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h5 img{
+	vertical-align:Middle;
+	margin-right:5px;
+	margin-left:4px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h6{
+	margin:15px 10px 5px 30px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h6 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+table div.h6{
+	margin-left:0px;
+	margin-top:10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#000000;
+}
+table div.text{
+	margin:3px 0 0 0;
+}
+div.text img{
+	vertical-align:Middle;
+}
+table div.text img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level1{
+	font-size:80%;
+	margin:5px 10px 5px 40px;
+	color:#000000;
+}
+table div.text_level1{
+	margin:3px 0 0 10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level2{
+	font-size:80%;
+	margin:5px 10px 5px 50px;
+	color:#000000;
+}
+table div.text_level2{
+	margin:3px 0 0 20px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level3{
+	font-size:80%;
+	margin:5px 10px 5px 60px;
+	color:#000000;
+}
+table div.text_level3{
+	margin:3px 0 0 30px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_center{
+	text-align:Center;
+	font-size:80%;
+	color:#000000;
+}
+table div.text_center{
+	margin:3px 0 0 0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_right{
+	text-align:Right;
+	font-size:80%;
+	color:#000000;
+	margin-right:10px;
+}
+table div.text_right{
+	margin-right:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.annotation{
+	font-size:75%;
+	margin:0px 10px 5px 55px;
+	text-indent:-1.5em;
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left:20px;
+	padding-top:0px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#000000;
+}
+table div.list{
+	margin-left:0px;
+}
+div.list img{
+	vertical-align:Top;
+}
+table div.list img{
+	vertical-align:Top;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div.dash{
+	margin-left:50px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	font-weight:Normal;
+	font-size:80%;
+	background:Transparent;
+	_background:Transparent;
+	padding:0px 0px 0px 20px;
+	color:#000000;
+}
+*:first-child+html div.dash{
+	background:Transparent;
+}
+table div.dash{
+	margin-left:12px;
+}
+div.dash img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.example{
+	font-size:80%;
+	font-family:Monospace;
+	margin:5px 10px 5px 30px;
+	clear:Both;
+	background:#707080;
+	padding:5px;
+	color:#FFFFFF;
+}
+div#id_content div.example a:link{
+	color:#0000FF;
+	text-decoration:None;
+}
+div#id_content div.example a:visited{
+	color:#0000FF;
+	text-decoration:None;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.path{
+	padding:3px 10px 3px 20px;
+	font-size:80%;
+	margin:0px 30px;
+	background:Transparent;
+	_background:Transparent;
+	color:#666666;
+}
+div.path img{
+	vertical-align:Middle;
+}
+table div.path{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_number{
+	background:#F8F8F8;
+	font:Bold 200% "Arial";
+	color:#4682B4;
+	padding:0px 5px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+	margin-bottom:0px;
+}
+div.step_number span{
+	font:Bold 100% "Arial";
+	color:#4682B4;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_path{
+	padding:3px 10px 3px 30px;
+	font-size:80%;
+	margin:0px 10px;
+	background:#F8F8F8;
+	_background:#F8F8F8;
+	color:#666666;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_text{
+	font-weight:Bold;
+	padding:0px 10px 15px 5px;
+	font-size:80%;
+	margin:0px 10px 10px 10px;
+	background:#F8F8F8;
+	color:#000000;
+}
+div.step_text img{
+	vertical-align:Middle;
+}
+@media print{div.step_text{
+	padding:0px 10px 20px 5px;
+}}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_sub{
+	font-size:80%;
+	font-weight:Bold;
+	margin:10px 10px 5px 15px;
+	padding-left:15px;
+	background:Transparent;
+	_background:Transparent;
+	color:#000000;
+}
+div.step_sub img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.figure{
+	text-align:Left;
+	margin-left:30px;
+	margin-bottom:10px;
+}
+table div.figure{
+	margin-left:0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link{
+	margin:10px;
+	font-size:80%;
+	color:#3366A5;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link a{
+	text-decoration:None;
+	padding-left:10px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list_link{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-bottom:0px;
+	padding-left:20px;
+	padding-top:1px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#3366A5;
+}
+table div.list_link{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link_to_top{
+	text-align:Right;
+	padding:5px 10px 30px 10px;
+	font-size:80%;
+	color:#3366A5;
+	border-top:Dotted 1px #87CEEB;
+	margin-top:30px;
+}
+@media print{div.link_to_top{
+	display:None;
+}}
+div.link_to_top a{
+	text-decoration:None;
+	padding-left:12px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.trouble_shooting{
+	margin:10px 10px 10px 30px;
+}
+table.trouble_shooting{
+	border-collapse:Collapse;
+	table-layout:Fixed;
+}
+td.trouble_shooting{
+	border:Solid 1px #FFFFFF;
+}
+td.trouble_shooting_col_0{
+	padding:5px;
+	vertical-align:Middle;
+	font-size:100%;
+	width:80px;
+	background:#C0C0C0;
+	padding-bottom:10px;
+}
+td.trouble_shooting_col_1{
+	background:#EFEFEF;
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-left:5px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.outline{
+	margin:10px 10px 10px 30px;
+}
+table.outline{
+	border-collapse:Collapse;
+	font-size:100%;
+}
+td.outline{
+	padding:10px 5px 10px 5px;
+}
+td.outline_col_0{
+	vertical-align:Middle;
+	text-align:Center;
+	border:Solid 1px #87CEEB;
+	background:#F5F5F5;
+	width:30px;
+	font-size:130%;
+}
+td.outline_col_0 div.h6{
+	color:#4682B4;
+	margin:0px;
+}
+td.outline_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #87CEEB;
+	border-left:None;
+	background:#F5F5F5;
+	width:150px;
+}
+td.outline_col_1 div.h6{
+	margin:0px;
+	color:#000000;
+}
+td.outline_col_2{
+	vertical-align:Middle;
+	background:#FFFFFF;
+	border:Solid 1px #87CEEB;
+	padding:3px 3px 3px 10px;
+}
+td.outline_col_2 div.list{
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_ui{
+	margin:5px 10px 10px 30px;
+}
+table.table_ui{
+	table-layout:Auto;
+	border-collapse:Collapse;
+	border:None;
+	border-bottom:Solid 1px #E0E0E0;
+}
+td.table_ui_col_0{
+	padding:0px;
+	vertical-align:Top;
+	font-size:100%;
+	width:150px;
+	color:#000000;
+	padding:0px 0px 5px 0px;
+	border-right:None;
+}
+td.table_ui_col_1{
+	background:#FFFFFF;
+	padding:3px;
+	padding-left:10px;
+	border:Solid 1px #E0E0E0;
+	border-left:Solid 1px #E0E0E0;
+	border-right:None;
+	border-bottom:None;
+	vertical-align:Top;
+}
+td.table_ui_col_0 div.ui_level0{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 1px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #FFFFFF;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level1{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #87BEDB;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level2{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:10px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #A0D0EA;
+}
+td.table_ui_col_0 div.ui_level3{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:20px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #C6E5F6;
+}
+td.table_ui_col_0 div.ui_level1 img,
+td.table_ui_col_0 div.ui_level2 img,
+td.table_ui_col_0 div.ui_level3 img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+table div.table_important,
+table div.table_caution,
+table div.table_warning,
+table div.table_note{
+	margin-left:20px;
+}
+div.table_important,
+div.table_caution,
+div.table_warning,
+div.table_note{
+	margin:10px 10px 10px 30px;
+}
+*:first-child+html table.table_important,
+*:first-child+html table.table_caution,
+*:first-child+html table.table_warning,
+*:first-child+html table.table_note{
+	width:Auto;
+	table-layout:Fixed;
+}
+table.table_important,
+table.table_caution,
+table.table_warning,
+table.table_note{
+	background:#FFFFFF;
+	border-collapse:Collapse;
+	font-size:100%;
+	width:100%;
+	_width:Auto;
+	_table-layout:Fixed;
+}
+*:first-child+html table td.table_important_col_0,
+*:first-child+html table td.table_caution_col_0,
+*:first-child+html table td.table_warning_col_0,
+*:first-child+html table td.table_note_col_0{
+	width:Auto;
+}
+table td.table_important_col_0,
+table td.table_caution_col_0,
+table td.table_warning_col_0,
+table td.table_note_col_0{
+	width:100%;
+	_width:Auto;
+	vertical-align:Top;
+}
+*:first-child+html tbody.table_important td.table_important_col_0,
+*:first-child+html tbody.table_caution td.table_caution_col_0,
+*:first-child+html tbody.table_warning td.table_warning_col_0,
+*:first-child+html tbody.table_note td.table_note_col_0{
+	width:Auto;
+}
+tbody.table_important td.table_important_col_0,
+tbody.table_caution td.table_caution_col_0,
+tbody.table_warning td.table_warning_col_0,
+tbody.table_note td.table_note_col_0{
+	padding-left:10px;
+	width:100%;
+	_width:Auto;
+}
+@media print{
+thead.table_important td.table_important,
+thead.table_caution td.table_caution,
+thead.table_warning td.table_warning,
+thead.table_note td.table_note{
+	padding-bottom:5px;
+}}
+tbody.table_important td.table_important,
+tbody.table_caution td.table_caution,
+tbody.table_warning td.table_warning,
+tbody.table_note td.table_note{
+	padding-left:10px;
+	padding-top:2px;
+	border-bottom:None;
+	padding-bottom:5px;
+	border-top:None;
+}
+thead.table_important td.table_important_col_0,
+thead.table_note td.table_note_col_0{
+	padding:2px 5px 2px 30px;
+	text-align:Left;
+	border-bottom:None;
+}
+thead.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0{
+	padding:2px 23px 5px 5px;
+	text-align:Center;
+	border-bottom:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0 div img,
+thead.table_warning td.table_warning_col_0 div img{
+	margin-right:3px;
+}
+thead.table_important td.table_important div,
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div,
+thead.table_note td.table_note div{
+	font-weight:Bold;
+}
+table.table_important{
+	border:Solid 1px #808080;
+}
+table.table_caution,
+table.table_warning{
+	border:Solid 1px #808080;
+}
+table.table_note{
+	border:Solid 1px #808080;
+}
+thead.table_important td.table_important{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	font-size:120%;
+}
+
+thead.table_note td.table_note{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_important td.table_important div{
+	color:#4682B4;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	color:#000000;
+}
+thead.table_note td.table_note div{
+	color:#808080;
+}
+thead.table_important td.table_important_col_0,
+tbody.table_important td.table_important_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0,
+tbody.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0,
+tbody.table_warning td.table_warning_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_note td.table_note_col_0,
+tbody.table_note td.table_note_col_0{
+	border-right:Solid 1px #808080;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_no_border{
+	margin:10px 10px 10px 30px;	
+}
+table div.table_no_border{
+	margin-left:10px;
+}
+table.table_no_border{
+	border:None;
+	width:Auto;
+}
+thead.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	font-weight:Bold;
+	vertical-align:Middle;
+}
+tbody.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	vertical-align:Top;
+	border:None;
+	font-size:100%;
+	padding-bottom:5px;
+}
+tbody.table_no_border td.table_no_border div{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_matrix{
+	margin:10px 10px 10px 30px;
+}
+table div.table_matrix{
+	margin-left:20px;
+}
+table.table_matrix{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix{
+	padding:5px;
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_matrix td.table_matrix_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	background-color:#EFEFEF;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_matrix td.table_matrix{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_matrix td.table_matrix_col_1{
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_matrix td.table_matrix_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix_col_0{
+	border:Solid 1px #808080;
+	background-color:#DDDDDD;
+	padding:5px;
+}
+thead.table_matrix td.table_matrix div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_general{
+	margin:10px 10px 10px 30px;
+}
+table div.table_general{
+	margin-left:20px;
+}
+table.table_general{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general{
+	padding:5px;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_general td.table_general_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_general td.table_general{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_general td.table_general_col_1{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_general td.table_general_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general_col_0{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+thead.table_general td.table_general div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_number{
+	margin:10px 10px 10px 35px;	
+}
+table div.table_number{
+	margin-left:25px;
+}
+table.table_number{
+	border-collapse:Collapse;
+	border:None;
+	width:Auto;
+}
+tbody.table_number td.table_number{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	vertical-align:Top;
+}
+tbody.table_number td.table_number_col_0{
+	width:1.5em;
+	border:None;
+}
+tbody.table_number td.table_number_col_0 div{
+	margin-left:0px;
+	margin-right:0px;
+	font-weight:Normal;
+	text-align:Right;
+}
+tbody.table_number td.table_number_col_1{
+	width:Auto;
+}
+/*-----------------------------------------------------------------------------------------------*/
+span.bold{
+	font-weight:Bold;
+}
+span.italic{
+	font-style:Italic;
+}
+span.no_break{
+	white-space:Nowrap;
+}
+span.superscript{
+	vertical-align:Super;
+	font-size:80%;
+}
+span.subscript{
+	vertical-align:Sub;
+	font-size:80%;
+}
+span.underline{
+	text-decoration:Underline;
+}
+span.color_white{
+	color:#FFFFFF;
+}
+span.color_blue{
+	color:#0000FF;
+}
+span.color_red{
+	color:#FF0000;
+}
+span.color_orange{
+	color:#FFA500;
+}
+span.color_green{
+	color:#008000;
+}
+span.bold\+color_red{
+	color:#FF0000;
+	font-weight:Bold;
+}
+span.bold\+italic{
+	font-style:Italic;
+	font-weight:Bold;
+}
+span.bold\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+underline{
+	text-decoration:Underline;
+	font-weight:Bold;
+}
+span.italic\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-style:Italic;
+}
+span.yenmark{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+}
+span.yenmark\+italic{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+	font-style:Italic;
+}
+span.bold\+color_orange{
+	color:#FFA500;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+no_break{
+	white-space:Nowrap;
+	font-weight:Bold;
+}
+span.bold\+no_break\+superscript{
+	white-space:Nowrap;
+	font-weight:Bold;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.no_break\+superscript{
+	white-space:Nowrap;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.ui_text{
+}
+span.ui_bold{
+	font-weight:Bold;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div#id_breadcrumbs{
+	font-size:70%;
+	position:Absolute;
+	left:5px;
+	top:10px;
+	z-index:1;
+	cursor:Default;
+	display:None;
+}
+div#id_breadcrumbs a{
+	margin:0px 5px;
+}
+div#id_breadcrumbs a:link{
+	color:#0000FF;
+}
+div#id_breadcrumbs a:visited{
+	color:#0000FF;
+}
+span.style_name{
+	font:Normal 8pt "Tahoma";
+	color:#FF0000;
+	margin:0px 5px;
+}
+div.open_close_all{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div.open_close_next_sibling{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div#id_content div.open_close_all a:hover,
+div#id_content div.open_close_next_sibling a:hover{
+	text-decoration:None;
+}
+a.open_all:hover,
+a.close_all:hover,
+a.open_next_sibling:hover,
+a.close_next_sibling:hover{
+	border-bottom:Solid 1px #3366A5;
+}
+a.open_all,
+a.close_all,
+a.open_next_sibling,
+a.close_next_sibling{
+	border-bottom:Dotted 1px #3366A5;
+	padding-right:15px;
+}
+a.open_all{
+	margin-right:5px;
+}
+a.open_next_sibling{
+}
+a.close_all,
+a.close_next_sibling{
+}
+div.invisible_begin{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible_end{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible{
+	display:None;
+	border-right:Dotted 1px #808080;
+	margin-right:10px;
+}
+@media print{
+div.open_close_all{
+	display:None;
+}
+div.open_close_next_sibling{
+	display:None;
+}
+div.invisible{
+	display:Block;
+	border-right:None;
+	margin-right:0px;
+}}
+div.hr{
+	border-top:Solid 2px #808080;
+	margin:25px 10px 0px 10px;
+	font-size:0pt;
+	color:#FFFFFF;
+}
+hr{
+	color:#808080;
+	background-color:#808080;
+	margin:25px 10px 0px 10px;
+	height:2px;
+	border:0;
+}
+-->
+		</style>
+	</head>
+	<body>
+		<!--CONTENT_START-->
+		<div id="id_content">
+			<div class="h1">Công Cụ Thiết Lập Mạng Canon MF/LBP cho phiên bản Microsoft Windows 2.30</div>
+			<div class="h2">HỢP ĐỒNG CẤP PHÉP PHẦN MỀM CANON</div>
+			<div class="h5">LƯU Ý QUAN TRỌNG</div>
+			<div class="text">Đây là một hợp đồng pháp lý (&quot;Hợp đồng&quot;) giữa quý vị và Canon Inc. (&quot;Canon&quot;) chi phối việc quý vị sử dụng các chương trình phần mềm của Canon bao gồm các cẩm nang sử dụng có liên quan hoặc bất kỳ tài liệu in ấn nào của các chương trình này (&quot;PHẦN MỀM&quot;) dành cho một số máy photocopy, máy in và các thiết bị ngoại vi đa chức năng của Canon (&quot;Sản phẩm&quot;).</div>
+			<div class="text">ĐỌC KỸ VÀ HIỂU RÕ TẤT CẢ CÁC QUYỀN LỢI VÀ HẠN CHẾ ĐƯỢC MÔ TẢ TRONG HỢP ĐỒNG NÀY TRƯỚC KHI CÀI ĐẶT PHẦN MỀM. BẰNG CÁCH NHẤP NÚT CHO THẤY QUÝ VỊ CHẤP NHẬN NHƯ TUYÊN BỐ BÊN DƯỚI HOẶC CÀI ĐẶT PHẦN MỀM, QUÝ VỊ ĐỒNG Ý BỊ RÀNG BUỘC BỞI CÁC ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CỦA HỢP ĐỒNG NÀY. KHÔNG ĐƯỢC SỬ DỤNG PHẦN MỀM NẾU QUÝ VỊ KHÔNG ĐỒNG Ý VỚI NHỮNG ĐIỀU KHOẢN VÀ ĐIỀU KIỆN SAU ĐÂY CỦA HỢP ĐỒNG. </div>
+			<div class="h5">1. CẤP PHÉP SỬ DỤNG</div>
+			<div class="text">Canon cấp phép cá nhân, có giới hạn và không độc quyền cho quý vị để sử dụng (&quot;sử dụng&quot; được dùng trong hợp đồng này sẽ bao gồm lưu trữ, tải nạp, cài đặt, truy xuất, chạy hoặc hiển thị) PHẦN MỀM chỉ cho mục đích sử dụng cùng với Sản phẩm trực tiếp trên máy tính hoặc qua mạng được kết nối với Sản phẩm (&quot;Máy tính Chỉ định&quot;).</div>
+			<div class="text">Quý vị có thể cho phép những người dùng máy tính khác được kết nối với Máy tính Chỉ định của quý vị để sử dụng PHẦN MỀM, miễn là quý vị phải bảo đảm rằng tất cả những người dùng đó sẽ tuân thủ các điều khoản của Hợp đồng này cũng như tuân theo các hạn chế và nghĩa vụ của quý vị dưới đây.</div>
+			<div class="text">Quý vị có thể sao chép một bản PHẦN MỀM chỉ với mục đích sao lưu dự phòng.</div>
+			<div class="h5">2. CÁC HẠN CHẾ</div>
+			<div class="text">Quý vị không được sử dụng PHẦN MỀM trừ khi được cấp hoặc cho phép rõ ràng trong hợp đồng này, và không được chuyển nhượng, cấp giấy phép phụ, bán, thuê mướn, cho thuê, cho mượn, sang tên hoặc chuyển PHẦN MỀM này cho bất kỳ bên thứ ba nào. Quý vị không được chỉnh sửa, dịch hoặc chuyển đổi sang một ngôn ngữ lập trình khác, sửa đổi, phân rã, dịch ngược hoặc thiết kế đảo ngược PHẦN MỀM và quý vị không được cho phép bất kỳ bên thứ ba nào làm như vậy.</div>
+			<div class="h5">3. THÔNG BÁO BẢN QUYỀN</div>
+			<div class="text">Quý vị không được phép sửa đổi, gỡ bỏ hoặc xóa bất kỳ thông báo bản quyền nào của Canon hoặc các cơ quan cấp phép của Canon trong PHẦN MỀM này, kể cả bất kỳ bản sao nào của PHẦN MỀM.</div>
+			<div class="h5">4. QUYỀN SỞ HỮU</div>
+			<div class="text">Canon và các cơ quan cấp phép của Canon giữ lại tác quyền, quyền sở hữu và các quyền sở hữu trí tuệ về mọi mặt đối với PHẦN MỀM. Trừ khi được cung cấp rõ ràng trong hợp đồng này, Canon không cấp hoặc sang nhượng cho quý vị bất kỳ giấy phép hoặc quyền nào, rõ ràng hoặc mặc nhiên, về quyền sở hữu trí tuệ của Canon và các cơ quan cấp phép của Canon.</div>
+			<div class="h5">5. QUẢN LÝ XUẤT KHẨU</div>
+			<div class="text">Quý vị đồng ý tuân theo tất cả các điều luật và hạn chế xuất khẩu cũng như các quy định xuất khẩu của quốc gia có liên quan, và không xuất khẩu hoặc tái xuất khẩu, trực tiếp hoặc gián tiếp, PHẦN MỀM vi phạm bất kỳ điều luật, hạn chế và quy định nào như thế, hoặc không có tất cả phê chuẩn cần thiết.</div>
+			<div class="h5">6. HỖ TRỢ VÀ CẬP NHẬT</div>
+			<div class="text">CANON, CÁC CÔNG TY CON VÀ CHI NHÁNH CỦA CANON, CÁC NHÀ PHÂN PHỐI VÀ ĐẠI LÝ CỦA CÁC CÔNG TY NÀY, CŨNG NHƯ CÁC CƠ QUAN CẤP PHÉP CỦA CANON KHÔNG CHỊU TRÁCH NHIỆM DUY TRÌ HOẶC GIÚP ĐỠ QUÝ VỊ SỬ DỤNG PHẦN MỀM NÀY, HOẶC CUNG CẤP CHO QUÝ VỊ BẤT KỲ CẬP NHẬT, SỬA CHỮA HOẶC HỖ TRỢ NÀO CHO PHẦN MỀM DƯỚI ĐÂY.</div>
+			<div class="h5">7. TUYÊN BỐ MIỄN TRÁCH NHIỆM BỒI THƯỜNG CỦA BẢO HÀNH VÀ PHÁP LÝ</div>
+			<div class="text">[KHÔNG CÓ BẢO HÀNH] PHẦN MỀM ĐƯỢC CUNG CẤP THEO ĐÚNG &quot;HIỆN TRẠNG&quot; KHÔNG CÓ BẤT KỲ CHẾ ĐỘ BẢO HÀNH NÀO, RÕ RÀNG HOẶC MẶC NHIÊN, BAO GỒM, NHƯNG KHÔNG GIỚI HẠN CÁC BẢO HÀNH MẶC NHIÊN VỀ KHẢ NĂNG BÁN SẢN PHẨM VÀ TÍNH PHÙ HỢP CHO MỤC ĐÍCH ĐẶC BIỆT. TOÀN BỘ RỦI RO VỀ CHẤT LƯỢNG VÀ KHẢ NĂNG HOẠT ĐỘNG CỦA PHẦN MỀM CÓ THỂ XẢY RA VỚI QUÝ VỊ. NẾU PHẦN MỀM CHỨNG THỰC BỊ KHIẾM KHUYẾT, QUÝ VỊ PHẢI CHỊU TOÀN BỘ CHI PHÍ CHO TẤT CẢ VIỆC BẢO DƯỠNG, SỬA CHỮA VÀ HIỆU CHỈNH CẦN THIẾT. MỘT SỐ QUỐC GIA HAY CƠ QUAN THỰC THI LUẬT PHÁP KHÔNG CHO PHÉP VIỆC MIỄN TRỪ CÁC BẢO HÀNH MẶC NHIÊN, TRONG TRƯỜNG HỢP ĐÓ CÓ THỂ KHÔNG ÁP DỤNG ĐIỀU KHOẢN MIỄN TRỪ TRÊN.</div>
+			<div class="text">ĐIỀU KHOẢN BẢO HÀNH NÀY MANG ĐẾN CHO QUÝ VỊ CÁC QUYỀN PHÁP LÝ RIÊNG BIỆT VÀ QUÝ VỊ CŨNG CÓ THỂ CÓ CÁC QUYỀN KHÁC, CÁC QUYỀN NÀY THAY ĐỔI GIỮA CÁC QUỐC GIA HAY GIỮA CÁC CƠ QUAN THỰC THI LUẬT PHÁP.</div>
+			<div class="text">CANON, CÁC CÔNG TY CON VÀ CHI NHÁNH CỦA CANON, CÁC NHÀ PHÂN PHỐI VÀ ĐẠI LÝ CỦA CÁC CÔNG TY NÀY, CŨNG NHƯ CÁC CƠ QUAN CẤP PHÉP CỦA CANON KHÔNG BẢO ĐẢM RẰNG CÁC CHỨC NĂNG CÓ TRONG PHẦN MỀM SẼ ĐÁP ỨNG CÁC YÊU CẦU CỦA QUÝ VỊ HOẶC HOẠT ĐỘNG CỦA PHẦN MỀM SẼ KHÔNG BỊ GIÁN ĐOẠN HAY KHÔNG XẢY RA LỖI.</div>
+			<div class="text">[KHÔNG CHỊU TRÁCH NHIỆM PHÁP LÝ VỀ THIỆT HẠI] TRONG BẤT KỲ TRƯỜNG HỢP NÀO, CANON, CÁC CÔNG TY CON VÀ CHI NHÁNH CỦA CANON, CÁC NHÀ PHÂN PHỐI, ĐẠI LÝ CỦA CÁC CÔNG TY NÀY, VÀ CÁC CƠ QUAN CẤP PHÉP CỦA CANON SẼ KHÔNG CHỊU TRÁCH NHIỆM PHÁP LÝ VỀ BẤT KỲ THIỆT HẠI NÀO (BAO GỒM KHÔNG GIỚI HẠN, VIỆC TỔN THẤT LỢI NHUẬN KINH DOANH, MẤT MÁT THÔNG TIN KINH DOANH, TỔN THẤT DO GIÁN ĐOẠN KINH DOANH HOẶC CÁC THIỆT HẠI KHÁC DO HẬU QUẢ, NGẪU NHIÊN HOẶC CẦN BỒI THƯỜNG) PHÁT SINH DO PHẦN MỀM, VIỆC SỬ DỤNG PHẦN MỀM HOẶC KHÔNG CÓ KHẢ NĂNG SỬ DỤNG PHẦN MỀM NGAY CẢ KHI CANON, CÁC CÔNG TY CON HOẶC CHI NHÁNH CỦA CANON, CÁC NHÀ PHÂN PHỐI, ĐẠI LÝ CỦA CÁC CÔNG TY NÀY, HOẶC CÁC CƠ QUAN CẤP PHÉP CỦA CANON ĐÃ ĐƯỢC THÔNG BÁO VỀ KHẢ NĂNG XẢY RA CÁC THIỆT HẠI ĐÓ. MỘT SỐ QUỐC GIA HAY CƠ QUAN THỰC THI LUẬT PHÁP KHÔNG CHO PHÉP VIỆC HẠN CHẾ HAY MIỄN TRỪ TRÁCH NHIỆM PHÁP LÝ ĐỐI VỚI CÁC THIỆT HẠI DO HẬU QUẢ HOẶC NGẪU NHIÊN, HOẶC THƯƠNG TÍCH HAY TỬ VONG XẢY RA DO SỰ BẤT CẨN VỀ PHÍA NHÀ BÁN LẺ, TRONG TRƯỜNG HỢP ĐÓ CÓ THỂ KHÔNG ÁP DỤNG ĐIỀU KHOẢN GIỚI HẠN HOẶC MIỄN TRỪ TRÊN.</div>
+			<div class="text">[MIỄN CHỊU TRÁCH NHIỆM PHÁP LÝ] TRONG CHỪNG MỰC ĐƯỢC LUẬT PHÁP HIỆN HÀNH CHO PHÉP, DO ĐÓ QUÝ VỊ MIỄN CHO CANON, CÁC CÔNG TY CON VÀ CHI NHÁNH CỦA CANON, CÁC NHÀ PHÂN PHỐI, ĐẠI LÝ CỦA CÁC CÔNG TY NÀY, CŨNG NHƯ CÁC CƠ QUAN CẤP PHÉP CỦA CANON KHỎI BẤT KỲ VÀ TOÀN BỘ TRÁCH NHIỆM PHÁP LÝ PHÁT SINH TỪ HOẶC CÓ LIÊN QUAN ĐẾN TẤT CẢ CÁC YÊU SÁCH LIÊN QUAN ĐẾN PHẦN MỀM HOẶC CÁCH SỬ DỤNG PHẦN MỀM.</div>
+			<div class="h5">8. THỜI HẠN</div>
+			<div class="text">Hợp đồng này có hiệu lực khi quý vị chấp nhận việc này bằng cách nhấp nút cho thấy quý vị chấp nhận như tuyên bố bên dưới hoặc cài đặt PHẦN MỀM và giữ nguyên hiệu lực cho đến khi kết thúc. Quý vị có thể kết thúc Hợp đồng này bằng cách hủy PHẦN MỀM bao gồm bất kỳ và toàn bộ các bản sao phần mềm.</div>
+			<div class="text">Hợp đồng này cũng sẽ kết thúc nếu quý vị không tuân thủ bất kỳ điều khoản nào của hợp đồng. Khi kết thúc Hợp đồng này, ngoài việc Canon thi hành các quyền lợi hợp pháp tương ứng của công ty, quý vị sau đó phải nhanh chóng hủy PHẦN MỀM bao gồm bất kỳ hoặc tất cả các bản sao của phần mềm. Bất kể những điều nêu trên, các Phần 4, và 7 đến 11 sẽ tiếp tục có hiệu lực khi kết thúc Hợp đồng này.</div>
+			<div class="h5">9. THÔNG BÁO CÁC QUYỀN LỢI HẠN CHẾ CỦA CHÍNH PHỦ HOA KỲ</div>
+			<div class="text">“Người Dùng Cuối của Chính Phủ Mỹ” có nghĩa chỉ bất kỳ cơ quan hoặc đoàn thể nào của Chính phủ Mỹ. Nếu bạn là một trong những Người Dùng Cuối của Chính Phủ Mỹ, hãy áp dụng điều khoản sau : PHẦN MỀM là một &quot;món hàng thương mại&quot;, theo đúng như thuật ngữ này được định nghĩa tại 48 C.F.R. 2.101 (Tháng 10/1995), bao gồm &quot;phần mềm máy tính thương mại&quot; và &quot;tài liệu phần mềm máy tính thương mại&quot;, theo đúng như các thuật ngữ này được dùng trong 48 C.F.R. 12.212 (Tháng 9/1995). Phù hợp với 48 C.F.R. 12.212 và 48 C.F.R. 227.7202-1 đến 227.7202-4 (Tháng 6/1995), tất cả Người Dùng Cuối của Chính phủ Mỹ sẽ có được PHẦN MỀM chỉ với các quyền lợi được nêu trong hợp đồng này. Nhà sản xuất là Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.</div>
+			<div class="h5">10. TÍNH TÁCH RỜI</div>
+			<div class="text">Trong trường hợp bất kỳ phần nào của hợp đồng này được bất kỳ tòa án hoặc tòa phán quyết có thẩm quyền nào tuyên bố hoặc nhận thấy là bất hợp pháp, phần đó sẽ không còn giá trị đối với thẩm quyền phán quyết của tòa án đó và tất cả điều khoản còn lại của hợp đồng sẽ vẫn giữ nguyên hiệu lực thi hành.</div>
+			<div class="h5">11. SỰ THỪA NHẬN</div>
+			<div class="text">BẰNG CÁCH NHẤP NÚT CHO THẤY QUÝ VỊ CHẤP NHẬN NHƯ TUYÊN BỐ BÊN DƯỚI HOẶC CÀI ĐẶT PHẦN MỀM, QUÝ VỊ THỪA NHẬN RẰNG QUÝ VỊ ĐÃ ĐỌC, HIỂU RÕ HỢP ĐỒNG NÀY, VÀ ĐỒNG Ý BỊ RÀNG BUỘC BỞI CÁC ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CỦA HỢP ĐỒNG. QUÝ VỊ CŨNG ĐỒNG Ý RẰNG HỢP ĐỒNG NÀY LÀ TUYÊN BỐ THỎA THUẬN ĐẦY ĐỦ VÀ ĐỘC QUYỀN GIỮA QUÝ VỊ VÀ CANON VỀ VẤN ĐỀ CỦA HỢP ĐỒNG VÀ THAY THẾ TẤT CẢ CÁC ĐỀ XUẤT HOẶC HỢP ĐỒNG TRƯỚC ĐÂY, BẰNG LỜI NÓI HOẶC VĂN BẢN, VÀ BẤT KỲ THÔNG TIN TRUYỀN ĐẠT NÀO KHÁC GIỮA QUÝ VỊ VÀ CANON LIÊN QUAN ĐẾN VẤN ĐỀ CỦA HỢP ĐỒNG NÀY. VIỆC CHỈNH SỬA HỢP ĐỒNG SẼ KHÔNG CÓ HIỆU LỰC NẾU KHÔNG ĐƯỢC KÝ KẾT BỞI NGƯỜI ĐẠI DIỆN CÓ THẨM QUYỀN THÍCH HỢP CỦA CANON.</div>
+			<div class="text">Nếu quý vị có bất kỳ thắc mắc nào về Hợp đồng này, hoặc nếu quý vị muốn liên hệ với Canon vì bất kỳ lý do nào, vui lòng viết thư cho công ty bán hàng trực thuộc hoặc nhà phân phối/đại lý của Canon, phục vụ tại quốc gia mà quý vị đã mua Sản phẩm.</div>
+			<div class="text"> </div>
+			<div class="text_right">No.025370</div>
+			<div class="h2">LƯU Ý</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">1.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">Vui lòng lưu ý các giới hạn sau khi sử dụng phần mềm này.</div>
+							</td>
+						</tr>
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+								<div class="text"></div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+								<div class="table_no_border">
+									<table class="table_no_border">
+										<tbody class="table_no_border">
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+													<div class="text">(1)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+													<div class="text">Phần mềm này có thể phát hiện lên đến 10 điểm truy cập LAN không dây bằng cách tìm kiếm các điểm truy cập mạng LAN không dây.</div>
+												</td>
+											</tr>
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+													<div class="text">(2)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+													<div class="text">Phần mềm này không thể phát hiện điểm truy cập LAN không dây bằng cách tìm kiếm các điểm truy cập LAN không dây khi các điểm truy cập LAN không dây đang sử dụng chức năng tàng hình.</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">2.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">Nếu hộp thoại [Thiết Lập Thiết Bị] được hiển thị khi bạn kết nối cáp USB với máy tính của bạn, bấm [Đóng].</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr />
+			<div class="text_right">Copyright CANON INC. 2012</div>
+			<div class="text"></div>
+		</div>
+		<!--CONTENT_END-->
+	</body>
+</html>

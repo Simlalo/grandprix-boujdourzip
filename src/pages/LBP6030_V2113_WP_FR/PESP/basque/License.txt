@@ -1,0 +1,57 @@
+CANON SOFTWAREAREN LIZENTZIA-HITZARMENA
+
+GARRANTZITSUA
+
+Honako hau zure eta Canon Inc. ("Canon") enpresaren arteko legezko hitzarmena ("Hitzarmena") da eta Canon enpresaren software-programen erabilera arautzen du, baita Canon enpresaren kopiatzeko makina, inprimagailu edo hainbat funtzio dituzten periferikoei ("Produktuak") lotutako eskuliburuak edo inprimatutako edozein material ere ("SOFTWAREA").
+
+IRAKURRI ARRETAZ ETA ULERTU HITZARMEN HONETAN ADIERAZITAKO ESKUBIDE ETA MUGA GUZTIAK SOFTWAREA INSTALATU BAINO LEHEN.  HEMEN ADIERAZITAKOA ONARTZEN DUZULA ADIERAZTEKO BOTOIA SAKATUZ GERO EDO SOFTWAREA INSTALATUZ GERO, HITZARMEN HONETAKO ZEHAZTAPENAK ETA BALDINTZAK BETEKO DITUZULA ADOSTEN DUZU.  HITZARMEN HONETAKO ZEHAZTAPEN ETA BALDINTZAK ADOSTEN EZ BADITUZU, EZ ERABILI SOFTWAREA.  
+
+
+1.  LIZENTZIA EMATEA
+Canon enpresak lizentzia pertsonal, mugatu eta ez-esklusiboa ematen dizu SOFTWAREA Produktuekin ordenagailuan zuzenean edo Produktuetara konektatutako sarearen bidez ("Esleitutako ordenagailua") erabiltzeko (hemen "erabili" aditzak gorde, kargatu, instalatu, atzitu, exekutatu edo bistaratu esanahia ere izan dezake). 
+Esleitutako ordenagailura konektatutako beste ordenagailuen erabiltzaileek ere SOFTWAREA erabil dezakete, baldin eta ziurtatzen baduzu erabiltzaile horiek guztiek Hitzarmen honetako baldintza guztiak beteko dituztela, baita beteko dituzula adierazi dituzun mugak ere.
+
+SOFTWAREAREN kopia bakarra egin dezakezu, babeskopia gisa erabiltzeko.
+
+2.  MUGAK
+SOFTWAREA emandako eta onartutako moduan soilik erabiliko duzu eta ez diozu SOFTWAREA hirugarren bati esleitu, azpilizentziatu, saldu, alokatu, maileguan eman, euren esku utzi edo transferituko.  Ez duzu SOFTWAREA beste programazio-lengoaia batera aldatu, itzuli edo bihurtuko, ezta aldatuko, desmihiztatuko, deskonpilatuko edo alderantzikako ingeniaritza egingo ere eta ez diozu hirugarren bati halakorik egiteko eskatuko ere.
+
+3.  COPYRIGHT-OHARRA
+Ez duzu Canon enpresak edo bere lizentzia-emaileek SOFTWAREAN jarritako copyright-oharrik aldatu, kendu edo ezabatuko, ezta egindako kopian ere.
+
+4.  JABETZA
+Canon eta bere lizentzia-emaileek dute, zentzu guztietan, SOFTWAREAREN eskubidea, jabetza eta jabetza intelektuala.  Berariaz kontrakorik esan ezean, Canon enpresak ez dizu lizentziarik edo eskubiderik eman, espresuki edo inplizituki, Canon enpresaren eta bere lizentzia-emaileen jabetza intelektualagatik.
+
+5.  ESPORTAZIO-KONTROLA
+Herrialdeko esportatze-arau eta -muga eta araudi guztiak beteko dituzula adosten duzu. Halaber, adosten duzu ez duzula SOFTWAREA esportatutako edo berriro esportatutako, zuzenean zein zeharka, halako legerik, mugarik edo araudirik urratzen baduzu, edo behar diren baimen guztiak ez badituzu.
+
+6.  LAGUNTZA ETA EGUNERATZEAK
+EZ CANON ENPRESAK, EZ CANON ENPRESAREN FILIAL EDO AFILIATUEK, BERE BANATZAILEEK EZTA CANON ENPRESAREN LIZENTZIA-EMAILEEK ERE EZ DUTE SOFTWAREA MANTENTZEKO EDO SOFTWAREA ERABILTZEN LAGUNTZEKO ERANTZUKIZUNIK. ERA BEREAN, EZ DUTE SOFTWAREAREN EGUNERATZERIK, KONPONKETARIK EDO LAGUNTZARIK ESKAINTZEKO ERANTZUKIZUNIK.
+
+7.  BERMEEN ETA ERANTZUKIZUNEN EZESPENA
+[BERMERIK EZA] SOFTWAREA "DAGOEN BEZALA" EMATEN DA INOLAKO BERMERIK GABE, EZ BERARIAZKORIK EZTA INPLIZITURIK ERE, XEDE JAKIN BATERAKO MERKATARITZA- EDO SASOI-BERME INPLIZITUA BARNE, BAINA HORRETARA MUGATU GABE.  SOFTWAREAREN KALITATE ETA ERRENDIMENDUARI BURUZKO ARRISKU GUZTIA ZURE GAIN DOA.  SOFTWAREA AKASTUNA BADA, ZUK ORDAINDU BEHARKO DITUZU HURA KONPONTZEKO EDO ZUZENTZEKO KOSTUAK.  ZENBAIT ESTATUK EDO LEGE-BARRUTIK EZ DUTE BERME INPLIZITUAK BAZTERTZEN UZTEN; BERAZ, BALITEKE BAZTERTZE HORREK ZUGAN ERAGINIK EZ IZATEA.  
+BERME HONEK LEGE-ESKUBIDE ZEHATZ BAT EMATEN DIZU ETA BALITEKE BESTE ESKUBIDE BATZUK ERE IZATEA. ESKUBIDE HORIEK ESTATUAREN EDO JURISDIKZIOAREN ARABERAKOAK DIRA.
+
+EZ CANON ENPRESAK, EZ CANON ENPRESAREN FILIAL EDO AFILIATUEK, BERE BANATZAILEEK EZTA CANON ENPRESAREN LIZENTZIA-EMAILEEK ERE EZ DUTE BERMATZEN SOFTWAREAREN FUNTZIOEK ZURE ESKAKIZUNAK BETEKO DITUZTENIK EDO SOFTWAREAK FUNTZIONATZEARI UTZIKO EZ DIONIK EDO ERRORERIK EDUKIKO EZ DUENIK.
+
+[KALTEEN ERANTZUKIZUNIK EZA] INOLAZ ERE CANON, CANON ENPRESAREN FILIAL EDO AFILIATUAK, BERE BANATZAILEAK EDO CANON ENPRESAREN LIZENTZIA-EMAILEAK SOFTWARETIK, SOFTWAREAREN ERABILERAGATIK ZEIN SOFTWAREA EZIN ERABILTZEGATIK SORTUTAKO EDONOLAKO KALTEREN ERANTZULE IZANGO (BARNE, BAINA HONETARA MUGATU GABE: NEGOZIOAN DIRUA GALTZEA, NEGOZIOAREN INFORMAZIOA GALTZEA, NEGOZIOA ETETEAGATIK GALERAK IZATEA EDO BESTELAKO KALTEAK ORDAINTZEKO, EZUSTEKO EDO ONDORIOZKO KALTE), NAHIZ ETA CANON ENPRESARI, CANON ENPRESAREN FILIAL EDO AFILIATUEI, BERE BANATZAILEEI EDO CANON ENPRESAREN LIZENTZIA-EMAILEEI HALAKO KALTEAK IZAN ZITEZKEELA OHARTU ZAIEN.  ZENBAIT ESTATUK EDO LEGE-BARRUTIK EZ DUTE SALTZAILEAREN ARDURAGABEKERIAREN ONDORIOZ IZANDAKO ISTRIPUEN, ONDORIOZKO KALTEEN, KALTE PERTSONALEN EDO HERIOTZEN ERANTZUKIZUNA MUGATZEA EDO BAZTERTZEA ONARTZEN; BERAZ, BALITEKE MUGA EDO BAZTERTZE HORREK ZUGAN ERAGINIK EZ IZATEA.
+
+[ERANTZUKIZUNETIK LIBRATZEA] INDARREAN DAGOEN LEGEAK ONARTZEN DUEN HEINEAN, SOFTWARETIK EDO BERE ERABILERATIK SORTUTAKO ERREKLAMAZIO GUZTIEN ERANTZUKIZUNETIK LIBRATZEN DITUZU CANON, CANON ENPRESAREN FILIAL EDO AFILIATUAK, BERE BANATZAILEAK ETA CANON ENPRESAREN LIZENTZIA-EMAILEAK.
+
+8.  IRAUPENA
+Hitzarmen hau indarrean sartuko da berori onartzen duzula dioen botoia sakatzen duzunean edo SOFTWAREA instalatzen duzunean, eta amaitu arte egongo da indarrean.  Hitzarmena akabatzeko, SOFTWAREA eta izan ditzakezun softwarearen kopia guztiak suntsitu behar dituzu. 
+Era berean, hitzarmena bertan behera geldituko da adierazitako baldintzak betetzen ez badituzu.  Hitzarmen hau akabatutakoan, Canon enpresak dagozkion lege-eskubideak betearaziko ditu eta zuk SOFTWAREA eta dituzun softwarearen kopia guztiak suntsitu beharko dituzu.  Hitzarmena amaituta ere, 4., 7. eta 11. artikuluek indarrean jarraituko dute.
+
+9.  AEBETAKO GOBERNUAK MUGATUTAKO ESKUBIDEEN OHARRA
+"AEBetako Gobernuko Azken Erabiltzaileak" dira Estatu Batuetako edozein gobernu-erakunde edo -entitate.  AEBetako Gobernuko Azken Erabiltzaile bat bazara, honako hau aplikatuko zaizu: SOFTWAREA "merkataritza-elementua" da, 48 C.F.R. 2.101 (1995eko urria) legean definitu moduan, eta "ordenagailu-software komertzialak" eta "ordenagailu-software komertzialaren dokumentazioak" osatzen dute, 48 C.F.R. 12.212 (1995eko iraila) legean termino horiek definitu moduan.  48 C.F.R. 12.212 eta 48 C.F.R. 227.7202-1 227.7202-4 (1995eko ekaina) arauak betez, AEBetako Gobernuko Azken Erabiltzaile guztiek SOFTWAREA hemen ezarritako eskubideekin soilik eskuratuko dute.  Fabrikatzailea hau da: Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokio 146-8501, Japonia.
+
+10.  ZATIKAGARRITASUNA
+Lege-barrutiko epaitegi edo auzitegiren batek Hitzarmen honetako zatiren bat legez kanpokotzat jotzen badu, atal hori nulua izango da eta baliorik gabe utziko da epaitegi edo auzitegi horri dagokionez, baina gainerako xedapenek indarrean jarraituko dute.
+
+11.  ONESPENA
+HITZARMENA ONARTZEN DUZULA ADIERAZTEKO BOTOIA SAKATUZ GERO EDO SOFTWAREA INSTALATUZ GERO, HITZARMENA IRAKURRI DUZULA, ULERTU DUZULA ETA BERTAKO ZEHAZTAPEN ETA BALDINTZAK BETEKO DITUZULA ADOSTEN DUZU.  ERA BEREAN, ADOSTEN DUZU HITZARMEN HAU ZU ETA CANON ENPRESAREN ARTEAN EGINGO DEN HITZARMEN-ADIERAZPEN OSO ETA ESKLUSIBOA DELA, HEMEN AIPATUTAKO GAIEN INGURUAN ETA AURREKO PROPOSAMEN ETA HITZARMEN GUZTIAK, IDATZIZKOAK ZEIN AHOZKOAK, ORDEZTEN DITUELA, BAITA GAIAREN INGURUAN ZU ETA CANON ENPRESAREN ARTEAN IZANDAKO BESTE EDOZEIN GAI ERE.  HITZARMENARI EGINDAKO ZUZENKETAK EZ DIRA INDARREAN SARTUKO, HARIK ETA CANON ENPRESAREN ORDEZKARI BAIMENDU BATEK BEHAR BEZALA SINATZEN DITUEN ARTE.
+
+
+Hitzarmenari buruzko galderarik izanez gero, edo zerbaitengatik Canon enpresarekin harremanetan jarri nahi izanez gero, idatzi Produktua erosi zenuen herrialdeko Canon saltzaileari edo banatzaileari.
+
+Zk.024410

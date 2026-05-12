@@ -1,0 +1,57 @@
+UMOWA LICENCYJNA NA OPROGRAMOWANIE CANON
+
+WAØNE
+
+Niniejsza umowa licencyjna (zwana dalej "Umowπ") stanowi prawnie wiπøπcπ umowÍ miÍdzy uøytkownikiem a firmπ Canon Inc.(zwanπ dalej "Canon") i okreúla warunki korzystania z programÛw firmy Canon, w tym odnoúnych instrukcji lub jakichkolwiek drukowanych materia≥Ûw (zwanych dalej "OPROGRAMOWANIEM") przeznaczonych dla okreúlonych kopiarek, drukarek i wielofunkcyjnych urzπdzeÒ peryferyjnych (zwanych dalej "Produktami").
+
+PRZED ZAINSTALOWANIEM OPROGRAMOWANIA PROSIMY UWAØNIE PRZECZYTA∆ NINIEJSZ• UMOW  W CELU ZAPOZNANIA SI  Z WSZYSTKIMI PRAWAMI I OGRANICZENIAMI ZAWARTYMI W UMOWIE. KLIKAJ•C PRZYCISK LUB INSTALUJ•C OPROGRAMOWANIE, LICENCJOBIORCA WYRAØA ZGOD  NA PRZESTRZEGANIE WARUNK”W NINIEJSZEJ UMOWY. W PRZYPADKU NIE ZGADZANIA SI  Z PONIØSZYMI WARUNKAMI UMOWY, NIE NALEØY KORZYSTA∆ Z OPROGRAMOWANIA.  
+
+
+1.  UDZIELENIE LICENCJI
+Firma Canon udziela Licencjobiorcy osobistej, ograniczonej i niewy≥πcznej licencji na uøywanie (termin "uøywanie" oznacza tutaj przechowywanie, ≥adowanie, instalowanie, dostÍp, uruchamianie lub wyúwietlanie) OPROGRAMOWANIA wy≥πcznie z Produktami i tylko na komputerach pod≥πczonych do ProduktÛw bezpoúrednio lub za poúrednictwem sieci lokalnej (zwanych dalej "Komputerem docelowym"). 
+Licencjobiorca moøe zezwoliÊ innym uøytkownikom korzystajπcym z komputerÛw po≥πczonych z Komputerem docelowym na uøywanie OPROGRAMOWANIA, pod warunkiem, øe Licencjobiorca zagwarantuje, iø uøytkownicy ci bÍdπ przestrzegaÊ warunkÛw niniejszej umowy, oraz øe bÍdπ oni podlegaÊ ograniczeniom oraz zobowiπzaniom na≥oøonym w niniejszej umowie na LicencjobiorcÍ.
+
+Licencjobiorca upowaøniony jest do wykonania jednej kopii OPROGRAMOWANIA wy≥πcznie dla celÛw archiwizacyjnych.
+
+2.  OGRANICZENIA
+Licencjobiorca nie moøe korzystaÊ z OPROGRAMOWANIA w sposÛb inny niø jednoznacznie tutaj okreúlony i dozwolony, jak rÛwnieø nie moøe cedowaÊ, udzielaÊ podlicencji, sprzedawaÊ, wynajmowaÊ, dzierøawiÊ, poøyczaÊ, przekazywaÊ lub przenosiÊ OPROGRAMOWANIA na stronÍ trzeciπ. Nie moøe dokonywaÊ zmian, translacji lub konwersji Oprogramowania na inny jÍzyk programowania, jak rÛwnieø modyfikowaÊ, dezasemblowaÊ, dekompilowaÊ lub w jakikolwiek inny sposÛb odtwarzaÊ OPROGRAMOWANIA ani teø zlecaÊ wykonanie tych czynnoúci stronom trzecim.
+
+3.  PRAWA AUTORSKIE
+Licencjobiorca nie moøe zmieniaÊ lub usuwaÊ informacji o prawach autorskich firmy Canon oraz jej licencjodawcÛw zawartych w OPROGRAMOWANIU oraz jego kopiach.
+
+4.  PRAWO W£ASNOåCI
+Firma Canon oraz jej licencjodawcy zachowujπ we wszystkich aspektach tytu≥ prawny do OPROGRAMOWANIA i wszelkie zwiπzane z nim prawa w≥asnoúci intelektualnej. Z wyjπtkiem sytuacji wyraünie tutaj okreúlonych, firma Canon nie udziela licencjobiorcy, jednoznacznie lub domniemanie, øadnej licencji ani prawa do w≥asnoúci intelektualnej firmy Canon i jej licencjodawcÛw.
+
+5.  KONTROLA EKSPORTU
+Licencjobiorca wyraøa zgodÍ na przestrzeganie wszystkich aktÛw prawnych dotyczπcych eksportu oraz ograniczeÒ i przepisÛw obowiπzujπcych na terenie kraju i zobowiπzuje siÍ nie eksportowaÊ ani reeksportowaÊ, bezpoúrednio lub poúrednio, OPROGRAMOWANIA z naruszeniem tych aktÛw prawnych, ograniczeÒ i przepisÛw lub bez wszystkich wymaganych zezwoleÒ.
+
+6.  POMOC TECHNICZNA I AKTUALIZACJA
+ZGODNIE Z NINIEJSZ• UMOW• ANI FIRMA CANON, JEJ SP”£KI ZALEØNE LUB FILIE, DYSTRYBUTORZY B•Dè DEALERZY ANI LICENCJODAWCY NIE S• ZOBOWI•ZANI UDZIELA∆ WSPARCIA W ZAKRESIE TEGO OPROGRAMOWANIA LUB POMAGA∆ W JEGO OBS£UDZE ANI UDOST PNIA∆ AKTUALIZACJI I POPRAWEK, A TAKØE åWIADCZY∆ POMOCY TECHNICZNEJ.
+
+7.  WY£•CZENIE GWARANCJI I ODPOWIEDZIALNOåCI
+[BRAK GWARANCJI] OPROGRAMOWANIE JEST LICENCJONOWANE W STANIE W JAKIM SI  ZNAJDUJE, BEZ JAKICHKOLWIEK, WYRAØONYCH WPROST LUB DOMYåLNIE, GWARANCJI, W TYM DOROZUMIANYCH GWARANCJI PRZYDATNOåCI HANDLOWEJ LUB PRZYDATNOåCI DO OKREåLONEGO CELU. CA£KOWITE RYZYKO ZWI•ZANE Z JAKOåCI• I WYDAJNOåCI• OPROGRAMOWANIA PONOSI LICENCJOBIORCA. W PRZYPADKU WADLIWIE DZIA£AJ•CEGO OPROGRAMOWANIA LICENCJOBIORCA PONOSI CA£KOWITY KOSZT NIEZB DNEJ OBS£UGI SERWISOWEJ, NAPRAW I USUNI CIA USTEREK. NIEKT”RE JURYSDYKCJE NIE ZEZWALAJ• NA WY£•CZENIE DOMYåLNYCH GWARANCJI, A W ZWI•ZKU Z TYM POWYØSZE WY£•CZENIE MOØE NIE DOTYCZY∆ LICENCJOBIORCY. 
+NINIEJSZA UMOWA DAJE LICENCJOBIORCY OKREåLONE PRAWA, JEDNAK MOØE ON MIE∆ INNE PRAWA, R”ØNI•CE SI  W ZALEØNOåCI OD JURYSDYKCJI.
+
+ANI FIRMA CANON, JEJ SP”£KI ZALEØNE LUB FILIE, DYSTRYBUTORZY B•Dè DEALERZY ANI LICENCJODAWCY NIE GWARANTUJ•, ØE FUNKCJE OPROGRAMOWANIA SPE£NI• OCZEKIWANIA LICENCJOBIORCY ORAZ ØE OPROGRAMOWANIE B DZIE DZIA£A£O W SPOS”B NIEPRZERWANY LUB B DZIE POZBAWIONE B£ D”W.
+
+[BRAK ODPOWIEDZIALNOåCI ZA USZKODZENIA] FIRMA CANON, JEJ SP”£KI ZALEØNE, DYSTRYBUTORZY, DEALERZY ORAZ LICENCJODAWCY W ØADNYM WYPADKU NIE PONOSZ• ODPOWIEDZIALNOåCI ZA JAKIEKOLWIEK SZKODY (W TYM UTRACONE ZYSKI, UTRACONE DANE, STRATY WYNIK£E Z PRZERWY DZIA£ALNOåCI LUB KONIECZNOå∆ PONIESIENIA INNYCH KOSZT”W, SZKODY POåREDNIE LUB PRZYPADKOWE) SPOWODOWANE LUB WYNIKAJ•CE Z DZIA£ANIA, UØYTKOWANIA B•Dè NIEMOØNOåCI UØYTKOWANIA OPROGRAMOWANIA, NAWET W PRZYPADKU GDY FIRMA CANON, JEJ SP”£KI ZALEØNE, DYSTRYBUTORZY, DEALERZY ORAZ LICENCJODAWCY ZOSTALI POWIADOMIENI O MOØLIWOåCI WYST•PIENIA TAKICH SZK”D. NIEKT”RE JURYSDYKCJE NIE ZEZWALAJ• NA OGRANICZENIE LUB WY£•CZENIE ODPOWIEDZIALNOåCI ZA SZKODY PRZYPADKOWE LUB POåREDNIE B•Dè OBRAØENIA LUB åMIER∆ B D•CE WYNIKIEM ZANIEDBANIA PO STRONIE DOSTAWCY, A W ZWI•ZKU Z TYM POWYØSZE OGRANICZENIE LUB WY£•CZENIE MOØE NIE DOTYCZY∆ LICENCJOBIORCY.
+
+[ZWOLNIENIE OD ODPOWIEDZIALNOåCI] LICENCJOBIORCA, W PE£NEJ ROZCI•G£OåCI DOZWOLONEJ PRZEZ STOSOWNE PRAWO, ZWALNIA NINIEJSZYM FIRM  CANON, JEJ SP”£KI ZALEØNE, DYSTRYBUTOR”W, DEALER”W ORAZ JEJ LICENCJODAWC”W Z WSZELKIEJ ODPOWIEDZIALNOåCI WYNIKAJ•CEJ LUB ZWI•ZANEJ Z WSZYSTKIMI ROSZCZENIAMI DOTYCZ•CYMI OPROGRAMOWANIA LUB KORZYSTANIA Z NIEGO.
+
+8.  OKRES OBOWI•ZYWANIA
+Niniejsza umowa obowiπzuje od momentu jej zaakceptowania przez LicencjobiorcÍ poprzez klikniÍcie przycisku lub zainstalowanie OPROGRAMOWANIA do czasu rozwiπzania umowy. Licencjobiorca moøe rozwiπzaÊ UmowÍ przez zniszczenie OPROGRAMOWANIA oraz wszystkich jego kopii. 
+Umowa niniejsza wygasa rÛwnieø w przypadku, gdy Licencjobiorca naruszy jakikolwiek z jej warunkÛw. Z chwilπ rozwiπzania Umowy Licencjobiorca, poza konsekwencjami prawnymi ze strony firmy Canon, zobowiπzany jest bezzw≥ocznie zniszczyÊ OPROGRAMOWANIE oraz wszystkie jego kopie. Bez wzglÍdu na powyøsze, paragrafy 4 oraz od 7 do 11 obowiπzujπ po wygaúniÍciu niniejszej Umowy.
+
+9.  OGRANICZONE PRAWA RZ•DU STAN”W ZJEDNOCZONYCH
+Termin "Uøytkownik koÒcowy podlegajπcy rzπdowi StanÛw Zjednoczonych" odnosi siÍ do dowolnej agencji lub jednostki rzπdu StanÛw Zjednoczonych. W przypadku UøytkownikÛw koÒcowych podlegajπcych rzπdowi StanÛw Zjednoczonych stosuje siÍ co nastÍpuje: OPROGRAMOWANIE jest "produktem komercyjnym" zgodnie z definicjπ tego terminu okreúlonπ w amerykaÒskim kodeksie przepisÛw federalnych 48 C.F.R. 2.101 (paüdziernik 1995), sk≥adajπcym siÍ z "komercyjnego oprogramowania komputerowego" oraz "dokumentacji komercyjnego oprogramowania komputerowego" zgodnie z definicjami tych terminÛw okreúlonymi w przepisach 48 C.F.R. 12.212 (wrzesieÒ 1995). Zgodnie z 48 C.F.R. 12.212 oraz 48 C.F.R. 227.7202-1 do 227.7202-4 (czerwiec 1995) uøytkownicy koÒcowi podlegajπcy rzπdowi StanÛw Zjednoczonych nabywajπ OPROGRAMOWANIE wy≥πcznie na prawach okreúlonych w niniejszej umowie. Producentem jest firma Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japonia.
+
+10.  PODZIELNOå∆ UMOWY
+W przypadku stwierdzenia przez w≥aúciwy lokalny sπd lub trybuna≥ niezgodnoúci z prawem jakiegokolwiek z warunkÛw niniejszej umowy, warunek ten zostanie uznany za niewaøny w jurysdykcji danego sπdu lub trybuna≥u, przy czym pozosta≥e warunki niniejszej umowy pozostajπ w mocy i sπ obowiπzujπce.
+
+11.  AKCEPTACJA WARUNK”W UMOWY
+KLIKAJ•C PRZYCISK LUB INSTALUJ•C OPROGRAMOWANIE, LICENCJOBIORCA POTWIERDZA, IØ ZAPOZNA£ SI  Z PONIØSZ• UMOW•, ZROZUMIA£ J• I WYRAØA ZGOD  NA PRZESTRZEGANIE JEJ WARUNK”W. LICENCJOBIORCA ZGADZA SI  R”WNIEØ, IØ NINIEJSZA UMOWA STANOWI PE£NE I WY£•CZNE POROZUMIENIE MI DZY LICENCJOBIORC• A FIRM• CANON W ZAKRESIE OKREåLONYM W NINIEJSZEJ UMOWIE ORAZ ØE ZAST PUJE ONA WSZYSTKIE PROPOZYCJE LUB WCZEåNIEJSZE UMOWY, USTNE LUB PISEMNE, A TAKØE WSZELKIE INNE POROZUMIENIA ZAWARTE W TYM ZAKRESIE MI DZY LICENCJOBIORC• A FIRM• CANON. WSZELKIE ZMIANY TREåCI NINIEJSZEJ UMOWY WYMAGAJ• PODPISANIA PRZEZ UPOWAØNIONEGO PRZEDSTAWICIELA FIRMY CANON POD RYGOREM NIEWAØNOåCI.
+
+
+Jeúli macie PaÒstwo jakiekolwiek pytania dotyczπce niniejszej Umowy lub zamierzacie z innego powodu skontaktowaÊ siÍ z firmπ Canon, prosimy o skierowanie pisma do przedstawiciela handlowego lub dystrybutora/dealera firmy Canon dzia≥ajπcego na terenie kraju, w ktÛrym Produkt zosta≥ nabyty.
+
+Nr 024410

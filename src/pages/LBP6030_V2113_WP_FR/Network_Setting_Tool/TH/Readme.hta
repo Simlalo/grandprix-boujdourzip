@@ -1,0 +1,1191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="th" xmlns="http://www.w3.org/1999/xhtml" xmlns:hta="urn:HTMLApplication">
+	<head>
+		<meta name="Generator" content="CAESAR" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+		<title>Canon MF/LBP Network Setup Tool for Microsoft Windows เวอร์ชัน 2.30</title>
+		<hta:application id="id_canon_main_window" applicationname="canon_main_window" border="thick" borderstyle="normal" caption="yes" maximizebutton="yes" minimizebutton="yes" showintaskbar="yes" singleinstance="no" sysmenu="yes" version="1.0" windowstate="normal" contextmenu="yes" navigable="yes" />
+		<style type="text/css">div.list{display:list-item!important;list-style-type:Disc;margin-left:40px!important;padding-left:5px!important;}table div.list{margin-left:20px!important;padding-left:5px!important;}div.dash{display:list-item!important;list-style-type:Circle;margin-left:65px!important;padding-left:5px!important;}table div.dash{margin-left:40px!important;padding-left:5px!important;}div.step_sub{display:list-item!important;list-style-type:Square;margin-left:30px!important;padding-left:5px!important;}div.list_link{display:list-item!important;list-style-type:Square;margin-left:50px!important;padding-left:5px!important;}div.h1{background:#F3F8FA!important;}div.h2,div.h2_2line,div.h2_3line{background:#F3F8FA!important;}div.h3{background:#F3F8FA!important;}thead.table_important td.table_important_col_0,thead.table_note td.table_note_col_0{padding:2px 5px 2px 5px!important;}</style>
+		<style type="text/css" >
+			<!--
+*{
+	font-family:"Arial","Helvetica",Sans-serif;
+	/*margin:0;*/
+	/*padding:0;*/
+	/*border:0;*/
+	/*background-color:Transparent;*/
+	font-size:100%;
+	/*font-style:Normal;*/
+	text-decoration:None;
+}
+html{
+	border:0;
+}
+body{
+	margin:0;
+	padding:0;
+	background:#FFFFFF;
+}
+span{
+	color:Inherit;
+}
+div#id_content a{
+	text-decoration:None;
+}
+div#id_content a:link{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:visited{
+	color:#3366A5;
+	text-decoration:None;
+}
+div#id_content a:hover{
+	color:#EC6700;
+	background-color:#FFFFCC;
+	text-decoration:Underline;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.chapter_title{
+	background:#4682B4;
+	padding:2px 5px 2px 5px;
+	border-bottom:Solid 1px #4682B4;
+	font-weight:Bold;
+	font-size:80%;
+	margin-bottom:16px;
+	text-align:Right;
+	color:#FFFFFF;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h1{
+	padding:32px 0 2px 8px;
+	border-bottom:Solid 1px #4682B4;
+	background:#F3F8FA;
+	font-weight:Bold;
+	font-size:120%;
+	margin-bottom:16px;
+	vertical-align:Bottom;
+	text-align:Left;
+	color:#000080;
+	position:Relative;
+}
+div.h1 a{
+	position:Absolute;
+	*position:Static!important;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h2,
+div.h2_2line,
+div.h2_3line{
+	border:Solid 1px #4682B4;
+	padding:5px;
+	margin:30px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	color:#000080;
+}
+div.h2 a,
+div.h2_2line a,
+div.h2_3line a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h2 img,
+div.h2_2line img,
+div.h2_3line img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h3{
+	padding:5px;
+	margin:25px 10px 5px 10px;
+	font-size:90%;
+	font-weight:Bold;
+	background:#F3F8FA;
+	border-bottom:Solid 1px #87CEEB;
+	color:#000080;
+}
+div.h3 a{
+	font-weight:Bold;
+	text-decoration:None;
+	color:#0000FF;
+}
+div.h3 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h4{
+	margin:20px 10px 5px 10px;
+	font-weight:Bold;
+	font-size:90%;
+	border-Bottom:Solid 1px #87CEEB;
+	background:#FFFFFF;
+	padding:0px 5px;
+	color:#000080;
+}
+div.h4 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h5{
+	margin:20px 10px 5px 15px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h5 img{
+	vertical-align:Middle;
+	margin-right:5px;
+	margin-left:4px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.h6{
+	margin:15px 10px 5px 30px;
+	font-weight:Bold;
+	font-size:80%;
+	color:#000080;
+}
+div.h6 img{
+	vertical-align:Middle;
+	margin-right:2px;
+	margin-left:0px;
+}
+table div.h6{
+	margin-left:0px;
+	margin-top:10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#000000;
+}
+table div.text{
+	margin:3px 0 0 0;
+}
+div.text img{
+	vertical-align:Middle;
+}
+table div.text img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level1{
+	font-size:80%;
+	margin:5px 10px 5px 40px;
+	color:#000000;
+}
+table div.text_level1{
+	margin:3px 0 0 10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level2{
+	font-size:80%;
+	margin:5px 10px 5px 50px;
+	color:#000000;
+}
+table div.text_level2{
+	margin:3px 0 0 20px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_level3{
+	font-size:80%;
+	margin:5px 10px 5px 60px;
+	color:#000000;
+}
+table div.text_level3{
+	margin:3px 0 0 30px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_center{
+	text-align:Center;
+	font-size:80%;
+	color:#000000;
+}
+table div.text_center{
+	margin:3px 0 0 0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.text_right{
+	text-align:Right;
+	font-size:80%;
+	color:#000000;
+	margin-right:10px;
+}
+table div.text_right{
+	margin-right:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.annotation{
+	font-size:75%;
+	margin:0px 10px 5px 55px;
+	text-indent:-1.5em;
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left:20px;
+	padding-top:0px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#000000;
+}
+table div.list{
+	margin-left:0px;
+}
+div.list img{
+	vertical-align:Top;
+}
+table div.list img{
+	vertical-align:Top;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div.dash{
+	margin-left:50px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	font-weight:Normal;
+	font-size:80%;
+	background:Transparent;
+	_background:Transparent;
+	padding:0px 0px 0px 20px;
+	color:#000000;
+}
+*:first-child+html div.dash{
+	background:Transparent;
+}
+table div.dash{
+	margin-left:12px;
+}
+div.dash img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.example{
+	font-size:80%;
+	font-family:Monospace;
+	margin:5px 10px 5px 30px;
+	clear:Both;
+	background:#707080;
+	padding:5px;
+	color:#FFFFFF;
+}
+div#id_content div.example a:link{
+	color:#0000FF;
+	text-decoration:None;
+}
+div#id_content div.example a:visited{
+	color:#0000FF;
+	text-decoration:None;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.path{
+	padding:3px 10px 3px 20px;
+	font-size:80%;
+	margin:0px 30px;
+	background:Transparent;
+	_background:Transparent;
+	color:#666666;
+}
+div.path img{
+	vertical-align:Middle;
+}
+table div.path{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_number{
+	background:#F8F8F8;
+	font:Bold 200% "Arial";
+	color:#4682B4;
+	padding:0px 5px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+	margin-bottom:0px;
+}
+div.step_number span{
+	font:Bold 100% "Arial";
+	color:#4682B4;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_path{
+	padding:3px 10px 3px 30px;
+	font-size:80%;
+	margin:0px 10px;
+	background:#F8F8F8;
+	_background:#F8F8F8;
+	color:#666666;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_text{
+	font-weight:Bold;
+	padding:0px 10px 15px 5px;
+	font-size:80%;
+	margin:0px 10px 10px 10px;
+	background:#F8F8F8;
+	color:#000000;
+}
+div.step_text img{
+	vertical-align:Middle;
+}
+@media print{div.step_text{
+	padding:0px 10px 20px 5px;
+}}
+/*-----------------------------------------------------------------------------------------------*/
+div.step_sub{
+	font-size:80%;
+	font-weight:Bold;
+	margin:10px 10px 5px 15px;
+	padding-left:15px;
+	background:Transparent;
+	_background:Transparent;
+	color:#000000;
+}
+div.step_sub img{
+	vertical-align:Top;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.figure{
+	text-align:Left;
+	margin-left:30px;
+	margin-bottom:10px;
+}
+table div.figure{
+	margin-left:0;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link{
+	margin:10px;
+	font-size:80%;
+	color:#3366A5;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link a{
+	text-decoration:None;
+	padding-left:10px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.list_link{
+	background:Transparent;
+	_background:Transparent;
+	margin-left:30px;
+	margin-right:10px;
+	margin-bottom:0px;
+	padding-left:20px;
+	padding-top:1px;
+	font-weight:Normal;
+	font-size:80%;
+	color:#3366A5;
+}
+table div.list_link{
+	margin-left:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.link_to_top{
+	text-align:Right;
+	padding:5px 10px 30px 10px;
+	font-size:80%;
+	color:#3366A5;
+	border-top:Dotted 1px #87CEEB;
+	margin-top:30px;
+}
+@media print{div.link_to_top{
+	display:None;
+}}
+div.link_to_top a{
+	text-decoration:None;
+	padding-left:12px;
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.trouble_shooting{
+	margin:10px 10px 10px 30px;
+}
+table.trouble_shooting{
+	border-collapse:Collapse;
+	table-layout:Fixed;
+}
+td.trouble_shooting{
+	border:Solid 1px #FFFFFF;
+}
+td.trouble_shooting_col_0{
+	padding:5px;
+	vertical-align:Middle;
+	font-size:100%;
+	width:80px;
+	background:#C0C0C0;
+	padding-bottom:10px;
+}
+td.trouble_shooting_col_1{
+	background:#EFEFEF;
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-left:5px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.outline{
+	margin:10px 10px 10px 30px;
+}
+table.outline{
+	border-collapse:Collapse;
+	font-size:100%;
+}
+td.outline{
+	padding:10px 5px 10px 5px;
+}
+td.outline_col_0{
+	vertical-align:Middle;
+	text-align:Center;
+	border:Solid 1px #87CEEB;
+	background:#F5F5F5;
+	width:30px;
+	font-size:130%;
+}
+td.outline_col_0 div.h6{
+	color:#4682B4;
+	margin:0px;
+}
+td.outline_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #87CEEB;
+	border-left:None;
+	background:#F5F5F5;
+	width:150px;
+}
+td.outline_col_1 div.h6{
+	margin:0px;
+	color:#000000;
+}
+td.outline_col_2{
+	vertical-align:Middle;
+	background:#FFFFFF;
+	border:Solid 1px #87CEEB;
+	padding:3px 3px 3px 10px;
+}
+td.outline_col_2 div.list{
+	background:Transparent;
+	_background:Transparent;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_ui{
+	margin:5px 10px 10px 30px;
+}
+table.table_ui{
+	table-layout:Auto;
+	border-collapse:Collapse;
+	border:None;
+	border-bottom:Solid 1px #E0E0E0;
+}
+td.table_ui_col_0{
+	padding:0px;
+	vertical-align:Top;
+	font-size:100%;
+	width:150px;
+	color:#000000;
+	padding:0px 0px 5px 0px;
+	border-right:None;
+}
+td.table_ui_col_1{
+	background:#FFFFFF;
+	padding:3px;
+	padding-left:10px;
+	border:Solid 1px #E0E0E0;
+	border-left:Solid 1px #E0E0E0;
+	border-right:None;
+	border-bottom:None;
+	vertical-align:Top;
+}
+td.table_ui_col_0 div.ui_level0{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 1px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #FFFFFF;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level1{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #87BEDB;
+	margin-left:0px;
+}
+td.table_ui_col_0 div.ui_level2{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:10px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #A0D0EA;
+}
+td.table_ui_col_0 div.ui_level3{
+	background:#FFFFFF;
+	font-size:80%;
+	padding:6px 3px 10px 3px;
+	margin-left:20px;
+	border-top:Solid 1px #E0E0E0;
+	border-right:None;
+	border-left:Solid 10px #C6E5F6;
+}
+td.table_ui_col_0 div.ui_level1 img,
+td.table_ui_col_0 div.ui_level2 img,
+td.table_ui_col_0 div.ui_level3 img{
+	vertical-align:Middle;
+}
+/*-----------------------------------------------------------------------------------------------*/
+table div.table_important,
+table div.table_caution,
+table div.table_warning,
+table div.table_note{
+	margin-left:20px;
+}
+div.table_important,
+div.table_caution,
+div.table_warning,
+div.table_note{
+	margin:10px 10px 10px 30px;
+}
+*:first-child+html table.table_important,
+*:first-child+html table.table_caution,
+*:first-child+html table.table_warning,
+*:first-child+html table.table_note{
+	width:Auto;
+	table-layout:Fixed;
+}
+table.table_important,
+table.table_caution,
+table.table_warning,
+table.table_note{
+	background:#FFFFFF;
+	border-collapse:Collapse;
+	font-size:100%;
+	width:100%;
+	_width:Auto;
+	_table-layout:Fixed;
+}
+*:first-child+html table td.table_important_col_0,
+*:first-child+html table td.table_caution_col_0,
+*:first-child+html table td.table_warning_col_0,
+*:first-child+html table td.table_note_col_0{
+	width:Auto;
+}
+table td.table_important_col_0,
+table td.table_caution_col_0,
+table td.table_warning_col_0,
+table td.table_note_col_0{
+	width:100%;
+	_width:Auto;
+	vertical-align:Top;
+}
+*:first-child+html tbody.table_important td.table_important_col_0,
+*:first-child+html tbody.table_caution td.table_caution_col_0,
+*:first-child+html tbody.table_warning td.table_warning_col_0,
+*:first-child+html tbody.table_note td.table_note_col_0{
+	width:Auto;
+}
+tbody.table_important td.table_important_col_0,
+tbody.table_caution td.table_caution_col_0,
+tbody.table_warning td.table_warning_col_0,
+tbody.table_note td.table_note_col_0{
+	padding-left:10px;
+	width:100%;
+	_width:Auto;
+}
+@media print{
+thead.table_important td.table_important,
+thead.table_caution td.table_caution,
+thead.table_warning td.table_warning,
+thead.table_note td.table_note{
+	padding-bottom:5px;
+}}
+tbody.table_important td.table_important,
+tbody.table_caution td.table_caution,
+tbody.table_warning td.table_warning,
+tbody.table_note td.table_note{
+	padding-left:10px;
+	padding-top:2px;
+	border-bottom:None;
+	padding-bottom:5px;
+	border-top:None;
+}
+thead.table_important td.table_important_col_0,
+thead.table_note td.table_note_col_0{
+	padding:2px 5px 2px 30px;
+	text-align:Left;
+	border-bottom:None;
+}
+thead.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0{
+	padding:2px 23px 5px 5px;
+	text-align:Center;
+	border-bottom:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0 div img,
+thead.table_warning td.table_warning_col_0 div img{
+	margin-right:3px;
+}
+thead.table_important td.table_important div,
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div,
+thead.table_note td.table_note div{
+	font-weight:Bold;
+}
+table.table_important{
+	border:Solid 1px #808080;
+}
+table.table_caution,
+table.table_warning{
+	border:Solid 1px #808080;
+}
+table.table_note{
+	border:Solid 1px #808080;
+}
+thead.table_important td.table_important{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	font-size:120%;
+}
+
+thead.table_note td.table_note{
+	background:Transparent;
+	_background:Transparent;
+}
+thead.table_important td.table_important div{
+	color:#4682B4;
+}
+thead.table_caution td.table_caution div,
+thead.table_warning td.table_warning div{
+	color:#000000;
+}
+thead.table_note td.table_note div{
+	color:#808080;
+}
+thead.table_important td.table_important_col_0,
+tbody.table_important td.table_important_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_caution td.table_caution_col_0,
+tbody.table_caution td.table_caution_col_0,
+thead.table_warning td.table_warning_col_0,
+tbody.table_warning td.table_warning_col_0{
+	border-right:Solid 1px #808080;
+}
+thead.table_note td.table_note_col_0,
+tbody.table_note td.table_note_col_0{
+	border-right:Solid 1px #808080;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_no_border{
+	margin:10px 10px 10px 30px;	
+}
+table div.table_no_border{
+	margin-left:10px;
+}
+table.table_no_border{
+	border:None;
+	width:Auto;
+}
+thead.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	font-weight:Bold;
+	vertical-align:Middle;
+}
+tbody.table_no_border td.table_no_border{
+	padding:0px 5px 0px 0px;
+	vertical-align:Top;
+	border:None;
+	font-size:100%;
+	padding-bottom:5px;
+}
+tbody.table_no_border td.table_no_border div{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_matrix{
+	margin:10px 10px 10px 30px;
+}
+table div.table_matrix{
+	margin-left:20px;
+}
+table.table_matrix{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix{
+	padding:5px;
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_matrix td.table_matrix_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	background-color:#EFEFEF;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_matrix td.table_matrix{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_matrix td.table_matrix_col_1{
+	background-color:#DDDDDD;
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_matrix td.table_matrix_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_matrix td.table_matrix_col_0{
+	border:Solid 1px #808080;
+	background-color:#DDDDDD;
+	padding:5px;
+}
+thead.table_matrix td.table_matrix div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_general{
+	margin:10px 10px 10px 30px;
+}
+table div.table_general{
+	margin-left:20px;
+}
+table.table_general{
+	border-collapse:Collapse;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general{
+	padding:5px;
+	border:Solid 1px #808080;
+	font-size:100%;
+	text-align:Center;
+	font-weight:Normal;
+	vertical-align:Middle;
+}
+tbody.table_general td.table_general_col_0{
+	padding:5px 0px;
+	padding-left:5px;
+	width:120px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+	font-weight:Normal;
+}
+tbody.table_general td.table_general{
+	padding:3px 10px;
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+	font-size:100%;
+}
+thead.table_general td.table_general_col_1{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+tbody.table_general td.table_general_col_1{
+	vertical-align:Middle;
+	border:Solid 1px #808080;
+}
+thead.table_general td.table_general_col_0{
+	border:Solid 1px #808080;
+	padding:5px;
+}
+thead.table_general td.table_general div{
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/
+div.table_number{
+	margin:10px 10px 10px 35px;	
+}
+table div.table_number{
+	margin-left:25px;
+}
+table.table_number{
+	border-collapse:Collapse;
+	border:None;
+	width:Auto;
+}
+tbody.table_number td.table_number{
+	padding:0px 5px 0px 0px;
+	border:None;
+	font-size:100%;
+	text-align:Left;
+	vertical-align:Top;
+}
+tbody.table_number td.table_number_col_0{
+	width:1.5em;
+	border:None;
+}
+tbody.table_number td.table_number_col_0 div{
+	margin-left:0px;
+	margin-right:0px;
+	font-weight:Normal;
+	text-align:Right;
+}
+tbody.table_number td.table_number_col_1{
+	width:Auto;
+}
+/*-----------------------------------------------------------------------------------------------*/
+span.bold{
+	font-weight:Bold;
+}
+span.italic{
+	font-style:Italic;
+}
+span.no_break{
+	white-space:Nowrap;
+}
+span.superscript{
+	vertical-align:Super;
+	font-size:80%;
+}
+span.subscript{
+	vertical-align:Sub;
+	font-size:80%;
+}
+span.underline{
+	text-decoration:Underline;
+}
+span.color_white{
+	color:#FFFFFF;
+}
+span.color_blue{
+	color:#0000FF;
+}
+span.color_red{
+	color:#FF0000;
+}
+span.color_orange{
+	color:#FFA500;
+}
+span.color_green{
+	color:#008000;
+}
+span.bold\+color_red{
+	color:#FF0000;
+	font-weight:Bold;
+}
+span.bold\+italic{
+	font-style:Italic;
+	font-weight:Bold;
+}
+span.bold\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+underline{
+	text-decoration:Underline;
+	font-weight:Bold;
+}
+span.italic\+superscript{
+	vertical-align:Super;
+	font-size:80%;
+	font-style:Italic;
+}
+span.yenmark{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+}
+span.yenmark\+italic{
+	/*font-family:"MS PGothic","Osaka","Arial","Helvetica",Sans-serif;*/
+	font-style:Italic;
+}
+span.bold\+color_orange{
+	color:#FFA500;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+	font-weight:Bold;
+}
+span.bold\+no_break{
+	white-space:Nowrap;
+	font-weight:Bold;
+}
+span.bold\+no_break\+superscript{
+	white-space:Nowrap;
+	font-weight:Bold;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.no_break\+superscript{
+	white-space:Nowrap;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_red{
+	color:#FF0000;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.superscript\+color_orange{
+	color:#FFA500;
+	vertical-align:Super;
+	font-size:80%;
+}
+span.ui_text{
+}
+span.ui_bold{
+	font-weight:Bold;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+div#id_breadcrumbs{
+	font-size:70%;
+	position:Absolute;
+	left:5px;
+	top:10px;
+	z-index:1;
+	cursor:Default;
+	display:None;
+}
+div#id_breadcrumbs a{
+	margin:0px 5px;
+}
+div#id_breadcrumbs a:link{
+	color:#0000FF;
+}
+div#id_breadcrumbs a:visited{
+	color:#0000FF;
+}
+span.style_name{
+	font:Normal 8pt "Tahoma";
+	color:#FF0000;
+	margin:0px 5px;
+}
+div.open_close_all{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div.open_close_next_sibling{
+	font-size:80%;
+	margin:5px 10px 5px 30px;
+	color:#3366A5;
+	text-align:Right;
+}
+div#id_content div.open_close_all a:hover,
+div#id_content div.open_close_next_sibling a:hover{
+	text-decoration:None;
+}
+a.open_all:hover,
+a.close_all:hover,
+a.open_next_sibling:hover,
+a.close_next_sibling:hover{
+	border-bottom:Solid 1px #3366A5;
+}
+a.open_all,
+a.close_all,
+a.open_next_sibling,
+a.close_next_sibling{
+	border-bottom:Dotted 1px #3366A5;
+	padding-right:15px;
+}
+a.open_all{
+	margin-right:5px;
+}
+a.open_next_sibling{
+}
+a.close_all,
+a.close_next_sibling{
+}
+div.invisible_begin{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible_end{
+	color:#FFFFFF;
+	font-size:80%;
+	text-align:Right;
+}
+div.invisible{
+	display:None;
+	border-right:Dotted 1px #808080;
+	margin-right:10px;
+}
+@media print{
+div.open_close_all{
+	display:None;
+}
+div.open_close_next_sibling{
+	display:None;
+}
+div.invisible{
+	display:Block;
+	border-right:None;
+	margin-right:0px;
+}}
+div.hr{
+	border-top:Solid 2px #808080;
+	margin:25px 10px 0px 10px;
+	font-size:0pt;
+	color:#FFFFFF;
+}
+hr{
+	color:#808080;
+	background-color:#808080;
+	margin:25px 10px 0px 10px;
+	height:2px;
+	border:0;
+}
+-->
+		</style>
+	</head>
+	<body>
+		<!--CONTENT_START-->
+		<div id="id_content">
+			<div class="h1">Canon MF/LBP Network Setup Tool for Microsoft Windows เวอร์ชัน 2.30</div>
+			<div class="h2">ข้อตกลงว่าด้วยการอนุญาตให้ใช้ซอฟต์แวร์ของ CANON</div>
+			<div class="h5">ข้อความสำคัญ</div>
+			<div class="text">ต่อไปนี้เป็นข้อตกลงทางกฎหมาย (&quot;ข้อตกลง&quot;) ระหว่างท่าน และบริษัท Canon (&quot;Canon&quot;) เพื่อครอบคลุมถึงการใช้โปรมแกรมต่าง ๆ ของ Canon อันรวมถึงคู่มือต่าง ๆ ที่เกี่ยวข้อง หรือสิ่งตีพิมพ์จากสิ่งนั้น (&quot;ซอฟต์แวร์&quot;) สำหรับเครื่องถ่ายเอกสาร, เครื่องพิมพ์, และอุปกรณ์ต่อเพิ่มการทำงานต่าง ๆ ของ Canon (&quot;ผลิตภัณฑ์&quot;)</div>
+			<div class="text">โปรดอ่านเอกสารให้ถี่ถ้วน และทำความเข้าใจถึงสิทธิและข้อกำหนดทั้งหมดที่ปรากฏในข้อตกลงฉบับนี้ก่อนติดตั้งซอฟต์แวร์ โดยการคลิกที่ปุ่มที่แสดงถึงการยอมรับข้อตกลงของท่าน หรือการติดตั้งซอฟต์แวร์ ให้ถือว่าท่านตกลงปฏิบัติตามเงื่อนไขต่าง ๆ ภายใต้ข้อกำหนดต่าง ๆ ที่ปรากฏในข้อตกลงฉบับนี้ หากท่านไม่ยินยอมที่จะปฏิบัติตามข้อกำหนดดังกล่าวของข้อตกลงฉบับนี้ โปรดอย่าใช้งานซอฟต์แวร์นี้ </div>
+			<div class="h5">1. การอนุญาตให้ใช้สิทธิ์</div>
+			<div class="text">Canon อนุญาตให้ท่านใช้สิทธิ์แบบบุคคลธรรมดา, นิติบุคคลและบุคคลที่ไม่เฉพาะเจาะจง ในการใช้ (&quot;ใช้&quot; ในที่นี้รวมถึง เก็บ, โหลด, ติดตั้ง, เข้าถึง, สั่งทำงาน, หรือแสดงผล) ซอฟต์แวร์กับผลิตภัณฑ์ที่ต่อกับคอมพิวเตอร์โดยตรง หรือผ่านเครือข่ายที่ต่ออยู่กับผลิตภัณฑ์ (&quot;คอมพิวเตอร์ที่ระบุ&quot;)</div>
+			<div class="text">ท่านอาจอนุญาตให้ผู้ใช้รายอื่นของคอมพิวเตอร์เครื่องอื่นที่ต่ออยู่กับคอมพิวเตอร์ที่ระบุให้ใช้ซอฟต์แวร์ โดยมีข้อแม้ว่าท่านต้องรับประกันว่าผู้ใช้เหล่านั้นจะปฏิบัติตามข้อกำหนดของข้อตกลง รวมถึงข้อกำหนด และข้อจำกัดอื่นๆภายใต้การควบคุมของท่าน</div>
+			<div class="text">ท่านสามารถทำสำเนาของซอฟต์แวร์ได้หนึ่งสำเนาเท่านั้น เพื่อใช้เป็นสำเนาสำรอง</div>
+			<div class="h5">2. ข้อจำกัดอื่นๆ</div>
+			<div class="text">ท่านไม่มีสิทธิ์ใช้ซอฟต์แวร์เว้นแต่ได้ระบุไว้ในที่นี้แล้วเท่านั้น และไม่มิสิทธิ์ในการโอนสิทธิ์, ให้สิทธิ์ร่วม, ขาย, ให้เช่า, ให้เช่าช่วง, ให้ยืม, ถ่ายหรือย้ายสิทธิ์ซอฟต์แวร์ให้แก่บุคคลที่สาม ท่านไม่มีสิทธิ์</div>
+			<div class="text">แก้ไข, แปลหรือเปลี่ยนเป็นภาษาโปรแกรมอื่น, เปลี่ยนแปลง, ถอดรื้อ, ถอด/แก้รหัส หรือทำวิศวกรรมย้อนกลับซอฟต์แวร์ และท่านไม่มีสิทธิ์ให้บุคคลที่สามกระทำสิ่งที่ระบุมาข้างต้น</div>
+			<div class="h5">3. คำประกาศลิขสิทธิ์</div>
+			<div class="text">ห้ามเปลี่ยนแปลง เคลื่อนย้าย หรือลบคำประกาศลิขสิทธิ์ที่ได้บรรจุไว้ในซอฟต์แวร์ของ Canon และผู้ออกใบอนุญาต รวมทั้งสำเนา</div>
+			<div class="h5">4. ความเป็นเจ้าของ</div>
+			<div class="text">Canon และผู้ออกใบอนุญาตเป็นเจ้าของ ชื่อ, กรรมสิทธิ์, สิทธิในทรัพย์สินทางปัญญาทั้งหลายที่ปรากฏในและที่มีต่อเนื้อหาของซอฟต์แวร์ ไม่มีใบอนุญาตหรือสิทธิที่ระบุแจ้งชัดหรือโดยปริยายที่จะถ่ายโอนหรือให้สิทธิของทรัพย์สินทางปัญญาของ Canon และผู้ออกใบอนุญาตจาก Canon แก่ท่าน</div>
+			<div class="h5">5. การควบคุมการส่งออก</div>
+			<div class="text">ท่านยอมรับที่จะยินยอมทำตามกฎหมายการส่งออกและข้อจำกัดและระเบียบใด ๆ ทั้งหมดของประเทศที่เกี่ยวข้อง และจะไม่ส่งออกซอฟต์แวร์หรือส่งออกซ้ำทั้งโดยทางตรง หรือโดยทางอ้อม ในทางที่ละเมิด ต่อกฎหมาย ข้อห้าม และระเบียบใด ๆ หรือโดยไม่ได้รับอนุญาต</div>
+			<div class="h5">6. บริการสนับสนุนและอัปเดต</div>
+			<div class="text">CANON, สาขาหรือสมาชิกของ CANON, ผู้จัดจำหน่าย, ตัวแทนจำหน่าย และ/หรือ ผู้ออกใบอนุญาตของ CANON ไม่มีส่วนรับผิดชอบใด ๆ ในการบำรุงรักษา หรือให้ความช่วยเหลือเกี่ยวกับการใช้ซอฟต์แวร์ หรือจัดเตรียมการปรับปรุง, ซ่อมแซม หรือสนับสนุนใด ๆ สำหรับซอฟต์แวร์ที่ระบุต่อไปนี้</div>
+			<div class="h5">7. ข้อตกลงการรับประกันและความรับผิดชอบ</div>
+			<div class="text">[ไม่มีการรับประกัน] ซอฟต์แวร์ถูกส่งมอบในรูปแบบ &quot;ตามลักษณะปัจจุบัน&quot; (&quot;AS IS&quot;) โดยปราศจากการรับประกันในลักษณะใด ๆ ไม่ว่าโดยแจ้งชัดหรือโดยปริยาย รวมถึงแต่ไม่จำกัดเพียงการรับประกันโดยปริยายถึงความเหมาะสมในการวางตลาด หรือความเหมาะสมในวัตถุประสงค์โดยเฉพาะอย่างใดอย่างหนึ่ง ท่านเป็นผู้รับความเสี่ยงทั้งหมดในเรื่องคุณภาพหรือประสิทธิภาพของโปรแกรม หากปรากฏความจริงว่าโปรแกรมชำรุดบกพร่อง ท่านจะเป็นผู้รับภาระต้นทุนในการบำรุงรักษา ซ่อมแซม หรือแก้ไขเท่าที่จำเป็นทั้งหมด บางรัฐหรือบางศาลกฎหมายไม่อนุญาตการจำกัด หรือการไม่มีการรับประกันโดยปริยาย ดังนั้นการไม่มีการรับประกันตามที่ระบุไว้ข้างต้น อาจใช้ไม่ได้สำหรับท่าน</div>
+			<div class="text">การรับประกันนี้ให้สิทธิพิเศษทางกฎหมายแก่ท่าน และท่านอาจจะมีสิทธิอื่น ๆ ด้วย ซึ่งแตกต่างกันไปในแต่ละรัฐหรือในแต่ละศาล</div>
+			<div class="text">CANON, สาขาหรือสมาชิกของ CANON, ผู้จัดจำหน่าย, ตัวแทนจำหน่าย และ/หรือ ผู้ออกใบอนุญาตของ CANON ไม่รับประกันว่าการทำงานต่าง ๆ ในซอฟต์แวร์จะตรงกับความต้องการของท่าน หรือไม่รับประกันว่า การทำงานของซอฟต์แวร์จะไม่มีการหยุดชะงัก หรือไม่มีข้อผิดพลาด</div>
+			<div class="text">[ไม่มีความรับผิดชอบเนื่องมาจากความเสียหาย] ไม่มีความรับผิดชอบเนื่องมาจากความเสียหาย ไม่มีกรณีใดๆ ที่ CANON, สาขาและสมาชิกของ CANON, ผู้จัดจำหน่าย, ตัวแทนจำหน่าย และ/หรือผู้ออกใบอนุญาตของ CANON จะต้องรับชดใช้ความเสียหายใด ๆ อันเป็นผลมาจากซอฟต์แวร์, การใช้หรือความไม่สามารถในการใช้ซอฟต์แวร์ (รวมถึงแต่ไม่จำกัดเพียงการจำกัดหรือสูญเสียผลประโยชน์ของธุรกิจ, การสูญเสียสารสนเทศของธุรกิจ, การสูญเสียเนื่องจากธุรกิจหยุดชะงัก หรือค่าชดเชยอื่นๆ, ความเสียหายใด ๆ ที่เกิดขึ้นโดยบังเอิญหรือโดยเนื่องมาแต่เหตุ) ถึงแม้ว่า CANON, สาขา และสมาชิกของ CANON, ผู้จัดจำหน่าย, ตัวแทนจำหน่าย และ/หรือผู้ออกใบอนุญาตของ Canon จะได้รับการแจ้งเตือนถึงความเป็นไปได้ ของความเสียหายเช่นว่าแล้วก็ตาม บางรัฐหรือบางศาลกฎหมายไม่อนุญาตการจำกัดหรือการไม่รับชดใช้ความเสียหายโดยบังเอิญ หรือโดยเนื่องมาแต่เหตุ หรือการทำให้ผู้อื่นบาดเจ็บหรือเสียชีวิต เนื่องมาจากความละเลยในส่วนของผู้ขาย ดังนั้นการจำกัด หรือไม่รับชดใช้ตามที่ระบุไว้ข้างต้นอาจใช้ไม่ได้สำหรับท่าน</div>
+			<div class="text">[ปลดภาระความรับผิดชอบ] ตามข้อบังคับโดยกฎหมายที่เกี่ยวข้องทั้งหมด ท่านต้องปลด CANON, สาขาหรือสมาชิกของ CANON, ผู้จัดจำหน่าย, ตัวแทนจำหน่าย และ/หรือ ผู้ออกใบอนุญาตของ CANON จากภาระความรับผิดชอบใด ๆ อันเนื่องมาจากหรือเกี่ยวพันกับข้อร้องเรียนทั้งหมดเกี่ยวกับซอฟต์แวร์ หรือการใช้งานซอฟต์แวร์</div>
+			<div class="h5">8. ระยะเวลา</div>
+			<div class="text">ข้อตกลงนี้จะมีผลบังคับใช้เมื่อมีการคลิกปุ่มที่แสดงถึงการยอมรับข้อตกลงของท่านตามที่ระบุไว้ด้านล่างนี้ หรือการติดตั้งซอฟต์แวร์ และมีผลบังคับไปจนกว่าจะยกเลิก ท่านอาจยกเลิกข้อตกลงได้ โดยการทำลายซอฟต์แวร์ และสำเนาทั้งหมด</div>
+			<div class="text">ข้อตกลงนี้จะยกเลิกเช่นกัน หากท่านไม่ปฏิบัติตามข้อกำหนดและเงื่อนไขของข้อตกลงนี้ ในการยกเลิกข้อตกลงรวมถึงการยุติการดำเนินสิทธิ์ทางกฎหมายที่ตามมาของ Canon ท่านจะต้องทำลายซอฟต์แวร์ และสำเนาทั้งหมดโดยทันที อย่างไรก็ตาม ข้อตกลงส่วนที่ 4 และส่วนที่ 7 ถึง 11 ยังคงมีผลบังคับใช้อยู่หลังการยกเลิกข้อตกลง</div>
+			<div class="h5">9. คำประกาศจำกัดสิทธิ์ตามรัฐบาลสหรัฐอเมริกา</div>
+			<div class="text">ผู้ใช้ภายใต้รัฐบาลสหรัฐฯ ในที่นี้หมายถึงเอเจนซี้หรือเอนทิตีของรัฐบาลสหรัฐฯ หากคุณเป็นผู้ใช้ภายใต้รัฐบาลสหรัฐฯ รายการต่อไปนี้จะได้รับการถูกนำไปใช้</div>
+			<div class="text">ซอฟต์แวร์เป็น &quot;วัตถุทางพาณิชย์&quot; มีคำจำกัดความตามมาตรา 48 C.F.R. 2.101 (ตุลาคม 1995) ประกอบด้วย &quot;ซอฟต์แวร์คอมพิวเตอร์ทางพาณิชย์&quot; และ &quot;เอกสารซอฟต์แวร์คอมพิวเตอร์ทางพาณิชย์&quot; มีการกำหนดใช้ตามมาตรา 48 C.F.R. 12.212 (กันยายน 1995) อันประกอบด้วย 48 C.F.R. 12.212 และ 48 C.F.R. 227.7202-1 จนถึง 227.7202-4 (มิถุนายน 1995) ผู้ใช้ (End Users) ภายใต้รัฐบาลสหรัฐฯ จะครอบครองซอฟต์แวร์ได้ตามสิทธิ์ที่ระบุไว้ตามมาตราดังกล่าวเท่านั้น ผู้ผลิตคือ Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan</div>
+			<div class="h5">10. ข้อกำหนดสามารถแยกออกจากกัน</div>
+			<div class="text">ในกรณีที่ข้อกำหนดใดในที่นี้ได้ถูกประกาศ หรือพบว่าไม่ถูกต้องตามกฎหมาย โดยสภาหรืออำนาจอันเหมาะสมทางศาลใด ข้อกำหนดดังกล่าวถือเป็นโมฆะตามอำนาจทางสภาหรือศาลนั้น และข้อกำหนดอื่นในที่นี้ยังคงมีผลบังคับตามกฎหมายโดยสมบูรณ์</div>
+			<div class="h5">11. การยอมรับข้อตกลง</div>
+			<div class="text">โดยการคลิกปุ่มที่แสดงถึงการยอมรับของท่านตามที่ระบุไว้ด้านล่างนี้ หรือการติดตั้งซอฟต์แวร์ ให้ถือว่า ท่านได้อ่านข้อตกลงนี้ และได้ทำความเข้าใจ และตกลงปฏิบัติตามข้อกำหนดและเงื่อนไขเหล่านั้นรวมถึงยอมรับว่าข้อตกลงนี้เป็นไปโดยสมบูรณ์ และเป็นสัญญาเฉพาะระหว่างท่านกับ CANON ในเรื่องของเนื้อหาใดในที่นี้ และข้อเสนอในภายหน้า หรือข้อตกลงที่ผ่านมาโดยทางวาจา หรือลายลักษณ์อักษรก็ตาม รวมถึงการติดต่อสื่อสารใดระหว่างท่านกับ CANON เกี่ยวกับเนื้อหาดังกล่าวเหล่านั้น การแก้ไขใดๆ ในข้อตกลงนี้ไม่มีผลบังคับใช้ หากปราศจากการลงนามจากผู้แทนอำนาจโดยชอบธรรมของ CANON</div>
+			<div class="text">หากท่านมีข้อสงสัยเกี่ยวกับข้อตกลงนี้ หรือหากท่านต้องการติดต่อกับ Canon ด้วยเหตุผลใดๆ กรุณาส่งจดหมายมาที่แผนกขายของ Canon หรือที่ผู้จำหน่ายสินค้า/ตัวแทนจำหน่ายที่ให้บริการในประเทศที่ท่านได้รับผลิตภัณฑ์</div>
+			<div class="text"> </div>
+			<div class="text_right">No.025370</div>
+			<div class="h2">ข้อควรระวัง</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">1.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">โปรดสังเกตข้อจำกัดต่อไปนี้เมื่อใช้ซอฟต์แวร์นี้</div>
+							</td>
+						</tr>
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+								<div class="text"></div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+								<div class="table_no_border">
+									<table class="table_no_border">
+										<tbody class="table_no_border">
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+													<div class="text">(1)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+													<div class="text">ซอฟต์แวร์สามารถตรวจพบจุดการเข้าถึง LAN แบบไร้สายได้สูงสุด 10 จุด โดยการค้นหาจุดการเข้าถึง LAN แบบไร้สาย</div>
+												</td>
+											</tr>
+											<tr class="table_no_border">
+												<td colspan="1" rowspan="1" class="col_0 row_1 table_no_border table_no_border_col_0 table_no_border_row_1">
+													<div class="text">(2)</div>
+												</td>
+												<td colspan="1" rowspan="1" class="col_1 row_1 table_no_border table_no_border_col_1 table_no_border_row_1">
+													<div class="text">ซอฟต์แวร์ไม่สามารถตรวจพบจุดการเข้าถึง LAN แบบไร้สายโดยการค้นหาจุดการเข้าถึง LAN แบบไร้สายได้ เมื่อจุดการเข้าถึง LAN แบบไร้สายกำลังใช้ฟังก์ชันการพรางตัว</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table_no_border">
+				<table class="table_no_border">
+					<tbody class="table_no_border">
+						<tr class="table_no_border">
+							<td colspan="1" rowspan="1" class="col_0 row_0 table_no_border table_no_border_col_0 table_no_border_row_0">
+								<div class="text">2.</div>
+							</td>
+							<td colspan="1" rowspan="1" class="col_1 row_0 table_no_border table_no_border_col_1 table_no_border_row_0">
+								<div class="text">ถ้ากล่องโต้ตอบ [การติดตั้งอุปกรณ์] แสดงขึ้นเมื่อคุณเชื่อมต่อสายเคเบิล USB เข้ากับคอมพิวเตอร์ของคุณ ให้คลิก [ปิด]</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr />
+			<div class="text_right">Copyright CANON INC. 2012</div>
+			<div class="text"></div>
+		</div>
+		<!--CONTENT_END-->
+	</body>
+</html>

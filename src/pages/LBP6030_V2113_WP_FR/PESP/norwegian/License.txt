@@ -1,0 +1,57 @@
+LISENSAVTALE FOR CANON PROGRAMVARE
+
+VIKTIG
+
+Dette er en juridisk bindende avtale ("Avtale") mellom deg og Canon Inc. ("Canon") som omfatter din bruk av programvare fra Canon, inklusive tilhørende håndbøker eller trykket materiale ("PROGRAMVAREN") for bestemte Canon kopimaskiner, skrivere og flerfunksjons periferutstyr ("Produktene").
+
+LES NØYE OG VÆR SIKKER PÅ AT DU FORSTÅR ALLE RETTIGHETENE OG BEGRENSNINGENE SOM ER BESKREVET I DENNE AVTALEN FØR DU INSTALLERER PROGRAMVAREN. VED Å KLIKKE PÅ KNAPPEN OG INDIKERE DITT SAMTYKKE SLIK DET ER ANGITT NEDENFOR, ELLER INSTALLERE PROGRAMVAREN, AKSEPTERER DU Å VÆRE BUNDET AV VILKÅRENE OG BETINGELSENE I DENNE AVTALEN. HVIS DU IKKE SAMTYKKER I VILKÅRENE OG BETINGELSENE I DENNE AVTALEN, MÅ DU IKKE BRUKE PROGRAMVAREN. 
+
+
+1.  TILDELING AV LISENS
+Canon gir deg en personlig, begrenset og ikke-eksklusiv lisens for bruk ("bruk" slik det forstås her omfatter lagring, lasting, installering, tilgang, utførelse eller visning) av PROGRAMVAREN utelukkende for bruk sammen med Produktene direkte på datamaskinen eller via nettverk tilknyttet Produktene ("Angitt datamaskin"). 
+Du kan tillate brukere av andre datamaskiner som er koblet til din angitte datamaskin å bruke PROGRAMVAREN på den betingelse at du sørger for at alle brukerne overholder vilkårene i denne avtalen og retter seg etter begrensningene og forpliktelsene som i henhold til avtalen er ditt ansvar.
+
+Du kan ta én kopi av PROGRAMVAREN som sikkerhetskopi.
+
+2.  BEGRENSNINGER
+Du må ikke bruke PROGRAMVAREN til annet enn det som er uttrykkelig fastslått eller tillatt i denne avtalen, og du må ikke tildele, overlate, selge, leie ut, låne ut, gi videre eller overføre PROGRAMVAREN til tredjepart. Du må ikke endre, oversette eller konvertere til andre programmeringsspråk, modifisere, demontere, dekompilere eller på andre måter forandre noe i PROGRAMVAREN, og du kan heller ikke la en tredjepart gjøre dette.
+
+3.  MERKNAD OM OPPHAVSRETT
+Du må ikke modifisere, fjerne eller slette noen merknader om opphavsrett som tilhører Canon ellers dets lisenstagere som finnes i PROGRAMVAREN, inkludert alle kopier av denne.
+
+4.  EIERSKAP
+Canon og Canons lisenstagere beholder i alle henseender retten til, eierskapet og de intellektuelle eiendomsrettighetene i og til PROGRAMVAREN. Unntatt det som er uttrykkelig forutsatt i avtalen, blir ingen lisens eller rettighet, eksplisitt eller implisitt, overført eller gitt til deg av Canon for noen intellektuell eiendom som tilhører Canon eller deres lisenstagere.
+
+5.  EKSPORTKONTROLL
+Du aksepterer å overholde alle lover, restriksjoner og forskrifter om eksport for det aktuelle landet, og ikke å reeksportere, direkte eller indirekte, PROGRAMVAREN i strid med slike lover, restriksjoner og forskrifter, eller uten alle nødvendige godkjenninger.
+
+6.  STØTTE OG OPPDATERING
+CANON, CANONS DATTERSELSKAPER ELLER FILIALER, DISTRIBUTØRER, FORHANDLERE ELLER CANONS LISENSTAGERE ER IKKE ANSVARLIG FOR Å VEDLIKEHOLDE ELLER HJELPE DEG MED Å BRUKE PROGRAMVAREN, ELLER LEVERE NOEN INGEN OPPDATERINGER, REPARASJONER ELLER STØTTE FOR PROGRAMVAREN.
+
+7.  FRASKRIVELSE AV GARANTI OG ANSVAR
+[INGEN GARANTI] PROGRAMVAREN LEVERES "SOM DEN ER" UTEN GARANTI AV NOE SLAG, VERKEN EKSPLISITT ELLER IMPLISITT, INKLUSIVE, MEN IKKE BEGRENSET TIL, UNDERFORSTÅTTE GARANTIER OM SALGBARHET OG EGNETHET FOR ET BESTEMT FORMÅL. ALL RISIKO MED HENSYN TIL PROGRAMVARENS KVALITET OG YTELSE HVILER PÅ DEG. SKULLE PROGRAMVAREN VISE SEG Å VÆRE DEFEKT, PÅTAR DU DEG ALLE UTGIFTER TIL ALL NØDVENDIG SERVICE, REPARASJON ELLER KORRIGERING. NOEN STATER ELLER JURISDIKSJONER TILLATER IKKE UTELUKKELSE AV IMPLISITTE (UNDERFORSTÅTTE) GARANTIER, SÅ DET ER IKKE SIKKERT AT UTELUKKELSEN OVENFOR GJELDER FOR DEG. 
+DENNE GARANTIEN GIR DEG BESTEMTE LOVMESSIGE RETTIGHETER, OG DU KAN OGSÅ HA ANDRE RETTIGHETER SOM KAN VARIERE FRA STAT TIL STAT ELLER FRA JURISDIKSJON TIL JURISDIKSJON.
+
+CANON, CANONS DATTERSELSKAPER, FILIALER, DISTRIBUTØRER, FORHANDLERE ELLER LISENSTAGERE GARANTERER IKKE AT FUNKSJONENE I PROGRAMVAREN VIL DEKKE DINE BEHOV, ELLER AT PROGRAMVAREN VIL FUNGERE UAVBRUTT ELLER FEILFRITT.
+
+[IKKE ANSVAR FOR SKADER] VERKEN CANON, CANONS DATTERSELSKAPER ELLER FILIALER, DISTRIBUTØRER, FORHANDLERE ELLER CANONS LISENSINNEHAVERE KAN HOLDES ANSVARLIG FOR SKADER (INKLUDERT, UTEN BEGRENSNING, TAP AV FORTJENESTE, TAP AV FORRETNINGSINFORMASJON, TAP SOM SKYLDES AVBRUDD ELLER ANDRE KOSTNADER, TILFELDIGE SKADER ELLER FØLGESKADER) SOM MÅTTE OPPSTÅ PÅ GRUNN AV PROGRAMVAREN, BRUK AV DEN ELLER MANGLENDE EVNE TIL Å BRUKE PROGRAMVAREN, SELV OM CANON, CANONS DATTERSELSKAPER, FILIALER, DISTRIBUTØRER, FORHANDLERE ELLER CANONS LINSENSINNEHAVERE ER BLITT UNDERRETTET OM MULIGHETEN FOR SLIKE SKADER. NOEN STATER ELLER JURISDIKSJONER TILLATER IKKE BEGRENSNING ELLER EKSKLUSJON AV ANSVAR FOR TILFELDIGE SKADER ELLER FØLGESKADER, ELLER PERSONSKADE ELLER DØD SOM FØLGE AV UAKTSOMHET FRA SELGERENS SIDE, SÅ ENKELTE AV BEGRENSNINGENE ELLER UTELUKKELSENE OVENFOR GJELDER KANSKJE IKKE FOR DEG.
+
+[ANSVARSFRASKRIVELSE] I DEN GRAD DET ER TILLATT I HENHOLD TIL GJELDENDE LOVGIVNING, FRITAR DU HERVED CANON, CANONS DATTERSELSKAPER, FILIALER, DISTRIBUTØRER, FORHANDLERE OG CANONS LINSENSTAGERE FOR ALT ERSTATNINGSANSVAR SOM OPPSTÅR FRA ELLER ER RELATERT TIL KRAV I FORBINDELSE MED PROGRAMVAREN ELLER BRUK AV PROGRAMVAREN.
+
+8.  VILKÅR
+Denne avtalen gjelder fra du godkjenner den ved å klikke på knappen som indikerer aksept slik det er angitt nedenfor, eller ved å installere PROGRAMVAREN, og den er gyldig til den avsluttes. Du kan avslutte denne avtalen ved å ødelegge PROGRAMVAREN, inkludert alle kopier av den. 
+Denne avtalen skal også avsluttes hvis du ikke overholder noen av vilkårene i den. Når denne avtalen avsluttes, og i tillegg til at Canon vil håndheve sine juridiske rettigheter, må du øyeblikkelig tilintetgjøre PROGRAMVAREN, inkludert alle kopier av den. Uten hensyn til det foregående, skal avsnittene 4 og 7 til og med 11 gjelde til tross for at denne avtalen avsluttes.
+
+9.  MERKNAD OM BEGRENSEDE RETTIGHETER FOR AMERIKANSKE STATSANSATTE
+En "sluttbruker i den amerikanske regjering" skal bety et byrå eller en enhet innenfor regjeringen i USA. Hvis du er en sluttbruker i den amerikanske regjering, gjelder følgende: PROGRAMVAREN er et "kommersielt produkt" i henhold til 48 C.F.R. 2.101(oktober 1995), og består av "kommersiell programvare for datamaskin", og "dokumentasjon til kommersiell programvare for datamaskin", som det kalles i 48 C.F.R. 12.212 (september 1995). I samsvar med 48 C.F.R. 12.212 og 48 C.F.R 227.7202-1 til 227.7202-4 (juni 1995) skal alle sluttbrukere blant amerikanske statsansatte skaffe seg PROGRAMVAREN kun med de rettighetene som er nevnt her. Produsenten er Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10.  GYLDIGHET
+Dersom det i en rettssal eller ved en domstol med kompetent domsmyndighet erklæres eller besluttes at bestemmelser som er nevnt her, er ulovlige, vil en slik bestemmelse erklæres ugyldig for vedkommende jurisdiksjon som vedkommende rett eller domstol har, og alle øvrige bestemmelser vil fortsatt gjelde.
+
+11.  GODKJENNELSE
+VED Å KLIKKE PÅ KNAPPEN OG INDIKERE DITT SAMTYKKE SLIK DET ER ANGITT NEDENFOR, ELLER VED Å INSTALLERE PROGRAMVAREN, ERKJENNER DU AT DU HAR LEST DENNE AVTALEN, AT DU HAR FORSTÅTT DEN OG AKSEPTERER AT DU ER BUNDET AV VILKÅRENE OG BETINGELSENE I DEN. DU AKSEPTERER OGSÅ AT DENNE AVTALEN ER DEN FULLSTENDIGE OG ENESTE AVTALEERKLÆRINGEN MELLOM DEG OG CANON MED HENSYN TIL GJELDENE PRODUKT, OG AT DEN ERSTATTER ALLE FORSLAG ELER FORUTGÅENDE AVTALER, MUNTLIGE SOM SKRIFTLIGE, OG ALL ANNEN KOMMUNIKASJON MELLOM DEG OG CANON SOM HAR MED GJELDENDE PRODUKT Å GJØRE. INGEN RETTELSER AV DENNE AVTALEN VIL VÆRE GYLDIG MED MINDRE DEN ER UNDERTEGNET AV EN BEHØRIG GODKJENT REPRESENTANT FOR CANON.
+
+
+Hvis du har spørsmål som gjelder denne avtalen, eller hvis du av en eller annen grunn ønsker å kontakte Canon, skriver du til Canons salgsdatterselskaper eller distributør/forhandler, i landet der du anskaffet produktet.
+
+Nr.024410

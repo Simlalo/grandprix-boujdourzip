@@ -1,0 +1,57 @@
+CONTRATO DE LICENÇA DE SOFTWARE CANON
+
+IMPORTANTE
+
+Este é um contrato legal ("Contrato") firmado entre você (usuário) e a Canon Inc. ("Canon"); por meio dele é controlado o uso dos programas de software da Canon, entre os quais os manuais relacionados e todo material impresso a ele referente (o "SOFTWARE"), de determinadas copiadoras, impressoras e periféricos multifuncionais (os "Produtos") da Canon.
+
+ANTES DE INSTALAR O SOFTWARE, LEIA ESTE CONTRATO COM ATENÇÃO PARA COMPREENDER TODOS OS DIREITOS E RESTRIÇÕES NELE DESCRITOS.  AO CLICAR NO BOTÃO QUE INDICA SUA ACEITAÇÃO CONFORME CONSTA ABAIXO OU INSTALAR O SOFTWARE, VOCÊ ESTARÁ CONCORDANDO EM CUMPRIR OS TERMOS E CONDIÇÕES DESTE CONTRATO.  CASO VOCÊ NÃO ACEITE TODOS OS TERMOS E CONDIÇÕES DESTE CONTRATO, NÃO UTILIZE O SOFTWARE.
+
+
+1.  CONCESSÃO DE LICENÇA
+A Canon concede ao usuário uma licença pessoal, limitada e não-exclusiva para utilizar (aqui, "utilizar" significa armazenar, carregar, instalar, acessar, executar ou exibir) o SOFTWARE somente com os Produtos em computadores conectados, diretamente ou através de uma rede, aos Produtos (o "Computador designado"). 
+Os usuários de outros computadores conectados ao Computador designado podem utilizar o SOFTWARE, desde que você assegure que esses usuários cumprirão os termos deste Contrato, sujeitando-se às restrições e obrigações assumidas de acordo com o presente documento.
+
+Você poderá fazer uma cópia do SOFTWARE apenas para fins de backup.
+
+2.  RESTRIÇÕES
+Você só pode utilizar o SOFTWARE da forma expressamente permitida ou acordada neste documento, não podendo atribuí-lo, sublicenciá-lo, vendê-lo, alugá-lo, arrendá-lo, emprestá-lo, cedê-lo nem transferi-lo para terceiros.  Não está autorizada a você nem a terceiros a alteração, tradução ou conversão para outra linguagem de programação, a modificação, desmontagem, descompilação ou qualquer outra forma de engenharia reversa do SOFTWARE.
+
+3.  AVISO DE COPYRIGHT
+Você não pode modificar, remover nem excluir qualquer aviso de copyright da Canon ou dos seus licenciadores referidos no SOFTWARE, nem mesmo uma cópia desse aviso.
+
+4.  PROPRIEDADE
+A Canon e seus licenciadores detêm todos os direitos de propriedade intelectual, titularidade e propriedade relacionados ao SOFTWARE.  Exceto conforme previsto expressamente neste documento, nenhum direito ou licença, expresso ou implícito, é concedido ou transmitido a você, através do presente instrumento pela Canon, sobre qualquer propriedade intelectual da Canon ou de seus licenciadores.
+
+5.  CONTROLE DE EXPORTAÇÃO
+Você concorda em cumprir todas as leis de exportação, restrições e legislações do país envolvido, e em não exportar nem reexportar, direta ou indiretamente, o SOFTWARE no caso de violação de tais leis, restrições e legislações, ou se não houver todas as aprovações necessárias.
+
+6.  SUPORTE E ATUALIZAÇÃO
+A CANON, SUAS SUBSIDIÁRIAS OU AFILIADAS, DISTRIBUIDORES, REVENDEDORES OU LICENCIADORES NÃO SÃO RESPONSÁVEIS PELA MANUTENÇÃO OU SUPORTE TÉCNICO REFERENTES À UTILIZAÇÃO DO SOFTWARE.  NENHUMA ATUALIZAÇÃO, CORREÇÃO OU SUPORTE SERÁ OFERECIDO PARA O SOFTWARE.
+
+7.  RECLAMAÇÃO DE GARANTIA E INDENIZAÇÃO
+[ISENÇÃO DE GARANTIA] O SOFTWARE É FORNECIDO "NO ESTADO" E SEM QUALQUER TIPO DE GARANTIA, EXPRESSA OU IMPLÍCITA, INCLUINDO (MAS SEM LIMITAÇÃO) AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO OU ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO.  O RISCO QUANTO À QUALIDADE E AO DESEMPENHO DO SOFTWARE É TODO SEU.  EM CASO DE DEFEITOS DO SOFTWARE, VOCÊ ARCARÁ COM TODOS OS CUSTOS DE ASSISTÊNCIA TÉCNICA, REPAROS OU CORREÇÕES.  ALGUNS ESTADOS OU JURISDIÇÕES NÃO PERMITEM A EXCLUSÃO DE GARANTIAS IMPLÍCITAS. ASSIM SENDO, A EXCLUSÃO ACIMA PODE NÃO LHE SER APLICÁVEL.  
+ESTA GARANTIA CONCEDE-LHE DIREITOS LEGAIS ESPECÍFICOS. VOCÊ PODERÁ TER OUTROS DIREITOS QUE VARIEM DE UM ESTADO PARA OUTRO OU DE UMA JURISDIÇÃO PARA OUTRA.
+
+A CANON, SUAS SUBSIDIÁRIAS OU AFILIADAS, DISTRIBUIDORES, REVENDEDORES OU LICENCIADORES NÃO OFERECEM QUALQUER GARANTIA DE QUE AS FUNÇÕES INCLUÍDAS NO SOFTWARE ATENDERÃO ÀS SUAS NECESSIDADES OU DE QUE O FUNCIONAMENTO DO SOFTWARE SERÁ ININTERRUPTO OU NÃO APRESENTARÁ ERROS.
+
+[ISENÇÃO DE RESPONSABILIDADE POR DANOS] EM HIPÓTESE ALGUMA, A CANON, SUAS SUBSIDIÁRIAS OU AFILIADAS, DISTRIBUIDORES, REVENDEDORES OU LICENCIADORES SERÃO RESPONSABILIZADOS POR QUAISQUER DANOS (INCLUINDO, SEM LIMITAÇÃO, DANOS POR LUCROS CESSANTES, PERDA DE INFORMAÇÕES COMERCIAIS, INTERRUPÇÕES COMERCIAIS OU OUTROS DANOS COMPENSATÓRIOS, CONSEQÜENTES OU INCIDENTAIS) CAUSADOS PELO SOFTWARE OU DECORRENTES DE SEU USO OU DA INCAPACIDADE DE UTILIZÁ-LO, MESMO QUE A CANON, SUAS SUBSIDIÁRIAS OU AFILIADAS, DISTRIBUIDORES, REVENDEDORES OU LICENCIADORES TENHAM SIDO AVISADOS SOBRE A POSSIBILIDADE DA OCORRÊNCIA DE TAIS DANOS.  ALGUNS ESTADOS OU JURISDIÇÕES NÃO PERMITEM A LIMITAÇÃO NEM A EXCLUSÃO DE RESPONSABILIDADE POR DANOS CONSEQÜENTES OU INCIDENTAIS, LESÕES CORPORAIS OU MORTE RESULTANTES DE NEGLIGÊNCIA POR PARTE DO VENDEDOR. ASSIM SENDO, A LIMITAÇÃO OU EXCLUSÃO ACIMA PODE NÃO LHE SER APLICÁVEL.
+
+[ISENÇÃO DE RESPONSABILIDADE] NA EXTENSÃO MÁXIMA PERMITIDA PELA LEGISLAÇÃO APLICÁVEL, ATRAVÉS DESTE DOCUMENTO, VOCÊ EXIME A CANON, SUAS SUBSIDIÁRIAS E AFILIADAS, DISTRIBUIDORES, REVENDEDORES E LICENCIADORES DE TODA E QUALQUER RESPONSABILIDADE DECORRENTE DE OU ASSOCIADA A TODAS AS REIVINDICAÇÕES RELATIVAS AO SOFTWARE OU AO SEU USO.
+
+8.  CONDIÇÕES
+Este Contrato entra em vigor com a aceitação dos termos e condições deste documento ao clicar no botão indicando a sua aceitação, conforme consta abaixo, ou com a instalação do SOFTWARE e permanece válido até sua expiração.  Você pode rescindir este Contrato destruindo o SOFTWARE e todas as suas cópias. 
+Este Contrato também será rescindido caso não seja cumprido algum de seus termos.  Com a rescisão deste Contrato, a Canon fará cumprir seus respectivos direitos legais e você deverá destruir imediatamente o SOFTWARE e toda e qualquer cópia dele que possa existir.  Apesar do que foi mencionado anteriormente, as seções 4 e de 7 a 11 continuarão em vigor após a rescisão deste Contrato.
+
+9.  AVISO DE DIREITOS RESTRITOS DO GOVERNO DOS E.U.A.
+Um “Usuário Final do Governo dos E.U.A.” significa qualquer agência ou entidade do governo dos E.U.A.. Se você é um usuário final do governo dos E.U.A., a seguinte regra deverá ser aplicada: o SOFTWARE é um "item comercial", nos termos do disposto no documento 48 C.F.R. 2.101 de outubro de 1995, que consiste no "software comercial para computadores" e na "documentação relativa ao software comercial para computadores", de acordo com os termos utilizados no documento 48 C.F.R. 12.212 de setembro de 1995.  De acordo com os documentos 48 C.F.R. 12.212 e 48 C.F.R. 227.7202-1 a 227.7202-4 de junho de 1995, todos os usuários finais do governo dos E.U.A. deverão adquirir o SOFTWARE apenas segundo os direitos estabelecidos neste documento.  O fabricante é a Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tóquio 146-8501, Japão.
+
+10.  AUTONOMIA
+No caso de alguma seção deste contrato ser declarada ou julgada ilegal por qualquer foro ou tribunal de jurisdição competente, essa seção será anulada e cancelada em relação à jurisdição de tal foro ou tribunal, e todas as demais cláusulas referidas neste documento continuarão em pleno vigor e vigência.
+
+11.  ACEITAÇÃO
+AO CLICAR NO BOTÃO QUE INDICA SUA ACEITAÇÃO CONFORME CONSTA ABAIXO OU INSTALAR O SOFTWARE, VOCÊ CONFIRMA QUE LEU E ENTENDEU ESTE CONTRATO E SE COMPROMETE A CUMPRIR SEUS TERMOS E CONDIÇÕES.  VOCÊ TAMBÉM CONCORDA QUE ESTE CONTRATO É UMA DECLARAÇÃO DE COMPROMISSO EXCLUSIVA E COMPLETA ENTRE VOCÊ E A CANON EM RELAÇÃO AOS TERMOS E CONDIÇÕES AQUI REFERIDOS E QUE ESTE MESMO DOCUMENTO ANULA A VALIDADE DE QUAISQUER PROPOSTAS OU ACORDOS ANTERIORES, VERBAIS OU ESCRITOS, BEM COMO DE QUALQUER OUTRO TIPO DE COMUNICAÇÃO QUE TENHA HAVIDO ENTRE VOCÊ E A CANON RELACIONADA A ESTE ASSUNTO.  NENHUMA EMENDA A ESTE CONTRATO SERÁ CONSIDERADA VÁLIDA SE NÃO FOR ASSINADA POR UM REPRESENTANTE DEVIDAMENTE AUTORIZADO PELA CANON.
+
+
+Caso você tenha alguma dúvida em relação a este Contrato ou deseje comunicar-se com a Canon por qualquer motivo, escreva para o distribuidor/revendedor ou para a subsidiária da Canon que atende ao país em que obteve os Produtos.
+
+No.024410

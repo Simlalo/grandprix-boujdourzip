@@ -1,0 +1,57 @@
+CANON YAZILIM LÝSANS SÖZLEÞMESÝ
+
+ÖNEMLÝ
+
+Bu, tarafýnýz ile Canon Inc. ("Canon") arasýnda yapýlmýþ olan ve Canon’un birtakým kopyalama makinelerine, yazýcýlarýna veya birden çok iþlevli çevre birimlerine ("Ürünler") ait iliþkili ("YAZILIM") kullaným kýlavuzlarý veya herhangi bir yazýlý malzeme dahil olmak üzere Canon yazýlým programlarýna yönelik kullanýmýnýzý yöneten bir yasal sözleþmedir ("Sözleþme").
+
+YAZILIMI YÜKLEMEDEN ÖNCE ÝÞBU SÖZLEÞMEDE AÇIKLANAN HAKLARIN VE SINIRLAMALARIN TÜMÜNÜ DÝKKATLE OKUYUN VE ANLAMAYA ÇALIÞIN.  AÞAÐIDA BELÝRTÝLDÝÐÝ ÞEKÝLDE ONAY VERDÝÐÝNÝZÝ GÖSTERMEK ÜZERE DÜÐMEYÝ TIKLATMAK VEYA YAZILIMI YÜKLEMEK SURETÝYLE, ÝÞBU SÖZLEÞMENÝN HÜKÜM VE ÞARTLARINI KABUL ETMÝÞ OLURSUNUZ.  ÝÞBU SÖZLEÞMENÝN AÞAÐIDAKÝ HÜKÜM VE ÞARTLARINI KABUL ETMEMENÝZ DURUMUNDA, YAZILIMI KULLANMAMANIZ GEREKÝR.
+
+
+1.  LÝSANS VERME
+Canon tarafýnýza YAZILIM’ý yalnýzca bilgisayarlar üzerindeki Ürünler ile birlikte veya Ürünlere baðlanmýþ að ("Atanmýþ Bilgisayar") üzerinden kullanmanýza (iþbu baðlamda kullanýlan þekliyle "kullaným" depolama, yükleme, eriþim, yürütme veya görüntüleme iþlemlerini içermektedir) yönelik olarak kiþisel, sýnýrlý ve genel bir lisans vermektedir. 
+Söz konusu kullanýcýlarýn iþbu Sözleþme hükümlerine uygun davranmasýný ve tarafýnýzca getirilen sýnýrlamalara ve yükümlülüklere tabi olmasýný saðlamanýz koþuluyla, Atanmýþ Bilgisayarýnýza baðlý durumdaki diðer bilgisayarlardaki kullanýcýlarýn YAZILIM’ý kullanmasýna izin verebilirsiniz.
+
+Yalnýzca yedekleme amaçlarýna yönelik olarak YAZILIM’a ait tek bir kopya alabilirsiniz.
+
+2.  SINIRLAMALAR
+YAZILIM'ý iþbu belgede açýkça belirtilen veya izin verilen durumlar haricinde kullanamaz ve YAZILIM'ý üçüncü þahýslara devredemez, alt lisansýný veremez, satamaz, kiralayamaz, ödünç veremez veya aktaramazsýnýz.  YAZILIM'ý baþka bir programlama diline aktaramaz veya dönüþtüremez, üzerinde deðiþiklik yapamaz, kaynak koduna dönüþtüremez, derlemesini çözemez veya baþka þekillerde Yazýlým'a ters mühendislik uygulayamaz ve bunlarý üçüncü þahýslarýn gerçekleþtirmesine izin veremezsiniz.
+
+3.  TELÝF HAKKI UYARISI
+YAZILIM'a ait kopyalar da dahil olmak üzere, Yazýlým'da yer alan ve Canon'a ya da lisans verenlerine ait herhangi bir telif hakký uyarýsýný deðiþtiremez, çýkaramaz veya silemezsiniz.
+
+4.  MÜLKÝYET
+Canon ve lisans verenleri, her yönüyle YAZILIM üzerindeki mülkiyet ve fikri mülkiyet haklarýný ellerinde bulundurmaktadýr.  Ýþbu sözleþmede açýkça belirtilen durumlar haricinde, Canon'a veya lisans verenlerine ait herhangi bir fikri mülkiyet hakkýna yönelik olarak size Canon tarafýndan açýk ya da zýmni þekilde hiçbir lisans veya hak devredilmemiþ ya da tanýnmamýþ bulunmaktadýr.
+
+5.  ÝHRACAT KONTROLÜ
+Söz konusu ülkenin tüm ihracat kanunlarýna, sýnýrlamalarýna ve yönetmeliklerine baðlý kalacaðýnýzý ve YAZILIM'ý bu kanunlarý, sýnýrlamalarý veya yönetmelikleri ihlal edecek þekilde ve gereken tüm onaylar olmaksýzýn doðrudan ya da dolaylý olarak ihraç etmeyeceðinizi veya yeniden ihraç etmeyeceðinizi kabul etmiþ sayýlýrsýnýz.
+
+6. DESTEK VE GÜNCELLEÞTÝRME
+CANON, CANON'UN ALT KURULUÞLARI VEYA BAÐLI KURULUÞLARI, BUNLARIN DAÐITIMCILARI VEYA BAYÝLERÝ YA DA CANON'UN LÝSANS VERENLERÝ, YAZILIM BAKIMININ YAPILMASI VEYA YAZILIM KULLANIMINIZA YARDIMCI OLUNMASI YA DA ÝÞBU BELGEDE BELÝRTÝLEN YAZILIMA YÖNELÝK OLARAK SÝZE HERHANGÝ BÝR GÜNCELLEÞTÝRME, DÜZELTME VEYA DESTEK SAÐLANMASIYLA SORUMLU TUTULAMAZ.
+
+7. GARANTÝ VE YÜKÜMLÜLÜK OLMAMASI
+[GARANTÝ OLMAMASI]  YAZILIM, SATILABÝLÝRLÝÐE VE BELÝRLÝ BÝR AMACA UYGUNLUÐA YÖNELÝK ZIMNÝ GARANTÝLER DAHÝL OLMAK ÜZERE, ANCAK BUNLARLA SINIRLI OLMAMAK KAYDIYLA AÇIK YA DA ZIMNÝ OLMAK ÜZERE HERHANGÝ BÝR GARANTÝ VERÝLMEKSÝZÝN "OLDUÐU GÝBÝ" SUNULMUÞTUR.  YAZILIMIN KALÝTESÝNE VE PERFORMANSINA YÖNELÝK TÜM RÝSKLER TARAFINIZA AÝTTÝR.  YAZILIMIN HATALI OLMASI DURUMUNDA GEREKEN TÜM HÝZMET, ONARIM VEYA DÜZELTME MALÝYETLERÝNÝ ÜSTLENÝRSÝNÝZ.  BAZI EYALETLERDE VEYA HUKUK SÝSTEMLERÝNDE ZIMNÝ GARANTÝLERÝN HARÝÇ TUTULMASINA ÝZÝN VERÝLMEMESÝ NEDENÝYLE YUKARIDA BELÝRTÝLEN GARANTÝLERÝN HARÝÇ TUTULMASI DURUMU SÝZÝN ÝÇÝN GEÇERLÝ OLMAYABÝLÝR.  
+BU GARANTÝ TARAFINIZA BELÝRLÝ YASAL HAKLAR VERMEKTEDÝR VE AYNI ZAMANDA, EYALETLER VEYA HUKUK SÝSTEMLERÝ ARASINDA FARKLILIK GÖSTEREN BAÞKA HAKLARA DA SAHÝP OLABÝLÝRSÝNÝZ.
+
+CANON, CANON'UN ALT KURULUÞLARI VEYA BAÐLI KURULUÞLARI, BUNLARIN DAÐITIMCILARI YA DA BAYÝLERÝ VEYA CANON'UN LÝSANS VERENLERÝ ÝÞBU YAZILIMDA BULUNAN ÝÞLEVLERÝN GEREKSÝNÝMLERÝNÝZÝ KARÞILAYACAÐINA YA DA YAZILIMIN KESÝNTÝSÝZ VEYA HATASIZ ÞEKÝLDE ÇALIÞACAÐINA YÖNELÝK OLARAK HÝÇBÝR GARANTÝ VERMEMEKTEDÝR.
+
+[ZARARLARA ÝLÝÞKÝN HÝÇBÝR SORUMLULUK KABUL EDÝLMEMESÝ]  CANON, CANON'UN ALT KURULUÞLARI VEYA BAÐLI KURULUÞLARI, BUNLARIN DAÐITIMCILARI YA DA BAYÝLERÝ VEYA CANON'UN LÝSANS VERENLERÝ SÖZ KONUSU ZARAR OLASILIÐI HAKKINDA ÖNCEDEN BÝLGÝLENDÝRÝLMÝÞ OLSA DAHÝ HÝÇBÝR DURUMDA YAZILIMDAN, YAZILIMIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN KAYNAKLANAN HERHANGÝ BÝR ZARARA (ÝÞLETME KARLARINDAKÝ ZARAR, ÝÞLETME BÝLGÝLERÝNÝN KAYBI, ÝÞLERÝN KESÝNTÝYE UÐRAMASI VEYA DÝÐER TELAFÝ EDÝCÝ, ARIZÝ VEYA DOLAYLI ZARARLAR DAHÝL OLMAK ÜZERE ANCAK BUNLARLA SINIRLI OLMAMAK KAYDIYLA) YÖNELÝK OLARAK SORUMLU TUTULAMAZ.  BAZI EYALETLERDE VEYA HUKUK SÝSTEMLERÝNDE ARIZÝ VEYA DOLAYLI ZARARLARA YA DA SATICININ ÝHMALÝNDEN KAYNAKLANAN YARALANMA VEYA ÖLÜM DURUMUNDA SORUMLULUÐUN SINIRLANMASINA VEYA HARÝÇ TUTULMASINA ÝZÝN VERÝLMEDÝÐÝNDEN, YUKARIDAKÝ SINIRLAMA VEYA HARÝÇ TUTMA SÝZÝN ÝÇÝN GEÇERLÝ OLMAYABÝLÝR.
+
+[SORUMLULUKTAN VARESTE TUTMA]  ÝÞBU SÖZLEÞMEYLE, YASALARIN ÝZÝN VERDÝÐÝ AZAMÝ ÖLÇÜDE, CANON'U, CANON'UN ALT KURULUÞLARINI VEYA YAN KURULUÞLARINI, BUNLARIN DAÐITIMCILARINI, BAYÝLERÝNÝ VE CANON'UN LÝSANS VERENLERÝNÝ YAZILIMA VEYA KULLANIMINA ÝLÝÞKÝN TÜM TALEPLERLE ÝLGÝLÝ OLAN VEYA BUNLARDAN KAYNAKLANAN TÜM SORUMLULUKLARDAN VARESTE TUTMUÞ OLURSUNUZ.
+
+8.  SÜRE
+Ýþbu Sözleþme aþaðýda belirtilen þekilde onayýnýzý göstermek üzere düðmeyi týklatarak veya YAZILIM’ý yükleyerek sözleþmeyi kabul etmeniz üzerine geçerli olacak ve feshedilene kadar yürürlükte kalacaktýr.  YAZILIM’ý ve YAZILIM’a ait tüm kopyalarý imha etmek suretiyle bu Sözleþmeyi feshedebilirsiniz. 
+Ýþbu Sözleþme ayný zamanda içerdiði hükümlere uymamanýz durumunda da sona erecektir.  Ýþbu Sözleþmenin feshi durumunda, ilgili yasal haklarýný uygulayan Canon'un yaný sýra, YAZILIM'ý ve YAZILIM’a ait tüm kopyalarý derhal imha etmeniz gerekir.  Yukarýda bahsi geçenler dikkate alýnmaksýzýn, Bölüm 4 ve 7 ile 11 arasýndaki bölümler iþbu Sözleþmenin feshi durumunda da geçerliliðini korur.
+
+9.  ABD HÜKÜMETÝ SINIRLI HAKLARI UYARISI
+"ABD Hükümeti Son Kullanýcýsý" ifadesi, Amerika Birleþik Devletleri hükümetinin herhangi bir dairesi veya kurumu anlamýnda kullanýlmaktadýr. ABD Hükümeti Son Kullanýcýsý iseniz, aþaðýdaki hükümler geçerli olacaktýr. YAZILIM terimin 48 C.F.R. 2.101 (Ekim 1995) belgesinde tanýmlandýðý þekliyle bir "ticari ürün"dür; bu ürün terimlerin 48 C.F.R. 12.212 (Eylül 1995) sayýlý belgede tanýmlandýklarý haliyle "ticari bilgisayar yazýlýmý"ndan ve "ticari bilgisayar yazýlýmý belgeleri"nden oluþmaktadýr.  48 C.F.R. 12.212 ve 48 C.F.R. 227.7202-1 ile 227.7202-4 (Haziran 1995) tutarlý olarak, tüm ABD Hükümeti Son Kullanýcýlarý YAZILIM'ý yalnýzca burada belirtilen haklarla birlikte edinebilir.  Ýmalatçý firma Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japonya olmaktadýr.
+
+10.  AYRILABÝLÝRLÝK
+Ýþbu belgedeki bir bölüm herhangi bir mahkeme veya yeterli yargýlama yetkisine sahip mahkemeler tarafýndan kanuna aykýrý bulunursa, söz konusu mahkemelerin yargýlama yetkisine göre bu bölüm geçersiz sayýlacak ve geri kalan diðer hükümler yürürlükte kalýp geçerli olacaktýr.
+
+11.  KABUL BEYANI
+AÞAÐIDA BELÝRTÝLEN ÞEKÝLDE, ONAY VERMEK ÜZERE DÜÐMEYÝ TIKLATARAK VEYA YAZILIMI YÜKLEYEREK BU SÖZLEÞMEYÝ OKUDUÐUNUZU, ANLADIÐINIZI VE HÜKÜM VE ÞARTLARINA BAÐLI KALACAÐINIZI KABUL ETMÝÞ SAYILIRSINIZ.  AYRICA ÝÞBU SÖZLEÞMENÝN, KAPSAMINDAKÝ KONUYA ÝLÝÞKÝN OLARAK TARAFINIZ ÝLE CANON ARASINDAKÝ EKSÝKSÝZ VE TEK ANLAÞMA BÝLDÝRÝMÝNÝ OLUÞTURDUÐUNU VE TÜM TEKLÝFLERÝ VE SÖZLÜ VEYA YAZILI OLMAK ÜZERE, ÖNCEKÝ TÜM SÖZLEÞMELERÝ VE TARAFINIZ ÝLE CANON ARASINDAKÝ SÖZLEÞMEDEKÝ KONUYA ÝLÝÞKÝN DÝÐER TÜM ÝLETÝÞÝMLERÝ GEÇERSÝZ KILDIÐINI KABUL ETMÝÞ OLURSUNUZ.  UYGUN ÞEKÝLDE YETKÝLENDÝRÝLMÝÞ BÝR CANON TEMSÝLCÝSÝ TARAFINDAN ÝMZALANMAMIÞ OLMASI DURUMUNDA, BU SÖZLEÞMEDE YAPILAN HÝÇBÝR DÜZELTME GEÇERLÝ OLMAYACAKTIR.
+
+
+Ýþbu Sözleþmeyle ilgili sorularýnýz olmasý veya herhangi bir nedenle Canon ile baðlantý kurmayý istemeniz durumunda, lütfen Ürünleri satýn aldýðýnýz ülkede faaliyet gösteren Canon satýþ temsilcisine veya daðýtýmcýsýna/bayisine yazýn.
+
+No.024410

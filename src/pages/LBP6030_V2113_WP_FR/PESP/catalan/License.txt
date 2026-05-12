@@ -1,0 +1,59 @@
+ACORD DE LLICÈNCIA DEL PROGRAMARI DE CANON
+
+IMPORTANT
+
+Aquest document és un acord legal ("Acord") entre vostè i Canon Inc. ("Canon") i determina l'ús que faci del programari de Canon, inclosos els manuals relacionats o qualsevol material imprès relacionat (el "PROGRAMARI") de determinades fotocopiadores, impressores i perifèrics multifuncionals de Canon (els "Productes").
+
+ABANS D'INSTAL·LAR EL PROGRAMARI, LLEGEIXI ATENTAMENT I COMPRENGUI TOTS ELS DRETS I LES RESTRICCIONS QUE ES DESCRIUEN EN AQUEST ACORD.  EN FER CLIC AL BOTÓ QUE IMPLICA L'ACCEPTACIÓ DEL QUE S'INDICA A CONTINUACIÓ O EN INSTAL·LAR EL PROGRAMARI, ACCEPTA SOTMETRE'S ALS TERMES I LES CONDICIONS DEL PRESENT ACORD.  SI NO ACCEPTA ELS TERMES I LES CONDICIONS SEGÜENTS D'AQUEST ACORD, NO FACI SERVIR EL PROGRAMARI.  
+
+
+1.  CONCESSIÓ DE LLICÈNCIA
+Canon li atorga una llicència personal, limitada i no exclusiva per utilitzar (l'"ús", tal com s'utilitza en aquest document, inclourà l'emmagatzematge, la càrrega, la instal·lació, l'accés, l'execució o la visualització) el PROGRAMARI només per a l'ús amb Productes i només en equips connectats directament o per xarxa als Productes (l'"Equip designat"). 
+Pot permetre a altres usuaris d'altres equips connectats al seu Equip designat que utilitzin el PROGRAMARI, sempre que s'asseguri que aquests usuaris respectaran els termes d'aquest Acord i estaran subjectes a les restriccions i a les obligacions que li corresponen a continuació.
+
+Només pot fer una còpia del PROGRAMARI per tenir-ne una còpia de seguretat.
+
+2.  RESTRICCIONS
+Només pot utilitzar el PROGRAMARI tal com està expressament permès en aquest Acord, i no assignarà, concedirà llicències, vendrà, llogarà, arrendarà, prestarà, transmetrà ni transferirà el PROGRAMARI a tercers.  No alterarà, traduirà ni convertirà a un altre llenguatge de programació, modificarà, desmuntarà, descompilarà ni realitzarà enginyeria inversa en el PROGRAMARI i no encomanarà a cap tercer que ho faci.
+
+3.  AVÍS DE DRETS D'AUTOR
+No modificarà, eliminarà ni esborrarà cap avís de drets d'autor de Canon o dels seus llicenciants que contingui el PROGRAMARI, inclosa qualsevol còpia.
+
+4.  PROPIETAT
+Canon i els seus llicenciants tenen en tots els sentits la titularitat, la propietat i els drets de propietat intel·lectual del PROGRAMARI.  Llevat del que s'estipula expressament en el present document, Canon no li transmet cap llicència ni dret, explícit ni implícit, de cap propietat intel·lectual de Canon ni dels seus llicenciants.
+
+5.  CONTROL D'EXPORTACIONS
+Accepta complir amb qualsevol legislació sobre exportació i les restriccions i regulacions del país implicat, i no exportar ni reexportar, directament ni indirectament, el PROGRAMARI que incompleixi qualsevol d'aquestes legislacions, restriccions o regulacions, o bé el que no disposi de totes les aprovacions necessàries.
+
+6.  ASSISTÈNCIA I ACTUALITZACIÓ
+NI CANON NI LES SEVES FILIALS, ELS SEUS DISTRIBUÏDORS, ELS SEUS COMERCIANTS NI ELS LLICENCIANTS DE CANON NO SÓN RESPONSABLES DE MANTENIR EL PROGRAMARI O D'AJUDAR-LO A UTILITZAR-LO, NI DE PROPORCIONAR ACTUALITZACIONS, CORRECCIONS NI ASSISTÈNCIA PER AL PROGRAMARI.
+
+7.  DECLINACIÓ DE GARANTIES I RESPONSABILITAT
+[ABSÈNCIA DE GARANTIA] EL PROGRAMARI S'OFEREIX "TAL COM ÉS", SENSE GARANTIA DE CAP MENA, NI EXPLÍCITA NI IMPLÍCITA, LA QUAL COSA INCLOU, ENTRE D'ALTRES, GARANTIES IMPLÍCITES DE NEGOCIABILITAT I APTITUD PER A UN PROPÒSIT PARTICULAR.  TOTA LA RESPONSABILITAT DE LA QUALITAT I LA FINALITAT DEL PROGRAMARI ÉS SEVA.  EN CAS QUE EL PROGRAMARI FOS DEFECTUÓS, VOSTÈ ASSUMIRÀ EL COST DEL MANTENIMENT, LA REPARACIÓ O LA CORRECCIÓ.  ALGUNS ESTATS O JURISDICCIONS LEGALS NO PERMETEN L'EXCLUSIÓ DE GARANTIES IMPLÍCITES, DE MANERA QUE ÉS POSSIBLE QUE L'EXCLUSIÓ ANTERIOR NO SIGUI APLICABLE EN EL SEU CAS.  
+AQUESTA GARANTIA LI DÓNA DRETS LEGALS ESPECÍFICS, I POT SER QUE TAMBÉ TINGUI ALTRES DRETS, QUE CANVIEN D'UN ESTAT A L'ALTRE O D'UNA JURISDICCIÓ A UNA ALTRA.
+
+NI CANON NI LES SEVES FILIALS, ELS SEUS DISTRIBUÏDORS, ELS SEUS COMERCIANTS, NI ELS LLICENCIANTS DE CANON NO GARANTEIXEN QUE LES FUNCIONS QUE CONTÉ EL PROGRAMARI COMPLEIXIN ELS SEUS REQUISITS NI QUE EL PROGRAMARI FUNCIONI DE MANERA ININTERROMPUDA O SENSE ERRORS.
+
+[EXEMPCIÓ DE RESPONSABILITAT PER DANYS] EN CAP CAS CANON NI LES SEVES FILIALS, ELS SEUS DISTRIBUÏDORS, ELS SEUS COMERCIANTS NI ELS SEUS LLICENCIANTS NO SERAN RESPONSABLES DE CAP CLASSE DE DANY (INCLÒS, SENSE RESTRICCIÓ, LA PÈRDUA DE GUANYS DEL NEGOCI, LA PÈRDUA D'INFORMACIÓ DEL NEGOCI, LA INTERRUPCIÓ DEL NEGOCI NI CAP ALTRE DANY COMPENSATORI, INCIDENTAL O CONSEQÜENCIAL) DERIVAT DE L'ÚS DEL PROGRAMARI, L'ÚS O LA INCAPACITAT D'UTILITZAR EL PROGRAMARI, ENCARA QUE CANON O LES SEVES FILIALS, ELS SEUS DISTRIBUÏDORS, ELS SEUS COMERCIANTS O ELS SEUS LLICENCIANTS HAGIN ESTAT ADVERTITS DE LA POSSIBILITAT QUE ES PRODUEIXIN AQUESTS DANYS.  ALGUNS ESTATS O JURISDICCIONS LEGALS NO ADMETEN LA LIMITACIÓ O EXCLUSIÓ DE DANYS INCIDENTALS O CONSEQÜENCIALS, O DE LESIONS PERSONALS O LA MORT QUE DERIVIN D'UNA NEGLIGÈNCIA PER PART DEL VENEDOR, DE MANERA QUE ÉS POSSIBLE QUE LA LIMITACIÓ O L'EXCLUSIÓ ANTERIORS NO SIGUIN APLICABLES EN EL SEU CAS PARTICULAR.
+
+[EXEMPCIÓ DE RESPONSABILITAT] EN EL GRAU MÀXIM PERMÈS PER LA LEGISLACIÓ APLICABLE, VOSTÈ EXIMEIX CANON I LES SEVES FILIALS, ELS SEUS DISTRIBUÏDORS I ELS SEUS LLICENCIANTS DE QUALSEVOL RESPONSABILITAT DERIVADA DE O RELACIONADA AMB LES RECLAMACIONS DEL PROGRAMARI O L’ÚS QUE SE'N FACI.
+
+8.  TERMINI
+Aquest Acord és efectiu a partir de la seva acceptació, és a dir, a partir del moment en què fa clic al botó que implica la seva acceptació del que s’indica a continuació o en instal·lar el PROGRAMARI, i continua vigent fins que es cancel·li.  Pot cancel·lar aquest Acord mitjançant la destrucció del PROGRAMARI, incloses totes les còpies que en tingui. 
+Aquest Acord també es cancel·larà si no compleix qualsevol dels seus termes.  En cancel·lar aquest Acord, a part del fet que Canon faci valer els seus respectius drets legals, vostè haurà de destruir immediatament el PROGRAMARI, incloses totes les còpies que en tingui.  Sense perjudici d'això, les seccions 4, i 7-11 continuaran vigents malgrat la cancel·lació d'aquest Acord.
+
+9.  AVÍS DE DRETS RESTRINGITS DEL GOVERN DELS EUA
+Un "Usuari final del Govern dels EUA" significarà qualsevol agència o entitat del govern dels Estats Units.  Si vostè és un Usuari final del Govern dels EUA, s'aplicarà el següent: The SOFTWARE is a "commercial item," as that term is defined at 48 C.F.R. 2.101 (October 1995), consisting of "commercial computer software" and "commercial computer software documentation," as such terms are used in 48 C.F.R. 12.212 (September 1995).  Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4 (June 1995), all U.S. Government End Users shall acquire the SOFTWARE with only those rights set forth herein.  The manufacturer is Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10.  DIVISIBILITAT
+En cas que qualsevol secció sigui declarada o considerada il·legal per qualsevol jutjat o tribunal de la jurisdicció competent, aquesta secció es considerarà nul·la i sense efecte pel que fa a la jurisdicció d'aquest jutjat o tribunal, i totes les disposicions restants d'aquest document continuaran en plena vigència.
+
+11.  CONFIRMACIÓ
+EN FER CLIC AL BOTÓ QUE IMPLICA L'ACCEPTACIÓ DEL QUE S'INDICA A CONTINUACIÓ O EN INSTAL·LAR EL PROGRAMARI, CONFIRMA QUE HA LLEGIT ELS TERMES I CONDICIONS D'AQUEST ACORD, I QUE ELS ACCEPTA.  TAMBÉ ACCEPTA QUE AQUEST ACORD SIGUI LA DECLARACIÓ COMPLETA I EXCLUSIVA D'ACORD ENTRE VOSTÈ I CANON RESPECTE A L’ASSUMPTE D'AQUEST DOCUMENT I REEMPLAÇA TOTES LES PROPOSTES O ELS ACORDS ANTERIORS, VERBALS O ESCRITS, I QUALSEVOL ALTRA COMUNICACIÓ ENTRE VOSTÈ I CANON EN RELACIÓ AMB L'ASSUMPTE D'AQUEST DOCUMENT.  CAP ESMENA AL PRESENT ACORD SERÀ EFECTIVA A MENYS QUE LA SIGNI UN REPRESENTANT DEGUDAMENT AUTORITZAT DE CANON.
+
+
+Si té cap dubte sobre el present Acord o si vol contactar amb Canon per qualsevol altre motiu, pot escriure a la filial de vendes de Canon o al distribuïdor o comerciant que presti servei al país on hagi obtingut els Productes.
+
+No. I010G016868
+
+

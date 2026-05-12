@@ -1,0 +1,57 @@
+CANON SOFTWARELICENSAFTALE
+
+VIGTIGT
+
+Dette er en juridisk bindende aftale ("Aftale") mellem Dem og Canon Inc. ("Canon"), som bestemmer Deres brug af Canons softwareprogrammer, inklusive de tilhørende brugervejledninger eller enhver form for trykt materiale derfra ("SOFTWAREN") for visse Canon kopimaskiner, printere og multifunktionsprodukter ("Produktet").
+
+LÆS DETTE DOKUMENT OMHYGGELIGT, OG FORSTÅ ALLE RETTIGHEDER OG BEGRÆNSNINGER, DER BESKRIVES I DENNE AFTALE, INDEN SOFTWAREN INSTALLERES.  VED AT KLIKKE PÅ KNAPPEN, DER INDIKERER DERES ACCEPT SOM ANGIVET HERUNDER ELLER VED AT INSTALLERE SOFTWAREN ACCEPTERER DE AT VÆRE UNDERLAGT ALLE VILKÅR OG BETINGELSER I DENNE AFTALE.  HVIS DE IKKE KAN ACCEPTERE FØLGENDE VILKÅR OG BETINGELSER I DENNE AFTALE, MÅ DE IKKE BRUGE DENNE SOFTWARE.
+
+
+1.  LICENSTILDELING
+Canon giver Dem en personlig, begrænset og ikke-eksklusiv licens til at anvende ("anvende" bruges heri i betydningen lagring, indlæsning, installation, få adgang til, eksekvere eller vise) SOFTWAREN udelukkende sammen med Produktet på en enkelt computer direkte eller via netværk, som er tilsluttet Produktet (den "Specificerede computer"). 
+De har tilladelse til at lade andre brugere af andre computere, der er tilsluttet den Specificerede computer, anvende SOFTWAREN, forudsat at De sikrer Dem, at alle sådanne brugere overholder betingelserne i nærværende Aftale og er underlagt de herunder nævnte begrænsninger og forpligtelser, som De selv er underlagt.
+
+De har ret til at fremstille én kopi af SOFTWAREN udelukkende til sikkerhedskopieringsbrug.
+
+2.  BEGRÆNSNINGER
+De må ikke anvende SOFTWAREN, undtagen som udtrykkeligt tilladt heri, og De må ikke tildele, sælge, udleje, lease, udlåne, overdrage eller overføre SOFTWAREN til tredjemand.  De må ikke foretage ændringer, oversætte eller konvertere Softwaren til et andet programmeringssprog, foretage modificeringer, disassemblering, dekompilering eller reverse engineering af SOFTWAREN, eller lade tredjemand foretage noget sådant.
+
+3.  OPHAVSRET
+De må ikke modificere, fjerne eller slette nogen meddelelse om ophavsret fra Canon eller selskabets licensgivere, som findes i SOFTWAREN, herunder enhver kopi heraf.
+
+4.  EJENDOMSRETTIGHEDER
+Canon og selskabets licensgivere bevarer på enhver måde ejendomsrettighederne, ejerskabet og intellektuelle ejendomsrettigheder i og til SOFTWAREN.  Undtagen i tilfælde, hvor der gives udtrykkelig tilladelse hertil, overdrages eller tildeles ingen licens eller rettigheder, udtrykkeligt eller stiltiende, for nogen intellektuel ejendomsrettighed tilhørende Canon eller selskabets licensgivere fra Canon til Dem.
+
+5.  EKSPORTKONTROL
+De accepterer at overholde alle eksportlove samt restriktioner og regulativer for det involverede land og ikke at eksportere eller geneksportere, direkte eller indirekte, SOFTWAREN i strid med nogen sådanne love, restriktioner og regulativer, eller uden alle nødvendige godkendelser.
+
+6.  SUPPORT OG OPDATERING
+HVERKEN CANON, CANONS DATTERSELSKABER ELLER ASSOCIEREDE SELSKABER, DERES DISTRIBUTØRER, FORHANDLERE ELLER CANONS LICENSGIVERE ER ANSVARLIGE FOR VEDLIGEHOLDELSE AF SOFTWAREN ELLER HJÆLP TIL DEM MED HENSYN TIL AT ANVENDE SOFTWAREN, ELLER LEVERE OPDATERINGER, REPARATIONER ELLER SUPPORT I FORBINDELSE MED NEDENNÆVNTE SOFTWARE.
+
+7.  FRASIGELSE AF GARANTIER OG ANSVAR
+[INGEN GARANTI]  SOFTWAREN LEVERES "SOM DEN ER OG FOREFINDES" UDEN GARANTI, SÅVEL UDTRYKKELIGT SOM STILTIENDE, INKLUSIVE, MEN IKKE BEGRÆNSET TIL STILTIENDE GARANTI FOR OG EGNETHED TIL SPECIELLE FORMÅL.  DEN SAMLEDE RISIKO MED HENSYN TIL SOFTWARENS KVALITET OG YDEEVNE BÆRES AF DEM.  HVIS SOFTWAREN ER MANGELFULD, HÆFTER DE FOR ALLE UDGIFTER TIL NØDVENDIG SERVICERING, REPARATION ELLER KORRIGERING.  NOGLE STATER OG JURISDIKTIONER TILLADER IKKE UDELUKKELSE AF STILTIENDE ANSVAR, SÅ OVENNÆVNTE BEGRÆNSNING GÆLDER MULIGVIS IKKE FOR DEM.  
+DENNE GARANTI GIVER DEM SÆRLIGE JURIDISKE RETTIGHEDER, OG DE HAR MULIGVIS OGSÅ ANDRE RETTIGHEDER, SOM VARIERER FRA STAT TIL STAT ELLER FRA JURISDIKTION TIL JURISDIKTION.
+
+HVERKEN CANON, CANONS DATTERSELSKABER ELLER ASSOCIEREDE SELSKABER, DERES DISTRIBUTØRER, FORHANDLERE ELLER CANONS LICENSGIVERE GARANTERER, AT FUNKTIONERNE I SOFTWAREN OPFYLDER DERES BEHOV ELLER AT DRIFTEN AF SOFTWAREN VIL VÆRE UBRUDT OG FEJLFRI.
+
+[INTET ANSVAR FOR SKADER]  I INTET TILFÆLDE SKAL HVERKEN CANON, CANONS DATTERSELSKABER ELLER ASSOCIEREDE SELSKABER, DERES DISTRIBUTØRER, FORHANDLERE ELLER CANONS LICENSGIVERE VÆRE ANSVARLIG FOR SKADER AF NOGEN ART (INKLUSIVE UDEN BEGRÆNSNING DRIFTSTAB, TAB AF FORRETNINGSOPLYSNINGER, DRIFTSFORSTYRRELSE ELLER ANDRE FØLGESKADER, KOMPENSERENDE ELLER HÆNDELIGE SKADER), DER OPSTÅR PÅ GRUND AF SOFTWAREN, ANVENDELSEN AF DENNE ELLER MANGLENDE EVNE TIL AT ANVENDE SOFTWAREN, SELVOM ENTEN CANON, CANONS DATTERSELSKABER ELLER ASSOCIEREDE SELSKABER, DERES DISTRIBUTØRER, FORHANDLERE ELLER CANONS LICENSGIVERE ER BLEVET ADVARET OM MULIGHEDEN FOR SÅDANNE SKADER.  DA NOGLE STATER OG JURISDIKTIONER IKKE TILLADER UDELUKKELSE ELLER BEGRÆNSNING AF ERSTATNINGSANSVAR FOR FØLGESKADER ELLER HÆNDELIGE SKADER, ELLER PERSONSKADE ELLER DØDSFALD SOM FØLGE AF SÆLGERENS FORSØMMELIGHED, GÆLDER OVENNÆVNTE BEGRÆNSNING MULIGVIS IKKE FOR DEM.
+
+[FRATAGELSE FOR ANSVAR]  I DET OMFANG GÆLDENDE LOVGIVNING GØR DET MULIGT FRATAGER DE HERMED CANON, CANONS DATTERSELSKABER OG ASSOCIEREDE SELSKABER, DERES DISTRIBUTØRER, FORHANDLERE OG CANONS LICENSGIVERE FOR ENHVER FORM FOR ANSVAR, DER OPSTÅR SOM FØLGE AF ELLER I FORBINDELSE MED KRAV VEDRØRENDE SOFTWAREN ELLER DENS ANVENDELSE.
+
+8.  LICENSBETINGELSER
+Denne Aftale træder i kraft, når De accepterer den ved at klikke på knappen, der indikerer Deres accept som angivet herunder, eller ved at installere SOFTWAREN, og er gældende, indtil den ophæves.  De kan ophæve denne Aftale ved at tilintetgøre SOFTWAREN, inklusive alle kopier heraf. 
+Denne Aftale ophæves også, hvis De tilsidesætter betingelserne heri.  I tilgift til at Canon gør sin juridiske ret gældende i forbindelse med ophævelse af licensen, skal De straks destruere SOFTWAREN og alle kopier af den.  Uanset ovenstående skal paragraf 4 og 7 til 11 fortsat være gældende efter enhver ophævelse af denne Aftale.
+
+9.  BEGRÆNSEDE RETTIGHEDER IFØLGE USA'S REGERING
+En "slutbruger i den amerikanske regering" skal betyde ethvert organ eller enhver enhed under den amerikanske regering. Hvis De er en slutbruger i den amerikanske regering, skal følgende gælde: SOFTWAREN er et "commercial item" (kommercielt produkt) som defineret i Code of Federal Regulations, 48 C.F.R. 2.101 (oktober 1995), der består af "commercial computer software" (kommerciel computersoftware) og "commercial computer software documentation" (dokumentation til kommerciel computersoftware), som begreberne er brugt i 48 C.F.R. 12.212 (september  I overensstemmelse med 48 C.F.R. 12.212 og 48 C.F.R. 227.7202-1 til og med 227.7202-4 (juni 1995) erhverver alle slutbrugere i den amerikanske regering sSOFTWAREN udelukkende med de rettigheder, der er angivet heri.  Producenten er Canon Inc./30-2, Shimomaruko 3-chome, Ohta-ku, Tokyo 146-8501, Japan.
+
+10.  OPHÆVELSESMULIGHEDER
+I tilfælde af, at en paragraf heri erklæres eller findes ulovlig af en retsinstans eller en kompetent domstol, vil en sådan paragraf blive erklæret ugyldig i henhold til den pågældende rets eller domstols jurisdiktion, og alle øvrige bestemmelser heri vil fortsat være gældende.
+
+11.  BEKRÆFTELSE
+VED AT KLIKKE PÅ KNAPPEN, DER INDIKERER DERES ACCEPT SOM ANGIVET HERUNDER ELLER VED AT INSTALLERE SOFTWAREN BEKRÆFTER DE, AT DE HAR LÆST NÆRVÆRENDE AFTALE, AT DE HAR FORSTÅET DEN OG ACCEPTERER BETINGELSERNE OG VILKÅRENE I DEN.  DE ACCEPTERER OGSÅ, AT DENNE AFTALE ER DEN FULDE OG ENESTE UDGAVE AF LICENSAFTALEN MELLEM DEM OG CANON VEDRØRENDE SAGENS GENSTAND, OG AT DEN TILSIDESÆTTER ALLE ANDRE FORSLAG OG TIDLIGERE AFTALER, MUNDTLIGE SÅVEL SOM SKRIFTLIGE, SAMT EN HVILKEN SOM HELST ANDEN FORM FOR KOMMUNIKATION MELLEM DEM OG CANON MED RELATION TIL NÆRVÆRENDE AFTALE.  TILLÆG ELLER ÆNDRINGER TIL DENNE AFTALE HAR INGEN RETSVIRKNING, MEDMINDRE DE ER UNDERSKREVET AF EN BEHØRIGT BEFULDMÆGTIGET REPRÆSENTANT FOR CANON.
+
+
+Hvis De har nogen spørgsmål vedrørende denne Aftale, eller hvis De ønsker at kontakte Canon af anden årsag, kan De skrive til Canons salgskontor eller distributør/forhandler i det land, hvor De har erhvervet dette Produkt.
+
+Nr. 024410
