@@ -281,6 +281,7 @@ function InstitutionCard({ institution, isAdmin, onUpdate }) {
   const [showActions, setShowActions] = useState(false);
   const [athletes, setAthletes] = useState(null);
   const [loadingAthletes, setLoadingAthletes] = useState(false);
+  const [expandedGroups, setExpandedGroups] = useState({});
 
   const status = STATUS_LABELS[institution.list_status];
   const athleteCount = institution.athletes?.[0]?.count || 0;
@@ -293,7 +294,8 @@ function InstitutionCard({ institution, isAdmin, onUpdate }) {
         .select('*')
         .eq('institution_id', institution.id)
         .order('category')
-        .order('last_name');
+        .order('gender')
+        .order('dossard_number', { ascending: true, nullsFirst: false });
       setAthletes(data || []);
       setLoadingAthletes(false);
     }
@@ -371,25 +373,116 @@ function InstitutionCard({ institution, isAdmin, onUpdate }) {
                 <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 8 }}>
                   الرياضيون ({athletes.length})
                 </div>
-                <div className="list">
-                  {athletes.map((a) => (
-                    <div key={a.id} style={{
-                      background: '#f8fafc',
-                      padding: 10,
-                      borderRadius: 8,
-                      marginBottom: 4,
-                    }}>
-                      <div style={{ fontSize: 14, fontWeight: 600 }}>
-                        {a.first_name} {a.last_name}
-                      </div>
-                      <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
-                        {getCategoryLabel(a.category, a.gender)} • {a.gender === 'male' ? 'ذكر' : 'أنثى'} • {new Date(a.birth_date).toLocaleDateString('ar')}
-                        {a.duplicate_flag && (
-                          <span className="badge badge-warning" style={{ marginRight: 6 }}>⚠ ازدواجية</span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {(() => {
+                    const CATEGORIES = ['katakit', 'baraem', 'sighar', 'fityan'];
+                    const GENDERS = ['male', 'female'];
+                    const groups = [];
+                    for (const cat of CATEGORIES) {
+                      for (const gen of GENDERS) {
+                        const groupKey = `${cat}_${gen}`;
+                        const groupAthletes = athletes.filter(
+                          (a) => a.category === cat && a.gender === gen
+                        );
+                        if (groupAthletes.length === 0) continue;
+                        const isOpen = !!expandedGroups[groupKey];
+                        const withDossard = groupAthletes.filter((a) => a.dossard_number).length;
+                        groups.push(
+                          <div key={groupKey} style={{
+                            background: '#f1f5f9',
+                            borderRadius: 8,
+                            overflow: 'hidden',
+                            border: '1px solid var(--border)',
+                          }}>
+                            <div
+                              onClick={() => setExpandedGroups({
+                                ...expandedGroups,
+                                [groupKey]: !isOpen,
+                              })}
+                              style={{
+                                padding: '10px 12px',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                cursor: 'pointer',
+                                background: isOpen ? '#e0e7ff' : '#f1f5f9',
+                                transition: 'background 0.15s',
+                              }}
+                            >
+                              <div style={{ fontSize: 13, fontWeight: 700 }}>
+                                {getCategoryLabel(cat, gen)}
+                              </div>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                <span style={{
+                                  background: 'white',
+                                  padding: '2px 8px',
+                                  borderRadius: 10,
+                                  fontSize: 11,
+                                  fontWeight: 600,
+                                  color: 'var(--text-muted)',
+                                }}>
+                                  {withDossard}/{groupAthletes.length} صدرية
+                                </span>
+                                <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>
+                                  {isOpen ? '▼' : '◄'}
+                                </span>
+                              </div>
+                            </div>
+                            {isOpen && (
+                              <div style={{ padding: 8, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                                {groupAthletes.map((a) => (
+                                  <div key={a.id} style={{
+                                    background: 'white',
+                                    padding: 10,
+                                    borderRadius: 6,
+                                  }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+                                      <div style={{ fontSize: 14, fontWeight: 600, flex: 1 }}>
+                                        {a.first_name} {a.last_name}
+                                      </div>
+                                      {a.dossard_number ? (
+                                        <span style={{
+                                          background: 'var(--accent)',
+                                          color: 'white',
+                                          padding: '3px 10px',
+                                          borderRadius: 12,
+                                          fontSize: 13,
+                                          fontWeight: 700,
+                                          minWidth: 36,
+                                          textAlign: 'center',
+                                          direction: 'ltr',
+                                        }}>
+                                          #{a.dossard_number}
+                                        </span>
+                                      ) : (
+                                        <span style={{
+                                          background: '#e5e7eb',
+                                          color: '#6b7280',
+                                          padding: '3px 10px',
+                                          borderRadius: 12,
+                                          fontSize: 11,
+                                          fontStyle: 'italic',
+                                        }}>
+                                          بدون صدرية
+                                        </span>
+                                      )}
+                                    </div>
+                                    <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 4 }}>
+                                      {new Date(a.birth_date).toLocaleDateString('ar')}
+                                      {a.duplicate_flag && (
+                                        <span className="badge badge-warning" style={{ marginRight: 6 }}>⚠ ازدواجية</span>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }
+                    }
+                    return groups;
+                  })()}
                 </div>
               </>
             )}
