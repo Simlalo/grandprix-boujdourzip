@@ -10,7 +10,10 @@ import FinishLinePanel from './pages/FinishLinePanel';
 import TimekeeperPanel from './pages/TimekeeperPanel';
 import InstitutionDashboard from './pages/InstitutionDashboard';
 import PublicResults from './pages/PublicResults';
+import DownloadPage from "./pages/DownloadPage";
 
+// داخل الـ routes:
+<Route path="/d" element={<DownloadPage />} />
 function ProtectedDashboard() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
