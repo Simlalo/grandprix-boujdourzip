@@ -3,6 +3,7 @@ import { supabase } from '../supabase';
 import RaceDayPanel from './RaceDayPanel';
 import FinalResultsPanel from './FinalResultsPanel';
 import CommitteeMembersPanel from './components/CommitteeMembersPanel';
+import DossardPrint from './DossardPrint';
 
 const STATUS_LABELS = {
   draft: { text: 'مسودة', class: 'badge-draft' },
@@ -139,6 +140,14 @@ export default function CommitteeDashboard({
                 subtitle="الترتيب العام والفئات"
                 onClick={() => setView('results')}
               />
+              {isAdmin && (
+                <NavCard
+                  icon="🪪"
+                  title="طباعة بطاقات الصدريات"
+                  subtitle="بطاقات بأسماء الرياضيين وأرقامهم — 4 بطاقات/ورقة A4"
+                  onClick={() => setView('dossards')}
+                />
+              )}
               <button
                 className="btn btn-outline btn-block"
                 style={{ marginTop: -8, fontSize: 13, minHeight: 44 }}
@@ -219,6 +228,11 @@ export default function CommitteeDashboard({
         {/* ============ قسم النتائج النهائية ============ */}
         {view === 'results' && (
           <FinalResultsPanel />
+        )}
+
+        {/* ============ قسم طباعة بطاقات الصدريات ============ */}
+        {view === 'dossards' && isAdmin && (
+          <DossardPrint onBack={() => setView('home')} />
         )}
 
         {/* ============ قسم إدارة أعضاء اللجنة ============ */}
