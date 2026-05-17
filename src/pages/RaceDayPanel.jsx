@@ -337,14 +337,12 @@ function RaceCertification({ race, isAdmin, onBack }) {
       let rank = 1;
       for (const row of rows) {
         if (!row.athlete) continue;
-        const points = rank <= 10 ? 11 - rank : 0;
-        const qualified = race.stage === 'qualifying' ? rank <= 30 : null;
+        // ملاحظة: points و qualified_to_final أعمدة مولّدة في DB
+        // تُحسب تلقائياً من rank
         resultsToInsert.push({
           athlete_id: row.athlete.id,
           race_id: race.id,
           rank,
-          points,
-          qualified_to_final: qualified,
           finish_time_ms: row.timing?.finish_time_ms || null,
         });
         rank++;
@@ -357,8 +355,6 @@ function RaceCertification({ race, isAdmin, onBack }) {
           athlete_id: att.athlete.id,
           race_id: race.id,
           rank: null,
-          points: 0,
-          qualified_to_final: false,
           finish_time_ms: null,
         });
       }
