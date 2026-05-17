@@ -160,14 +160,18 @@ export default function DossardPrint({ onBack }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 130pt;
           font-weight: 900;
           color: #000;
           line-height: 0.9;
-          letter-spacing: -3px;
           font-family: 'Inter', 'Arial Black', sans-serif;
           direction: ltr;
+          overflow: hidden;
+          padding: 0 2mm;
         }
+        .dossard-number.digits-1 { font-size: 150pt; }
+        .dossard-number.digits-2 { font-size: 130pt; }
+        .dossard-number.digits-3 { font-size: 95pt; }
+        .dossard-number.digits-4 { font-size: 75pt; }
 
         .dossard-category {
           font-size: 16pt;
@@ -312,7 +316,7 @@ function DossardCard({ athlete }) {
         <div className="dossard-subtitle">{EVENT_SUBTITLE}</div>
       </div>
 
-      <div className="dossard-number">
+      <div className={`dossard-number digits-${String(athlete.dossard_number).length}`}>
         {athlete.dossard_number}
       </div>
 
