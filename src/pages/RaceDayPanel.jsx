@@ -131,12 +131,13 @@ function RaceCertification({ race, isAdmin, onBack }) {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  const [localStatus, setLocalStatus] = useState(race.status);
   const raceLabel = CATEGORY_LABELS[race.category][race.gender];
   const stageLabel = race.stage === 'qualifying' ? 'التصفيات' : 'النهائيات';
-  const isApproved = race.status === 'approved';
-  const isPending = race.status === 'pending';
-  const isRunning = race.status === 'running';
-  const isFinished = race.status === 'finished';
+  const isApproved = localStatus === 'approved';
+  const isPending = localStatus === 'pending';
+  const isRunning = localStatus === 'running';
+  const isFinished = localStatus === 'finished';
 
   useEffect(() => { loadAll(); }, [race.id]);
 
@@ -147,20 +148,59 @@ function RaceCertification({ race, isAdmin, onBack }) {
     const { data: attendanceData } = await supabase.from('attendance')
       .select('*, athlete:athletes(id, first_name, last_name, dossard_number, institution:institutions(id, name, is_free_participants))')
       .eq('race_id', race.id).not('start_line_at', 'is', null);
-    const dossards = (ordersData || []).map(o => o.dossard_number).filter(d => d != null);
+
+    // إذا السباق معتمد، نقرأ النتائج المُعتمدة لإعادة بناء الجدول
+    let resultsData = null;
+    if (localStatus === 'approved') {
+      const { data } = await supabase.from('results')
+        .select('*, athlete:athletes(id, first_name, last_name, dossard_number, category, gender, institution:institutions(id, name, is_free_participants))')
+        .eq('race_id', race.id)
+        .order('rank', { ascending: true, nullsFirst: false });
+      resultsData = data;
+    }
+
+    // خريطة dossard → athlete (من الجداول الخام أو من results)
     let athletesMap = {};
+    if (resultsData) {
+      // أضف من results
+      resultsData.forEach(r => {
+        if (r.athlete?.dossard_number != null) {
+          athletesMap[r.athlete.dossard_number] = r.athlete;
+        }
+      });
+    }
+    const dossards = (ordersData || []).map(o => o.dossard_number).filter(d => d != null);
     if (dossards.length > 0) {
       const { data: athletes } = await supabase.from('athletes')
         .select('id, first_name, last_name, dossard_number, category, gender, institution:institutions(id, name, is_free_participants)')
         .in('dossard_number', dossards);
       (athletes || []).forEach(a => { athletesMap[a.dossard_number] = a; });
     }
+
     setTimingsRaw(timingsData || []);
     setOrdersRaw(ordersData || []);
     setAttendance(attendanceData || []);
     setAthletesByDossard(athletesMap);
-    setTimingColumn((timingsData || []).map(t => ({ ms: t.finish_time_ms, fromDb: true })));
-    setDossardColumn((ordersData || []).map(o => ({ dossard: o.dossard_number, out_of_flow: o.out_of_flow_warning, fromDb: true })));
+
+    // ─── بناء الأعمدة ───
+    if (resultsData && resultsData.length > 0) {
+      // السباق معتمد: نقرأ الأعمدة من results (تعكس التعديلات المعتمدة)
+      // نُرتّب بحسب rank (DNF rank=NULL في الأسفل)
+      const withRank = resultsData.filter(r => r.rank != null).sort((a, b) => a.rank - b.rank);
+      // ملاحظة: الـ DNF (rank=NULL) لا تظهر في الجدول المرئي
+      // لأنهم في قائمة "لم يكملوا" المنفصلة
+      const tCol = withRank.map(r => r.finish_time_ms != null ? { ms: r.finish_time_ms, fromDb: true } : null);
+      const dCol = withRank.map(r => r.athlete?.dossard_number != null
+        ? { dossard: r.athlete.dossard_number, fromDb: true }
+        : null);
+      setTimingColumn(tCol);
+      setDossardColumn(dCol);
+    } else {
+      // السباق غير معتمد بعد: نقرأ من الجداول الخام (للتعديل)
+      setTimingColumn((timingsData || []).map(t => ({ ms: t.finish_time_ms, fromDb: true })));
+      setDossardColumn((ordersData || []).map(o => ({ dossard: o.dossard_number, out_of_flow: o.out_of_flow_warning, fromDb: true })));
+    }
+
     setLoading(false);
   }
 
@@ -280,6 +320,7 @@ function RaceCertification({ race, isAdmin, onBack }) {
       }
       const { error: updateErr } = await supabase.from('races').update({ status: 'approved', is_completed: true }).eq('id', race.id);
       if (updateErr) throw updateErr;
+      setLocalStatus('approved');
       setSuccess('✅ تم الاعتماد بنجاح');
       setTimeout(() => onBack(), 1500);
     } catch (e) {
@@ -290,12 +331,47 @@ function RaceCertification({ race, isAdmin, onBack }) {
   }
 
   async function handleReopen() {
-    if (!confirm('إعادة فتح هذا السباق للتعديل؟ سيتم حذف النتائج المعتمدة الحالية.')) return;
+    if (!confirm('إعادة فتح هذا السباق للتعديل؟\nسيتم تحميل النتائج المعتمدة كنقطة بداية للتعديل.')) return;
     setSaving(true);
-    await supabase.from('results').delete().eq('race_id', race.id);
-    await supabase.from('races').update({ status: 'finished', is_completed: false }).eq('id', race.id);
-    setSaving(false);
-    await loadAll();
+    try {
+      // 1. اقرأ النتائج المعتمدة (لاستخدامها كنقطة بداية للتعديل)
+      const { data: resultsData } = await supabase.from('results')
+        .select('*, athlete:athletes(id, first_name, last_name, dossard_number, category, gender, institution:institutions(id, name, is_free_participants))')
+        .eq('race_id', race.id)
+        .order('rank', { ascending: true, nullsFirst: false });
+
+      // 2. حوّل النتائج لأعمدة قابلة للتعديل
+      const withRank = (resultsData || []).filter(r => r.rank != null).sort((a, b) => a.rank - b.rank);
+      const tCol = withRank.map(r => r.finish_time_ms != null ? { ms: r.finish_time_ms, fromDb: true } : null);
+      const dCol = withRank.map(r => r.athlete?.dossard_number != null
+        ? { dossard: r.athlete.dossard_number, fromDb: true }
+        : null);
+
+      // أضف خريطة الرياضيين من النتائج
+      const athletesMap = { ...athletesByDossard };
+      (resultsData || []).forEach(r => {
+        if (r.athlete?.dossard_number != null) {
+          athletesMap[r.athlete.dossard_number] = r.athlete;
+        }
+      });
+
+      // 3. احذف من results وأعد السباق إلى finished
+      await supabase.from('results').delete().eq('race_id', race.id);
+      const { error: updateErr } = await supabase.from('races')
+        .update({ status: 'finished', is_completed: false })
+        .eq('id', race.id);
+      if (updateErr) throw updateErr;
+
+      // 4. حدّث الحالة المحلية مباشرة
+      setTimingColumn(tCol);
+      setDossardColumn(dCol);
+      setAthletesByDossard(athletesMap);
+      setLocalStatus('finished');
+    } catch (e) {
+      setError('خطأ: ' + e.message);
+    } finally {
+      setSaving(false);
+    }
   }
 
   if (loading) return <div className="loading"><div className="spinner"></div></div>;
@@ -312,7 +388,7 @@ function RaceCertification({ race, isAdmin, onBack }) {
         <div style={{ textAlign: 'center', flex: 1, marginRight: 12 }}>
           <div style={{ fontSize: 22, fontWeight: 900 }}>{raceLabel}</div>
           <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 700 }}>
-            {stageLabel} • {raceStatusLabel(race.status)}
+            {stageLabel} • {raceStatusLabel(localStatus)}
           </div>
         </div>
       </div>
