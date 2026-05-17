@@ -48,7 +48,7 @@ export default function RaceDayPanel({ isAdmin }) {
 
   if (selectedRace) {
     return (
-      <RaceResultsEntry
+      <RaceCertification
         race={selectedRace}
         isAdmin={isAdmin}
         onBack={() => setSelectedRace(null)}
@@ -67,7 +67,7 @@ export default function RaceDayPanel({ isAdmin }) {
 }
 
 // ═══════════════════════════════════════════════════════
-// شاشة اختيار السباق
+// شاشة اختيار السباق (دون تغيير)
 // ═══════════════════════════════════════════════════════
 
 function RaceSelector({ onSelect, currentDay, isAdmin, onChangeDay }) {
@@ -86,19 +86,14 @@ function RaceSelector({ onSelect, currentDay, isAdmin, onChangeDay }) {
     setLoading(false);
   }
 
-  if (loading) {
-    return <div className="loading"><div className="spinner"></div></div>;
-  }
+  if (loading) return <div className="loading"><div className="spinner"></div></div>;
 
   const grouped = [];
   CATEGORY_ORDER.forEach(cat => {
     ['male', 'female'].forEach(gender => {
       const race = races.find(r => r.category === cat && r.gender === gender);
       if (race) {
-        grouped.push({
-          race,
-          label: CATEGORY_LABELS[cat][gender],
-        });
+        grouped.push({ race, label: CATEGORY_LABELS[cat][gender] });
       }
     });
   });
@@ -137,443 +132,583 @@ function RaceSelector({ onSelect, currentDay, isAdmin, onChangeDay }) {
 
       <div className="flex flex-col gap-2">
         {grouped.map(({ race, label }) => (
-          <button
-            key={race.id}
-            onClick={() => onSelect(race)}
-            className="card"
-            style={{
-              padding: 18,
-              background: race.is_completed ? '#d1fae5' : 'white',
-              borderColor: race.is_completed ? 'var(--success)' : 'var(--border)',
-              borderWidth: 2,
-              cursor: 'pointer',
-              textAlign: 'right',
-              fontFamily: 'inherit',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              minHeight: 70,
-            }}
-          >
-            <div style={{
-              fontSize: 28,
-              color: race.is_completed ? 'var(--success)' : 'var(--text-muted)',
-            }}>
-              {race.is_completed ? '✓' : '›'}
-            </div>
-            <div style={{ flex: 1, textAlign: 'right', marginRight: 12 }}>
-              <div style={{ fontSize: 20, fontWeight: 900 }}>{label}</div>
-              <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600, marginTop: 4 }}>
-                {race.distance_meters && `${race.distance_meters}م`}
-                {race.distance_meters && race.scheduled_at && ' • '}
-                {race.scheduled_at && new Date(race.scheduled_at).toLocaleTimeString('ar-MA', {
-                  hour: '2-digit',
-                  minute: '2-digit',
-                  timeZone: 'Africa/Casablanca'
-                })}
-              </div>
-              {race.is_completed && (
-                <div style={{ fontSize: 12, color: 'var(--success)', fontWeight: 700, marginTop: 2 }}>
-                  ✓ مكتمل
-                </div>
-              )}
-            </div>
-          </button>
+          <RaceCard key={race.id} race={race} label={label} onSelect={() => onSelect(race)} />
         ))}
       </div>
     </div>
   );
 }
 
+function RaceCard({ race, label, onSelect }) {
+  // الحالة المرئية حسب status
+  const statusInfo = {
+    pending:   { color: '#6b7280', bg: 'white',     label: 'في الانتظار', icon: '○' },
+    running:   { color: '#dc2626', bg: '#fef2f2',   label: 'قيد التشغيل', icon: '●' },
+    finished:  { color: '#d97706', bg: '#fef3c7',   label: 'بانتظار الاعتماد', icon: '⚠' },
+    approved:  { color: '#15803d', bg: '#d1fae5',   label: 'معتمد',        icon: '✓' },
+  };
+  const info = statusInfo[race.status] || statusInfo.pending;
+
+  return (
+    <button
+      onClick={onSelect}
+      className="card"
+      style={{
+        padding: 18,
+        background: info.bg,
+        borderColor: info.color,
+        borderWidth: 2,
+        cursor: 'pointer',
+        textAlign: 'right',
+        fontFamily: 'inherit',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        minHeight: 70,
+      }}
+    >
+      <div style={{ fontSize: 24, color: info.color, fontWeight: 900 }}>
+        {info.icon}
+      </div>
+      <div style={{ flex: 1, textAlign: 'right', marginRight: 12 }}>
+        <div style={{ fontSize: 20, fontWeight: 900 }}>{label}</div>
+        <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600, marginTop: 4 }}>
+          {race.distance_meters && `${race.distance_meters}م`}
+          {race.distance_meters && race.scheduled_at && ' • '}
+          {race.scheduled_at && new Date(race.scheduled_at).toLocaleTimeString('ar-MA', {
+            hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Casablanca'
+          })}
+        </div>
+        <div style={{ fontSize: 12, color: info.color, fontWeight: 700, marginTop: 4 }}>
+          {info.label}
+        </div>
+      </div>
+    </button>
+  );
+}
+
 // ═══════════════════════════════════════════════════════
-// شاشة إدخال النتائج (محسّنة للميدان)
+// شاشة الاعتماد الجديدة
 // ═══════════════════════════════════════════════════════
 
-function RaceResultsEntry({ race, isAdmin, onBack }) {
-  const [athletes, setAthletes] = useState([]);
-  const [results, setResults] = useState([]);
+function RaceCertification({ race, isAdmin, onBack }) {
   const [loading, setLoading] = useState(true);
-  const [dossardInput, setDossardInput] = useState('');
-  const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
+  const [timings, setTimings] = useState([]);          // race_timings (ميقاتي)
+  const [finishOrders, setFinishOrders] = useState([]); // race_finish_orders (خط الوصول)
+  const [attendance, setAttendance] = useState([]);     // attendance (DNF حساب)
+  const [athletesById, setAthletesById] = useState({}); // map: dossard -> athlete
+  const [existingResults, setExistingResults] = useState([]); // النتائج المعتمدة (لإعادة الفتح)
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   const raceLabel = CATEGORY_LABELS[race.category][race.gender];
   const stageLabel = race.stage === 'qualifying' ? 'التصفيات' : 'النهائيات';
+  const isApproved = race.status === 'approved';
+  const isPending = race.status === 'pending';
+  const isRunning = race.status === 'running';
+  const isFinished = race.status === 'finished';
 
-  useEffect(() => { loadData(); }, []);
+  useEffect(() => { loadAll(); }, [race.id]);
 
-  async function loadData() {
+  async function loadAll() {
     setLoading(true);
+    setError('');
 
-    let { data: ath } = await supabase
-      .from('athletes')
-      .select('*, institution:institutions(id, name, list_status)')
-      .eq('category', race.category)
-      .eq('gender', race.gender)
-      .not('dossard_number', 'is', null);
+    // 1. تواقيت الميقاتي
+    const { data: timingsData } = await supabase
+      .from('race_timings')
+      .select('*')
+      .eq('race_id', race.id)
+      .order('position', { ascending: true });
 
-    let filteredAthletes = (ath || []).filter(a => a.institution?.list_status === 'approved');
+    // 2. ترتيب خط الوصول
+    const { data: ordersData } = await supabase
+      .from('race_finish_orders')
+      .select('*')
+      .eq('race_id', race.id)
+      .order('position', { ascending: true });
 
-    if (race.stage === 'final') {
-      const { data: qualifyingRace } = await supabase
-        .from('races')
-        .select('id')
-        .eq('category', race.category)
-        .eq('gender', race.gender)
-        .eq('stage', 'qualifying')
-        .single();
+    // 3. الحضور (للـ DNF)
+    const { data: attendanceData } = await supabase
+      .from('attendance')
+      .select('*, athlete:athletes(id, first_name, last_name, dossard_number, institution:institutions(id, name, is_free_participants))')
+      .eq('race_id', race.id)
+      .not('start_line_at', 'is', null);
 
-      if (qualifyingRace) {
-        const { data: qualifiers } = await supabase
-          .from('results')
-          .select('athlete_id')
-          .eq('race_id', qualifyingRace.id)
-          .lte('rank', 40);
-
-        const qualifierIds = (qualifiers || []).map(q => q.athlete_id);
-        filteredAthletes = filteredAthletes.filter(a => qualifierIds.includes(a.id));
-      }
+    // 4. خريطة dossard → athlete
+    const dossards = (ordersData || []).map(o => o.dossard_number).filter(d => d != null);
+    let athletesMap = {};
+    if (dossards.length > 0) {
+      const { data: athletes } = await supabase
+        .from('athletes')
+        .select('id, first_name, last_name, dossard_number, category, gender, institution:institutions(id, name, is_free_participants)')
+        .in('dossard_number', dossards);
+      (athletes || []).forEach(a => { athletesMap[a.dossard_number] = a; });
     }
 
-    setAthletes(filteredAthletes);
-
-    const { data: existing } = await supabase
+    // 5. النتائج المعتمدة (لو موجودة)
+    const { data: resultsData } = await supabase
       .from('results')
-      .select('*, athlete:athletes(*)')
+      .select('*, athlete:athletes(id, first_name, last_name, dossard_number, institution:institutions(id, name, is_free_participants))')
       .eq('race_id', race.id)
-      .order('rank');
+      .order('rank', { ascending: true, nullsLast: true });
 
-    setResults(existing || []);
+    setTimings(timingsData || []);
+    setFinishOrders(ordersData || []);
+    setAttendance(attendanceData || []);
+    setAthletesById(athletesMap);
+    setExistingResults(resultsData || []);
     setLoading(false);
   }
 
-  async function handleAddDossard() {
+  // بناء الجدول الموحد (ميقاتي ⨯ خط الوصول مع الربط)
+  function buildLinkedTable() {
+    const maxLen = Math.max(timings.length, finishOrders.length);
+    const rows = [];
+    for (let i = 0; i < maxLen; i++) {
+      const t = timings[i] || null;
+      const o = finishOrders[i] || null;
+      const dossard = o?.dossard_number;
+      const athlete = dossard ? athletesById[dossard] : null;
+      rows.push({
+        position: i + 1,
+        timing: t,
+        order: o,
+        athlete,
+        warnings: collectWarnings(t, o, athlete, i),
+      });
+    }
+    return rows;
+  }
+
+  function collectWarnings(t, o, athlete, idx) {
+    const w = [];
+    if (!t && o) w.push('لا توقيت');
+    if (t && !o) w.push('لا صدرية');
+    if (o?.out_of_flow_warning) w.push('تخطى التدفق');
+    if (o && o.dossard_number && !athlete) w.push('صدرية غير معروفة');
+    if (athlete && athlete.category !== race.category) w.push('فئة لا تطابق');
+    if (athlete && athlete.gender !== race.gender) w.push('جنس لا يطابق');
+    return w;
+  }
+
+  // قائمة الـ DNF (في attendance لكن ليسوا في finish_orders)
+  function getDnfList() {
+    const arrivedDossards = new Set(
+      finishOrders.map(o => o.dossard_number).filter(Boolean)
+    );
+    return attendance.filter(a => {
+      const d = a.athlete?.dossard_number;
+      return d && !arrivedDossards.has(d);
+    });
+  }
+
+  // اعتماد النتائج
+  async function handleApprove() {
     setError('');
+    const rows = buildLinkedTable();
+    const dnfList = getDnfList();
 
-    const dossard = parseInt(dossardInput);
-    if (!dossard || isNaN(dossard)) {
-      setError('أدخل رقماً صحيحاً');
-      return;
+    // التحقق من السلامة الأساسية
+    const incompleteRows = rows.filter(r => !r.athlete);
+    if (incompleteRows.length > 0) {
+      if (!confirm(
+        `يوجد ${incompleteRows.length} صف ناقص (بدون رياضي معروف).\n` +
+        `سيتم تجاهلهم.\nمتابعة الاعتماد؟`
+      )) return;
     }
 
-    const athlete = athletes.find(a => a.dossard_number === dossard);
-    if (!athlete) {
-      setError(`الرقم ${dossard} غير موجود في ${raceLabel}`);
-      return;
-    }
-
-    if (results.some(r => r.athlete_id === athlete.id)) {
-      const existingRank = results.find(r => r.athlete_id === athlete.id).rank;
-      setError(`الرقم ${dossard} مُدخَل في المركز ${existingRank}`);
-      return;
-    }
+    if (!confirm(
+      `اعتماد نتائج ${stageLabel} ${raceLabel}؟\n\n` +
+      `• ${rows.filter(r => r.athlete).length} رياضي بنتيجة\n` +
+      `• ${dnfList.length} رياضي لم يكمل\n\n` +
+      `هذا سيُحرك السباق إلى "معتمد".`
+    )) return;
 
     setSaving(true);
-    const newRank = results.length + 1;
-    const newPoints = newRank <= 10 ? 11 - newRank : 0;
 
-    const { data: inserted, error: insertError } = await supabase
-      .from('results')
-      .insert({
-        athlete_id: athlete.id,
-        race_id: race.id,
-        rank: newRank,
-        points: newPoints,
-      })
-      .select('*, athlete:athletes(*)')
-      .single();
+    try {
+      // 1. مسح أي نتائج سابقة لنفس السباق (إعادة الاعتماد)
+      await supabase.from('results').delete().eq('race_id', race.id);
 
-    if (insertError) {
-      setError('خطأ في الحفظ: ' + insertError.message);
+      // 2. صفوف النتائج
+      const resultsToInsert = [];
+      let rank = 1;
+      for (const row of rows) {
+        if (!row.athlete) continue;
+        const points = rank <= 10 ? 11 - rank : 0;
+        const qualified = race.stage === 'qualifying' ? rank <= 30 : null;
+        resultsToInsert.push({
+          athlete_id: row.athlete.id,
+          race_id: race.id,
+          rank,
+          points,
+          qualified_to_final: qualified,
+          finish_time_ms: row.timing?.finish_time_ms || null,
+        });
+        rank++;
+      }
+
+      // 3. صفوف DNF (rank = null)
+      for (const att of dnfList) {
+        if (!att.athlete?.id) continue;
+        resultsToInsert.push({
+          athlete_id: att.athlete.id,
+          race_id: race.id,
+          rank: null,
+          points: 0,
+          qualified_to_final: false,
+          finish_time_ms: null,
+        });
+      }
+
+      if (resultsToInsert.length > 0) {
+        const { error: insertErr } = await supabase
+          .from('results')
+          .insert(resultsToInsert);
+        if (insertErr) throw insertErr;
+      }
+
+      // 4. تحديث حالة السباق
+      const { error: updateErr } = await supabase
+        .from('races')
+        .update({ status: 'approved', is_completed: true })
+        .eq('id', race.id);
+      if (updateErr) throw updateErr;
+
+      setSuccess('✅ تم الاعتماد بنجاح');
+      setTimeout(() => onBack(), 1500);
+    } catch (e) {
+      setError('خطأ في الحفظ: ' + e.message);
+    } finally {
       setSaving(false);
-      return;
     }
-
-    setResults([...results, inserted]);
-    setDossardInput('');
-    setSaving(false);
   }
 
-  async function handleRemoveResult(resultId, rank) {
-    if (!confirm(`حذف المركز ${rank}؟`)) return;
-
+  // إعادة فتح للتعديل
+  async function handleReopen() {
+    if (!confirm(
+      'إعادة فتح هذا السباق للتعديل؟\n' +
+      'سيتم حذف النتائج المعتمدة الحالية.'
+    )) return;
     setSaving(true);
-    await supabase.from('results').delete().eq('id', resultId);
-
-    const toUpdate = results.filter(r => r.rank > rank);
-    for (const r of toUpdate) {
-      const newRank = r.rank - 1;
-      const newPoints = newRank <= 10 ? 11 - newRank : 0;
-      await supabase
-        .from('results')
-        .update({ rank: newRank, points: newPoints })
-        .eq('id', r.id);
-    }
-
-    setDossardInput('');
-    await loadData();
+    await supabase.from('results').delete().eq('race_id', race.id);
+    await supabase
+      .from('races')
+      .update({ status: 'finished', is_completed: false })
+      .eq('id', race.id);
     setSaving(false);
-  }
-
-  async function handleCompleteRace() {
-    if (!confirm(`تأكيد إنهاء ${stageLabel} ${raceLabel}؟`)) return;
-
-    await supabase
-      .from('races')
-      .update({ is_completed: true })
-      .eq('id', race.id);
-
-    onBack();
-  }
-
-  async function handleReopenRace() {
-    if (!confirm('إعادة فتح هذا السباق للتعديل؟')) return;
-
-    await supabase
-      .from('races')
-      .update({ is_completed: false })
-      .eq('id', race.id);
-
-    await loadData();
+    await loadAll();
   }
 
   if (loading) {
     return <div className="loading"><div className="spinner"></div></div>;
   }
 
-  const presentAthletes = results.map(r => r.athlete_id);
-  const absentAthletes = athletes.filter(a => !presentAthletes.includes(a.id));
+  const linkedRows = buildLinkedTable();
+  const dnfList = getDnfList();
 
   return (
     <div>
-      <button onClick={onBack} className="btn btn-outline mb-4" style={{ fontSize: 14, minHeight: 48 }}>
-        → الرجوع
-      </button>
-
-      <div className="card mb-4" style={{
-        background: 'var(--primary)',
-        color: 'white',
-        textAlign: 'center',
-        padding: 20,
-      }}>
-        <div style={{ fontSize: 24, fontWeight: 900 }}>{raceLabel}</div>
-        <div style={{ fontSize: 16, opacity: 0.9, marginTop: 6 }}>
-          {stageLabel}
-        </div>
-        {race.distance_meters && (
-          <div style={{ fontSize: 14, color: 'var(--accent)', fontWeight: 800, marginTop: 8 }}>
-            {race.distance_meters}م
-            {race.scheduled_at && ` • ${new Date(race.scheduled_at).toLocaleTimeString('ar-MA', {
-              hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Casablanca'
-            })}`}
+      {/* رأس الصفحة */}
+      <div className="flex items-center justify-between mb-4">
+        <button onClick={onBack} className="btn btn-outline" style={{ minHeight: 44 }}>
+          → الرجوع
+        </button>
+        <div style={{ textAlign: 'center', flex: 1, marginRight: 12 }}>
+          <div style={{ fontSize: 22, fontWeight: 900 }}>{raceLabel}</div>
+          <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 700 }}>
+            {stageLabel} • {raceStatusLabel(race.status)}
           </div>
-        )}
-        <div style={{ fontSize: 13, opacity: 0.7, marginTop: 6 }}>
-          {athletes.length} رياضي مسجل • {results.length} وصل
         </div>
       </div>
 
-      {isAdmin && !race.is_completed && (
-        <div className="card mb-4" style={{ padding: 20 }}>
-          <div style={{
-            fontSize: 16,
-            fontWeight: 700,
-            marginBottom: 12,
-            textAlign: 'center',
-          }}>
-            المركز التالي:{' '}
-            <span style={{
-              color: 'var(--accent)',
-              fontSize: 28,
-              fontWeight: 900,
-            }}>
-              {results.length + 1}
-            </span>
+      {/* رسائل */}
+      {error && (
+        <div className="card mb-3" style={{ padding: 12, background: '#fef2f2', borderColor: '#fca5a5' }}>
+          <div style={{ color: '#991b1b', fontWeight: 700 }}>{error}</div>
+        </div>
+      )}
+      {success && (
+        <div className="card mb-3" style={{ padding: 12, background: '#d1fae5', borderColor: '#6ee7b7' }}>
+          <div style={{ color: '#065f46', fontWeight: 700 }}>{success}</div>
+        </div>
+      )}
+
+      {/* حالة pending — لا شيء بعد */}
+      {isPending && (
+        <div className="card text-center" style={{ padding: 32 }}>
+          <div style={{ fontSize: 40, marginBottom: 8 }}>○</div>
+          <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>
+            السباق لم يبدأ بعد
+          </div>
+          <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+            الميقاتي يحتاج بدء السباق من شاشته
+          </div>
+        </div>
+      )}
+
+      {/* حالة running — منتظرون النهاية */}
+      {isRunning && (
+        <div className="card text-center" style={{ padding: 32, background: '#fef2f2', borderColor: '#fca5a5' }}>
+          <div style={{ fontSize: 40, marginBottom: 8 }}>●</div>
+          <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4, color: '#991b1b' }}>
+            السباق قيد التشغيل
+          </div>
+          <div style={{ fontSize: 13, color: '#7f1d1d' }}>
+            ميقاتي: {timings.length} توقيت • خط الوصول: {finishOrders.length} صدرية
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 8 }}>
+            انتظر إنهاء الميقاتي للسباق ثم عُد للاعتماد
+          </div>
+        </div>
+      )}
+
+      {/* حالة finished — جاهز للاعتماد */}
+      {(isFinished || isApproved) && (
+        <>
+          {/* إحصائيات سريعة */}
+          <div className="card mb-3" style={{ padding: 12 }}>
+            <div style={{ display: 'flex', gap: 12, fontSize: 13 }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ color: 'var(--text-muted)', fontWeight: 700 }}>ميقاتي</div>
+                <div style={{ fontSize: 18, fontWeight: 900 }}>{timings.length}</div>
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ color: 'var(--text-muted)', fontWeight: 700 }}>خط الوصول</div>
+                <div style={{ fontSize: 18, fontWeight: 900 }}>{finishOrders.length}</div>
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ color: 'var(--text-muted)', fontWeight: 700 }}>غير مكتملين</div>
+                <div style={{ fontSize: 18, fontWeight: 900, color: dnfList.length > 0 ? '#d97706' : 'inherit' }}>
+                  {dnfList.length}
+                </div>
+              </div>
+            </div>
           </div>
 
-          {error && (
-            <div className="alert alert-error" style={{
-              marginBottom: 12,
-              padding: 12,
-              fontSize: 15,
-              fontWeight: 600,
-              textAlign: 'center',
-            }}>
-              {error}
+          {/* تحذير عدم التطابق */}
+          {timings.length !== finishOrders.length && !isApproved && (
+            <div className="card mb-3" style={{ padding: 12, background: '#fef3c7', borderColor: '#fcd34d' }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#92400e' }}>
+                ⚠ عدم تطابق: {timings.length} توقيت مقابل {finishOrders.length} صدرية
+              </div>
+              <div style={{ fontSize: 12, color: '#78350f', marginTop: 4 }}>
+                راجع الجدول بعناية قبل الاعتماد
+              </div>
             </div>
           )}
 
-          <input
-            type="number"
-            className="form-input"
-            value={dossardInput}
-            onChange={(e) => setDossardInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleAddDossard()}
-            placeholder="رقم الصدرية"
-            dir="ltr"
-            style={{
-              fontSize: 32,
-              fontWeight: 900,
-              textAlign: 'center',
-              minHeight: 64,
-              marginBottom: 12,
-              letterSpacing: '2px',
-            }}
-            autoFocus
-            disabled={saving}
-          />
+          {/* جدول الربط */}
+          {linkedRows.length === 0 ? (
+            <div className="card text-center" style={{ padding: 32 }}>
+              <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+                لا توجد بيانات للعرض
+              </div>
+            </div>
+          ) : (
+            <LinkedTable rows={linkedRows} />
+          )}
 
-          <button
-            className="btn btn-success btn-block"
-            onClick={handleAddDossard}
-            disabled={saving || !dossardInput}
-            style={{
-              minHeight: 64,
-              fontSize: 18,
-              fontWeight: 900,
-            }}
-          >
-            {saving ? 'جاري الحفظ...' : '✓ إضافة'}
-          </button>
-        </div>
-      )}
+          {/* قائمة الـ DNF */}
+          {dnfList.length > 0 && (
+            <DnfList list={dnfList} />
+          )}
 
-      <div className="mb-4">
-        <h3 style={{ fontSize: 18, fontWeight: 900, marginBottom: 10 }}>
-          الترتيب ({results.length})
-        </h3>
-        {results.length === 0 ? (
-          <div className="card text-center text-muted" style={{ padding: 24 }}>
-            لم تُدخَل أي نتيجة بعد
-          </div>
-        ) : (
-          <div className="list">
-            {results.map((r) => (
-              <ResultRow
-                key={r.id}
-                result={r}
-                isAdmin={isAdmin && !race.is_completed}
-                onRemove={() => handleRemoveResult(r.id, r.rank)}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+          {/* أزرار الإجراء */}
+          {isAdmin && isFinished && (
+            <button
+              onClick={handleApprove}
+              disabled={saving}
+              className="btn btn-accent"
+              style={{
+                width: '100%',
+                marginTop: 16,
+                minHeight: 56,
+                fontSize: 17,
+                fontWeight: 900,
+              }}
+            >
+              {saving ? '⏳ جارٍ الاعتماد...' : '✓ اعتماد النتائج'}
+            </button>
+          )}
 
-      {absentAthletes.length > 0 && (
-        <details className="mb-4">
-          <summary style={{
-            cursor: 'pointer',
-            fontSize: 16,
-            fontWeight: 700,
-            padding: 12,
-            background: '#f8fafc',
-            borderRadius: 'var(--radius)',
-          }}>
-            لم يُسجَّلوا ({absentAthletes.length}) ▾
-          </summary>
-          <div className="list mt-2">
-            {absentAthletes.map((a) => (
-              <div key={a.id} className="list-item" style={{ opacity: 0.7 }}>
-                <div className="list-item-info">
-                  <div style={{ fontSize: 14 }}>
-                    <strong style={{ color: 'var(--text-muted)' }}>{a.dossard_number}</strong>
-                    {' • '}
-                    {a.first_name} {a.last_name}
-                  </div>
-                  <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-                    {a.institution?.name}
-                  </div>
+          {isAdmin && isApproved && (
+            <>
+              <div className="card mb-3" style={{ padding: 12, background: '#d1fae5' }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: '#065f46' }}>
+                  ✓ هذا السباق معتمد. النتائج محفوظة في الجدول الرسمي.
                 </div>
               </div>
-            ))}
-          </div>
-        </details>
-      )}
-
-      {isAdmin && results.length > 0 && !race.is_completed && (
-        <button
-          className="btn btn-success btn-block"
-          onClick={handleCompleteRace}
-          style={{ minHeight: 56, fontSize: 16, fontWeight: 900 }}
-        >
-          ✓ إنهاء {stageLabel}
-        </button>
-      )}
-
-      {isAdmin && race.is_completed && (
-        <>
-          <div className="alert alert-success">
-            ✓ تم إنهاء هذا السباق
-          </div>
-          <button
-            className="btn btn-outline btn-block"
-            onClick={handleReopenRace}
-            style={{ fontSize: 14 }}
-          >
-            ↻ إعادة الفتح للتعديل
-          </button>
+              <button
+                onClick={handleReopen}
+                disabled={saving}
+                className="btn btn-outline"
+                style={{
+                  width: '100%',
+                  minHeight: 48,
+                  fontSize: 14,
+                  color: '#dc2626',
+                  borderColor: '#fca5a5',
+                }}
+              >
+                {saving ? '⏳ ...' : '↺ إعادة فتح للتعديل (تحذير: يمسح النتائج)'}
+              </button>
+            </>
+          )}
         </>
       )}
     </div>
   );
 }
 
-function ResultRow({ result, isAdmin, onRemove }) {
-  const points = result.rank <= 10 ? 11 - result.rank : 0;
-  const isPodium = result.rank <= 3;
+function raceStatusLabel(status) {
+  switch (status) {
+    case 'pending':  return 'لم يبدأ بعد';
+    case 'running':  return 'قيد التشغيل';
+    case 'finished': return 'بانتظار الاعتماد';
+    case 'approved': return 'معتمد';
+    default: return status;
+  }
+}
 
+function LinkedTable({ rows }) {
   return (
-    <div className="list-item" style={{
-      background: isPodium ? '#fef3c7' : 'white',
-      borderColor: isPodium ? '#f59e0b' : 'var(--border)',
-      borderWidth: isPodium ? 2 : 1,
-      padding: 14,
-    }}>
-      <div className="list-item-info" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-        <div style={{
-          fontSize: 24,
-          fontWeight: 900,
-          color: isPodium ? '#92400e' : 'var(--primary)',
-          minWidth: 40,
-          textAlign: 'center',
-        }}>
-          {result.rank}
-        </div>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 16, fontWeight: 700 }}>
-            <span style={{
-              color: 'var(--accent)',
-              fontWeight: 900,
-              fontSize: 18,
-            }}>
-              #{result.athlete?.dossard_number}
-            </span>
-            {' '}
-            {result.athlete?.first_name} {result.athlete?.last_name}
-          </div>
-          {points > 0 && (
-            <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>
-              {points} نقطة
-              {result.qualified_to_final && ' • ✓ متأهل'}
-            </div>
-          )}
-        </div>
+    <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '50px 1fr 80px',
+        background: '#f8fafc',
+        padding: '10px 12px',
+        fontSize: 11,
+        fontWeight: 700,
+        color: 'var(--text-muted)',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <div>المركز</div>
+        <div>الرياضي</div>
+        <div style={{ textAlign: 'left', direction: 'ltr' }}>التوقيت</div>
       </div>
-      {isAdmin && (
-        <button
-          onClick={onRemove}
-          style={{
-            background: 'transparent',
-            color: 'var(--danger)',
-            fontSize: 22,
-            padding: 8,
-            minWidth: 40,
-          }}
-        >
-          ✕
-        </button>
-      )}
+
+      {rows.map((row, idx) => (
+        <LinkedRow key={idx} row={row} idx={idx} />
+      ))}
     </div>
   );
+}
+
+function LinkedRow({ row, idx }) {
+  const hasIssue = row.warnings.length > 0;
+  const bg = hasIssue ? '#fef3c7' : (idx % 2 === 0 ? 'white' : '#fafafa');
+
+  return (
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: '50px 1fr 80px',
+      padding: '10px 12px',
+      background: bg,
+      borderBottom: '1px solid #f1f5f9',
+      alignItems: 'center',
+    }}>
+      <div style={{ fontSize: 18, fontWeight: 900 }}>{row.position}</div>
+
+      <div>
+        {row.athlete ? (
+          <>
+            <div style={{ fontSize: 14, fontWeight: 700 }}>
+              <span style={{ color: 'var(--accent)', fontWeight: 900, marginLeft: 6 }}>
+                #{row.athlete.dossard_number}
+              </span>
+              {row.athlete.first_name} {row.athlete.last_name}
+            </div>
+            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
+              {row.athlete.institution?.name || '—'}
+            </div>
+          </>
+        ) : row.order ? (
+          <div style={{ fontSize: 14, fontWeight: 700, color: '#dc2626' }}>
+            #{row.order.dossard_number} (غير معروف)
+          </div>
+        ) : (
+          <div style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic' }}>
+            بدون صدرية
+          </div>
+        )}
+        {row.warnings.length > 0 && (
+          <div style={{ display: 'flex', gap: 4, marginTop: 4, flexWrap: 'wrap' }}>
+            {row.warnings.map((w, i) => (
+              <span key={i} style={{
+                fontSize: 10,
+                background: '#fcd34d',
+                color: '#78350f',
+                padding: '2px 6px',
+                borderRadius: 4,
+                fontWeight: 700,
+              }}>
+                ⚠ {w}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div style={{
+        fontSize: 13,
+        fontFamily: 'monospace',
+        direction: 'ltr',
+        textAlign: 'left',
+        fontWeight: 700,
+      }}>
+        {row.timing ? formatMs(row.timing.finish_time_ms) : '—'}
+      </div>
+    </div>
+  );
+}
+
+function DnfList({ list }) {
+  return (
+    <div className="card mt-3" style={{ padding: 0, background: '#fafafa' }}>
+      <div style={{
+        padding: '10px 12px',
+        background: '#fef3c7',
+        fontSize: 13,
+        fontWeight: 700,
+        color: '#92400e',
+        borderBottom: '1px solid #fcd34d',
+      }}>
+        ⚠ لم يكملوا السباق ({list.length})
+      </div>
+      <div>
+        {list.map((att) => (
+          <div key={att.id} style={{
+            padding: '8px 12px',
+            fontSize: 13,
+            borderBottom: '1px solid #f1f5f9',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}>
+            <div>
+              <span style={{ color: 'var(--accent)', fontWeight: 900, marginLeft: 6 }}>
+                #{att.athlete?.dossard_number}
+              </span>
+              {att.athlete?.first_name} {att.athlete?.last_name}
+            </div>
+            <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+              {att.athlete?.institution?.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function formatMs(ms) {
+  if (ms == null) return '—';
+  const totalSec = Math.floor(ms / 1000);
+  const min = Math.floor(totalSec / 60);
+  const sec = totalSec % 60;
+  const cs = Math.floor((ms % 1000) / 10);
+  return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}.${String(cs).padStart(2, '0')}`;
 }
