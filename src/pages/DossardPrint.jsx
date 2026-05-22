@@ -57,8 +57,8 @@ export default function DossardPrint({ onBack }) {
 
   // تقسيم لصفحات 4 بطاقات
   const pages = [];
-  for (let i = 0; i < filtered.length; i += 4) {
-    pages.push(filtered.slice(i, i + 4));
+  for (let i = 0; i < filtered.length; i += 8) {
+    pages.push(filtered.slice(i, i + 8));
   }
 
   return (
@@ -95,7 +95,7 @@ export default function DossardPrint({ onBack }) {
           box-sizing: border-box;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
           gap: 0;
           position: relative;
           margin: 0 auto 20px auto;
@@ -115,7 +115,7 @@ export default function DossardPrint({ onBack }) {
           width: 100%;
           background: white;
           border: 1px solid #1f2937;
-          padding: 6mm 5mm;
+          padding: 3mm 4mm;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
@@ -123,14 +123,16 @@ export default function DossardPrint({ onBack }) {
         }
 
         /* خطوط التقطيع المنقطة */
-        .cut-line-h {
+        .cut-line-h-1, .cut-line-h-2, .cut-line-h-3 {
           position: absolute;
           left: 0;
           right: 0;
-          top: 50%;
           border-top: 1px dashed #6b7280;
           pointer-events: none;
         }
+        .cut-line-h-1 { top: 25%; }
+        .cut-line-h-2 { top: 50%; }
+        .cut-line-h-3 { top: 75%; }
         .cut-line-v {
           position: absolute;
           top: 0;
@@ -141,18 +143,18 @@ export default function DossardPrint({ onBack }) {
         }
 
         .dossard-header {
-          font-size: 8pt;
+          font-size: 6.5pt;
           font-weight: 700;
           color: #1f2937;
-          line-height: 1.4;
-          padding-bottom: 3mm;
+          line-height: 1.3;
+          padding-bottom: 1.5mm;
           border-bottom: 1px solid #9ca3af;
           margin-bottom: 0;
         }
         .dossard-subtitle {
-          font-size: 7pt;
+          font-size: 5.5pt;
           color: #4b5563;
-          margin-top: 1mm;
+          margin-top: 0.5mm;
         }
 
         .dossard-number {
@@ -168,33 +170,33 @@ export default function DossardPrint({ onBack }) {
           overflow: hidden;
           padding: 0 2mm;
         }
-        .dossard-number.digits-1 { font-size: 150pt; }
-        .dossard-number.digits-2 { font-size: 130pt; }
-        .dossard-number.digits-3 { font-size: 95pt; }
-        .dossard-number.digits-4 { font-size: 75pt; }
+        .dossard-number.digits-1 { font-size: 90pt; }
+        .dossard-number.digits-2 { font-size: 78pt; }
+        .dossard-number.digits-3 { font-size: 58pt; }
+        .dossard-number.digits-4 { font-size: 46pt; }
 
         .dossard-category {
-          font-size: 16pt;
+          font-size: 10pt;
           font-weight: 900;
           color: #1f2937;
-          margin-bottom: 2mm;
-          padding-top: 3mm;
+          margin-bottom: 1mm;
+          padding-top: 1.5mm;
           border-top: 1px solid #9ca3af;
         }
 
         .dossard-name {
-          font-size: 12pt;
-          font-weight: 700;
-          color: #111827;
-          margin-bottom: 1.5mm;
-          line-height: 1.2;
+          font-size: 13pt;
+          font-weight: 900;
+          color: #000;
+          margin-bottom: 1mm;
+          line-height: 1.15;
         }
 
         .dossard-institution {
-          font-size: 9pt;
+          font-size: 7pt;
           font-weight: 500;
           color: #4b5563;
-          line-height: 1.2;
+          line-height: 1.15;
         }
 
         /* واجهة المعاينة */
@@ -288,9 +290,9 @@ export default function DossardPrint({ onBack }) {
 }
 
 function DossardPage({ athletes }) {
-  // ملء الخلايا بالـ4 بطاقات + خلايا فارغة إن لزم
+  // ملء الخلايا بالـ8 بطاقات + خلايا فارغة إن لزم
   const cells = [...athletes];
-  while (cells.length < 4) cells.push(null);
+  while (cells.length < 8) cells.push(null);
 
   return (
     <div className="print-page">
@@ -299,8 +301,10 @@ function DossardPage({ athletes }) {
           {athlete ? <DossardCard athlete={athlete} /> : <div className="dossard-card" style={{ background: '#f3f4f6' }}></div>}
         </div>
       ))}
-      {/* خطوط التقطيع */}
-      <div className="cut-line-h"></div>
+      {/* خطوط التقطيع: 3 أفقية + 1 عمودية */}
+      <div className="cut-line-h-1"></div>
+      <div className="cut-line-h-2"></div>
+      <div className="cut-line-h-3"></div>
       <div className="cut-line-v"></div>
     </div>
   );
